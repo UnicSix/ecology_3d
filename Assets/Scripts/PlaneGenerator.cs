@@ -86,7 +86,7 @@ public class PlaneGenerator : MonoBehaviour
     
     List<Vector3> GetCircumferencePoints(int sides, float radius)   
     {
-        List<Vector3> points = new List<Vector3>();
+        List<Vector3> points = new List<Vector3>(); //
         float circumferenceProgressPerStep = (float)1/sides;
         float TAU = 2*Mathf.PI;
         float radianProgressPerStep = circumferenceProgressPerStep*TAU;
