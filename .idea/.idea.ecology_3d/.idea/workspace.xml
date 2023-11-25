@@ -1,265 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="739ec775-2bce-411e-8645-81f107ffdc51" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.ecology_3d/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.ecology_3d/.idea/indexLayout.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.ecology_3d/.idea/projectSettingsUpdater.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.ecology_3d/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FreeFlyCamera.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FreeFlyCamera/Documentation.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FreeFlyCamera/Documentation/FreeFlyCamera_en.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FreeFlyCamera/Documentation/FreeFlyCamera_en.pdf.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FreeFlyCamera/Documentation/FreeFlyCamera_ru.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FreeFlyCamera/Documentation/FreeFlyCamera_ru.pdf.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FreeFlyCamera/Scripts.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FreeFlyCamera/Scripts/FreeFlyCamera.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FreeFlyCamera/Scripts/FreeFlyCamera.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FreeFlyCamera/readme.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FreeFlyCamera/readme.txt.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Material.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Material/Aisle_Floor.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Material/Aisle_Floor.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Material/Aisle_Wall.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Material/Aisle_Wall.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Material/Cafeteria_Floor.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Material/Cafeteria_Floor.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Material/Cafeteria_Wall.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Material/Cafeteria_Wall.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Material/Control_Floor.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Material/Control_Floor.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Material/Control_Wall.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Material/Control_Wall.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Material/Event_Floor.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Material/Event_Floor.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Material/Event_Wall.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Material/Event_Wall.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Material/Normal_Floor.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Material/Normal_Floor.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Material/Normal_Wall.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Material/Normal_Wall.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Material/Power_Floor.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Material/Power_Floor.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Material/Power_Wall.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Material/Power_Wall.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Material/Rest_Floor.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Material/Rest_Floor.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Material/Rest_Wall.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Material/Rest_Wall.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Material/SpaceShip_Color.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Material/SpaceShip_Color.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Material/Src.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Material/Src/UV-NAVE.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Material/Src/UV-NAVE.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Material/Src/UVcolores.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Material/Src/UVcolores.jpg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Material/Src/black.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Material/Src/black.jpg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Material/Src/black2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Material/Src/black2.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Material/Src/blue.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Material/Src/blue.jpg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Material/Src/blue2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Material/Src/blue2.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Material/Src/darkGreen.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Material/Src/darkGreen.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Material/Src/drk-green.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Material/Src/drk-green.jpg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Material/Src/ligth-blue.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Material/Src/ligth-blue.jpg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Material/Src/ligthblue2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Material/Src/ligthblue2.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Material/Src/pink.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Material/Src/pink.jpg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Material/Src/pink2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Material/Src/pink2.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Material/Src/red2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Material/Src/red2.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Material/Src/white2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Material/Src/white2.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Material/Src/yelow2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Material/Src/yelow2.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/PreFab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/PreFab/Aisle.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/PreFab/Aisle.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/PreFab/Cafeteria_Room.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/PreFab/Cafeteria_Room.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/PreFab/Cafeteria_Wall.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/PreFab/Cafeteria_Wall.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/PreFab/Control_Room.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/PreFab/Control_Room.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/PreFab/Event_Room.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/PreFab/Event_Room.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/PreFab/Event_Wall.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/PreFab/Event_Wall.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/PreFab/Normal_Room.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/PreFab/Normal_Room.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/PreFab/Normal_Wall.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/PreFab/Normal_Wall.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/PreFab/PlaneGenerator.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/PreFab/PlaneGenerator.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/PreFab/Power_Room.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/PreFab/Power_Room.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/PreFab/Power_Wall.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/PreFab/Power_Wall.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/PreFab/Rest_Room.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/PreFab/Rest_Room.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/PreFab/Rest_Wall.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/PreFab/Rest_Wall.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/PreFab/SpaceShip.fbx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/PreFab/SpaceShip.fbx.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/PreFab/Wall1.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/PreFab/Wall1.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/MainSence.unity" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/MainSence.unity.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/PlaneGenerator.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/PlaneGenerator.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_1.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_1/Pink_1K_Resolution.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_1/Pink_1K_Resolution.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_1/Pink_2K_Resolution.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_1/Pink_2K_Resolution.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_1/Pink_4K_Resolution.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_1/Pink_4K_Resolution.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_1/Textures.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_1/Textures/1K_Resolution.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_1/Textures/1K_Resolution/Back_1K_TEX.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_1/Textures/1K_Resolution/Back_1K_TEX.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_1/Textures/1K_Resolution/Down_1K_TEX.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_1/Textures/1K_Resolution/Down_1K_TEX.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_1/Textures/1K_Resolution/Front_1K_TEX.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_1/Textures/1K_Resolution/Front_1K_TEX.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_1/Textures/1K_Resolution/Left_1K_TEX.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_1/Textures/1K_Resolution/Left_1K_TEX.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_1/Textures/1K_Resolution/Right_1K_TEX.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_1/Textures/1K_Resolution/Right_1K_TEX.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_1/Textures/1K_Resolution/Up_1K_TEX.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_1/Textures/1K_Resolution/Up_1K_TEX.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_1/Textures/2K_Resolution.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_1/Textures/2K_Resolution/Back_2K_TEX.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_1/Textures/2K_Resolution/Back_2K_TEX.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_1/Textures/2K_Resolution/Down_2K_TEX.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_1/Textures/2K_Resolution/Down_2K_TEX.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_1/Textures/2K_Resolution/Front_2K_TEX.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_1/Textures/2K_Resolution/Front_2K_TEX.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_1/Textures/2K_Resolution/Left_2K_TEX.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_1/Textures/2K_Resolution/Left_2K_TEX.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_1/Textures/2K_Resolution/Right_2K_TEX.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_1/Textures/2K_Resolution/Right_2K_TEX.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_1/Textures/2K_Resolution/Up_2K_TEX.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_1/Textures/2K_Resolution/Up_2K_TEX.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_1/Textures/4K_Resolution.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_1/Textures/4K_Resolution/Back_4K_TEX.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_1/Textures/4K_Resolution/Back_4K_TEX.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_1/Textures/4K_Resolution/Down_4K_TEX.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_1/Textures/4K_Resolution/Down_4K_TEX.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_1/Textures/4K_Resolution/Front_4K_TEX.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_1/Textures/4K_Resolution/Front_4K_TEX.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_1/Textures/4K_Resolution/Left_4K_TEX.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_1/Textures/4K_Resolution/Left_4K_TEX.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_1/Textures/4K_Resolution/Right_4K_TEX.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_1/Textures/4K_Resolution/Right_4K_TEX.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_1/Textures/4K_Resolution/Up_4K_TEX.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_1/Textures/4K_Resolution/Up_4K_TEX.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_2.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_2/Green_1K_Resolution.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_2/Green_1K_Resolution.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_2/Green_2K_Resoution.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_2/Green_2K_Resoution.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_2/Green_4K_Resolution.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_2/Green_4K_Resolution.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_2/Textures.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_2/Textures/1K_Resolution.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_2/Textures/1K_Resolution/Back_1K_TEX.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_2/Textures/1K_Resolution/Back_1K_TEX.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_2/Textures/1K_Resolution/Down_1K_TEX.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_2/Textures/1K_Resolution/Down_1K_TEX.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_2/Textures/1K_Resolution/Front_1K_TEX.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_2/Textures/1K_Resolution/Front_1K_TEX.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_2/Textures/1K_Resolution/Left_1K_TEX.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_2/Textures/1K_Resolution/Left_1K_TEX.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_2/Textures/1K_Resolution/Right_1K_TEX.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_2/Textures/1K_Resolution/Right_1K_TEX.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_2/Textures/1K_Resolution/Up_1K_TEX.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_2/Textures/1K_Resolution/Up_1K_TEX.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_2/Textures/2K_Resolution.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_2/Textures/2K_Resolution/Back_2K_TEX.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_2/Textures/2K_Resolution/Back_2K_TEX.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_2/Textures/2K_Resolution/Down_2K_TEX.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_2/Textures/2K_Resolution/Down_2K_TEX.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_2/Textures/2K_Resolution/Front_2K_TEX.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_2/Textures/2K_Resolution/Front_2K_TEX.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_2/Textures/2K_Resolution/Left_2K_TEX.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_2/Textures/2K_Resolution/Left_2K_TEX.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_2/Textures/2K_Resolution/Right_2K_TEX.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_2/Textures/2K_Resolution/Right_2K_TEX.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_2/Textures/2K_Resolution/Up_2K_TEX.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_2/Textures/2K_Resolution/Up_2K_TEX.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_2/Textures/4K_Resolution.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_2/Textures/4K_Resolution/Back_4K_TEX.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_2/Textures/4K_Resolution/Back_4K_TEX.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_2/Textures/4K_Resolution/Down_4K_TEX.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_2/Textures/4K_Resolution/Down_4K_TEX.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_2/Textures/4K_Resolution/Front_4K_TEX.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_2/Textures/4K_Resolution/Front_4K_TEX.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_2/Textures/4K_Resolution/Left_4K_TEX.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_2/Textures/4K_Resolution/Left_4K_TEX.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_2/Textures/4K_Resolution/Right_4K_TEX.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_2/Textures/4K_Resolution/Right_4K_TEX.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_2/Textures/4K_Resolution/Up_4K_TEX.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_2/Textures/4K_Resolution/Up_4K_TEX.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_3/Purple_1K_Resolution.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_3/Purple_1K_Resolution.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_3/Purple_2K_Resolution.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_3/Purple_2K_Resolution.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_3/Purple_4K_Resolution.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_3/Purple_4K_Resolution.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_3/Textures.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_3/Textures/1K_Resolution.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_3/Textures/1K_Resolution/Back_1K_TEX.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_3/Textures/1K_Resolution/Back_1K_TEX.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_3/Textures/1K_Resolution/Down_1K_TEX.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_3/Textures/1K_Resolution/Down_1K_TEX.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_3/Textures/1K_Resolution/Front_1K_TEX.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_3/Textures/1K_Resolution/Front_1K_TEX.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_3/Textures/1K_Resolution/Left_1K_TEX.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_3/Textures/1K_Resolution/Left_1K_TEX.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_3/Textures/1K_Resolution/Right_1K_TEX.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_3/Textures/1K_Resolution/Right_1K_TEX.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_3/Textures/1K_Resolution/Up_1K_TEX.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_3/Textures/1K_Resolution/Up_1K_TEX.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_3/Textures/2K_Resolution.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_3/Textures/2K_Resolution/Back_2K_TEX.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_3/Textures/2K_Resolution/Back_2K_TEX.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_3/Textures/2K_Resolution/Down_2K_TEX.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_3/Textures/2K_Resolution/Down_2K_TEX.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_3/Textures/2K_Resolution/Front_2K_TEX.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_3/Textures/2K_Resolution/Front_2K_TEX.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_3/Textures/2K_Resolution/Left_2K_TEX.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_3/Textures/2K_Resolution/Left_2K_TEX.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_3/Textures/2K_Resolution/Right_2K_TEX.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_3/Textures/2K_Resolution/Right_2K_TEX.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_3/Textures/2K_Resolution/Up_2K_TEX.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_3/Textures/2K_Resolution/Up_2K_TEX.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_3/Textures/4K_Resolution.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_3/Textures/4K_Resolution/Back_4K_TEX.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_3/Textures/4K_Resolution/Back_4K_TEX.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_3/Textures/4K_Resolution/Down_4K_TEX.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_3/Textures/4K_Resolution/Down_4K_TEX.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_3/Textures/4K_Resolution/Front_4K_TEX.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_3/Textures/4K_Resolution/Front_4K_TEX.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_3/Textures/4K_Resolution/Left_4K_TEX.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_3/Textures/4K_Resolution/Left_4K_TEX.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_3/Textures/4K_Resolution/Right_4K_TEX.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_3/Textures/4K_Resolution/Right_4K_TEX.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_3/Textures/4K_Resolution/Up_4K_TEX.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_3/Textures/4K_Resolution/Up_4K_TEX.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ecology_3d/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ecology_3d/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainSence.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainSence.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/NavMeshAreas.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/NavMeshAreas.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.testtools.codecoverage/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.testtools.codecoverage/Settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -270,41 +24,41 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 3
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="2YRmrVmmKZRLBfPo3s8uXUCiBoq" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyIntegratedToolsModulesConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "C:\\Users\\馮定安\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\DecompilerCache",
-      "C:\\Users\\馮定安\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\SourcesCache",
-      "C:\\Users\\馮定安\\AppData\\Local\\Symbols\\src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;C:\\Users\\match\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\match\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\match\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="G:\Unity\2022.3.11f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="C:\Program Files\Unity 2022.3.11f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath I:\大四上\人工智慧\ecology_3d -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="I:\大四上\人工智慧\ecology_3d" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -312,7 +66,7 @@
       <method v="2" />
     </configuration>
     <configuration name="Unit Tests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="G:\Unity\2022.3.11f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="C:\Program Files\Unity 2022.3.11f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath I:\大四上\人工智慧\ecology_3d -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="I:\大四上\人工智慧\ecology_3d" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -349,6 +103,10 @@
       <option name="presentableId" value="Default" />
       <updated>1700496966086</updated>
       <workItem from="1700496971096" duration="339000" />
+      <workItem from="1700894903036" duration="18000" />
+      <workItem from="1700894939332" duration="105000" />
+      <workItem from="1700895057699" duration="1010000" />
+      <workItem from="1700897966433" duration="1133000" />
     </task>
     <servers />
   </component>
@@ -360,5 +118,9 @@
   <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
