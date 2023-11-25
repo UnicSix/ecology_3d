@@ -162,6 +162,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1a852c8bfe9d094f976f2679afc0e8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  myClips: []
   range: 10
   Cam: {fileID: 963194227}
 --- !u!4 &72772283 stripped
@@ -873,6 +874,10 @@ PrefabInstance:
     - target: {fileID: 913845681951795218, guid: 2435736d6adca23458edd7c80c901e3e, type: 3}
       propertyPath: m_Name
       value: casual_Male_K
+      objectReference: {fileID: 0}
+    - target: {fileID: 3295747975015287969, guid: 2435736d6adca23458edd7c80c901e3e, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

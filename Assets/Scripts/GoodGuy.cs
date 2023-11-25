@@ -8,12 +8,14 @@ public class GoodGuy : MonoBehaviour
     private Vector3 goal;
     private NavMeshAgent _agent;
     private NavMeshHit hit;
+    [SerializeField] private AnimationClip[] myClips;
+    private Animator animator;
     [SerializeField] private float range = 30.0f;
     public Camera Cam;
     void Start()
     {
+        animator = GetComponent<Animator>();
         _agent = GetComponent<NavMeshAgent>();
-        StartCoroutine(RandomWalk());
     }
 
     void Update()
@@ -30,9 +32,9 @@ public class GoodGuy : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (_agent.remainingDistance==0f)
         {
-            Debug.Log("Space");
+            Debug.Log("Stop");
             Walk();
         }
     }
@@ -44,15 +46,6 @@ public class GoodGuy : MonoBehaviour
         if (NavMesh.SamplePosition(randomPoint, out hit, range, NavMesh.AllAreas))
         {
             _agent.destination = randomPoint; 
-        }
-    }
-
-    IEnumerator RandomWalk()
-    {
-        while (true)
-        {
-            yield return new WaitForSeconds(15.0f + Random.value * 5.0f);
-            Walk();
         }
     }
 }

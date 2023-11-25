@@ -6,7 +6,7 @@ namespace CityPeople
 {
     public class CityPeople : MonoBehaviour
     {
-        private AnimationClip[] myClips;
+        [SerializeField] private AnimationClip[] myClips;
         private Animator animator;
 
         void Start()
