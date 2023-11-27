@@ -18,6 +18,7 @@ TagManager:
   - Control_Wall
   - Aisle_Floor
   - Aisle_Wall
+  - Task
   layers:
   - Default
   - TransparentFX
@@ -25,8 +26,8 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
+  - Task
+  - Villager
   - 
   - 
   - 
