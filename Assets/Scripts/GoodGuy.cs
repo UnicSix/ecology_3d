@@ -8,14 +8,30 @@ public class GoodGuy : MonoBehaviour
     private Vector3 goal;
     private NavMeshAgent _agent;
     private NavMeshHit hit;
+    private List<Vector3> taskPositions;
     [SerializeField] private AnimationClip[] myClips;
     private Animator animator;
-    [SerializeField] private float range = 30.0f;
+    [Range(10f,50f)]
+    public float range = 30.0f;
     public Camera Cam;
     void Start()
     {
         animator = GetComponent<Animator>();
         _agent = GetComponent<NavMeshAgent>();
+        Cam = Camera.main;
+        taskPositions = new List<Vector3>();
+
+        // Assuming task objects are tagged as "TaskObject"
+        GameObject[] taskObjects = GameObject.FindGameObjectsWithTag("Task");
+
+        foreach (GameObject taskObject in taskObjects)
+        {
+            taskPositions.Add(taskObject.transform.position);
+        }
+        foreach (Vector3 pos in taskPositions)
+        {
+            Debug.Log("Task Object Position: " + pos);
+        }
     }
 
     void Update()
@@ -34,7 +50,6 @@ public class GoodGuy : MonoBehaviour
 
         if (_agent.remainingDistance==0f)
         {
-            Debug.Log("Stop");
             Walk();
         }
     }
