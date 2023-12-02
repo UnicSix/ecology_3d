@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18990731, g: 0.1426116, b: 0.15199834, a: 1}
+  m_IndirectSpecularColor: {r: 0.1904257, g: 0.14258197, b: 0.15262991, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -163,7 +163,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myClips: []
-  range: 30
+  range: 25.1
   Cam: {fileID: 0}
 --- !u!114 &72772284
 MonoBehaviour:
@@ -177,16 +177,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d68d6fd95f807ad47a9ad278b65483ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 0
-  angle: 0
-  villagerRef: {fileID: 72772278}
-  isInSight: 0
-  targetMask:
-    serializedVersion: 2
-    m_Bits: 128
-  obstructionMask:
-    serializedVersion: 2
-    m_Bits: 64
 --- !u!114 &72772288
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -202,9 +192,12 @@ MonoBehaviour:
   VisionConeMaterial: {fileID: 2100000, guid: 9255753fa8bf80e42b33758fc7fbe120, type: 2}
   VisionRange: 5
   VisionAngle: 90
-  VisionObstructingLayer:
+  obstacleMask:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 0
+  targetMask:
+    serializedVersion: 2
+    m_Bits: 0
   VisionConeResolution: 120
 --- !u!1001 &207992537
 PrefabInstance:
@@ -926,7 +919,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 568985597124981416, guid: 2435736d6adca23458edd7c80c901e3e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.09999943
+      value: -0.35
       objectReference: {fileID: 0}
     - target: {fileID: 568985597124981416, guid: 2435736d6adca23458edd7c80c901e3e, type: 3}
       propertyPath: m_LocalPosition.z

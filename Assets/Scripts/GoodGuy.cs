@@ -48,7 +48,7 @@ public class GoodGuy : MonoBehaviour
             }
         }
 
-        if (_agent.remainingDistance==0f)
+        if (_agent.remainingDistance == 0f)
         {
             Walk();
         }
