@@ -23,8 +23,14 @@ public class VisionCone : MonoBehaviour
         VisionConeMesh = new Mesh();
         VisionAngle = 90f;
         VisionAngle *= Mathf.Deg2Rad;
-        VisionRange = 15f;
+        VisionRange = 25f;
         VisionConeResolution = 10;
+        if (gameObject.CompareTag("BadGuy"))
+        {
+            VisionAngle = 15f;
+            VisionAngle *= Mathf.Deg2Rad;
+            VisionRange = 45;
+        }
     }
 
     void Update()

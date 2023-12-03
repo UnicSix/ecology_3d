@@ -19,6 +19,7 @@ TagManager:
   - Aisle_Floor
   - Aisle_Wall
   - Task
+  - BadGuy
   layers:
   - Default
   - TransparentFX
