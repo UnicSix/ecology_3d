@@ -44,7 +44,8 @@ public class GoodGuy : MonoBehaviour
             if( Physics.Raycast(ray, out hit) )
             {
                 Debug.Log(hit.point);
-                _agent.destination = hit.point; 
+                Vector3 dest = new Vector3(hit.point.x, hit.point.y+1.5f, hit.point.z);
+                _agent.destination = dest; 
             }
         }
 
