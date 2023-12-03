@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3340961706851718677}
   - component: {fileID: 3577221527791724882}
   m_Layer: 0
-  m_Name: GuyDead
+  m_Name: GuyDead-Origin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
