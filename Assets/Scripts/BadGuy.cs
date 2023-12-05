@@ -16,7 +16,7 @@ public class BadGuy : MonoBehaviour
     public Camera Cam;
     void Start()
     {
-        // animator = GetComponent<Animator>();
+        animator = GetComponent<Animator>();
         _agent = GetComponent<NavMeshAgent>();
         Cam = Camera.main;
         taskPositions = new List<Vector3>();

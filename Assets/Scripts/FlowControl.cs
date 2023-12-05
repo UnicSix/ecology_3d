@@ -18,6 +18,7 @@ public class FlowControl : MonoBehaviour
     {
 
     }
+    
     void Generate_Creatures()
     {
         if (Goodguy_Prefab != null)
@@ -28,7 +29,9 @@ public class FlowControl : MonoBehaviour
                 float x = spawnCenter.x + spawnCircleRad * Mathf.Cos(Mathf.Deg2Rad * angle);
                 float z = spawnCenter.z + spawnCircleRad * Mathf.Sin(Mathf.Deg2Rad * angle);
                 Vector3 spawnPos = new Vector3(x, spawnCenter.y, z);
-                GameObject goodGuy = Instantiate(Goodguy_Prefab, spawnPos, Quaternion.identity);
+                Quaternion rotation = Quaternion.LookRotation(spawnCenter - spawnPos); // Face Center
+
+                GameObject goodGuy = Instantiate(Goodguy_Prefab, spawnPos, rotation);
                 goodGuysList.Add(goodGuy);
             }
         }
