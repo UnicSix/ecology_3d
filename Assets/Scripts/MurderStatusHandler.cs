@@ -9,15 +9,16 @@ public class MurderStatusHandler : MonoBehaviour
     public Slider tailgating;
     public Slider assassinate;
     public Slider killingSpree;
-    
+    private Canvas selfcanvas;
     private void Start()
     {
+        selfcanvas = GetComponent<Canvas>();
         chaos.value = 0;
         tailgating.value = 0;
         assassinate.value = 0;
         killingSpree.value = 0;
-        HideStatus();
         // value can't be larger than 1 and smaller than zero (auto adjusted)
+        HideStatus();
     }
     public void update_Chaos(float val) {
         chaos.value = val;
@@ -29,12 +30,12 @@ public class MurderStatusHandler : MonoBehaviour
         assassinate.value = val;
     }
     public void update_killingSpree(float val) {
-        killingSpree.value = val;
+        killingSpree.value = val; 
     }
     public void HideStatus() {
-        gameObject.SetActive(false);
+        selfcanvas.enabled = false;
     }
     public void ShowStatus() {
-        gameObject.SetActive(true);
+        selfcanvas.enabled = true;
     }
 }
