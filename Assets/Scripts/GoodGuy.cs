@@ -14,6 +14,8 @@ public class GoodGuy : MonoBehaviour
     [Range(10f,50f)]
     public float range = 30.0f;
     public Camera Cam;
+    public GameObject footprint = null;
+    private float printTime;
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -38,20 +40,26 @@ public class GoodGuy : MonoBehaviour
     {
         Ray ray = Cam.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit = new RaycastHit();
-        if (Input.GetKeyDown(KeyCode.Mouse0))
-        {
-            goal= Input.mousePosition;
-            if( Physics.Raycast(ray, out hit) )
-            {
-                Debug.Log(hit.point);
-                Vector3 dest = new Vector3(hit.point.x, hit.point.y+1.5f, hit.point.z);
-                _agent.destination = dest; 
-            }
-        }
+        printTime += Time.deltaTime;
+        // if (Input.GetKeyDown(KeyCode.Mouse0))
+        // {
+        //     goal= Input.mousePosition;
+        //     if( Physics.Raycast(ray, out hit) )
+        //     {
+        //         Debug.Log(hit.point);
+        //         Vector3 dest = new Vector3(hit.point.x, hit.point.y+1.5f, hit.point.z);
+        //         _agent.destination = dest; 
+        //     }
+        // }
 
         if (_agent.remainingDistance == 0f)
         {
             Walk();
+        }
+        if(printTime > 0.15f)
+        {
+            LeaveFootPrint(transform.position);
+            printTime = 0f;
         }
     }
 
@@ -63,5 +71,12 @@ public class GoodGuy : MonoBehaviour
         {
             _agent.destination = randomPoint; 
         }
+    }
+
+    void LeaveFootPrint(Vector3 pos)
+    {
+        GameObject newprint = footprint;
+        Instantiate(newprint);
+        newprint.transform.position = pos;
     }
 }
