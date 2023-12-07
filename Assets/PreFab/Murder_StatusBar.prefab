@@ -239,7 +239,7 @@ GameObject:
   - component: {fileID: 3251129995324891645}
   - component: {fileID: 3245833375146064221}
   m_Layer: 0
-  m_Name: chaos
+  m_Name: Chaos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -421,7 +421,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2514668585431564893}
-  m_LocalRotation: {x: 0, y: -0.0026179885, z: 0, w: 0.9999966}
+  m_LocalRotation: {x: 0, y: -0.9848079, z: 0, w: 0.17364752}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.6, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
@@ -431,7 +431,7 @@ RectTransform:
   - {fileID: 2828220309413387150}
   - {fileID: 8002994135847211450}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: -0.3, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 1280, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 8}
@@ -482,7 +482,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!114 &4355762169014494756
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -554,7 +554,6 @@ MonoBehaviour:
   tailgating: {fileID: 6288090011939492581}
   assassinate: {fileID: 2262524000332623972}
   killingSpree: {fileID: 5421942900072356954}
-  on: 0
 --- !u!1 &3568234842425998084
 GameObject:
   m_ObjectHideFlags: 0

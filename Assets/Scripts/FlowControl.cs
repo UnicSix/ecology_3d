@@ -10,7 +10,6 @@ public class FlowControl : MonoBehaviour
     [SerializeField] public float spawnCircleRad = 5.0f;
     [SerializeField] public int numGoodguy = 10;
     [SerializeField] public int numBadguy = 2;
-    [SerializeField] public bool on = false, is_on = false; // TEMP
     private List<GameObject> GuysList = new List<GameObject>();
     private List<int> GuysType = new List<int>();
     void Start()
