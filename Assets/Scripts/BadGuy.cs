@@ -13,13 +13,17 @@ public class BadGuy : MonoBehaviour
     private Animator animator;
     [Range(10f,50f)]
     public float range = 30.0f;
-    public Camera Cam;
+    private Camera Cam;
+    private GameObject footprint;
+    private float printTime;
     void Start()
     {
         animator = GetComponent<Animator>();
         _agent = GetComponent<NavMeshAgent>();
         Cam = Camera.main;
         taskPositions = new List<Vector3>();
+        footprint = Resources.Load<GameObject>("FootPrintBad");
+        printTime = 0f;
 
         // Assuming task objects are tagged as "TaskObject"
         GameObject[] taskObjects = GameObject.FindGameObjectsWithTag("Task");
@@ -38,6 +42,7 @@ public class BadGuy : MonoBehaviour
     {
         Ray ray = Cam.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit = new RaycastHit();
+        printTime += Time.deltaTime;
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             goal= Input.mousePosition;
@@ -53,6 +58,15 @@ public class BadGuy : MonoBehaviour
         {
             Walk();
         }
+
+        if (printTime > 0.25f)
+        {
+            GameObject newprint = footprint;
+            Instantiate(newprint);
+            newprint.transform.position = transform.position;
+            printTime = 0f;
+        }
+        
     }
 
     void Walk()
