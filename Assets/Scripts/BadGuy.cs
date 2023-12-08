@@ -14,7 +14,7 @@ public class BadGuy : MonoBehaviour
     [Range(10f,50f)]
     public float range = 30.0f;
     private Camera Cam;
-    private GameObject footprint;
+    [SerializeField] public GameObject footprint;
     private float printTime;
     void Start()
     {
@@ -22,7 +22,8 @@ public class BadGuy : MonoBehaviour
         _agent = GetComponent<NavMeshAgent>();
         Cam = Camera.main;
         taskPositions = new List<Vector3>();
-        footprint = Resources.Load<GameObject>("FootPrintBad");
+        if (footprint == null)
+            footprint = Resources.Load<GameObject>("FootPrintBad");
         printTime = 0f;
 
         // Assuming task objects are tagged as "TaskObject"

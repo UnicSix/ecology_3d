@@ -26,7 +26,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7c5106dd5de22c04d81bb6694cb934d7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.22
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7c5106dd5de22c04d81bb6694cb934d7, type: 3}
       propertyPath: m_LocalPosition.z
@@ -168,7 +168,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myClips: []
   range: 30
-  Cam: {fileID: 0}
+  footprint: {fileID: 1393041673580144389, guid: c154851c530dee049876b37b06c62524, type: 3}
 --- !u!195 &4455311706426508451
 NavMeshAgent:
   m_ObjectHideFlags: 0
