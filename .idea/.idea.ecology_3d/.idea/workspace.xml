@@ -4,12 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="739ec775-2bce-411e-8645-81f107ffdc51" name="Changes" comment="good guy prefab fix">
+    <list default="true" id="739ec775-2bce-411e-8645-81f107ffdc51" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ecology_3d/.idea/shelf/Uncommitted_changes_before_Update_at_2023_12_3__07_00__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ecology_3d/.idea/shelf/Uncommitted_changes_before_Update_at_2023_12_3__07_00__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ecology_3d/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ecology_3d/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PreFab/Guy 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PreFab/Guy 1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/CharTestScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/CharTestScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FOVCone.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FOVCone.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PreFab/FootPrint.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PreFab/FootPrint.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GoodGuy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GoodGuy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GoodGuy.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GoodGuy.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +38,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/FOVCone.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Footprint.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SpawnPpl.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
@@ -67,15 +71,15 @@
   },
   &quot;keyToStringList&quot;: {
     &quot;rider.external.source.directories&quot;: [
-      &quot;C:\\Users\\match\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\DecompilerCache&quot;,
-      &quot;C:\\Users\\match\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\SourcesCache&quot;,
-      &quot;C:\\Users\\match\\AppData\\Local\\Symbols\\src&quot;
+      &quot;C:\\Users\\馮定安\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\馮定安\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\馮定安\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
 }</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="C:\Program Files\Unity 2022.3.11f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="G:\Unity\2022.3.11f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath I:\大四上\人工智慧\ecology_3d -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="I:\大四上\人工智慧\ecology_3d" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -83,7 +87,7 @@
       <method v="2" />
     </configuration>
     <configuration name="Unit Tests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="C:\Program Files\Unity 2022.3.11f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="G:\Unity\2022.3.11f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath I:\大四上\人工智慧\ecology_3d -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="I:\大四上\人工智慧\ecology_3d" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -128,6 +132,10 @@
       <workItem from="1700979317552" duration="543000" />
       <workItem from="1700991779742" duration="5151000" />
       <workItem from="1701160347601" duration="6500000" />
+      <workItem from="1701795973478" duration="1921000" />
+      <workItem from="1701800022135" duration="2016000" />
+      <workItem from="1701971137243" duration="1640000" />
+      <workItem from="1702003685594" duration="707000" />
     </task>
     <task id="LOCAL-00001" summary="editor scripts">
       <option name="closed" value="true" />
@@ -145,7 +153,23 @@
       <option name="project" value="LOCAL" />
       <updated>1701604628127</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="add badguy prefab and script">
+      <option name="closed" value="true" />
+      <created>1701610453131</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1701610453131</updated>
+    </task>
+    <task id="LOCAL-00004" summary="footprint update">
+      <option name="closed" value="true" />
+      <created>1701973054762</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1701973054762</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -169,7 +193,10 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="editor scripts" />
     <MESSAGE value="good guy prefab fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="good guy prefab fix" />
+    <MESSAGE value="add badguy prefab and script" />
+    <MESSAGE value="foot print" />
+    <MESSAGE value="footprint update" />
+    <option name="LAST_COMMIT_MESSAGE" value="footprint update" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -64,6 +64,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BadGuy
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7c5106dd5de22c04d81bb6694cb934d7, type: 3}
+      propertyPath: m_TagString
+      value: BadGuy
+      objectReference: {fileID: 0}
     - target: {fileID: 8743813690021804245, guid: 7c5106dd5de22c04d81bb6694cb934d7, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 

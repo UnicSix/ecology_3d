@@ -22,6 +22,7 @@ public class GoodGuy : MonoBehaviour
         _agent = GetComponent<NavMeshAgent>();
         Cam = Camera.main;
         taskPositions = new List<Vector3>();
+        footprint = Resources.Load<GameObject>("FootPrint");
 
         // Assuming task objects are tagged as "TaskObject"
         GameObject[] taskObjects = GameObject.FindGameObjectsWithTag("Task");
