@@ -22,7 +22,7 @@ public class GoodGuy : MonoBehaviour
         Cam = Camera.main;
         taskPositions = new List<Vector3>();
         if (footprint == null)
-            footprint = Resources.Load<GameObject>("FootPrintGood");
+            footprint = Resources.Load<GameObject>("Prefab/FootPrintGood");
 
         // Assuming task objects are tagged as "TaskObject"
         GameObject[] taskObjects = GameObject.FindGameObjectsWithTag("Task");

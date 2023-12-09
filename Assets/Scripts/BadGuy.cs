@@ -22,7 +22,7 @@ public class BadGuy : MonoBehaviour
         Cam = Camera.main;
         taskPositions = new List<Vector3>();
         if (footprint == null)
-            footprint = Resources.Load<GameObject>("FootPrintBad");
+            footprint = Resources.Load<GameObject>("Prefab/FootPrintBad");
         printTime = 0f;
 
         // Assuming task objects are tagged as "TaskObject"
@@ -48,7 +48,6 @@ public class BadGuy : MonoBehaviour
             goal= Input.mousePosition;
             if( Physics.Raycast(ray, out hit) )
             {
-                Debug.Log(hit.point);
                 Vector3 dest = new Vector3(hit.point.x, hit.point.y+1.5f, hit.point.z);
                 _agent.destination = dest; 
             }

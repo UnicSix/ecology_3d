@@ -1,0 +1,118 @@
+Index: .idea/.idea.ecology_3d/.idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"739ec775-2bce-411e-8645-81f107ffdc51\" name=\"Changes\" comment=\"\">\r\n      <change afterPath=\"$PROJECT_DIR$/Assets/Material/MyMaterial/Target.mat\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/Assets/Material/MyMaterial/Target.mat.meta\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/.idea.ecology_3d/.idea/codestream.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/.idea.ecology_3d/.idea/codestream.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/.idea.ecology_3d/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/.idea.ecology_3d/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Assets/Scenes/CharTestScene.unity\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Assets/Scenes/CharTestScene.unity\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Assets/Scenes/CharTestScene/NavMesh-Floor.asset\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Assets/Scenes/CharTestScene/NavMesh-Floor.asset\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Assets/Scenes/CharTestScene/NavMesh-Floor.asset.meta\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Assets/Scenes/CharTestScene/NavMesh-Floor.asset.meta\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Assets/Scenes/MainSence/NavMesh-SpaceShip.asset\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Assets/Scenes/MainSence/NavMesh-SpaceShip.asset.meta\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Assets/Scripts/Editor.meta\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Assets/Scripts/Editor/FieldOfViewEditor.cs\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Assets/Scripts/Editor/FieldOfViewEditor.cs.meta\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Assets/Scripts/GoodGuy.cs\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Assets/Scripts/GoodGuy.cs\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Assets/Scripts/VillagerFOV.cs\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Assets/Scripts/VillagerFOV.cs.meta\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/UserSettings/EditorUserSettings.asset\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/UserSettings/EditorUserSettings.asset\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"HighlightingSettingsPerFile\">\r\n    <setting file=\"mock://D:/Github/ecology_3d/Assets/Scenes/CharTestScene.unity\" root0=\"SKIP_HIGHLIGHTING\" />\r\n    <setting file=\"mock://D:/Github/ecology_3d/Assets/Scenes/CharTestScene.unity\" root0=\"SKIP_HIGHLIGHTING\" />\r\n    <setting file=\"file://$PROJECT_DIR$/Assets/Scripts/FOVCone.cs\" root0=\"FORCE_HIGHLIGHTING\" />\r\n    <setting file=\"file://$PROJECT_DIR$/Assets/Scripts/VillagerFOV.cs\" root0=\"FORCE_HIGHLIGHTING\" />\r\n    <setting file=\"mock://D:/Github/ecology_3d/UserSettings/EditorUserSettings.asset\" root0=\"SKIP_HIGHLIGHTING\" />\r\n    <setting file=\"mock://D:/Github/ecology_3d/UserSettings/EditorUserSettings.asset\" root0=\"SKIP_HIGHLIGHTING\" />\r\n  </component>\r\n  <component name=\"MetaFilesCheckinStateConfiguration\" checkMetaFiles=\"true\" />\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;customColor&quot;: &quot;&quot;,\r\n  &quot;associatedIndex&quot;: 3\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"2YRmrVmmKZRLBfPo3s8uXUCiBoq\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\">\r\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\r\n  </component>\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"ASKED_ADD_EXTERNAL_FILES\": \"true\",\r\n    \"RunOnceActivity.OpenProjectViewOnStart\": \"true\",\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"WebServerToolWindowFactoryState\": \"false\",\r\n    \"git-widget-placeholder\": \"master\",\r\n    \"ignore.virus.scanning.warn.message\": \"true\",\r\n    \"node.js.detected.package.eslint\": \"true\",\r\n    \"node.js.detected.package.tslint\": \"true\",\r\n    \"node.js.selected.package.eslint\": \"(autodetect)\",\r\n    \"node.js.selected.package.tslint\": \"(autodetect)\",\r\n    \"settings.editor.selected.configurable\": \"preferences.pluginManager\",\r\n    \"vue.rearranger.settings.migration\": \"true\"\r\n  },\r\n  \"keyToStringList\": {\r\n    \"rider.external.source.directories\": [\r\n      \"C:\\\\Users\\\\match\\\\AppData\\\\Roaming\\\\JetBrains\\\\Rider2023.2\\\\resharper-host\\\\DecompilerCache\",\r\n      \"C:\\\\Users\\\\match\\\\AppData\\\\Roaming\\\\JetBrains\\\\Rider2023.2\\\\resharper-host\\\\SourcesCache\",\r\n      \"C:\\\\Users\\\\match\\\\AppData\\\\Local\\\\Symbols\\\\src\"\r\n    ]\r\n  }\r\n}]]></component>\r\n  <component name=\"RunManager\" selected=\"Attach to Unity Editor.Attach to Unity Editor\">\r\n    <configuration name=\"Start Unity\" type=\"RunUnityExe\" factoryName=\"Unity Executable\">\r\n      <option name=\"EXE_PATH\" value=\"C:\\Program Files\\Unity 2022.3.11f1\\Editor\\Unity.exe\" />\r\n      <option name=\"PROGRAM_PARAMETERS\" value=\"-projectPath I:\\大四上\\人工智慧\\ecology_3d -debugCodeOptimization\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"I:\\大四上\\人工智慧\\ecology_3d\" />\r\n      <option name=\"PASS_PARENT_ENVS\" value=\"1\" />\r\n      <option name=\"USE_EXTERNAL_CONSOLE\" value=\"0\" />\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"Unit Tests (batch mode)\" type=\"RunUnityExe\" factoryName=\"Unity Executable\">\r\n      <option name=\"EXE_PATH\" value=\"C:\\Program Files\\Unity 2022.3.11f1\\Editor\\Unity.exe\" />\r\n      <option name=\"PROGRAM_PARAMETERS\" value=\"-runTests -batchmode -projectPath I:\\大四上\\人工智慧\\ecology_3d -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"I:\\大四上\\人工智慧\\ecology_3d\" />\r\n      <option name=\"PASS_PARENT_ENVS\" value=\"1\" />\r\n      <option name=\"USE_EXTERNAL_CONSOLE\" value=\"0\" />\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"Attach to Unity Editor &amp; Play\" type=\"UNITY_DEBUG_RUN_CONFIGURATION\" factoryName=\"UNITY_ATTACH_AND_PLAY\" show_console_on_std_err=\"false\" show_console_on_std_out=\"false\" port=\"50000\" address=\"localhost\">\r\n      <option name=\"allowRunningInParallel\" value=\"false\" />\r\n      <option name=\"listenPortForConnections\" value=\"false\" />\r\n      <option name=\"pid\" />\r\n      <option name=\"projectPathOnTarget\" />\r\n      <option name=\"selectedOptions\">\r\n        <list />\r\n      </option>\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"Attach to Unity Editor\" type=\"UNITY_DEBUG_RUN_CONFIGURATION\" factoryName=\"Unity Debug\" show_console_on_std_err=\"false\" show_console_on_std_out=\"false\" port=\"50000\" address=\"localhost\">\r\n      <option name=\"allowRunningInParallel\" value=\"false\" />\r\n      <option name=\"listenPortForConnections\" value=\"false\" />\r\n      <option name=\"pid\" />\r\n      <option name=\"projectPathOnTarget\" />\r\n      <option name=\"selectedOptions\">\r\n        <list />\r\n      </option>\r\n      <method v=\"2\" />\r\n    </configuration>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"739ec775-2bce-411e-8645-81f107ffdc51\" name=\"Changes\" comment=\"\" />\r\n      <created>1700496966086</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1700496966086</updated>\r\n      <workItem from=\"1700496971096\" duration=\"339000\" />\r\n      <workItem from=\"1700894903036\" duration=\"18000\" />\r\n      <workItem from=\"1700894939332\" duration=\"105000\" />\r\n      <workItem from=\"1700895057699\" duration=\"1010000\" />\r\n      <workItem from=\"1700897966433\" duration=\"1133000\" />\r\n      <workItem from=\"1700976172805\" duration=\"1146000\" />\r\n      <workItem from=\"1700979317552\" duration=\"543000\" />\r\n      <workItem from=\"1700991779742\" duration=\"5151000\" />\r\n      <workItem from=\"1701160347601\" duration=\"6500000\" />\r\n    </task>\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"UnityCheckinConfiguration\" checkUnsavedScenes=\"true\" />\r\n  <component name=\"UnityProjectConfiguration\" hasMinimizedUI=\"true\" />\r\n  <component name=\"UnityUnitTestConfiguration\" currentTestLauncher=\"Both\" />\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <option name=\"CLEAR_INITIAL_COMMIT_MESSAGE\" value=\"true\" />\r\n  </component>\r\n  <component name=\"XSLT-Support.FileAssociations.UIState\">\r\n    <expand />\r\n    <select />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/.idea.ecology_3d/.idea/workspace.xml b/.idea/.idea.ecology_3d/.idea/workspace.xml
+--- a/.idea/.idea.ecology_3d/.idea/workspace.xml	(revision 1d7d42a2d988f87afd8d9fcffb77a07f18bf0f44)
++++ b/.idea/.idea.ecology_3d/.idea/workspace.xml	(date 1701673526225)
+@@ -4,23 +4,9 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="739ec775-2bce-411e-8645-81f107ffdc51" name="Changes" comment="">
+-      <change afterPath="$PROJECT_DIR$/Assets/Material/MyMaterial/Target.mat" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/Assets/Material/MyMaterial/Target.mat.meta" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ecology_3d/.idea/codestream.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ecology_3d/.idea/codestream.xml" afterDir="false" />
++    <list default="true" id="739ec775-2bce-411e-8645-81f107ffdc51" name="Changes" comment="fov">
+       <change beforePath="$PROJECT_DIR$/.idea/.idea.ecology_3d/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ecology_3d/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/CharTestScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/CharTestScene.unity" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/CharTestScene/NavMesh-Floor.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/CharTestScene/NavMesh-Floor.asset" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/CharTestScene/NavMesh-Floor.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/CharTestScene/NavMesh-Floor.asset.meta" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainSence/NavMesh-SpaceShip.asset" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainSence/NavMesh-SpaceShip.asset.meta" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Editor.meta" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Editor/FieldOfViewEditor.cs" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Editor/FieldOfViewEditor.cs.meta" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GoodGuy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GoodGuy.cs" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/VillagerFOV.cs" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/VillagerFOV.cs.meta" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -31,12 +17,12 @@
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+   </component>
+   <component name="HighlightingSettingsPerFile">
+-    <setting file="mock://D:/Github/ecology_3d/Assets/Scenes/CharTestScene.unity" root0="SKIP_HIGHLIGHTING" />
++    <setting file="file://$PROJECT_DIR$/Assets/DenysAlmaral/CityPeopleLite/Demo_Scenes/Scripts/CityPeople.cs" root0="SKIP_HIGHLIGHTING" />
++    <setting file="file://$PROJECT_DIR$/Assets/Editor/FieldOfViewEditor.cs" root0="SKIP_HIGHLIGHTING" />
++    <setting file="file://$PROJECT_DIR$/Assets/Editor/VillagerFOV.cs" root0="SKIP_HIGHLIGHTING" />
+     <setting file="mock://D:/Github/ecology_3d/Assets/Scenes/CharTestScene.unity" root0="SKIP_HIGHLIGHTING" />
+-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/FOVCone.cs" root0="FORCE_HIGHLIGHTING" />
+-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/VillagerFOV.cs" root0="FORCE_HIGHLIGHTING" />
+-    <setting file="mock://D:/Github/ecology_3d/UserSettings/EditorUserSettings.asset" root0="SKIP_HIGHLIGHTING" />
+-    <setting file="mock://D:/Github/ecology_3d/UserSettings/EditorUserSettings.asset" root0="SKIP_HIGHLIGHTING" />
++    <setting file="file://$PROJECT_DIR$/Assets/Scripts/FOVCone.cs" root0="SKIP_HIGHLIGHTING" />
++    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GoodGuy.cs" root0="SKIP_HIGHLIGHTING" />
+   </component>
+   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
+   <component name="ProjectColorInfo">{
+@@ -128,8 +114,25 @@
+       <workItem from="1700976172805" duration="1146000" />
+       <workItem from="1700979317552" duration="543000" />
+       <workItem from="1700991779742" duration="5151000" />
+-      <workItem from="1701160347601" duration="6500000" />
++      <workItem from="1701160347601" duration="7428000" />
+     </task>
++    <task id="LOCAL-00001" summary="fov update(still not functioning well">
++      <option name="closed" value="true" />
++      <created>1701336317894</created>
++      <option name="number" value="00001" />
++      <option name="presentableId" value="LOCAL-00001" />
++      <option name="project" value="LOCAL" />
++      <updated>1701336317894</updated>
++    </task>
++    <task id="LOCAL-00002" summary="fov">
++      <option name="closed" value="true" />
++      <created>1701415413363</created>
++      <option name="number" value="00002" />
++      <option name="presentableId" value="LOCAL-00002" />
++      <option name="project" value="LOCAL" />
++      <updated>1701415413363</updated>
++    </task>
++    <option name="localTasksCounter" value="3" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -140,6 +143,9 @@
+   <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
+   <component name="VcsManagerConfiguration">
+     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
++    <MESSAGE value="fov update(still not functioning well" />
++    <MESSAGE value="fov" />
++    <option name="LAST_COMMIT_MESSAGE" value="fov" />
+   </component>
+   <component name="XSLT-Support.FileAssociations.UIState">
+     <expand />
+Index: ProjectSettings/TagManager.asset
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>%YAML 1.1\r\n%TAG !u! tag:unity3d.com,2011:\r\n--- !u!78 &1\r\nTagManager:\r\n  serializedVersion: 2\r\n  tags:\r\n  - Normal_Wall\r\n  - Normal_Floor\r\n  - Cafeteria_Floor\r\n  - Cafeteria_Wall\r\n  - Rest_Floor\r\n  - Rest_Wall\r\n  - Event_Floor\r\n  - Event_Wall\r\n  - Power_Floor\r\n  - Power_Wall\r\n  - Control_Floor\r\n  - Control_Wall\r\n  - Aisle_Floor\r\n  - Aisle_Wall\r\n  - Task\r\n  layers:\r\n  - Default\r\n  - TransparentFX\r\n  - Ignore Raycast\r\n  - \r\n  - Water\r\n  - UI\r\n  - Task\r\n  - Villager\r\n  - \r\n  - \r\n  - \r\n  - \r\n  - \r\n  - \r\n  - \r\n  - \r\n  - \r\n  - \r\n  - \r\n  - \r\n  - \r\n  - \r\n  - \r\n  - \r\n  - \r\n  - \r\n  - \r\n  - \r\n  - \r\n  - \r\n  - \r\n  - \r\n  m_SortingLayers:\r\n  - name: Default\r\n    uniqueID: 0\r\n    locked: 0\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/ProjectSettings/TagManager.asset b/ProjectSettings/TagManager.asset
+--- a/ProjectSettings/TagManager.asset	(revision 1d7d42a2d988f87afd8d9fcffb77a07f18bf0f44)
++++ b/ProjectSettings/TagManager.asset	(date 1701673512007)
+@@ -19,6 +19,7 @@
+   - Aisle_Floor
+   - Aisle_Wall
+   - Task
++  - Ship
+   layers:
+   - Default
+   - TransparentFX
+@@ -28,7 +29,7 @@
+   - UI
+   - Task
+   - Villager
+-  - 
++  - Wall
+   - 
+   - 
+   - 

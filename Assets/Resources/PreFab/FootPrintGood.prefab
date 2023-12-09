@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1805000520254889928}
   - component: {fileID: 892916201365172331}
   - component: {fileID: 5614194322114394567}
+  - component: {fileID: 5248263054075732243}
   m_Layer: 0
   m_Name: FootPrintGood
   m_TagString: GoodPrint
@@ -28,8 +29,13 @@ Transform:
   m_GameObject: {fileID: 8445895244651686643}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+<<<<<<< HEAD
   m_LocalPosition: {x: 2.8040009, y: -4.1141605, z: 17.25201}
   m_LocalScale: {x: 0.4, y: 0.01, z: 0.4}
+=======
+  m_LocalPosition: {x: -29.941313, y: -0.4867859, z: -68.67363}
+  m_LocalScale: {x: 0.6, y: 0.01, z: 0.6}
+>>>>>>> 3fe447eaa263bf5aff13ff2c9ac94d6589e947da
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -97,3 +103,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Lifetime: 5
+--- !u!135 &5248263054075732243
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8445895244651686643}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
