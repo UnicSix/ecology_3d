@@ -74,7 +74,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 50}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 28
+  controlID: 49
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -99,7 +99,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 104
+  controlID: 102
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -119,8 +119,8 @@ MonoBehaviour:
     y: 0
     width: 454
     height: 1347
-  m_MinSize: {x: 276, y: 71}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -321,7 +321,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Resources/PreFab
+    - Assets/Resources/PreFab/MyPreFab
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -329,30 +329,30 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 96
   m_LastFolders:
-  - Assets/Resources/PreFab
+  - Assets/Resources/PreFab/MyPreFab
   m_LastFoldersGridSize: 96
   m_LastProjectPath: S:\Program Files\Projects\ecology_3d
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: e4600000
-    m_LastClickedID: 24804
-    m_ExpandedIDs: 00000000ce5f0000d05f0000d25f0000aa600000ae600000e460000000ca9a3b
+    m_SelectedIDs: fa420000
+    m_LastClickedID: 17146
+    m_ExpandedIDs: 00000000d24000008a41000092420000e643000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: MyPreFab
+      m_OriginalName: MyPreFab
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: 17146
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 6}
     m_SearchString: 
@@ -366,7 +366,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000ce5f0000d05f0000d25f0000
+    m_ExpandedIDs: 
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -393,7 +393,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -506,9 +506,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 947effff
-      m_LastClickedID: -33132
-      m_ExpandedIDs: 5046f7ff0a7cf8ff5a19fafff6cefbffc8ddfbff0a80ffffb28cffffd498ffffdaa6ffff7eb4ffff86bdfffff8bfffffe4ccffff34d3ffff2efbffff5e5a0000186c0000
+      m_SelectedIDs: 4ce8feff
+      m_LastClickedID: -71604
+      m_ExpandedIDs: 78edfeff62effeff98f0feff90f9feff06fcfeff9cfffeff1001ffffc4ac0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -875,9 +875,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 378.68604, y: -411.81732, z: -78.89071}
+    m_Target: {x: 0.93599844, y: 5.000306, z: -9.56974}
     speed: 2
-    m_Value: {x: 378.68604, y: -411.81732, z: -78.89071}
+    m_Value: {x: 0.93599844, y: 5.000306, z: -9.56974}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -923,13 +923,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.3265095, y: 0.67167425, z: -0.24634516, w: 0.61427534}
+    m_Target: {x: 0.34251437, y: 0.6592815, z: -0.25028247, w: 0.61731726}
     speed: 2
-    m_Value: {x: 0.3281285, y: 0.6727282, z: -0.24787243, w: 0.6150835}
+    m_Value: {x: 0.34101567, y: 0.6623819, z: -0.24936074, w: 0.6186904}
   m_Size:
-    m_Target: 284.60275
+    m_Target: 0.7071245
     speed: 2
-    m_Value: 3.5539963
+    m_Value: 0.8643188
   m_Ortho:
     m_Target: 0
     speed: 2
