@@ -148,15 +148,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7c5106dd5de22c04d81bb6694cb934d7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.738
+      value: 23.18306
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7c5106dd5de22c04d81bb6694cb934d7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.18
+      value: -0.4999981
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7c5106dd5de22c04d81bb6694cb934d7, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -17.51
+      value: 20.642696
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7c5106dd5de22c04d81bb6694cb934d7, type: 3}
       propertyPath: m_LocalRotation.w
@@ -296,6 +296,7 @@ MonoBehaviour:
   myClips: []
   range: 30
   Cam: {fileID: 0}
+  footprint: {fileID: 8445895244651686643, guid: 476e4bc9aa5ef724a8496b74dee16f59, type: 3}
 --- !u!195 &8838733092706029413
 NavMeshAgent:
   m_ObjectHideFlags: 0
