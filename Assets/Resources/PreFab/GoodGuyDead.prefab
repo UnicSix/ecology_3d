@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1400731322004751859}
   m_Layer: 0
   m_Name: GoodGuyDead
-  m_TagString: Untagged
+  m_TagString: DeadBody
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -408,7 +408,7 @@ GameObject:
   - component: {fileID: 8240347181005668595}
   - component: {fileID: 6706480655735182849}
   m_Layer: 0
-  m_Name: Murder_StatusBar
+  m_Name: Murderer_StatusBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -421,7 +421,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2514668585431564893}
-  m_LocalRotation: {x: 0, y: -0.9848079, z: 0, w: 0.17364752}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.6, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
@@ -431,7 +431,7 @@ RectTransform:
   - {fileID: 2828220309413387150}
   - {fileID: 8002994135847211450}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 1280, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 8}

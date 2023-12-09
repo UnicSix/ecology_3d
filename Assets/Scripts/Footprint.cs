@@ -6,7 +6,6 @@ public class Footprint : MonoBehaviour
 {
     [Tooltip("this is how long the decal will stay, before it shrinks away totally")]
     public float Lifetime = 5.0f;
-
     private float mark;
     private Vector3 OrigSize;
 

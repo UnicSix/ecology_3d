@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class MurderStatusHandlerer : MonoBehaviour
+public class MurdererStatusHandler : MonoBehaviour
 {
     public Slider chaos;
     public Slider tailgating;
@@ -12,13 +12,13 @@ public class MurderStatusHandlerer : MonoBehaviour
     private Canvas selfcanvas;
     private void Start()
     {
-        selfcanvas = GetComponent<Canvas>(); 
+        selfcanvas = GetComponent<Canvas>();
         chaos.value = 0;
         tailgating.value = 0;
         assassinate.value = 0;
         killingSpree.value = 0;
         // value can't be larger than 1 and smaller than zero (auto adjusted)
-        HideStatus();
+        Hide();
     }
     public void update_Chaos(float val) {
         chaos.value = val;
@@ -32,10 +32,10 @@ public class MurderStatusHandlerer : MonoBehaviour
     public void update_killingSpree(float val) {
         killingSpree.value = val; 
     }
-    public void HideStatus() {
+    public void Hide() {
         selfcanvas.enabled = false;
     }
-    public void ShowStatus() {
+    public void Show() {
         selfcanvas.enabled = true;
     }
 }

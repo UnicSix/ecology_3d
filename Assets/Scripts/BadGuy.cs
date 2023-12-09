@@ -11,8 +11,7 @@ public class BadGuy : MonoBehaviour
     private List<Vector3> taskPositions;
     [SerializeField] private AnimationClip[] myClips;
     private Animator animator;
-    [Range(10f,50f)]
-    public float range = 30.0f;
+    [Range(10f,50f)] public float range = 30.0f;
     private Camera Cam;
     [SerializeField] public GameObject footprint;
     private float printTime;

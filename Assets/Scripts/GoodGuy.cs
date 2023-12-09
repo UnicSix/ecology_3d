@@ -11,8 +11,7 @@ public class GoodGuy : MonoBehaviour
     private List<Vector3> taskPositions;
     [SerializeField] private AnimationClip[] myClips;
     private Animator animator;
-    [Range(10f,50f)]
-    public float range = 30.0f;
+    [Range(10f,50f)] public float range = 30.0f;
     public Camera Cam;
     [SerializeField] public GameObject footprint;
     private float printTime;
@@ -41,7 +40,7 @@ public class GoodGuy : MonoBehaviour
     void Update()
     {
         Ray ray = Cam.ScreenPointToRay(Input.mousePosition);
-        RaycastHit hit = new RaycastHit();
+        // RaycastHit hit = new RaycastHit();
         printTime += Time.deltaTime;
         // if (Input.GetKeyDown(KeyCode.Mouse0))
         // {

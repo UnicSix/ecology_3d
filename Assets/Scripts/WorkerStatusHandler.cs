@@ -16,7 +16,7 @@ public class WorkerStatusHandler : MonoBehaviour
         panic.value = 0;
         alarm.value = 0;
         // value can't be larger than 1 and smaller than zero (auto adjusted)
-        HideStatus();
+        Hide();
     }
     public void update_work(float val) {
         work.value = val;
@@ -27,10 +27,10 @@ public class WorkerStatusHandler : MonoBehaviour
     public void update_alarm(float val) {
         alarm.value = val; 
     }
-    public void HideStatus() {
+    public void Hide() {
         selfcanvas.enabled = false;
     }
-    public void ShowStatus() {
+    public void Show() {
         selfcanvas.enabled = true;
     }
 }
