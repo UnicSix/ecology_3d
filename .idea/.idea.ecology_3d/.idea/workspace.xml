@@ -7,12 +7,11 @@
     <list default="true" id="739ec775-2bce-411e-8645-81f107ffdc51" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ecology_3d/.idea/shelf/Uncommitted_changes_before_Update_at_2023_12_3__07_00__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ecology_3d/.idea/shelf/Uncommitted_changes_before_Update_at_2023_12_3__07_00__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ecology_3d/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ecology_3d/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/PreFab/FootPrintBad.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/PreFab/FootPrintBad.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/PreFab/FootPrintBad.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/PreFab/FootPrintBad.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/PreFab/FootPrintGood.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/PreFab/FootPrintGood.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/CharTestScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/CharTestScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BadGuy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BadGuy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PreFab/FootPrint.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PreFab/FootPrint.prefab.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GoodGuy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GoodGuy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GoodGuy.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GoodGuy.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -136,8 +135,7 @@
       <workItem from="1701795973478" duration="1921000" />
       <workItem from="1701800022135" duration="2016000" />
       <workItem from="1701971137243" duration="1640000" />
-      <workItem from="1702003685594" duration="5573000" />
-      <workItem from="1702094612035" duration="1261000" />
+      <workItem from="1702003685594" duration="707000" />
     </task>
     <task id="LOCAL-00001" summary="editor scripts">
       <option name="closed" value="true" />
@@ -171,31 +169,7 @@
       <option name="project" value="LOCAL" />
       <updated>1701973054762</updated>
     </task>
-    <task id="LOCAL-00005" summary="load foot print from resources">
-      <option name="closed" value="true" />
-      <created>1702009766855</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1702009766855</updated>
-    </task>
-    <task id="LOCAL-00006" summary="footprint update">
-      <option name="closed" value="true" />
-      <created>1702019356329</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1702019356329</updated>
-    </task>
-    <task id="LOCAL-00007" summary="weapon set">
-      <option name="closed" value="true" />
-      <created>1702094745994</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1702094745994</updated>
-    </task>
-    <option name="localTasksCounter" value="8" />
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -221,10 +195,8 @@
     <MESSAGE value="good guy prefab fix" />
     <MESSAGE value="add badguy prefab and script" />
     <MESSAGE value="foot print" />
-    <MESSAGE value="load foot print from resources" />
     <MESSAGE value="footprint update" />
-    <MESSAGE value="weapon set" />
-    <option name="LAST_COMMIT_MESSAGE" value="weapon set" />
+    <option name="LAST_COMMIT_MESSAGE" value="footprint update" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

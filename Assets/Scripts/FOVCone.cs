@@ -83,7 +83,6 @@ public class VisionCone : MonoBehaviour
             float angleIcrement = VisionAngle / (VisionConeResolution - 1);
             float Sine;
             float Cosine;
-            RaycastHit[] hits;
 
             for (int i = 0; i < VisionConeResolution; i++)
             {
@@ -100,8 +99,6 @@ public class VisionCone : MonoBehaviour
                 {
                     Vertices[i + 1] = VertForward.normalized * VisionRange;
                 }
-                hits = Physics.RaycastAll(transform.position, RaycastDirection, VisionRange, obstacleMask);
-                
 
 
                 Currentangle += angleIcrement;
