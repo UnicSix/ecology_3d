@@ -361,7 +361,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   printTimeGap: 0.15
-  footprint: {fileID: 8445895244651686643, guid: 476e4bc9aa5ef724a8496b74dee16f59, type: 3}
+  footprint: {fileID: 2140893498484936665, guid: 476e4bc9aa5ef724a8496b74dee16f59, type: 3}
 --- !u!195 &8663059581122874056
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -458,7 +458,7 @@ Transform:
   m_GameObject: {fileID: 7141969195140726236}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.6, y: 2.1340218, z: 0.94}
+  m_LocalPosition: {x: -1.86, y: 2.1340218, z: 0.49}
   m_LocalScale: {x: 0.79198515, y: 1.2866207, z: 1.2866207}
   m_ConstrainProportionsScale: 0
   m_Children: []
