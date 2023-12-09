@@ -1,0 +1,955 @@
+Index: Assets/Scenes/CharTestScene.unity
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>%YAML 1.1\r\n%TAG !u! tag:unity3d.com,2011:\r\n--- !u!29 &1\r\nOcclusionCullingSettings:\r\n  m_ObjectHideFlags: 0\r\n  serializedVersion: 2\r\n  m_OcclusionBakeSettings:\r\n    smallestOccluder: 5\r\n    smallestHole: 0.25\r\n    backfaceThreshold: 100\r\n  m_SceneGUID: 00000000000000000000000000000000\r\n  m_OcclusionCullingData: {fileID: 0}\r\n--- !u!104 &2\r\nRenderSettings:\r\n  m_ObjectHideFlags: 0\r\n  serializedVersion: 9\r\n  m_Fog: 0\r\n  m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}\r\n  m_FogMode: 3\r\n  m_FogDensity: 0.01\r\n  m_LinearFogStart: 0\r\n  m_LinearFogEnd: 300\r\n  m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}\r\n  m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}\r\n  m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}\r\n  m_AmbientIntensity: 5\r\n  m_AmbientMode: 0\r\n  m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}\r\n  m_SkyboxMaterial: {fileID: 2100000, guid: 95ebf50189f880e4aa17c4fdba9007aa, type: 2}\r\n  m_HaloStrength: 0.5\r\n  m_FlareStrength: 1\r\n  m_FlareFadeSpeed: 3\r\n  m_HaloTexture: {fileID: 0}\r\n  m_SpotCookie: {fileID: 10001, guid: 0000000000000000e000000000000000, type: 0}\r\n  m_DefaultReflectionMode: 0\r\n  m_DefaultReflectionResolution: 128\r\n  m_ReflectionBounces: 1\r\n  m_ReflectionIntensity: 1\r\n  m_CustomReflection: {fileID: 0}\r\n  m_Sun: {fileID: 705507994}\r\n  m_IndirectSpecularColor: {r: 0.1904257, g: 0.14258197, b: 0.15262991, a: 1}\r\n  m_UseRadianceAmbientProbe: 0\r\n--- !u!157 &3\r\nLightmapSettings:\r\n  m_ObjectHideFlags: 0\r\n  serializedVersion: 12\r\n  m_GIWorkflowMode: 1\r\n  m_GISettings:\r\n    serializedVersion: 2\r\n    m_BounceScale: 1\r\n    m_IndirectOutputScale: 1\r\n    m_AlbedoBoost: 1\r\n    m_EnvironmentLightingMode: 0\r\n    m_EnableBakedLightmaps: 1\r\n    m_EnableRealtimeLightmaps: 0\r\n  m_LightmapEditorSettings:\r\n    serializedVersion: 12\r\n    m_Resolution: 2\r\n    m_BakeResolution: 40\r\n    m_AtlasSize: 1024\r\n    m_AO: 0\r\n    m_AOMaxDistance: 1\r\n    m_CompAOExponent: 1\r\n    m_CompAOExponentDirect: 0\r\n    m_ExtractAmbientOcclusion: 0\r\n    m_Padding: 2\r\n    m_LightmapParameters: {fileID: 0}\r\n    m_LightmapsBakeMode: 1\r\n    m_TextureCompression: 1\r\n    m_FinalGather: 0\r\n    m_FinalGatherFiltering: 1\r\n    m_FinalGatherRayCount: 256\r\n    m_ReflectionCompression: 2\r\n    m_MixedBakeMode: 2\r\n    m_BakeBackend: 1\r\n    m_PVRSampling: 1\r\n    m_PVRDirectSampleCount: 32\r\n    m_PVRSampleCount: 500\r\n    m_PVRBounces: 2\r\n    m_PVREnvironmentSampleCount: 500\r\n    m_PVREnvironmentReferencePointCount: 2048\r\n    m_PVRFilteringMode: 2\r\n    m_PVRDenoiserTypeDirect: 0\r\n    m_PVRDenoiserTypeIndirect: 0\r\n    m_PVRDenoiserTypeAO: 0\r\n    m_PVRFilterTypeDirect: 0\r\n    m_PVRFilterTypeIndirect: 0\r\n    m_PVRFilterTypeAO: 0\r\n    m_PVREnvironmentMIS: 0\r\n    m_PVRCulling: 1\r\n    m_PVRFilteringGaussRadiusDirect: 1\r\n    m_PVRFilteringGaussRadiusIndirect: 5\r\n    m_PVRFilteringGaussRadiusAO: 2\r\n    m_PVRFilteringAtrousPositionSigmaDirect: 0.5\r\n    m_PVRFilteringAtrousPositionSigmaIndirect: 2\r\n    m_PVRFilteringAtrousPositionSigmaAO: 1\r\n    m_ExportTrainingData: 0\r\n    m_TrainingDataDestination: TrainingData\r\n    m_LightProbeSampleCountMultiplier: 4\r\n  m_LightingDataAsset: {fileID: 0}\r\n  m_LightingSettings: {fileID: 0}\r\n--- !u!196 &4\r\nNavMeshSettings:\r\n  serializedVersion: 2\r\n  m_ObjectHideFlags: 0\r\n  m_BuildSettings:\r\n    serializedVersion: 3\r\n    agentTypeID: 0\r\n    agentRadius: 0.5\r\n    agentHeight: 2\r\n    agentSlope: 45\r\n    agentClimb: 0.4\r\n    ledgeDropHeight: 0\r\n    maxJumpAcrossDistance: 0\r\n    minRegionArea: 2\r\n    manualCellSize: 0\r\n    cellSize: 0.16666667\r\n    manualTileSize: 0\r\n    tileSize: 256\r\n    buildHeightMesh: 0\r\n    maxJobWorkers: 0\r\n    preserveTilesOutsideBounds: 0\r\n    debug:\r\n      m_Flags: 0\r\n  m_NavMeshData: {fileID: 0}\r\n--- !u!1001 &207992537\r\nPrefabInstance:\r\n  m_ObjectHideFlags: 0\r\n  serializedVersion: 2\r\n  m_Modification:\r\n    serializedVersion: 3\r\n    m_TransformParent: {fileID: 0}\r\n    m_Modifications:\r\n    - target: {fileID: -8679921383154817045, guid: 36b66908e1969b0478efc5e2f1e7cd01, type: 3}\r\n      propertyPath: m_LocalScale.x\r\n      value: 15\r\n      objectReference: {fileID: 0}\r\n    - target: {fileID: -8679921383154817045, guid: 36b66908e1969b0478efc5e2f1e7cd01, type: 3}\r\n      propertyPath: m_LocalScale.y\r\n      value: 15\r\n      objectReference: {fileID: 0}\r\n    - target: {fileID: -8679921383154817045, guid: 36b66908e1969b0478efc5e2f1e7cd01, type: 3}\r\n      propertyPath: m_LocalScale.z\r\n      value: 30\r\n      objectReference: {fileID: 0}\r\n    - target: {fileID: -8679921383154817045, guid: 36b66908e1969b0478efc5e2f1e7cd01, type: 3}\r\n      propertyPath: m_LocalPosition.x\r\n      value: 0\r\n      objectReference: {fileID: 0}\r\n    - target: {fileID: -8679921383154817045, guid: 36b66908e1969b0478efc5e2f1e7cd01, type: 3}\r\n      propertyPath: m_LocalPosition.y\r\n      value: -8\r\n      objectReference: {fileID: 0}\r\n    - target: {fileID: -8679921383154817045, guid: 36b66908e1969b0478efc5e2f1e7cd01, type: 3}\r\n      propertyPath: m_LocalPosition.z\r\n      value: 80\r\n      objectReference: {fileID: 0}\r\n    - target: {fileID: -8679921383154817045, guid: 36b66908e1969b0478efc5e2f1e7cd01, type: 3}\r\n      propertyPath: m_LocalRotation.w\r\n      value: 1\r\n      objectReference: {fileID: 0}\r\n    - target: {fileID: -8679921383154817045, guid: 36b66908e1969b0478efc5e2f1e7cd01, type: 3}\r\n      propertyPath: m_LocalRotation.x\r\n      value: 0\r\n      objectReference: {fileID: 0}\r\n    - target: {fileID: -8679921383154817045, guid: 36b66908e1969b0478efc5e2f1e7cd01, type: 3}\r\n      propertyPath: m_LocalRotation.y\r\n      value: 0\r\n      objectReference: {fileID: 0}\r\n    - target: {fileID: -8679921383154817045, guid: 36b66908e1969b0478efc5e2f1e7cd01, type: 3}\r\n      propertyPath: m_LocalRotation.z\r\n      value: 0\r\n      objectReference: {fileID: 0}\r\n    - target: {fileID: -8679921383154817045, guid: 36b66908e1969b0478efc5e2f1e7cd01, type: 3}\r\n      propertyPath: m_LocalEulerAnglesHint.x\r\n      value: 0\r\n      objectReference: {fileID: 0}\r\n    - target: {fileID: -8679921383154817045, guid: 36b66908e1969b0478efc5e2f1e7cd01, type: 3}\r\n      propertyPath: m_LocalEulerAnglesHint.y\r\n      value: 0\r\n      objectReference: {fileID: 0}\r\n    - target: {fileID: -8679921383154817045, guid: 36b66908e1969b0478efc5e2f1e7cd01, type: 3}\r\n      propertyPath: m_LocalEulerAnglesHint.z\r\n      value: 0\r\n      objectReference: {fileID: 0}\r\n    - target: {fileID: -8679921383154817045, guid: 36b66908e1969b0478efc5e2f1e7cd01, type: 3}\r\n      propertyPath: m_ConstrainProportionsScale\r\n      value: 0\r\n      objectReference: {fileID: 0}\r\n    - target: {fileID: -6004949192717032565, guid: 36b66908e1969b0478efc5e2f1e7cd01, type: 3}\r\n      propertyPath: m_Materials.Array.data[0]\r\n      value: \r\n      objectReference: {fileID: 2100000, guid: 091abaf540bbfe64e9fc74bc545aef18, type: 2}\r\n    - target: {fileID: -6004949192717032565, guid: 36b66908e1969b0478efc5e2f1e7cd01, type: 3}\r\n      propertyPath: m_Materials.Array.data[1]\r\n      value: \r\n      objectReference: {fileID: 2100000, guid: 091abaf540bbfe64e9fc74bc545aef18, type: 2}\r\n    - target: {fileID: 919132149155446097, guid: 36b66908e1969b0478efc5e2f1e7cd01, type: 3}\r\n      propertyPath: m_Name\r\n      value: SpaceShip\r\n      objectReference: {fileID: 0}\r\n    - target: {fileID: 5711534832756880787, guid: 36b66908e1969b0478efc5e2f1e7cd01, type: 3}\r\n      propertyPath: m_LocalScale.x\r\n      value: 0.28\r\n      objectReference: {fileID: 0}\r\n    - target: {fileID: 5711534832756880787, guid: 36b66908e1969b0478efc5e2f1e7cd01, type: 3}\r\n      propertyPath: m_LocalScale.y\r\n      value: 0.28\r\n      objectReference: {fileID: 0}\r\n    - target: {fileID: 5711534832756880787, guid: 36b66908e1969b0478efc5e2f1e7cd01, type: 3}\r\n      propertyPath: m_LocalScale.z\r\n      value: 0.28\r\n      objectReference: {fileID: 0}\r\n    - target: {fileID: 5711534832756880787, guid: 36b66908e1969b0478efc5e2f1e7cd01, type: 3}\r\n      propertyPath: m_LocalPosition.y\r\n      value: 0.55\r\n      objectReference: {fileID: 0}\r\n    - target: {fileID: 5711534832756880787, guid: 36b66908e1969b0478efc5e2f1e7cd01, type: 3}\r\n      propertyPath: m_LocalPosition.z\r\n      value: -3.5\r\n      objectReference: {fileID: 0}\r\n    - target: {fileID: 5711534832756880787, guid: 36b66908e1969b0478efc5e2f1e7cd01, type: 3}\r\n      propertyPath: m_ConstrainProportionsScale\r\n      value: 1\r\n      objectReference: {fileID: 0}\r\n    m_RemovedComponents: []\r\n    m_RemovedGameObjects:\r\n    - {fileID: 1143238392761963169, guid: 36b66908e1969b0478efc5e2f1e7cd01, type: 3}\r\n    - {fileID: -122828261115192467, guid: 36b66908e1969b0478efc5e2f1e7cd01, type: 3}\r\n    - {fileID: -1246822234137420708, guid: 36b66908e1969b0478efc5e2f1e7cd01, type: 3}\r\n    - {fileID: -4160958679298423175, guid: 36b66908e1969b0478efc5e2f1e7cd01, type: 3}\r\n    - {fileID: -4537186064606084910, guid: 36b66908e1969b0478efc5e2f1e7cd01, type: 3}\r\n    - {fileID: 4554595648678137626, guid: 36b66908e1969b0478efc5e2f1e7cd01, type: 3}\r\n    - {fileID: 7993742435749773133, guid: 36b66908e1969b0478efc5e2f1e7cd01, type: 3}\r\n    - {fileID: -5451957060613469694, guid: 36b66908e1969b0478efc5e2f1e7cd01, type: 3}\r\n    - {fileID: 4219939587788749906, guid: 36b66908e1969b0478efc5e2f1e7cd01, type: 3}\r\n    m_AddedGameObjects:\r\n    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 36b66908e1969b0478efc5e2f1e7cd01, type: 3}\r\n      insertIndex: -1\r\n      addedObject: {fileID: 1345945154}\r\n    m_AddedComponents:\r\n    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 36b66908e1969b0478efc5e2f1e7cd01, type: 3}\r\n      insertIndex: -1\r\n      addedObject: {fileID: 1553001430}\r\n  m_SourcePrefab: {fileID: 100100000, guid: 36b66908e1969b0478efc5e2f1e7cd01, type: 3}\r\n--- !u!1 &705507993\r\nGameObject:\r\n  m_ObjectHideFlags: 0\r\n  m_CorrespondingSourceObject: {fileID: 0}\r\n  m_PrefabInstance: {fileID: 0}\r\n  m_PrefabAsset: {fileID: 0}\r\n  serializedVersion: 6\r\n  m_Component:\r\n  - component: {fileID: 705507995}\r\n  - component: {fileID: 705507994}\r\n  m_Layer: 0\r\n  m_Name: Directional Light\r\n  m_TagString: Untagged\r\n  m_Icon: {fileID: 0}\r\n  m_NavMeshLayer: 0\r\n  m_StaticEditorFlags: 0\r\n  m_IsActive: 1\r\n--- !u!108 &705507994\r\nLight:\r\n  m_ObjectHideFlags: 0\r\n  m_CorrespondingSourceObject: {fileID: 0}\r\n  m_PrefabInstance: {fileID: 0}\r\n  m_PrefabAsset: {fileID: 0}\r\n  m_GameObject: {fileID: 705507993}\r\n  m_Enabled: 1\r\n  serializedVersion: 10\r\n  m_Type: 1\r\n  m_Shape: 0\r\n  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}\r\n  m_Intensity: 1\r\n  m_Range: 10\r\n  m_SpotAngle: 30\r\n  m_InnerSpotAngle: 21.80208\r\n  m_CookieSize: 10\r\n  m_Shadows:\r\n    m_Type: 2\r\n    m_Resolution: -1\r\n    m_CustomResolution: -1\r\n    m_Strength: 1\r\n    m_Bias: 0.05\r\n    m_NormalBias: 0.4\r\n    m_NearPlane: 0.2\r\n    m_CullingMatrixOverride:\r\n      e00: 1\r\n      e01: 0\r\n      e02: 0\r\n      e03: 0\r\n      e10: 0\r\n      e11: 1\r\n      e12: 0\r\n      e13: 0\r\n      e20: 0\r\n      e21: 0\r\n      e22: 1\r\n      e23: 0\r\n      e30: 0\r\n      e31: 0\r\n      e32: 0\r\n      e33: 1\r\n    m_UseCullingMatrixOverride: 0\r\n  m_Cookie: {fileID: 0}\r\n  m_DrawHalo: 0\r\n  m_Flare: {fileID: 0}\r\n  m_RenderMode: 0\r\n  m_CullingMask:\r\n    serializedVersion: 2\r\n    m_Bits: 4294967295\r\n  m_RenderingLayerMask: 1\r\n  m_Lightmapping: 1\r\n  m_LightShadowCasterMode: 0\r\n  m_AreaSize: {x: 1, y: 1}\r\n  m_BounceIntensity: 1\r\n  m_ColorTemperature: 6570\r\n  m_UseColorTemperature: 0\r\n  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}\r\n  m_UseBoundingSphereOverride: 0\r\n  m_UseViewFrustumForShadowCasterCull: 1\r\n  m_ShadowRadius: 0\r\n  m_ShadowAngle: 0\r\n--- !u!4 &705507995\r\nTransform:\r\n  m_ObjectHideFlags: 0\r\n  m_CorrespondingSourceObject: {fileID: 0}\r\n  m_PrefabInstance: {fileID: 0}\r\n  m_PrefabAsset: {fileID: 0}\r\n  m_GameObject: {fileID: 705507993}\r\n  serializedVersion: 2\r\n  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}\r\n  m_LocalPosition: {x: 0, y: 5.78, z: 0}\r\n  m_LocalScale: {x: 1, y: 1, z: 1}\r\n  m_ConstrainProportionsScale: 0\r\n  m_Children: []\r\n  m_Father: {fileID: 0}\r\n  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}\r\n--- !u!1 &963194225\r\nGameObject:\r\n  m_ObjectHideFlags: 0\r\n  m_CorrespondingSourceObject: {fileID: 0}\r\n  m_PrefabInstance: {fileID: 0}\r\n  m_PrefabAsset: {fileID: 0}\r\n  serializedVersion: 6\r\n  m_Component:\r\n  - component: {fileID: 963194228}\r\n  - component: {fileID: 963194227}\r\n  - component: {fileID: 963194226}\r\n  - component: {fileID: 963194229}\r\n  m_Layer: 0\r\n  m_Name: Main Camera\r\n  m_TagString: MainCamera\r\n  m_Icon: {fileID: 0}\r\n  m_NavMeshLayer: 0\r\n  m_StaticEditorFlags: 0\r\n  m_IsActive: 1\r\n--- !u!81 &963194226\r\nAudioListener:\r\n  m_ObjectHideFlags: 0\r\n  m_CorrespondingSourceObject: {fileID: 0}\r\n  m_PrefabInstance: {fileID: 0}\r\n  m_PrefabAsset: {fileID: 0}\r\n  m_GameObject: {fileID: 963194225}\r\n  m_Enabled: 1\r\n--- !u!20 &963194227\r\nCamera:\r\n  m_ObjectHideFlags: 0\r\n  m_CorrespondingSourceObject: {fileID: 0}\r\n  m_PrefabInstance: {fileID: 0}\r\n  m_PrefabAsset: {fileID: 0}\r\n  m_GameObject: {fileID: 963194225}\r\n  m_Enabled: 1\r\n  serializedVersion: 2\r\n  m_ClearFlags: 1\r\n  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}\r\n  m_projectionMatrixMode: 1\r\n  m_GateFitMode: 2\r\n  m_FOVAxisMode: 0\r\n  m_Iso: 200\r\n  m_ShutterSpeed: 0.005\r\n  m_Aperture: 16\r\n  m_FocusDistance: 10\r\n  m_FocalLength: 50\r\n  m_BladeCount: 5\r\n  m_Curvature: {x: 2, y: 11}\r\n  m_BarrelClipping: 0.25\r\n  m_Anamorphism: 0\r\n  m_SensorSize: {x: 36, y: 24}\r\n  m_LensShift: {x: 0, y: 0}\r\n  m_NormalizedViewPortRect:\r\n    serializedVersion: 2\r\n    x: 0\r\n    y: 0\r\n    width: 1\r\n    height: 1\r\n  near clip plane: 0.3\r\n  far clip plane: 1000\r\n  field of view: 60\r\n  orthographic: 0\r\n  orthographic size: 5\r\n  m_Depth: -1\r\n  m_CullingMask:\r\n    serializedVersion: 2\r\n    m_Bits: 4294967295\r\n  m_RenderingPath: -1\r\n  m_TargetTexture: {fileID: 0}\r\n  m_TargetDisplay: 0\r\n  m_TargetEye: 3\r\n  m_HDR: 1\r\n  m_AllowMSAA: 1\r\n  m_AllowDynamicResolution: 0\r\n  m_ForceIntoRT: 0\r\n  m_OcclusionCulling: 1\r\n  m_StereoConvergence: 10\r\n  m_StereoSeparation: 0.022\r\n--- !u!4 &963194228\r\nTransform:\r\n  m_ObjectHideFlags: 0\r\n  m_CorrespondingSourceObject: {fileID: 0}\r\n  m_PrefabInstance: {fileID: 0}\r\n  m_PrefabAsset: {fileID: 0}\r\n  m_GameObject: {fileID: 963194225}\r\n  serializedVersion: 2\r\n  m_LocalRotation: {x: 0.34389105, y: 0.6178503, z: -0.34389105, w: 0.6178503}\r\n  m_LocalPosition: {x: -47.59, y: 58.26, z: -5.2}\r\n  m_LocalScale: {x: 1, y: 1, z: 1}\r\n  m_ConstrainProportionsScale: 0\r\n  m_Children: []\r\n  m_Father: {fileID: 0}\r\n  m_LocalEulerAnglesHint: {x: 58.2, y: 90, z: 0}\r\n--- !u!114 &963194229\r\nMonoBehaviour:\r\n  m_ObjectHideFlags: 0\r\n  m_CorrespondingSourceObject: {fileID: 0}\r\n  m_PrefabInstance: {fileID: 0}\r\n  m_PrefabAsset: {fileID: 0}\r\n  m_GameObject: {fileID: 963194225}\r\n  m_Enabled: 1\r\n  m_EditorHideFlags: 0\r\n  m_Script: {fileID: 11500000, guid: 436275a13d4459746955fc6db5953473, type: 3}\r\n  m_Name: \r\n  m_EditorClassIdentifier: \r\n  _active: 1\r\n  _enableRotation: 1\r\n  _mouseSense: 1\r\n  _enableTranslation: 1\r\n  _translationSpeed: 55\r\n  _enableMovement: 1\r\n  _movementSpeed: 5\r\n  _boostedSpeed: 25\r\n  _boostSpeed: 304\r\n  _moveUp: 101\r\n  _moveDown: 113\r\n  _enableSpeedAcceleration: 1\r\n  _speedAccelerationFactor: 1.5\r\n  _initPositonButton: 114\r\n--- !u!1001 &1333480567\r\nPrefabInstance:\r\n  m_ObjectHideFlags: 0\r\n  serializedVersion: 2\r\n  m_Modification:\r\n    serializedVersion: 3\r\n    m_TransformParent: {fileID: 0}\r\n    m_Modifications:\r\n    - target: {fileID: 746912571944225760, guid: 74baacb1cd0a34d418bfbf33b97bfc09, type: 3}\r\n      propertyPath: m_LocalPosition.y\r\n      value: -0.62\r\n      objectReference: {fileID: 0}\r\n    - target: {fileID: 5829896257075672536, guid: 74baacb1cd0a34d418bfbf33b97bfc09, type: 3}\r\n      propertyPath: m_Enabled\r\n      value: 1\r\n      objectReference: {fileID: 0}\r\n    - target: {fileID: 7419704221734567982, guid: 74baacb1cd0a34d418bfbf33b97bfc09, type: 3}\r\n      propertyPath: m_LocalPosition.x\r\n      value: -10.9\r\n      objectReference: {fileID: 0}\r\n    - target: {fileID: 7419704221734567982, guid: 74baacb1cd0a34d418bfbf33b97bfc09, type: 3}\r\n      propertyPath: m_LocalPosition.y\r\n      value: -0.05\r\n      objectReference: {fileID: 0}\r\n    - target: {fileID: 7419704221734567982, guid: 74baacb1cd0a34d418bfbf33b97bfc09, type: 3}\r\n      propertyPath: m_LocalPosition.z\r\n      value: -30.3\r\n      objectReference: {fileID: 0}\r\n    - target: {fileID: 7419704221734567982, guid: 74baacb1cd0a34d418bfbf33b97bfc09, type: 3}\r\n      propertyPath: m_LocalRotation.w\r\n      value: 1\r\n      objectReference: {fileID: 0}\r\n    - target: {fileID: 7419704221734567982, guid: 74baacb1cd0a34d418bfbf33b97bfc09, type: 3}\r\n      propertyPath: m_LocalRotation.x\r\n      value: 0\r\n      objectReference: {fileID: 0}\r\n    - target: {fileID: 7419704221734567982, guid: 74baacb1cd0a34d418bfbf33b97bfc09, type: 3}\r\n      propertyPath: m_LocalRotation.y\r\n      value: 0\r\n      objectReference: {fileID: 0}\r\n    - target: {fileID: 7419704221734567982, guid: 74baacb1cd0a34d418bfbf33b97bfc09, type: 3}\r\n      propertyPath: m_LocalRotation.z\r\n      value: 0\r\n      objectReference: {fileID: 0}\r\n    - target: {fileID: 7419704221734567982, guid: 74baacb1cd0a34d418bfbf33b97bfc09, type: 3}\r\n      propertyPath: m_LocalEulerAnglesHint.x\r\n      value: 0\r\n      objectReference: {fileID: 0}\r\n    - target: {fileID: 7419704221734567982, guid: 74baacb1cd0a34d418bfbf33b97bfc09, type: 3}\r\n      propertyPath: m_LocalEulerAnglesHint.y\r\n      value: 0\r\n      objectReference: {fileID: 0}\r\n    - target: {fileID: 7419704221734567982, guid: 74baacb1cd0a34d418bfbf33b97bfc09, type: 3}\r\n      propertyPath: m_LocalEulerAnglesHint.z\r\n      value: 0\r\n      objectReference: {fileID: 0}\r\n    - target: {fileID: 7904878379860810388, guid: 74baacb1cd0a34d418bfbf33b97bfc09, type: 3}\r\n      propertyPath: m_Name\r\n      value: Guy 1\r\n      objectReference: {fileID: 0}\r\n    m_RemovedComponents: []\r\n    m_RemovedGameObjects: []\r\n    m_AddedGameObjects: []\r\n    m_AddedComponents: []\r\n  m_SourcePrefab: {fileID: 100100000, guid: 74baacb1cd0a34d418bfbf33b97bfc09, type: 3}\r\n--- !u!1 &1345945153\r\nGameObject:\r\n  m_ObjectHideFlags: 0\r\n  m_CorrespondingSourceObject: {fileID: 0}\r\n  m_PrefabInstance: {fileID: 0}\r\n  m_PrefabAsset: {fileID: 0}\r\n  serializedVersion: 6\r\n  m_Component:\r\n  - component: {fileID: 1345945154}\r\n  - component: {fileID: 1345945159}\r\n  - component: {fileID: 1345945158}\r\n  - component: {fileID: 1345945157}\r\n  - component: {fileID: 1345945156}\r\n  - component: {fileID: 1345945155}\r\n  m_Layer: 0\r\n  m_Name: Floor\r\n  m_TagString: Untagged\r\n  m_Icon: {fileID: 0}\r\n  m_NavMeshLayer: 0\r\n  m_StaticEditorFlags: 0\r\n  m_IsActive: 1\r\n--- !u!4 &1345945154\r\nTransform:\r\n  m_ObjectHideFlags: 0\r\n  m_CorrespondingSourceObject: {fileID: 0}\r\n  m_PrefabInstance: {fileID: 0}\r\n  m_PrefabAsset: {fileID: 0}\r\n  m_GameObject: {fileID: 1345945153}\r\n  serializedVersion: 2\r\n  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}\r\n  m_LocalPosition: {x: -0.06609, y: 0.5, z: -2.7566667}\r\n  m_LocalScale: {x: 0.70601916, y: 0.9933379, z: 0.71319664}\r\n  m_ConstrainProportionsScale: 0\r\n  m_Children: []\r\n  m_Father: {fileID: 1553001429}\r\n  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}\r\n--- !u!114 &1345945155\r\nMonoBehaviour:\r\n  m_ObjectHideFlags: 0\r\n  m_CorrespondingSourceObject: {fileID: 0}\r\n  m_PrefabInstance: {fileID: 0}\r\n  m_PrefabAsset: {fileID: 0}\r\n  m_GameObject: {fileID: 1345945153}\r\n  m_Enabled: 1\r\n  m_EditorHideFlags: 0\r\n  m_Script: {fileID: 11500000, guid: 1e3fdca004f2d45fe8abbed571a8abd5, type: 3}\r\n  m_Name: \r\n  m_EditorClassIdentifier: \r\n  m_OverrideArea: 0\r\n  m_Area: 0\r\n  m_OverrideGenerateLinks: 0\r\n  m_GenerateLinks: 0\r\n  m_IgnoreFromBuild: 0\r\n  m_ApplyToChildren: 1\r\n  m_AffectedAgents: 00000000\r\n--- !u!114 &1345945156\r\nMonoBehaviour:\r\n  m_ObjectHideFlags: 0\r\n  m_CorrespondingSourceObject: {fileID: 0}\r\n  m_PrefabInstance: {fileID: 0}\r\n  m_PrefabAsset: {fileID: 0}\r\n  m_GameObject: {fileID: 1345945153}\r\n  m_Enabled: 1\r\n  m_EditorHideFlags: 0\r\n  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}\r\n  m_Name: \r\n  m_EditorClassIdentifier: \r\n  m_AgentTypeID: 0\r\n  m_CollectObjects: 3\r\n  m_Size: {x: 90.97, y: -23.26, z: -205.19}\r\n  m_Center: {x: 0, y: 2, z: 0}\r\n  m_LayerMask:\r\n    serializedVersion: 2\r\n    m_Bits: 4294967295\r\n  m_UseGeometry: 0\r\n  m_DefaultArea: 0\r\n  m_GenerateLinks: 0\r\n  m_IgnoreNavMeshAgent: 1\r\n  m_IgnoreNavMeshObstacle: 1\r\n  m_OverrideTileSize: 0\r\n  m_TileSize: 256\r\n  m_OverrideVoxelSize: 0\r\n  m_VoxelSize: 0.16666667\r\n  m_MinRegionArea: 2\r\n  m_NavMeshData: {fileID: 23800000, guid: ba0b011fd7ce54e42b16616893f69a7a, type: 2}\r\n  m_BuildHeightMesh: 0\r\n--- !u!64 &1345945157\r\nMeshCollider:\r\n  m_ObjectHideFlags: 0\r\n  m_CorrespondingSourceObject: {fileID: 0}\r\n  m_PrefabInstance: {fileID: 0}\r\n  m_PrefabAsset: {fileID: 0}\r\n  m_GameObject: {fileID: 1345945153}\r\n  m_Material: {fileID: 0}\r\n  m_IncludeLayers:\r\n    serializedVersion: 2\r\n    m_Bits: 0\r\n  m_ExcludeLayers:\r\n    serializedVersion: 2\r\n    m_Bits: 0\r\n  m_LayerOverridePriority: 0\r\n  m_IsTrigger: 0\r\n  m_ProvidesContacts: 0\r\n  m_Enabled: 1\r\n  serializedVersion: 5\r\n  m_Convex: 0\r\n  m_CookingOptions: 30\r\n  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}\r\n--- !u!23 &1345945158\r\nMeshRenderer:\r\n  m_ObjectHideFlags: 0\r\n  m_CorrespondingSourceObject: {fileID: 0}\r\n  m_PrefabInstance: {fileID: 0}\r\n  m_PrefabAsset: {fileID: 0}\r\n  m_GameObject: {fileID: 1345945153}\r\n  m_Enabled: 1\r\n  m_CastShadows: 1\r\n  m_ReceiveShadows: 1\r\n  m_DynamicOccludee: 1\r\n  m_StaticShadowCaster: 0\r\n  m_MotionVectors: 1\r\n  m_LightProbeUsage: 1\r\n  m_ReflectionProbeUsage: 1\r\n  m_RayTracingMode: 2\r\n  m_RayTraceProcedural: 0\r\n  m_RenderingLayerMask: 1\r\n  m_RendererPriority: 0\r\n  m_Materials:\r\n  - {fileID: 2100000, guid: 86ef599a04893ce4f8f73155a9739eba, type: 2}\r\n  m_StaticBatchInfo:\r\n    firstSubMesh: 0\r\n    subMeshCount: 0\r\n  m_StaticBatchRoot: {fileID: 0}\r\n  m_ProbeAnchor: {fileID: 0}\r\n  m_LightProbeVolumeOverride: {fileID: 0}\r\n  m_ScaleInLightmap: 1\r\n  m_ReceiveGI: 1\r\n  m_PreserveUVs: 0\r\n  m_IgnoreNormalsForChartDetection: 0\r\n  m_ImportantGI: 0\r\n  m_StitchLightmapSeams: 1\r\n  m_SelectedEditorRenderState: 3\r\n  m_MinimumChartSize: 4\r\n  m_AutoUVMaxDistance: 0.5\r\n  m_AutoUVMaxAngle: 89\r\n  m_LightmapParameters: {fileID: 0}\r\n  m_SortingLayerID: 0\r\n  m_SortingLayer: 0\r\n  m_SortingOrder: 0\r\n  m_AdditionalVertexStreams: {fileID: 0}\r\n--- !u!33 &1345945159\r\nMeshFilter:\r\n  m_ObjectHideFlags: 0\r\n  m_CorrespondingSourceObject: {fileID: 0}\r\n  m_PrefabInstance: {fileID: 0}\r\n  m_PrefabAsset: {fileID: 0}\r\n  m_GameObject: {fileID: 1345945153}\r\n  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}\r\n--- !u!1001 &1357490098\r\nPrefabInstance:\r\n  m_ObjectHideFlags: 0\r\n  serializedVersion: 2\r\n  m_Modification:\r\n    serializedVersion: 3\r\n    m_TransformParent: {fileID: 0}\r\n    m_Modifications:\r\n    - target: {fileID: 746912571944225760, guid: 74baacb1cd0a34d418bfbf33b97bfc09, type: 3}\r\n      propertyPath: m_LocalPosition.y\r\n      value: -0.6199999\r\n      objectReference: {fileID: 0}\r\n    - target: {fileID: 7419704221734567982, guid: 74baacb1cd0a34d418bfbf33b97bfc09, type: 3}\r\n      propertyPath: m_LocalPosition.x\r\n      value: 8.6\r\n      objectReference: {fileID: 0}\r\n    - target: {fileID: 7419704221734567982, guid: 74baacb1cd0a34d418bfbf33b97bfc09, type: 3}\r\n      propertyPath: m_LocalPosition.y\r\n      value: -0.05\r\n      objectReference: {fileID: 0}\r\n    - target: {fileID: 7419704221734567982, guid: 74baacb1cd0a34d418bfbf33b97bfc09, type: 3}\r\n      propertyPath: m_LocalPosition.z\r\n      value: -31.8\r\n      objectReference: {fileID: 0}\r\n    - target: {fileID: 7419704221734567982, guid: 74baacb1cd0a34d418bfbf33b97bfc09, type: 3}\r\n      propertyPath: m_LocalRotation.w\r\n      value: 0\r\n      objectReference: {fileID: 0}\r\n    - target: {fileID: 7419704221734567982, guid: 74baacb1cd0a34d418bfbf33b97bfc09, type: 3}\r\n      propertyPath: m_LocalRotation.x\r\n      value: -0\r\n      objectReference: {fileID: 0}\r\n    - target: {fileID: 7419704221734567982, guid: 74baacb1cd0a34d418bfbf33b97bfc09, type: 3}\r\n      propertyPath: m_LocalRotation.y\r\n      value: 1\r\n      objectReference: {fileID: 0}\r\n    - target: {fileID: 7419704221734567982, guid: 74baacb1cd0a34d418bfbf33b97bfc09, type: 3}\r\n      propertyPath: m_LocalRotation.z\r\n      value: -0\r\n      objectReference: {fileID: 0}\r\n    - target: {fileID: 7419704221734567982, guid: 74baacb1cd0a34d418bfbf33b97bfc09, type: 3}\r\n      propertyPath: m_LocalEulerAnglesHint.x\r\n      value: 0\r\n      objectReference: {fileID: 0}\r\n    - target: {fileID: 7419704221734567982, guid: 74baacb1cd0a34d418bfbf33b97bfc09, type: 3}\r\n      propertyPath: m_LocalEulerAnglesHint.y\r\n      value: 90\r\n      objectReference: {fileID: 0}\r\n    - target: {fileID: 7419704221734567982, guid: 74baacb1cd0a34d418bfbf33b97bfc09, type: 3}\r\n      propertyPath: m_LocalEulerAnglesHint.z\r\n      value: 0\r\n      objectReference: {fileID: 0}\r\n    - target: {fileID: 7904878379860810388, guid: 74baacb1cd0a34d418bfbf33b97bfc09, type: 3}\r\n      propertyPath: m_Name\r\n      value: Guy 1 (1)\r\n      objectReference: {fileID: 0}\r\n    m_RemovedComponents: []\r\n    m_RemovedGameObjects: []\r\n    m_AddedGameObjects: []\r\n    m_AddedComponents: []\r\n  m_SourcePrefab: {fileID: 100100000, guid: 74baacb1cd0a34d418bfbf33b97bfc09, type: 3}\r\n--- !u!1 &1477419714\r\nGameObject:\r\n  m_ObjectHideFlags: 0\r\n  m_CorrespondingSourceObject: {fileID: 0}\r\n  m_PrefabInstance: {fileID: 0}\r\n  m_PrefabAsset: {fileID: 0}\r\n  serializedVersion: 6\r\n  m_Component:\r\n  - component: {fileID: 1477419715}\r\n  - component: {fileID: 1477419719}\r\n  - component: {fileID: 1477419718}\r\n  - component: {fileID: 1477419717}\r\n  - component: {fileID: 1477419716}\r\n  m_Layer: 6\r\n  m_Name: Workshop\r\n  m_TagString: Untagged\r\n  m_Icon: {fileID: 0}\r\n  m_NavMeshLayer: 0\r\n  m_StaticEditorFlags: 0\r\n  m_IsActive: 1\r\n--- !u!4 &1477419715\r\nTransform:\r\n  m_ObjectHideFlags: 0\r\n  m_CorrespondingSourceObject: {fileID: 0}\r\n  m_PrefabInstance: {fileID: 0}\r\n  m_PrefabAsset: {fileID: 0}\r\n  m_GameObject: {fileID: 1477419714}\r\n  serializedVersion: 2\r\n  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}\r\n  m_LocalPosition: {x: 0, y: -7.72, z: 11.76}\r\n  m_LocalScale: {x: 3.04, y: 16.514977, z: 3.66}\r\n  m_ConstrainProportionsScale: 0\r\n  m_Children: []\r\n  m_Father: {fileID: 2139154419}\r\n  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}\r\n--- !u!114 &1477419716\r\nMonoBehaviour:\r\n  m_ObjectHideFlags: 0\r\n  m_CorrespondingSourceObject: {fileID: 0}\r\n  m_PrefabInstance: {fileID: 0}\r\n  m_PrefabAsset: {fileID: 0}\r\n  m_GameObject: {fileID: 1477419714}\r\n  m_Enabled: 1\r\n  m_EditorHideFlags: 0\r\n  m_Script: {fileID: 11500000, guid: 35e95dc5ff2b64380880dd7ac5922847, type: 3}\r\n  m_Name: \r\n  m_EditorClassIdentifier: \r\n  m_Size: {x: 2.3523412, y: 1.1169412, z: 1.9654257}\r\n  m_Center: {x: -0.2848122, y: 0.058470905, z: 0.006908208}\r\n  m_Area: 3\r\n  m_AffectedAgents: 00000000\r\n--- !u!65 &1477419717\r\nBoxCollider:\r\n  m_ObjectHideFlags: 0\r\n  m_CorrespondingSourceObject: {fileID: 0}\r\n  m_PrefabInstance: {fileID: 0}\r\n  m_PrefabAsset: {fileID: 0}\r\n  m_GameObject: {fileID: 1477419714}\r\n  m_Material: {fileID: 0}\r\n  m_IncludeLayers:\r\n    serializedVersion: 2\r\n    m_Bits: 0\r\n  m_ExcludeLayers:\r\n    serializedVersion: 2\r\n    m_Bits: 0\r\n  m_LayerOverridePriority: 0\r\n  m_IsTrigger: 0\r\n  m_ProvidesContacts: 0\r\n  m_Enabled: 1\r\n  serializedVersion: 3\r\n  m_Size: {x: 1, y: 1, z: 1}\r\n  m_Center: {x: 0, y: 0, z: 0}\r\n--- !u!23 &1477419718\r\nMeshRenderer:\r\n  m_ObjectHideFlags: 0\r\n  m_CorrespondingSourceObject: {fileID: 0}\r\n  m_PrefabInstance: {fileID: 0}\r\n  m_PrefabAsset: {fileID: 0}\r\n  m_GameObject: {fileID: 1477419714}\r\n  m_Enabled: 1\r\n  m_CastShadows: 1\r\n  m_ReceiveShadows: 1\r\n  m_DynamicOccludee: 1\r\n  m_StaticShadowCaster: 0\r\n  m_MotionVectors: 1\r\n  m_LightProbeUsage: 1\r\n  m_ReflectionProbeUsage: 1\r\n  m_RayTracingMode: 2\r\n  m_RayTraceProcedural: 0\r\n  m_RenderingLayerMask: 1\r\n  m_RendererPriority: 0\r\n  m_Materials:\r\n  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}\r\n  m_StaticBatchInfo:\r\n    firstSubMesh: 0\r\n    subMeshCount: 0\r\n  m_StaticBatchRoot: {fileID: 0}\r\n  m_ProbeAnchor: {fileID: 0}\r\n  m_LightProbeVolumeOverride: {fileID: 0}\r\n  m_ScaleInLightmap: 1\r\n  m_ReceiveGI: 1\r\n  m_PreserveUVs: 0\r\n  m_IgnoreNormalsForChartDetection: 0\r\n  m_ImportantGI: 0\r\n  m_StitchLightmapSeams: 1\r\n  m_SelectedEditorRenderState: 3\r\n  m_MinimumChartSize: 4\r\n  m_AutoUVMaxDistance: 0.5\r\n  m_AutoUVMaxAngle: 89\r\n  m_LightmapParameters: {fileID: 0}\r\n  m_SortingLayerID: 0\r\n  m_SortingLayer: 0\r\n  m_SortingOrder: 0\r\n  m_AdditionalVertexStreams: {fileID: 0}\r\n--- !u!33 &1477419719\r\nMeshFilter:\r\n  m_ObjectHideFlags: 0\r\n  m_CorrespondingSourceObject: {fileID: 0}\r\n  m_PrefabInstance: {fileID: 0}\r\n  m_PrefabAsset: {fileID: 0}\r\n  m_GameObject: {fileID: 1477419714}\r\n  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}\r\n--- !u!1 &1553001428 stripped\r\nGameObject:\r\n  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 36b66908e1969b0478efc5e2f1e7cd01, type: 3}\r\n  m_PrefabInstance: {fileID: 207992537}\r\n  m_PrefabAsset: {fileID: 0}\r\n--- !u!4 &1553001429 stripped\r\nTransform:\r\n  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 36b66908e1969b0478efc5e2f1e7cd01, type: 3}\r\n  m_PrefabInstance: {fileID: 207992537}\r\n  m_PrefabAsset: {fileID: 0}\r\n--- !u!114 &1553001430\r\nMonoBehaviour:\r\n  m_ObjectHideFlags: 0\r\n  m_CorrespondingSourceObject: {fileID: 0}\r\n  m_PrefabInstance: {fileID: 0}\r\n  m_PrefabAsset: {fileID: 0}\r\n  m_GameObject: {fileID: 1553001428}\r\n  m_Enabled: 1\r\n  m_EditorHideFlags: 0\r\n  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}\r\n  m_Name: \r\n  m_EditorClassIdentifier: \r\n  m_AgentTypeID: 0\r\n  m_CollectObjects: 3\r\n  m_Size: {x: 10, y: 10, z: 10}\r\n  m_Center: {x: 0, y: 2, z: 0}\r\n  m_LayerMask:\r\n    serializedVersion: 2\r\n    m_Bits: 4294967295\r\n  m_UseGeometry: 0\r\n  m_DefaultArea: 0\r\n  m_GenerateLinks: 0\r\n  m_IgnoreNavMeshAgent: 1\r\n  m_IgnoreNavMeshObstacle: 1\r\n  m_OverrideTileSize: 0\r\n  m_TileSize: 256\r\n  m_OverrideVoxelSize: 0\r\n  m_VoxelSize: 0.16666667\r\n  m_MinRegionArea: 2\r\n  m_NavMeshData: {fileID: 23800000, guid: dd7a8ba48b8c74544b42b2070d80c63a, type: 2}\r\n  m_BuildHeightMesh: 0\r\n--- !u!1 &2055700646\r\nGameObject:\r\n  m_ObjectHideFlags: 0\r\n  m_CorrespondingSourceObject: {fileID: 0}\r\n  m_PrefabInstance: {fileID: 0}\r\n  m_PrefabAsset: {fileID: 0}\r\n  serializedVersion: 6\r\n  m_Component:\r\n  - component: {fileID: 2055700647}\r\n  - component: {fileID: 2055700648}\r\n  m_Layer: 0\r\n  m_Name: SpawnPoint\r\n  m_TagString: Untagged\r\n  m_Icon: {fileID: 0}\r\n  m_NavMeshLayer: 0\r\n  m_StaticEditorFlags: 0\r\n  m_IsActive: 1\r\n--- !u!4 &2055700647\r\nTransform:\r\n  m_ObjectHideFlags: 0\r\n  m_CorrespondingSourceObject: {fileID: 0}\r\n  m_PrefabInstance: {fileID: 0}\r\n  m_PrefabAsset: {fileID: 0}\r\n  m_GameObject: {fileID: 2055700646}\r\n  serializedVersion: 2\r\n  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}\r\n  m_LocalPosition: {x: -0.9, y: 0.051916122, z: -100.8}\r\n  m_LocalScale: {x: 1, y: 1, z: 1}\r\n  m_ConstrainProportionsScale: 0\r\n  m_Children: []\r\n  m_Father: {fileID: 0}\r\n  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}\r\n--- !u!114 &2055700648\r\nMonoBehaviour:\r\n  m_ObjectHideFlags: 0\r\n  m_CorrespondingSourceObject: {fileID: 0}\r\n  m_PrefabInstance: {fileID: 0}\r\n  m_PrefabAsset: {fileID: 0}\r\n  m_GameObject: {fileID: 2055700646}\r\n  m_Enabled: 1\r\n  m_EditorHideFlags: 0\r\n  m_Script: {fileID: 11500000, guid: a6544dd91f3f125498f1a5511fe99a94, type: 3}\r\n  m_Name: \r\n  m_EditorClassIdentifier: \r\n--- !u!1001 &2073070842\r\nPrefabInstance:\r\n  m_ObjectHideFlags: 0\r\n  serializedVersion: 2\r\n  m_Modification:\r\n    serializedVersion: 3\r\n    m_TransformParent: {fileID: 0}\r\n    m_Modifications:\r\n    - target: {fileID: 746912571944225760, guid: 74baacb1cd0a34d418bfbf33b97bfc09, type: 3}\r\n      propertyPath: m_LocalPosition.y\r\n      value: -0.6199999\r\n      objectReference: {fileID: 0}\r\n    - target: {fileID: 7419704221734567982, guid: 74baacb1cd0a34d418bfbf33b97bfc09, type: 3}\r\n      propertyPath: m_LocalPosition.x\r\n      value: -3.89\r\n      objectReference: {fileID: 0}\r\n    - target: {fileID: 7419704221734567982, guid: 74baacb1cd0a34d418bfbf33b97bfc09, type: 3}\r\n      propertyPath: m_LocalPosition.y\r\n      value: -0.05\r\n      objectReference: {fileID: 0}\r\n    - target: {fileID: 7419704221734567982, guid: 74baacb1cd0a34d418bfbf33b97bfc09, type: 3}\r\n      propertyPath: m_LocalPosition.z\r\n      value: -1.23\r\n      objectReference: {fileID: 0}\r\n    - target: {fileID: 7419704221734567982, guid: 74baacb1cd0a34d418bfbf33b97bfc09, type: 3}\r\n      propertyPath: m_LocalRotation.w\r\n      value: 0\r\n      objectReference: {fileID: 0}\r\n    - target: {fileID: 7419704221734567982, guid: 74baacb1cd0a34d418bfbf33b97bfc09, type: 3}\r\n      propertyPath: m_LocalRotation.x\r\n      value: -0\r\n      objectReference: {fileID: 0}\r\n    - target: {fileID: 7419704221734567982, guid: 74baacb1cd0a34d418bfbf33b97bfc09, type: 3}\r\n      propertyPath: m_LocalRotation.y\r\n      value: 1\r\n      objectReference: {fileID: 0}\r\n    - target: {fileID: 7419704221734567982, guid: 74baacb1cd0a34d418bfbf33b97bfc09, type: 3}\r\n      propertyPath: m_LocalRotation.z\r\n      value: -0\r\n      objectReference: {fileID: 0}\r\n    - target: {fileID: 7419704221734567982, guid: 74baacb1cd0a34d418bfbf33b97bfc09, type: 3}\r\n      propertyPath: m_LocalEulerAnglesHint.x\r\n      value: 0\r\n      objectReference: {fileID: 0}\r\n    - target: {fileID: 7419704221734567982, guid: 74baacb1cd0a34d418bfbf33b97bfc09, type: 3}\r\n      propertyPath: m_LocalEulerAnglesHint.y\r\n      value: 90\r\n      objectReference: {fileID: 0}\r\n    - target: {fileID: 7419704221734567982, guid: 74baacb1cd0a34d418bfbf33b97bfc09, type: 3}\r\n      propertyPath: m_LocalEulerAnglesHint.z\r\n      value: 0\r\n      objectReference: {fileID: 0}\r\n    - target: {fileID: 7904878379860810388, guid: 74baacb1cd0a34d418bfbf33b97bfc09, type: 3}\r\n      propertyPath: m_Name\r\n      value: Guy 1 (2)\r\n      objectReference: {fileID: 0}\r\n    m_RemovedComponents: []\r\n    m_RemovedGameObjects: []\r\n    m_AddedGameObjects: []\r\n    m_AddedComponents: []\r\n  m_SourcePrefab: {fileID: 100100000, guid: 74baacb1cd0a34d418bfbf33b97bfc09, type: 3}\r\n--- !u!1 &2139154418\r\nGameObject:\r\n  m_ObjectHideFlags: 0\r\n  m_CorrespondingSourceObject: {fileID: 0}\r\n  m_PrefabInstance: {fileID: 0}\r\n  m_PrefabAsset: {fileID: 0}\r\n  serializedVersion: 6\r\n  m_Component:\r\n  - component: {fileID: 2139154419}\r\n  m_Layer: 6\r\n  m_Name: Task2\r\n  m_TagString: Task\r\n  m_Icon: {fileID: 0}\r\n  m_NavMeshLayer: 0\r\n  m_StaticEditorFlags: 0\r\n  m_IsActive: 1\r\n--- !u!4 &2139154419\r\nTransform:\r\n  m_ObjectHideFlags: 0\r\n  m_CorrespondingSourceObject: {fileID: 0}\r\n  m_PrefabInstance: {fileID: 0}\r\n  m_PrefabAsset: {fileID: 0}\r\n  m_GameObject: {fileID: 2139154418}\r\n  serializedVersion: 2\r\n  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}\r\n  m_LocalPosition: {x: 5.1, y: 14.28, z: -67.9}\r\n  m_LocalScale: {x: 1, y: 1, z: 1}\r\n  m_ConstrainProportionsScale: 0\r\n  m_Children:\r\n  - {fileID: 1477419715}\r\n  m_Father: {fileID: 0}\r\n  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}\r\n--- !u!1660057539 &9223372036854775807\r\nSceneRoots:\r\n  m_ObjectHideFlags: 0\r\n  m_Roots:\r\n  - {fileID: 963194228}\r\n  - {fileID: 705507995}\r\n  - {fileID: 207992537}\r\n  - {fileID: 2139154419}\r\n  - {fileID: 2055700647}\r\n  - {fileID: 1333480567}\r\n  - {fileID: 1357490098}\r\n  - {fileID: 2073070842}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Assets/Scenes/CharTestScene.unity b/Assets/Scenes/CharTestScene.unity
+--- a/Assets/Scenes/CharTestScene.unity	(revision 7137da74b41c830a30c99b83a59564897d4f780d)
++++ b/Assets/Scenes/CharTestScene.unity	(date 1701971070532)
+@@ -38,7 +38,7 @@
+   m_ReflectionIntensity: 1
+   m_CustomReflection: {fileID: 0}
+   m_Sun: {fileID: 705507994}
+-  m_IndirectSpecularColor: {r: 0.1904257, g: 0.14258197, b: 0.15262991, a: 1}
++  m_IndirectSpecularColor: {r: 0.18990731, g: 0.1426116, b: 0.15199834, a: 1}
+   m_UseRadianceAmbientProbe: 0
+ --- !u!157 &3
+ LightmapSettings:
+@@ -456,71 +456,6 @@
+   _enableSpeedAcceleration: 1
+   _speedAccelerationFactor: 1.5
+   _initPositonButton: 114
+---- !u!1001 &1333480567
+-PrefabInstance:
+-  m_ObjectHideFlags: 0
+-  serializedVersion: 2
+-  m_Modification:
+-    serializedVersion: 3
+-    m_TransformParent: {fileID: 0}
+-    m_Modifications:
+-    - target: {fileID: 746912571944225760, guid: 74baacb1cd0a34d418bfbf33b97bfc09, type: 3}
+-      propertyPath: m_LocalPosition.y
+-      value: -0.62
+-      objectReference: {fileID: 0}
+-    - target: {fileID: 5829896257075672536, guid: 74baacb1cd0a34d418bfbf33b97bfc09, type: 3}
+-      propertyPath: m_Enabled
+-      value: 1
+-      objectReference: {fileID: 0}
+-    - target: {fileID: 7419704221734567982, guid: 74baacb1cd0a34d418bfbf33b97bfc09, type: 3}
+-      propertyPath: m_LocalPosition.x
+-      value: -10.9
+-      objectReference: {fileID: 0}
+-    - target: {fileID: 7419704221734567982, guid: 74baacb1cd0a34d418bfbf33b97bfc09, type: 3}
+-      propertyPath: m_LocalPosition.y
+-      value: -0.05
+-      objectReference: {fileID: 0}
+-    - target: {fileID: 7419704221734567982, guid: 74baacb1cd0a34d418bfbf33b97bfc09, type: 3}
+-      propertyPath: m_LocalPosition.z
+-      value: -30.3
+-      objectReference: {fileID: 0}
+-    - target: {fileID: 7419704221734567982, guid: 74baacb1cd0a34d418bfbf33b97bfc09, type: 3}
+-      propertyPath: m_LocalRotation.w
+-      value: 1
+-      objectReference: {fileID: 0}
+-    - target: {fileID: 7419704221734567982, guid: 74baacb1cd0a34d418bfbf33b97bfc09, type: 3}
+-      propertyPath: m_LocalRotation.x
+-      value: 0
+-      objectReference: {fileID: 0}
+-    - target: {fileID: 7419704221734567982, guid: 74baacb1cd0a34d418bfbf33b97bfc09, type: 3}
+-      propertyPath: m_LocalRotation.y
+-      value: 0
+-      objectReference: {fileID: 0}
+-    - target: {fileID: 7419704221734567982, guid: 74baacb1cd0a34d418bfbf33b97bfc09, type: 3}
+-      propertyPath: m_LocalRotation.z
+-      value: 0
+-      objectReference: {fileID: 0}
+-    - target: {fileID: 7419704221734567982, guid: 74baacb1cd0a34d418bfbf33b97bfc09, type: 3}
+-      propertyPath: m_LocalEulerAnglesHint.x
+-      value: 0
+-      objectReference: {fileID: 0}
+-    - target: {fileID: 7419704221734567982, guid: 74baacb1cd0a34d418bfbf33b97bfc09, type: 3}
+-      propertyPath: m_LocalEulerAnglesHint.y
+-      value: 0
+-      objectReference: {fileID: 0}
+-    - target: {fileID: 7419704221734567982, guid: 74baacb1cd0a34d418bfbf33b97bfc09, type: 3}
+-      propertyPath: m_LocalEulerAnglesHint.z
+-      value: 0
+-      objectReference: {fileID: 0}
+-    - target: {fileID: 7904878379860810388, guid: 74baacb1cd0a34d418bfbf33b97bfc09, type: 3}
+-      propertyPath: m_Name
+-      value: Guy 1
+-      objectReference: {fileID: 0}
+-    m_RemovedComponents: []
+-    m_RemovedGameObjects: []
+-    m_AddedGameObjects: []
+-    m_AddedComponents: []
+-  m_SourcePrefab: {fileID: 100100000, guid: 74baacb1cd0a34d418bfbf33b97bfc09, type: 3}
+ --- !u!1 &1345945153
+ GameObject:
+   m_ObjectHideFlags: 0
+@@ -551,7 +486,7 @@
+   m_GameObject: {fileID: 1345945153}
+   serializedVersion: 2
+   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+-  m_LocalPosition: {x: -0.06609, y: 0.5, z: -2.7566667}
++  m_LocalPosition: {x: 0.02, y: 0.64, z: -3.85}
+   m_LocalScale: {x: 0.70601916, y: 0.9933379, z: 0.71319664}
+   m_ConstrainProportionsScale: 0
+   m_Children: []
+@@ -679,7 +614,48 @@
+   m_PrefabAsset: {fileID: 0}
+   m_GameObject: {fileID: 1345945153}
+   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+---- !u!1001 &1357490098
++--- !u!1 &1553001428 stripped
++GameObject:
++  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 36b66908e1969b0478efc5e2f1e7cd01, type: 3}
++  m_PrefabInstance: {fileID: 207992537}
++  m_PrefabAsset: {fileID: 0}
++--- !u!4 &1553001429 stripped
++Transform:
++  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 36b66908e1969b0478efc5e2f1e7cd01, type: 3}
++  m_PrefabInstance: {fileID: 207992537}
++  m_PrefabAsset: {fileID: 0}
++--- !u!114 &1553001430
++MonoBehaviour:
++  m_ObjectHideFlags: 0
++  m_CorrespondingSourceObject: {fileID: 0}
++  m_PrefabInstance: {fileID: 0}
++  m_PrefabAsset: {fileID: 0}
++  m_GameObject: {fileID: 1553001428}
++  m_Enabled: 1
++  m_EditorHideFlags: 0
++  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
++  m_Name: 
++  m_EditorClassIdentifier: 
++  m_AgentTypeID: 0
++  m_CollectObjects: 3
++  m_Size: {x: 10, y: 10, z: 10}
++  m_Center: {x: 0, y: 2, z: 0}
++  m_LayerMask:
++    serializedVersion: 2
++    m_Bits: 4294967295
++  m_UseGeometry: 0
++  m_DefaultArea: 0
++  m_GenerateLinks: 0
++  m_IgnoreNavMeshAgent: 1
++  m_IgnoreNavMeshObstacle: 1
++  m_OverrideTileSize: 0
++  m_TileSize: 256
++  m_OverrideVoxelSize: 0
++  m_VoxelSize: 0.16666667
++  m_MinRegionArea: 2
++  m_NavMeshData: {fileID: 23800000, guid: dd7a8ba48b8c74544b42b2070d80c63a, type: 2}
++  m_BuildHeightMesh: 0
++--- !u!1001 &1564501864
+ PrefabInstance:
+   m_ObjectHideFlags: 0
+   serializedVersion: 2
+@@ -687,222 +663,118 @@
+     serializedVersion: 3
+     m_TransformParent: {fileID: 0}
+     m_Modifications:
+-    - target: {fileID: 746912571944225760, guid: 74baacb1cd0a34d418bfbf33b97bfc09, type: 3}
+-      propertyPath: m_LocalPosition.y
+-      value: -0.6199999
++    - target: {fileID: 78322244001075546, guid: 74baacb1cd0a34d418bfbf33b97bfc09, type: 3}
++      propertyPath: m_Name
++      value: BadGuy
+       objectReference: {fileID: 0}
+-    - target: {fileID: 7419704221734567982, guid: 74baacb1cd0a34d418bfbf33b97bfc09, type: 3}
++    - target: {fileID: 217909297175207514, guid: 74baacb1cd0a34d418bfbf33b97bfc09, type: 3}
++      propertyPath: Footprint
++      value: 
++      objectReference: {fileID: 7741256861965729176, guid: 30be613c8de38c14581944cbbfa0c885, type: 3}
++    - target: {fileID: 746912571944225760, guid: 74baacb1cd0a34d418bfbf33b97bfc09, type: 3}
+       propertyPath: m_LocalPosition.x
+-      value: 8.6
++      value: -10.768793
+       objectReference: {fileID: 0}
+-    - target: {fileID: 7419704221734567982, guid: 74baacb1cd0a34d418bfbf33b97bfc09, type: 3}
++    - target: {fileID: 746912571944225760, guid: 74baacb1cd0a34d418bfbf33b97bfc09, type: 3}
+       propertyPath: m_LocalPosition.y
+-      value: -0.05
++      value: 1.6000004
+       objectReference: {fileID: 0}
+-    - target: {fileID: 7419704221734567982, guid: 74baacb1cd0a34d418bfbf33b97bfc09, type: 3}
++    - target: {fileID: 746912571944225760, guid: 74baacb1cd0a34d418bfbf33b97bfc09, type: 3}
+       propertyPath: m_LocalPosition.z
+-      value: -31.8
++      value: -32.63397
+       objectReference: {fileID: 0}
+-    - target: {fileID: 7419704221734567982, guid: 74baacb1cd0a34d418bfbf33b97bfc09, type: 3}
++    - target: {fileID: 746912571944225760, guid: 74baacb1cd0a34d418bfbf33b97bfc09, type: 3}
+       propertyPath: m_LocalRotation.w
+       value: 0
+       objectReference: {fileID: 0}
+-    - target: {fileID: 7419704221734567982, guid: 74baacb1cd0a34d418bfbf33b97bfc09, type: 3}
++    - target: {fileID: 746912571944225760, guid: 74baacb1cd0a34d418bfbf33b97bfc09, type: 3}
+       propertyPath: m_LocalRotation.x
+       value: -0
+       objectReference: {fileID: 0}
+-    - target: {fileID: 7419704221734567982, guid: 74baacb1cd0a34d418bfbf33b97bfc09, type: 3}
++    - target: {fileID: 746912571944225760, guid: 74baacb1cd0a34d418bfbf33b97bfc09, type: 3}
+       propertyPath: m_LocalRotation.y
+       value: 1
+       objectReference: {fileID: 0}
+-    - target: {fileID: 7419704221734567982, guid: 74baacb1cd0a34d418bfbf33b97bfc09, type: 3}
++    - target: {fileID: 746912571944225760, guid: 74baacb1cd0a34d418bfbf33b97bfc09, type: 3}
+       propertyPath: m_LocalRotation.z
+       value: -0
+       objectReference: {fileID: 0}
+-    - target: {fileID: 7419704221734567982, guid: 74baacb1cd0a34d418bfbf33b97bfc09, type: 3}
++    - target: {fileID: 746912571944225760, guid: 74baacb1cd0a34d418bfbf33b97bfc09, type: 3}
+       propertyPath: m_LocalEulerAnglesHint.x
+       value: 0
+       objectReference: {fileID: 0}
+-    - target: {fileID: 7419704221734567982, guid: 74baacb1cd0a34d418bfbf33b97bfc09, type: 3}
++    - target: {fileID: 746912571944225760, guid: 74baacb1cd0a34d418bfbf33b97bfc09, type: 3}
+       propertyPath: m_LocalEulerAnglesHint.y
+       value: 90
+       objectReference: {fileID: 0}
+-    - target: {fileID: 7419704221734567982, guid: 74baacb1cd0a34d418bfbf33b97bfc09, type: 3}
++    - target: {fileID: 746912571944225760, guid: 74baacb1cd0a34d418bfbf33b97bfc09, type: 3}
+       propertyPath: m_LocalEulerAnglesHint.z
+       value: 0
+       objectReference: {fileID: 0}
+-    - target: {fileID: 7904878379860810388, guid: 74baacb1cd0a34d418bfbf33b97bfc09, type: 3}
+-      propertyPath: m_Name
+-      value: Guy 1 (1)
++    - target: {fileID: 1278603594686567815, guid: 74baacb1cd0a34d418bfbf33b97bfc09, type: 3}
++      propertyPath: m_Enabled
++      value: 0
++      objectReference: {fileID: 0}
++    - target: {fileID: 1886839413186447578, guid: 74baacb1cd0a34d418bfbf33b97bfc09, type: 3}
++      propertyPath: m_AnchorMax.x
++      value: 0
++      objectReference: {fileID: 0}
++    - target: {fileID: 1886839413186447578, guid: 74baacb1cd0a34d418bfbf33b97bfc09, type: 3}
++      propertyPath: m_AnchorMax.y
++      value: 0
++      objectReference: {fileID: 0}
++    - target: {fileID: 3744973353269648937, guid: 74baacb1cd0a34d418bfbf33b97bfc09, type: 3}
++      propertyPath: m_AnchorMax.x
++      value: 0
++      objectReference: {fileID: 0}
++    - target: {fileID: 3744973353269648937, guid: 74baacb1cd0a34d418bfbf33b97bfc09, type: 3}
++      propertyPath: m_AnchorMax.y
++      value: 0
++      objectReference: {fileID: 0}
++    - target: {fileID: 5397288175412323759, guid: 74baacb1cd0a34d418bfbf33b97bfc09, type: 3}
++      propertyPath: m_AnchorMax.x
++      value: 0
++      objectReference: {fileID: 0}
++    - target: {fileID: 5397288175412323759, guid: 74baacb1cd0a34d418bfbf33b97bfc09, type: 3}
++      propertyPath: m_AnchorMax.y
++      value: 0
++      objectReference: {fileID: 0}
++    - target: {fileID: 7473340408064961688, guid: 74baacb1cd0a34d418bfbf33b97bfc09, type: 3}
++      propertyPath: m_AnchorMax.x
++      value: 0
++      objectReference: {fileID: 0}
++    - target: {fileID: 7473340408064961688, guid: 74baacb1cd0a34d418bfbf33b97bfc09, type: 3}
++      propertyPath: m_AnchorMax.y
++      value: 0
+       objectReference: {fileID: 0}
+     m_RemovedComponents: []
+     m_RemovedGameObjects: []
+     m_AddedGameObjects: []
+-    m_AddedComponents: []
++    m_AddedComponents:
++    - targetCorrespondingSourceObject: {fileID: 78322244001075546, guid: 74baacb1cd0a34d418bfbf33b97bfc09, type: 3}
++      insertIndex: -1
++      addedObject: {fileID: 1768878408}
+   m_SourcePrefab: {fileID: 100100000, guid: 74baacb1cd0a34d418bfbf33b97bfc09, type: 3}
+---- !u!1 &1477419714
++--- !u!1 &1768878401 stripped
+ GameObject:
+-  m_ObjectHideFlags: 0
+-  m_CorrespondingSourceObject: {fileID: 0}
+-  m_PrefabInstance: {fileID: 0}
++  m_CorrespondingSourceObject: {fileID: 78322244001075546, guid: 74baacb1cd0a34d418bfbf33b97bfc09, type: 3}
++  m_PrefabInstance: {fileID: 1564501864}
+   m_PrefabAsset: {fileID: 0}
+-  serializedVersion: 6
+-  m_Component:
+-  - component: {fileID: 1477419715}
+-  - component: {fileID: 1477419719}
+-  - component: {fileID: 1477419718}
+-  - component: {fileID: 1477419717}
+-  - component: {fileID: 1477419716}
+-  m_Layer: 6
+-  m_Name: Workshop
+-  m_TagString: Untagged
+-  m_Icon: {fileID: 0}
+-  m_NavMeshLayer: 0
+-  m_StaticEditorFlags: 0
+-  m_IsActive: 1
+---- !u!4 &1477419715
+-Transform:
+-  m_ObjectHideFlags: 0
+-  m_CorrespondingSourceObject: {fileID: 0}
+-  m_PrefabInstance: {fileID: 0}
+-  m_PrefabAsset: {fileID: 0}
+-  m_GameObject: {fileID: 1477419714}
+-  serializedVersion: 2
+-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+-  m_LocalPosition: {x: 0, y: -7.72, z: 11.76}
+-  m_LocalScale: {x: 3.04, y: 16.514977, z: 3.66}
+-  m_ConstrainProportionsScale: 0
+-  m_Children: []
+-  m_Father: {fileID: 2139154419}
+-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+---- !u!114 &1477419716
+-MonoBehaviour:
+-  m_ObjectHideFlags: 0
+-  m_CorrespondingSourceObject: {fileID: 0}
+-  m_PrefabInstance: {fileID: 0}
+-  m_PrefabAsset: {fileID: 0}
+-  m_GameObject: {fileID: 1477419714}
+-  m_Enabled: 1
+-  m_EditorHideFlags: 0
+-  m_Script: {fileID: 11500000, guid: 35e95dc5ff2b64380880dd7ac5922847, type: 3}
+-  m_Name: 
+-  m_EditorClassIdentifier: 
+-  m_Size: {x: 2.3523412, y: 1.1169412, z: 1.9654257}
+-  m_Center: {x: -0.2848122, y: 0.058470905, z: 0.006908208}
+-  m_Area: 3
+-  m_AffectedAgents: 00000000
+---- !u!65 &1477419717
+-BoxCollider:
+-  m_ObjectHideFlags: 0
+-  m_CorrespondingSourceObject: {fileID: 0}
+-  m_PrefabInstance: {fileID: 0}
+-  m_PrefabAsset: {fileID: 0}
+-  m_GameObject: {fileID: 1477419714}
+-  m_Material: {fileID: 0}
+-  m_IncludeLayers:
+-    serializedVersion: 2
+-    m_Bits: 0
+-  m_ExcludeLayers:
+-    serializedVersion: 2
+-    m_Bits: 0
+-  m_LayerOverridePriority: 0
+-  m_IsTrigger: 0
+-  m_ProvidesContacts: 0
+-  m_Enabled: 1
+-  serializedVersion: 3
+-  m_Size: {x: 1, y: 1, z: 1}
+-  m_Center: {x: 0, y: 0, z: 0}
+---- !u!23 &1477419718
+-MeshRenderer:
+-  m_ObjectHideFlags: 0
+-  m_CorrespondingSourceObject: {fileID: 0}
+-  m_PrefabInstance: {fileID: 0}
+-  m_PrefabAsset: {fileID: 0}
+-  m_GameObject: {fileID: 1477419714}
+-  m_Enabled: 1
+-  m_CastShadows: 1
+-  m_ReceiveShadows: 1
+-  m_DynamicOccludee: 1
+-  m_StaticShadowCaster: 0
+-  m_MotionVectors: 1
+-  m_LightProbeUsage: 1
+-  m_ReflectionProbeUsage: 1
+-  m_RayTracingMode: 2
+-  m_RayTraceProcedural: 0
+-  m_RenderingLayerMask: 1
+-  m_RendererPriority: 0
+-  m_Materials:
+-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+-  m_StaticBatchInfo:
+-    firstSubMesh: 0
+-    subMeshCount: 0
+-  m_StaticBatchRoot: {fileID: 0}
+-  m_ProbeAnchor: {fileID: 0}
+-  m_LightProbeVolumeOverride: {fileID: 0}
+-  m_ScaleInLightmap: 1
+-  m_ReceiveGI: 1
+-  m_PreserveUVs: 0
+-  m_IgnoreNormalsForChartDetection: 0
+-  m_ImportantGI: 0
+-  m_StitchLightmapSeams: 1
+-  m_SelectedEditorRenderState: 3
+-  m_MinimumChartSize: 4
+-  m_AutoUVMaxDistance: 0.5
+-  m_AutoUVMaxAngle: 89
+-  m_LightmapParameters: {fileID: 0}
+-  m_SortingLayerID: 0
+-  m_SortingLayer: 0
+-  m_SortingOrder: 0
+-  m_AdditionalVertexStreams: {fileID: 0}
+---- !u!33 &1477419719
+-MeshFilter:
+-  m_ObjectHideFlags: 0
+-  m_CorrespondingSourceObject: {fileID: 0}
+-  m_PrefabInstance: {fileID: 0}
+-  m_PrefabAsset: {fileID: 0}
+-  m_GameObject: {fileID: 1477419714}
+-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+---- !u!1 &1553001428 stripped
+-GameObject:
+-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 36b66908e1969b0478efc5e2f1e7cd01, type: 3}
+-  m_PrefabInstance: {fileID: 207992537}
+-  m_PrefabAsset: {fileID: 0}
+---- !u!4 &1553001429 stripped
+-Transform:
+-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 36b66908e1969b0478efc5e2f1e7cd01, type: 3}
+-  m_PrefabInstance: {fileID: 207992537}
+-  m_PrefabAsset: {fileID: 0}
+---- !u!114 &1553001430
++--- !u!114 &1768878408
+ MonoBehaviour:
+   m_ObjectHideFlags: 0
+   m_CorrespondingSourceObject: {fileID: 0}
+   m_PrefabInstance: {fileID: 0}
+   m_PrefabAsset: {fileID: 0}
+-  m_GameObject: {fileID: 1553001428}
++  m_GameObject: {fileID: 1768878401}
+   m_Enabled: 1
+   m_EditorHideFlags: 0
+-  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
++  m_Script: {fileID: 11500000, guid: f1a852c8bfe9d094f976f2679afc0e8e, type: 3}
+   m_Name: 
+   m_EditorClassIdentifier: 
+-  m_AgentTypeID: 0
+-  m_CollectObjects: 3
+-  m_Size: {x: 10, y: 10, z: 10}
+-  m_Center: {x: 0, y: 2, z: 0}
+-  m_LayerMask:
+-    serializedVersion: 2
+-    m_Bits: 4294967295
+-  m_UseGeometry: 0
+-  m_DefaultArea: 0
+-  m_GenerateLinks: 0
+-  m_IgnoreNavMeshAgent: 1
+-  m_IgnoreNavMeshObstacle: 1
+-  m_OverrideTileSize: 0
+-  m_TileSize: 256
+-  m_OverrideVoxelSize: 0
+-  m_VoxelSize: 0.16666667
+-  m_MinRegionArea: 2
+-  m_NavMeshData: {fileID: 23800000, guid: dd7a8ba48b8c74544b42b2070d80c63a, type: 2}
+-  m_BuildHeightMesh: 0
++  myClips: []
++  range: 30
++  Cam: {fileID: 0}
+ --- !u!1 &2055700646
+ GameObject:
+   m_ObjectHideFlags: 0
+@@ -947,7 +819,7 @@
+   m_Script: {fileID: 11500000, guid: a6544dd91f3f125498f1a5511fe99a94, type: 3}
+   m_Name: 
+   m_EditorClassIdentifier: 
+---- !u!1001 &2073070842
++--- !u!1001 &216929607829894578
+ PrefabInstance:
+   m_ObjectHideFlags: 0
+   serializedVersion: 2
+@@ -955,91 +827,59 @@
+     serializedVersion: 3
+     m_TransformParent: {fileID: 0}
+     m_Modifications:
+-    - target: {fileID: 746912571944225760, guid: 74baacb1cd0a34d418bfbf33b97bfc09, type: 3}
+-      propertyPath: m_LocalPosition.y
+-      value: -0.6199999
+-      objectReference: {fileID: 0}
+-    - target: {fileID: 7419704221734567982, guid: 74baacb1cd0a34d418bfbf33b97bfc09, type: 3}
++    - target: {fileID: 5373698483721584649, guid: 30be613c8de38c14581944cbbfa0c885, type: 3}
+       propertyPath: m_LocalPosition.x
+-      value: -3.89
++      value: 9.155247
+       objectReference: {fileID: 0}
+-    - target: {fileID: 7419704221734567982, guid: 74baacb1cd0a34d418bfbf33b97bfc09, type: 3}
++    - target: {fileID: 5373698483721584649, guid: 30be613c8de38c14581944cbbfa0c885, type: 3}
+       propertyPath: m_LocalPosition.y
+-      value: -0.05
++      value: -5.92
+       objectReference: {fileID: 0}
+-    - target: {fileID: 7419704221734567982, guid: 74baacb1cd0a34d418bfbf33b97bfc09, type: 3}
++    - target: {fileID: 5373698483721584649, guid: 30be613c8de38c14581944cbbfa0c885, type: 3}
+       propertyPath: m_LocalPosition.z
+-      value: -1.23
++      value: -34.655212
+       objectReference: {fileID: 0}
+-    - target: {fileID: 7419704221734567982, guid: 74baacb1cd0a34d418bfbf33b97bfc09, type: 3}
++    - target: {fileID: 5373698483721584649, guid: 30be613c8de38c14581944cbbfa0c885, type: 3}
+       propertyPath: m_LocalRotation.w
+-      value: 0
++      value: 1
+       objectReference: {fileID: 0}
+-    - target: {fileID: 7419704221734567982, guid: 74baacb1cd0a34d418bfbf33b97bfc09, type: 3}
++    - target: {fileID: 5373698483721584649, guid: 30be613c8de38c14581944cbbfa0c885, type: 3}
+       propertyPath: m_LocalRotation.x
+-      value: -0
++      value: 0
+       objectReference: {fileID: 0}
+-    - target: {fileID: 7419704221734567982, guid: 74baacb1cd0a34d418bfbf33b97bfc09, type: 3}
++    - target: {fileID: 5373698483721584649, guid: 30be613c8de38c14581944cbbfa0c885, type: 3}
+       propertyPath: m_LocalRotation.y
+-      value: 1
++      value: 0
+       objectReference: {fileID: 0}
+-    - target: {fileID: 7419704221734567982, guid: 74baacb1cd0a34d418bfbf33b97bfc09, type: 3}
++    - target: {fileID: 5373698483721584649, guid: 30be613c8de38c14581944cbbfa0c885, type: 3}
+       propertyPath: m_LocalRotation.z
+-      value: -0
++      value: 0
+       objectReference: {fileID: 0}
+-    - target: {fileID: 7419704221734567982, guid: 74baacb1cd0a34d418bfbf33b97bfc09, type: 3}
++    - target: {fileID: 5373698483721584649, guid: 30be613c8de38c14581944cbbfa0c885, type: 3}
+       propertyPath: m_LocalEulerAnglesHint.x
+       value: 0
+       objectReference: {fileID: 0}
+-    - target: {fileID: 7419704221734567982, guid: 74baacb1cd0a34d418bfbf33b97bfc09, type: 3}
++    - target: {fileID: 5373698483721584649, guid: 30be613c8de38c14581944cbbfa0c885, type: 3}
+       propertyPath: m_LocalEulerAnglesHint.y
+-      value: 90
++      value: 0
+       objectReference: {fileID: 0}
+-    - target: {fileID: 7419704221734567982, guid: 74baacb1cd0a34d418bfbf33b97bfc09, type: 3}
++    - target: {fileID: 5373698483721584649, guid: 30be613c8de38c14581944cbbfa0c885, type: 3}
+       propertyPath: m_LocalEulerAnglesHint.z
+       value: 0
+       objectReference: {fileID: 0}
+-    - target: {fileID: 7904878379860810388, guid: 74baacb1cd0a34d418bfbf33b97bfc09, type: 3}
++    - target: {fileID: 6211780674629944792, guid: 30be613c8de38c14581944cbbfa0c885, type: 3}
++      propertyPath: m_LocalPosition.y
++      value: 0
++      objectReference: {fileID: 0}
++    - target: {fileID: 7741256861965729176, guid: 30be613c8de38c14581944cbbfa0c885, type: 3}
+       propertyPath: m_Name
+-      value: Guy 1 (2)
++      value: Footprint
+       objectReference: {fileID: 0}
+     m_RemovedComponents: []
+     m_RemovedGameObjects: []
+     m_AddedGameObjects: []
+     m_AddedComponents: []
+-  m_SourcePrefab: {fileID: 100100000, guid: 74baacb1cd0a34d418bfbf33b97bfc09, type: 3}
+---- !u!1 &2139154418
+-GameObject:
+-  m_ObjectHideFlags: 0
+-  m_CorrespondingSourceObject: {fileID: 0}
+-  m_PrefabInstance: {fileID: 0}
+-  m_PrefabAsset: {fileID: 0}
+-  serializedVersion: 6
+-  m_Component:
+-  - component: {fileID: 2139154419}
+-  m_Layer: 6
+-  m_Name: Task2
+-  m_TagString: Task
+-  m_Icon: {fileID: 0}
+-  m_NavMeshLayer: 0
+-  m_StaticEditorFlags: 0
+-  m_IsActive: 1
+---- !u!4 &2139154419
+-Transform:
+-  m_ObjectHideFlags: 0
+-  m_CorrespondingSourceObject: {fileID: 0}
+-  m_PrefabInstance: {fileID: 0}
+-  m_PrefabAsset: {fileID: 0}
+-  m_GameObject: {fileID: 2139154418}
+-  serializedVersion: 2
+-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+-  m_LocalPosition: {x: 5.1, y: 14.28, z: -67.9}
+-  m_LocalScale: {x: 1, y: 1, z: 1}
+-  m_ConstrainProportionsScale: 0
+-  m_Children:
+-  - {fileID: 1477419715}
+-  m_Father: {fileID: 0}
+-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
++  m_SourcePrefab: {fileID: 100100000, guid: 30be613c8de38c14581944cbbfa0c885, type: 3}
+ --- !u!1660057539 &9223372036854775807
+ SceneRoots:
+   m_ObjectHideFlags: 0
+@@ -1047,8 +887,6 @@
+   - {fileID: 963194228}
+   - {fileID: 705507995}
+   - {fileID: 207992537}
+-  - {fileID: 2139154419}
+   - {fileID: 2055700647}
+-  - {fileID: 1333480567}
+-  - {fileID: 1357490098}
+-  - {fileID: 2073070842}
++  - {fileID: 1564501864}
++  - {fileID: 216929607829894578}
+Index: Assets/Material/Src/Resources/UV-caja01.png.meta
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>fileFormatVersion: 2\r\nguid: 0970d283647e99841b62018259db0f67\r\nTextureImporter:\r\n  internalIDToNameTable: []\r\n  externalObjects: {}\r\n  serializedVersion: 11\r\n  mipmaps:\r\n    mipMapMode: 0\r\n    enableMipMap: 1\r\n    sRGBTexture: 1\r\n    linearTexture: 0\r\n    fadeOut: 0\r\n    borderMipMap: 0\r\n    mipMapsPreserveCoverage: 0\r\n    alphaTestReferenceValue: 0.5\r\n    mipMapFadeDistanceStart: 1\r\n    mipMapFadeDistanceEnd: 3\r\n  bumpmap:\r\n    convertToNormalMap: 0\r\n    externalNormalMap: 0\r\n    heightScale: 0.25\r\n    normalMapFilter: 0\r\n  isReadable: 0\r\n  streamingMipmaps: 0\r\n  streamingMipmapsPriority: 0\r\n  grayScaleToAlpha: 0\r\n  generateCubemap: 6\r\n  cubemapConvolution: 0\r\n  seamlessCubemap: 0\r\n  textureFormat: 1\r\n  maxTextureSize: 2048\r\n  textureSettings:\r\n    serializedVersion: 2\r\n    filterMode: -1\r\n    aniso: 2\r\n    mipBias: -100\r\n    wrapU: -1\r\n    wrapV: -1\r\n    wrapW: -1\r\n  nPOTScale: 1\r\n  lightmap: 0\r\n  compressionQuality: 50\r\n  spriteMode: 0\r\n  spriteExtrude: 1\r\n  spriteMeshType: 1\r\n  alignment: 0\r\n  spritePivot: {x: 0.5, y: 0.5}\r\n  spritePixelsToUnits: 100\r\n  spriteBorder: {x: 0, y: 0, z: 0, w: 0}\r\n  spriteGenerateFallbackPhysicsShape: 1\r\n  alphaUsage: 1\r\n  alphaIsTransparency: 0\r\n  spriteTessellationDetail: -1\r\n  textureType: 0\r\n  textureShape: 1\r\n  singleChannelComponent: 0\r\n  maxTextureSizeSet: 0\r\n  compressionQualitySet: 0\r\n  textureFormatSet: 0\r\n  applyGammaDecoding: 0\r\n  platformSettings:\r\n  - serializedVersion: 3\r\n    buildTarget: DefaultTexturePlatform\r\n    maxTextureSize: 8192\r\n    resizeAlgorithm: 0\r\n    textureFormat: -1\r\n    textureCompression: 1\r\n    compressionQuality: 50\r\n    crunchedCompression: 0\r\n    allowsAlphaSplitting: 0\r\n    overridden: 0\r\n    androidETC2FallbackOverride: 0\r\n    forceMaximumCompressionQuality_BC6H_BC7: 0\r\n  - serializedVersion: 3\r\n    buildTarget: Standalone\r\n    maxTextureSize: 8192\r\n    resizeAlgorithm: 0\r\n    textureFormat: -1\r\n    textureCompression: 1\r\n    compressionQuality: 50\r\n    crunchedCompression: 0\r\n    allowsAlphaSplitting: 0\r\n    overridden: 0\r\n    androidETC2FallbackOverride: 0\r\n    forceMaximumCompressionQuality_BC6H_BC7: 0\r\n  - serializedVersion: 3\r\n    buildTarget: iPhone\r\n    maxTextureSize: 8192\r\n    resizeAlgorithm: 0\r\n    textureFormat: -1\r\n    textureCompression: 1\r\n    compressionQuality: 50\r\n    crunchedCompression: 0\r\n    allowsAlphaSplitting: 0\r\n    overridden: 0\r\n    androidETC2FallbackOverride: 0\r\n    forceMaximumCompressionQuality_BC6H_BC7: 0\r\n  - serializedVersion: 3\r\n    buildTarget: Android\r\n    maxTextureSize: 8192\r\n    resizeAlgorithm: 0\r\n    textureFormat: -1\r\n    textureCompression: 1\r\n    compressionQuality: 50\r\n    crunchedCompression: 0\r\n    allowsAlphaSplitting: 0\r\n    overridden: 0\r\n    androidETC2FallbackOverride: 0\r\n    forceMaximumCompressionQuality_BC6H_BC7: 0\r\n  spriteSheet:\r\n    serializedVersion: 2\r\n    sprites: []\r\n    outline: []\r\n    physicsShape: []\r\n    bones: []\r\n    spriteID: \r\n    internalID: 0\r\n    vertices: []\r\n    indices: \r\n    edges: []\r\n    weights: []\r\n    secondaryTextures: []\r\n  spritePackingTag: \r\n  pSDRemoveMatte: 0\r\n  pSDShowRemoveMatteOption: 0\r\n  userData: \r\n  assetBundleName: \r\n  assetBundleVariant: \r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Assets/Material/Src/Resources/UV-caja01.png.meta b/Assets/Material/Src/Resources/UV-caja01.png.meta
+--- a/Assets/Material/Src/Resources/UV-caja01.png.meta	(revision 7137da74b41c830a30c99b83a59564897d4f780d)
++++ b/Assets/Material/Src/Resources/UV-caja01.png.meta	(date 1701970876037)
+@@ -1,5 +1,5 @@
+ fileFormatVersion: 2
+-guid: 0970d283647e99841b62018259db0f67
++guid: 3a5b122924c16b44fb26dd82f4aeefd2
+ TextureImporter:
+   internalIDToNameTable: []
+   externalObjects: {}
+Index: Assets/Material/MyMaterial/Target.mat
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>%YAML 1.1\r\n%TAG !u! tag:unity3d.com,2011:\r\n--- !u!21 &2100000\r\nMaterial:\r\n  serializedVersion: 8\r\n  m_ObjectHideFlags: 0\r\n  m_CorrespondingSourceObject: {fileID: 0}\r\n  m_PrefabInstance: {fileID: 0}\r\n  m_PrefabAsset: {fileID: 0}\r\n  m_Name: Target\r\n  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}\r\n  m_Parent: {fileID: 0}\r\n  m_ModifiedSerializedProperties: 0\r\n  m_ValidKeywords:\r\n  - _SMOOTHNESS_TEXTURE_ALBEDO_CHANNEL_A\r\n  m_InvalidKeywords: []\r\n  m_LightmapFlags: 4\r\n  m_EnableInstancingVariants: 0\r\n  m_DoubleSidedGI: 0\r\n  m_CustomRenderQueue: -1\r\n  stringTagMap: {}\r\n  disabledShaderPasses: []\r\n  m_LockedProperties: \r\n  m_SavedProperties:\r\n    serializedVersion: 3\r\n    m_TexEnvs:\r\n    - _BumpMap:\r\n        m_Texture: {fileID: 0}\r\n        m_Scale: {x: 1, y: 1}\r\n        m_Offset: {x: 0, y: 0}\r\n    - _DetailAlbedoMap:\r\n        m_Texture: {fileID: 0}\r\n        m_Scale: {x: 1, y: 1}\r\n        m_Offset: {x: 0, y: 0}\r\n    - _DetailMask:\r\n        m_Texture: {fileID: 0}\r\n        m_Scale: {x: 1, y: 1}\r\n        m_Offset: {x: 0, y: 0}\r\n    - _DetailNormalMap:\r\n        m_Texture: {fileID: 0}\r\n        m_Scale: {x: 1, y: 1}\r\n        m_Offset: {x: 0, y: 0}\r\n    - _EmissionMap:\r\n        m_Texture: {fileID: 0}\r\n        m_Scale: {x: 1, y: 1}\r\n        m_Offset: {x: 0, y: 0}\r\n    - _MainTex:\r\n        m_Texture: {fileID: 0}\r\n        m_Scale: {x: 1, y: 1}\r\n        m_Offset: {x: 0, y: 0}\r\n    - _MetallicGlossMap:\r\n        m_Texture: {fileID: 0}\r\n        m_Scale: {x: 1, y: 1}\r\n        m_Offset: {x: 0, y: 0}\r\n    - _OcclusionMap:\r\n        m_Texture: {fileID: 0}\r\n        m_Scale: {x: 1, y: 1}\r\n        m_Offset: {x: 0, y: 0}\r\n    - _ParallaxMap:\r\n        m_Texture: {fileID: 0}\r\n        m_Scale: {x: 1, y: 1}\r\n        m_Offset: {x: 0, y: 0}\r\n    m_Ints: []\r\n    m_Floats:\r\n    - _BumpScale: 1\r\n    - _Cutoff: 0.5\r\n    - _DetailNormalMapScale: 1\r\n    - _DstBlend: 0\r\n    - _GlossMapScale: 0.78\r\n    - _Glossiness: 0.5\r\n    - _GlossyReflections: 1\r\n    - _Metallic: 0.311\r\n    - _Mode: 0\r\n    - _OcclusionStrength: 1\r\n    - _Parallax: 0.02\r\n    - _SmoothnessTextureChannel: 1\r\n    - _SpecularHighlights: 1\r\n    - _SrcBlend: 1\r\n    - _UVSec: 0\r\n    - _ZWrite: 1\r\n    m_Colors:\r\n    - _Color: {r: 0.2869348, g: 0.42498538, b: 0.8773585, a: 1}\r\n    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}\r\n  m_BuildTextureStacks: []\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Assets/Material/MyMaterial/Target.mat b/Assets/Material/MyMaterial/Target.mat
+--- a/Assets/Material/MyMaterial/Target.mat	(revision 7137da74b41c830a30c99b83a59564897d4f780d)
++++ b/Assets/Material/MyMaterial/Target.mat	(date 1701970834936)
+@@ -12,9 +12,10 @@
+   m_Parent: {fileID: 0}
+   m_ModifiedSerializedProperties: 0
+   m_ValidKeywords:
++  - _EMISSION
+   - _SMOOTHNESS_TEXTURE_ALBEDO_CHANNEL_A
+   m_InvalidKeywords: []
+-  m_LightmapFlags: 4
++  m_LightmapFlags: 0
+   m_EnableInstancingVariants: 0
+   m_DoubleSidedGI: 0
+   m_CustomRenderQueue: -1
+@@ -60,25 +61,48 @@
+         m_Texture: {fileID: 0}
+         m_Scale: {x: 1, y: 1}
+         m_Offset: {x: 0, y: 0}
++    - _SpecGlossMap:
++        m_Texture: {fileID: 0}
++        m_Scale: {x: 1, y: 1}
++        m_Offset: {x: 0, y: 0}
+     m_Ints: []
+     m_Floats:
++    - _BlendOp: 0
+     - _BumpScale: 1
++    - _CameraFadingEnabled: 0
++    - _CameraFarFadeDistance: 2
++    - _CameraNearFadeDistance: 1
++    - _ColorMode: 0
++    - _Cull: 2
+     - _Cutoff: 0.5
+     - _DetailNormalMapScale: 1
++    - _DistortionBlend: 0.5
++    - _DistortionEnabled: 0
++    - _DistortionStrength: 1
++    - _DistortionStrengthScaled: 0
+     - _DstBlend: 0
++    - _EmissionEnabled: 0
++    - _FlipbookMode: 0
+     - _GlossMapScale: 0.78
+     - _Glossiness: 0.5
+     - _GlossyReflections: 1
++    - _LightingEnabled: 0
+     - _Metallic: 0.311
+     - _Mode: 0
+     - _OcclusionStrength: 1
+     - _Parallax: 0.02
+     - _SmoothnessTextureChannel: 1
++    - _SoftParticlesEnabled: 0
++    - _SoftParticlesFarFadeDistance: 1
++    - _SoftParticlesNearFadeDistance: 0
+     - _SpecularHighlights: 1
+     - _SrcBlend: 1
+     - _UVSec: 0
+     - _ZWrite: 1
+     m_Colors:
++    - _CameraFadeParams: {r: 0, g: Infinity, b: 0, a: 0}
+     - _Color: {r: 0.2869348, g: 0.42498538, b: 0.8773585, a: 1}
++    - _ColorAddSubDiff: {r: 0, g: 0, b: 0, a: 0}
+     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
++    - _SoftParticleFadeParams: {r: 0, g: 0, b: 0, a: 0}
+   m_BuildTextureStacks: []
+Index: Assets/Material/Motor4.mat.meta
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>fileFormatVersion: 2\r\nguid: 2a457bc9339241842a427a0607f6dcb1\r\nNativeFormatImporter:\r\n  externalObjects: {}\r\n  mainObjectFileID: 0\r\n  userData: \r\n  assetBundleName: \r\n  assetBundleVariant: \r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Assets/Material/Motor4.mat.meta b/Assets/Material/Motor4.mat.meta
+--- a/Assets/Material/Motor4.mat.meta	(revision 7137da74b41c830a30c99b83a59564897d4f780d)
++++ b/Assets/Material/Motor4.mat.meta	(date 1701970876033)
+@@ -1,5 +1,5 @@
+ fileFormatVersion: 2
+-guid: 2a457bc9339241842a427a0607f6dcb1
++guid: 406af2080f3571f48968322bccf09a22
+ NativeFormatImporter:
+   externalObjects: {}
+   mainObjectFileID: 0
+Index: Assets/Material/Src/Resources/UV-caja02.png.meta
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>fileFormatVersion: 2\r\nguid: ba15b8c5f77588447b71bf931fe981e7\r\nTextureImporter:\r\n  internalIDToNameTable: []\r\n  externalObjects: {}\r\n  serializedVersion: 11\r\n  mipmaps:\r\n    mipMapMode: 0\r\n    enableMipMap: 1\r\n    sRGBTexture: 1\r\n    linearTexture: 0\r\n    fadeOut: 0\r\n    borderMipMap: 0\r\n    mipMapsPreserveCoverage: 0\r\n    alphaTestReferenceValue: 0.5\r\n    mipMapFadeDistanceStart: 1\r\n    mipMapFadeDistanceEnd: 3\r\n  bumpmap:\r\n    convertToNormalMap: 0\r\n    externalNormalMap: 0\r\n    heightScale: 0.25\r\n    normalMapFilter: 0\r\n  isReadable: 0\r\n  streamingMipmaps: 0\r\n  streamingMipmapsPriority: 0\r\n  grayScaleToAlpha: 0\r\n  generateCubemap: 6\r\n  cubemapConvolution: 0\r\n  seamlessCubemap: 0\r\n  textureFormat: 1\r\n  maxTextureSize: 2048\r\n  textureSettings:\r\n    serializedVersion: 2\r\n    filterMode: -1\r\n    aniso: 2\r\n    mipBias: -100\r\n    wrapU: -1\r\n    wrapV: -1\r\n    wrapW: -1\r\n  nPOTScale: 1\r\n  lightmap: 0\r\n  compressionQuality: 50\r\n  spriteMode: 0\r\n  spriteExtrude: 1\r\n  spriteMeshType: 1\r\n  alignment: 0\r\n  spritePivot: {x: 0.5, y: 0.5}\r\n  spritePixelsToUnits: 100\r\n  spriteBorder: {x: 0, y: 0, z: 0, w: 0}\r\n  spriteGenerateFallbackPhysicsShape: 1\r\n  alphaUsage: 1\r\n  alphaIsTransparency: 0\r\n  spriteTessellationDetail: -1\r\n  textureType: 0\r\n  textureShape: 1\r\n  singleChannelComponent: 0\r\n  maxTextureSizeSet: 0\r\n  compressionQualitySet: 0\r\n  textureFormatSet: 0\r\n  applyGammaDecoding: 0\r\n  platformSettings:\r\n  - serializedVersion: 3\r\n    buildTarget: DefaultTexturePlatform\r\n    maxTextureSize: 8192\r\n    resizeAlgorithm: 0\r\n    textureFormat: -1\r\n    textureCompression: 1\r\n    compressionQuality: 50\r\n    crunchedCompression: 0\r\n    allowsAlphaSplitting: 0\r\n    overridden: 0\r\n    androidETC2FallbackOverride: 0\r\n    forceMaximumCompressionQuality_BC6H_BC7: 0\r\n  - serializedVersion: 3\r\n    buildTarget: Standalone\r\n    maxTextureSize: 8192\r\n    resizeAlgorithm: 0\r\n    textureFormat: -1\r\n    textureCompression: 1\r\n    compressionQuality: 50\r\n    crunchedCompression: 0\r\n    allowsAlphaSplitting: 0\r\n    overridden: 0\r\n    androidETC2FallbackOverride: 0\r\n    forceMaximumCompressionQuality_BC6H_BC7: 0\r\n  - serializedVersion: 3\r\n    buildTarget: iPhone\r\n    maxTextureSize: 8192\r\n    resizeAlgorithm: 0\r\n    textureFormat: -1\r\n    textureCompression: 1\r\n    compressionQuality: 50\r\n    crunchedCompression: 0\r\n    allowsAlphaSplitting: 0\r\n    overridden: 0\r\n    androidETC2FallbackOverride: 0\r\n    forceMaximumCompressionQuality_BC6H_BC7: 0\r\n  - serializedVersion: 3\r\n    buildTarget: Android\r\n    maxTextureSize: 8192\r\n    resizeAlgorithm: 0\r\n    textureFormat: -1\r\n    textureCompression: 1\r\n    compressionQuality: 50\r\n    crunchedCompression: 0\r\n    allowsAlphaSplitting: 0\r\n    overridden: 0\r\n    androidETC2FallbackOverride: 0\r\n    forceMaximumCompressionQuality_BC6H_BC7: 0\r\n  spriteSheet:\r\n    serializedVersion: 2\r\n    sprites: []\r\n    outline: []\r\n    physicsShape: []\r\n    bones: []\r\n    spriteID: \r\n    internalID: 0\r\n    vertices: []\r\n    indices: \r\n    edges: []\r\n    weights: []\r\n    secondaryTextures: []\r\n  spritePackingTag: \r\n  pSDRemoveMatte: 0\r\n  pSDShowRemoveMatteOption: 0\r\n  userData: \r\n  assetBundleName: \r\n  assetBundleVariant: \r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Assets/Material/Src/Resources/UV-caja02.png.meta b/Assets/Material/Src/Resources/UV-caja02.png.meta
+--- a/Assets/Material/Src/Resources/UV-caja02.png.meta	(revision 7137da74b41c830a30c99b83a59564897d4f780d)
++++ b/Assets/Material/Src/Resources/UV-caja02.png.meta	(date 1701970876038)
+@@ -1,5 +1,5 @@
+ fileFormatVersion: 2
+-guid: ba15b8c5f77588447b71bf931fe981e7
++guid: fb0afa82799a28a4d9cb30ec82b43a29
+ TextureImporter:
+   internalIDToNameTable: []
+   externalObjects: {}
+Index: Assets/Material/Src/Resources/UV-caja03.png.meta
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>fileFormatVersion: 2\r\nguid: 4dbeae9bd54215e4caa722050bc9de69\r\nTextureImporter:\r\n  internalIDToNameTable: []\r\n  externalObjects: {}\r\n  serializedVersion: 11\r\n  mipmaps:\r\n    mipMapMode: 0\r\n    enableMipMap: 1\r\n    sRGBTexture: 1\r\n    linearTexture: 0\r\n    fadeOut: 0\r\n    borderMipMap: 0\r\n    mipMapsPreserveCoverage: 0\r\n    alphaTestReferenceValue: 0.5\r\n    mipMapFadeDistanceStart: 1\r\n    mipMapFadeDistanceEnd: 3\r\n  bumpmap:\r\n    convertToNormalMap: 0\r\n    externalNormalMap: 0\r\n    heightScale: 0.25\r\n    normalMapFilter: 0\r\n  isReadable: 0\r\n  streamingMipmaps: 0\r\n  streamingMipmapsPriority: 0\r\n  grayScaleToAlpha: 0\r\n  generateCubemap: 6\r\n  cubemapConvolution: 0\r\n  seamlessCubemap: 0\r\n  textureFormat: 1\r\n  maxTextureSize: 2048\r\n  textureSettings:\r\n    serializedVersion: 2\r\n    filterMode: -1\r\n    aniso: 2\r\n    mipBias: -100\r\n    wrapU: -1\r\n    wrapV: -1\r\n    wrapW: -1\r\n  nPOTScale: 1\r\n  lightmap: 0\r\n  compressionQuality: 50\r\n  spriteMode: 0\r\n  spriteExtrude: 1\r\n  spriteMeshType: 1\r\n  alignment: 0\r\n  spritePivot: {x: 0.5, y: 0.5}\r\n  spritePixelsToUnits: 100\r\n  spriteBorder: {x: 0, y: 0, z: 0, w: 0}\r\n  spriteGenerateFallbackPhysicsShape: 1\r\n  alphaUsage: 1\r\n  alphaIsTransparency: 0\r\n  spriteTessellationDetail: -1\r\n  textureType: 0\r\n  textureShape: 1\r\n  singleChannelComponent: 0\r\n  maxTextureSizeSet: 0\r\n  compressionQualitySet: 0\r\n  textureFormatSet: 0\r\n  applyGammaDecoding: 0\r\n  platformSettings:\r\n  - serializedVersion: 3\r\n    buildTarget: DefaultTexturePlatform\r\n    maxTextureSize: 8192\r\n    resizeAlgorithm: 0\r\n    textureFormat: -1\r\n    textureCompression: 1\r\n    compressionQuality: 50\r\n    crunchedCompression: 0\r\n    allowsAlphaSplitting: 0\r\n    overridden: 0\r\n    androidETC2FallbackOverride: 0\r\n    forceMaximumCompressionQuality_BC6H_BC7: 0\r\n  - serializedVersion: 3\r\n    buildTarget: Standalone\r\n    maxTextureSize: 8192\r\n    resizeAlgorithm: 0\r\n    textureFormat: -1\r\n    textureCompression: 1\r\n    compressionQuality: 50\r\n    crunchedCompression: 0\r\n    allowsAlphaSplitting: 0\r\n    overridden: 0\r\n    androidETC2FallbackOverride: 0\r\n    forceMaximumCompressionQuality_BC6H_BC7: 0\r\n  - serializedVersion: 3\r\n    buildTarget: iPhone\r\n    maxTextureSize: 8192\r\n    resizeAlgorithm: 0\r\n    textureFormat: -1\r\n    textureCompression: 1\r\n    compressionQuality: 50\r\n    crunchedCompression: 0\r\n    allowsAlphaSplitting: 0\r\n    overridden: 0\r\n    androidETC2FallbackOverride: 0\r\n    forceMaximumCompressionQuality_BC6H_BC7: 0\r\n  - serializedVersion: 3\r\n    buildTarget: Android\r\n    maxTextureSize: 8192\r\n    resizeAlgorithm: 0\r\n    textureFormat: -1\r\n    textureCompression: 1\r\n    compressionQuality: 50\r\n    crunchedCompression: 0\r\n    allowsAlphaSplitting: 0\r\n    overridden: 0\r\n    androidETC2FallbackOverride: 0\r\n    forceMaximumCompressionQuality_BC6H_BC7: 0\r\n  spriteSheet:\r\n    serializedVersion: 2\r\n    sprites: []\r\n    outline: []\r\n    physicsShape: []\r\n    bones: []\r\n    spriteID: \r\n    internalID: 0\r\n    vertices: []\r\n    indices: \r\n    edges: []\r\n    weights: []\r\n    secondaryTextures: []\r\n  spritePackingTag: \r\n  pSDRemoveMatte: 0\r\n  pSDShowRemoveMatteOption: 0\r\n  userData: \r\n  assetBundleName: \r\n  assetBundleVariant: \r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Assets/Material/Src/Resources/UV-caja03.png.meta b/Assets/Material/Src/Resources/UV-caja03.png.meta
+--- a/Assets/Material/Src/Resources/UV-caja03.png.meta	(revision 7137da74b41c830a30c99b83a59564897d4f780d)
++++ b/Assets/Material/Src/Resources/UV-caja03.png.meta	(date 1701970876041)
+@@ -1,5 +1,5 @@
+ fileFormatVersion: 2
+-guid: 4dbeae9bd54215e4caa722050bc9de69
++guid: b01b3ab6826c0b84ebaa0eabdbca55df
+ TextureImporter:
+   internalIDToNameTable: []
+   externalObjects: {}
+Index: Assets/Material/Src/Resources/UV-ELECTRICIDAD.png.meta
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>fileFormatVersion: 2\r\nguid: 338212037ede53444965f37c8174f1ac\r\nTextureImporter:\r\n  internalIDToNameTable: []\r\n  externalObjects: {}\r\n  serializedVersion: 11\r\n  mipmaps:\r\n    mipMapMode: 0\r\n    enableMipMap: 1\r\n    sRGBTexture: 1\r\n    linearTexture: 0\r\n    fadeOut: 0\r\n    borderMipMap: 0\r\n    mipMapsPreserveCoverage: 0\r\n    alphaTestReferenceValue: 0.5\r\n    mipMapFadeDistanceStart: 1\r\n    mipMapFadeDistanceEnd: 3\r\n  bumpmap:\r\n    convertToNormalMap: 0\r\n    externalNormalMap: 0\r\n    heightScale: 0.25\r\n    normalMapFilter: 0\r\n  isReadable: 0\r\n  streamingMipmaps: 0\r\n  streamingMipmapsPriority: 0\r\n  grayScaleToAlpha: 0\r\n  generateCubemap: 6\r\n  cubemapConvolution: 0\r\n  seamlessCubemap: 0\r\n  textureFormat: 1\r\n  maxTextureSize: 2048\r\n  textureSettings:\r\n    serializedVersion: 2\r\n    filterMode: -1\r\n    aniso: 2\r\n    mipBias: -100\r\n    wrapU: -1\r\n    wrapV: -1\r\n    wrapW: -1\r\n  nPOTScale: 1\r\n  lightmap: 0\r\n  compressionQuality: 50\r\n  spriteMode: 0\r\n  spriteExtrude: 1\r\n  spriteMeshType: 1\r\n  alignment: 0\r\n  spritePivot: {x: 0.5, y: 0.5}\r\n  spritePixelsToUnits: 100\r\n  spriteBorder: {x: 0, y: 0, z: 0, w: 0}\r\n  spriteGenerateFallbackPhysicsShape: 1\r\n  alphaUsage: 1\r\n  alphaIsTransparency: 0\r\n  spriteTessellationDetail: -1\r\n  textureType: 0\r\n  textureShape: 1\r\n  singleChannelComponent: 0\r\n  maxTextureSizeSet: 0\r\n  compressionQualitySet: 0\r\n  textureFormatSet: 0\r\n  applyGammaDecoding: 0\r\n  platformSettings:\r\n  - serializedVersion: 3\r\n    buildTarget: DefaultTexturePlatform\r\n    maxTextureSize: 8192\r\n    resizeAlgorithm: 0\r\n    textureFormat: -1\r\n    textureCompression: 1\r\n    compressionQuality: 50\r\n    crunchedCompression: 0\r\n    allowsAlphaSplitting: 0\r\n    overridden: 0\r\n    androidETC2FallbackOverride: 0\r\n    forceMaximumCompressionQuality_BC6H_BC7: 0\r\n  - serializedVersion: 3\r\n    buildTarget: Standalone\r\n    maxTextureSize: 8192\r\n    resizeAlgorithm: 0\r\n    textureFormat: -1\r\n    textureCompression: 1\r\n    compressionQuality: 50\r\n    crunchedCompression: 0\r\n    allowsAlphaSplitting: 0\r\n    overridden: 0\r\n    androidETC2FallbackOverride: 0\r\n    forceMaximumCompressionQuality_BC6H_BC7: 0\r\n  - serializedVersion: 3\r\n    buildTarget: iPhone\r\n    maxTextureSize: 8192\r\n    resizeAlgorithm: 0\r\n    textureFormat: -1\r\n    textureCompression: 1\r\n    compressionQuality: 50\r\n    crunchedCompression: 0\r\n    allowsAlphaSplitting: 0\r\n    overridden: 0\r\n    androidETC2FallbackOverride: 0\r\n    forceMaximumCompressionQuality_BC6H_BC7: 0\r\n  - serializedVersion: 3\r\n    buildTarget: Android\r\n    maxTextureSize: 8192\r\n    resizeAlgorithm: 0\r\n    textureFormat: -1\r\n    textureCompression: 1\r\n    compressionQuality: 50\r\n    crunchedCompression: 0\r\n    allowsAlphaSplitting: 0\r\n    overridden: 0\r\n    androidETC2FallbackOverride: 0\r\n    forceMaximumCompressionQuality_BC6H_BC7: 0\r\n  spriteSheet:\r\n    serializedVersion: 2\r\n    sprites: []\r\n    outline: []\r\n    physicsShape: []\r\n    bones: []\r\n    spriteID: \r\n    internalID: 0\r\n    vertices: []\r\n    indices: \r\n    edges: []\r\n    weights: []\r\n    secondaryTextures: []\r\n  spritePackingTag: \r\n  pSDRemoveMatte: 0\r\n  pSDShowRemoveMatteOption: 0\r\n  userData: \r\n  assetBundleName: \r\n  assetBundleVariant: \r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Assets/Material/Src/Resources/UV-ELECTRICIDAD.png.meta b/Assets/Material/Src/Resources/UV-ELECTRICIDAD.png.meta
+--- a/Assets/Material/Src/Resources/UV-ELECTRICIDAD.png.meta	(revision 7137da74b41c830a30c99b83a59564897d4f780d)
++++ b/Assets/Material/Src/Resources/UV-ELECTRICIDAD.png.meta	(date 1701970876044)
+@@ -1,5 +1,5 @@
+ fileFormatVersion: 2
+-guid: 338212037ede53444965f37c8174f1ac
++guid: 87cf4ae53b4f34841afb574955c8a9c8
+ TextureImporter:
+   internalIDToNameTable: []
+   externalObjects: {}
+Index: Assets/Material/Src/Resources/UV.png.meta
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>fileFormatVersion: 2\r\nguid: c219ebcba1fba07468bd6e2615294a2a\r\nTextureImporter:\r\n  internalIDToNameTable: []\r\n  externalObjects: {}\r\n  serializedVersion: 11\r\n  mipmaps:\r\n    mipMapMode: 0\r\n    enableMipMap: 1\r\n    sRGBTexture: 1\r\n    linearTexture: 0\r\n    fadeOut: 0\r\n    borderMipMap: 0\r\n    mipMapsPreserveCoverage: 0\r\n    alphaTestReferenceValue: 0.5\r\n    mipMapFadeDistanceStart: 1\r\n    mipMapFadeDistanceEnd: 3\r\n  bumpmap:\r\n    convertToNormalMap: 0\r\n    externalNormalMap: 0\r\n    heightScale: 0.25\r\n    normalMapFilter: 0\r\n  isReadable: 0\r\n  streamingMipmaps: 0\r\n  streamingMipmapsPriority: 0\r\n  grayScaleToAlpha: 0\r\n  generateCubemap: 6\r\n  cubemapConvolution: 0\r\n  seamlessCubemap: 0\r\n  textureFormat: 1\r\n  maxTextureSize: 2048\r\n  textureSettings:\r\n    serializedVersion: 2\r\n    filterMode: -1\r\n    aniso: 2\r\n    mipBias: -100\r\n    wrapU: -1\r\n    wrapV: -1\r\n    wrapW: -1\r\n  nPOTScale: 1\r\n  lightmap: 0\r\n  compressionQuality: 50\r\n  spriteMode: 0\r\n  spriteExtrude: 1\r\n  spriteMeshType: 1\r\n  alignment: 0\r\n  spritePivot: {x: 0.5, y: 0.5}\r\n  spritePixelsToUnits: 100\r\n  spriteBorder: {x: 0, y: 0, z: 0, w: 0}\r\n  spriteGenerateFallbackPhysicsShape: 1\r\n  alphaUsage: 1\r\n  alphaIsTransparency: 0\r\n  spriteTessellationDetail: -1\r\n  textureType: 0\r\n  textureShape: 1\r\n  singleChannelComponent: 0\r\n  maxTextureSizeSet: 0\r\n  compressionQualitySet: 0\r\n  textureFormatSet: 0\r\n  applyGammaDecoding: 0\r\n  platformSettings:\r\n  - serializedVersion: 3\r\n    buildTarget: DefaultTexturePlatform\r\n    maxTextureSize: 8192\r\n    resizeAlgorithm: 0\r\n    textureFormat: -1\r\n    textureCompression: 1\r\n    compressionQuality: 50\r\n    crunchedCompression: 0\r\n    allowsAlphaSplitting: 0\r\n    overridden: 0\r\n    androidETC2FallbackOverride: 0\r\n    forceMaximumCompressionQuality_BC6H_BC7: 0\r\n  - serializedVersion: 3\r\n    buildTarget: Standalone\r\n    maxTextureSize: 8192\r\n    resizeAlgorithm: 0\r\n    textureFormat: -1\r\n    textureCompression: 1\r\n    compressionQuality: 50\r\n    crunchedCompression: 0\r\n    allowsAlphaSplitting: 0\r\n    overridden: 0\r\n    androidETC2FallbackOverride: 0\r\n    forceMaximumCompressionQuality_BC6H_BC7: 0\r\n  - serializedVersion: 3\r\n    buildTarget: iPhone\r\n    maxTextureSize: 8192\r\n    resizeAlgorithm: 0\r\n    textureFormat: -1\r\n    textureCompression: 1\r\n    compressionQuality: 50\r\n    crunchedCompression: 0\r\n    allowsAlphaSplitting: 0\r\n    overridden: 0\r\n    androidETC2FallbackOverride: 0\r\n    forceMaximumCompressionQuality_BC6H_BC7: 0\r\n  - serializedVersion: 3\r\n    buildTarget: Android\r\n    maxTextureSize: 8192\r\n    resizeAlgorithm: 0\r\n    textureFormat: -1\r\n    textureCompression: 1\r\n    compressionQuality: 50\r\n    crunchedCompression: 0\r\n    allowsAlphaSplitting: 0\r\n    overridden: 0\r\n    androidETC2FallbackOverride: 0\r\n    forceMaximumCompressionQuality_BC6H_BC7: 0\r\n  spriteSheet:\r\n    serializedVersion: 2\r\n    sprites: []\r\n    outline: []\r\n    physicsShape: []\r\n    bones: []\r\n    spriteID: \r\n    internalID: 0\r\n    vertices: []\r\n    indices: \r\n    edges: []\r\n    weights: []\r\n    secondaryTextures: []\r\n  spritePackingTag: \r\n  pSDRemoveMatte: 0\r\n  pSDShowRemoveMatteOption: 0\r\n  userData: \r\n  assetBundleName: \r\n  assetBundleVariant: \r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Assets/Material/Src/Resources/UV.png.meta b/Assets/Material/Src/Resources/UV.png.meta
+--- a/Assets/Material/Src/Resources/UV.png.meta	(revision 7137da74b41c830a30c99b83a59564897d4f780d)
++++ b/Assets/Material/Src/Resources/UV.png.meta	(date 1701970876046)
+@@ -1,5 +1,5 @@
+ fileFormatVersion: 2
+-guid: c219ebcba1fba07468bd6e2615294a2a
++guid: 9e1f7833faaf4d045a37199154516e0d
+ TextureImporter:
+   internalIDToNameTable: []
+   externalObjects: {}
+Index: Assets/Material/Src/Resources/UVcolores.jpg.meta
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>fileFormatVersion: 2\r\nguid: e13db2e47ae8e5940b3a477bddc1d195\r\nTextureImporter:\r\n  internalIDToNameTable: []\r\n  externalObjects: {}\r\n  serializedVersion: 11\r\n  mipmaps:\r\n    mipMapMode: 0\r\n    enableMipMap: 1\r\n    sRGBTexture: 1\r\n    linearTexture: 0\r\n    fadeOut: 0\r\n    borderMipMap: 0\r\n    mipMapsPreserveCoverage: 0\r\n    alphaTestReferenceValue: 0.5\r\n    mipMapFadeDistanceStart: 1\r\n    mipMapFadeDistanceEnd: 3\r\n  bumpmap:\r\n    convertToNormalMap: 0\r\n    externalNormalMap: 0\r\n    heightScale: 0.25\r\n    normalMapFilter: 0\r\n  isReadable: 0\r\n  streamingMipmaps: 0\r\n  streamingMipmapsPriority: 0\r\n  grayScaleToAlpha: 0\r\n  generateCubemap: 6\r\n  cubemapConvolution: 0\r\n  seamlessCubemap: 0\r\n  textureFormat: 1\r\n  maxTextureSize: 2048\r\n  textureSettings:\r\n    serializedVersion: 2\r\n    filterMode: -1\r\n    aniso: 2\r\n    mipBias: -100\r\n    wrapU: -1\r\n    wrapV: -1\r\n    wrapW: -1\r\n  nPOTScale: 1\r\n  lightmap: 0\r\n  compressionQuality: 50\r\n  spriteMode: 0\r\n  spriteExtrude: 1\r\n  spriteMeshType: 1\r\n  alignment: 0\r\n  spritePivot: {x: 0.5, y: 0.5}\r\n  spritePixelsToUnits: 100\r\n  spriteBorder: {x: 0, y: 0, z: 0, w: 0}\r\n  spriteGenerateFallbackPhysicsShape: 1\r\n  alphaUsage: 1\r\n  alphaIsTransparency: 0\r\n  spriteTessellationDetail: -1\r\n  textureType: 0\r\n  textureShape: 1\r\n  singleChannelComponent: 0\r\n  maxTextureSizeSet: 0\r\n  compressionQualitySet: 0\r\n  textureFormatSet: 0\r\n  applyGammaDecoding: 0\r\n  platformSettings:\r\n  - serializedVersion: 3\r\n    buildTarget: DefaultTexturePlatform\r\n    maxTextureSize: 8192\r\n    resizeAlgorithm: 0\r\n    textureFormat: -1\r\n    textureCompression: 1\r\n    compressionQuality: 50\r\n    crunchedCompression: 0\r\n    allowsAlphaSplitting: 0\r\n    overridden: 0\r\n    androidETC2FallbackOverride: 0\r\n    forceMaximumCompressionQuality_BC6H_BC7: 0\r\n  - serializedVersion: 3\r\n    buildTarget: Standalone\r\n    maxTextureSize: 8192\r\n    resizeAlgorithm: 0\r\n    textureFormat: -1\r\n    textureCompression: 1\r\n    compressionQuality: 50\r\n    crunchedCompression: 0\r\n    allowsAlphaSplitting: 0\r\n    overridden: 0\r\n    androidETC2FallbackOverride: 0\r\n    forceMaximumCompressionQuality_BC6H_BC7: 0\r\n  - serializedVersion: 3\r\n    buildTarget: iPhone\r\n    maxTextureSize: 8192\r\n    resizeAlgorithm: 0\r\n    textureFormat: -1\r\n    textureCompression: 1\r\n    compressionQuality: 50\r\n    crunchedCompression: 0\r\n    allowsAlphaSplitting: 0\r\n    overridden: 0\r\n    androidETC2FallbackOverride: 0\r\n    forceMaximumCompressionQuality_BC6H_BC7: 0\r\n  - serializedVersion: 3\r\n    buildTarget: Android\r\n    maxTextureSize: 8192\r\n    resizeAlgorithm: 0\r\n    textureFormat: -1\r\n    textureCompression: 1\r\n    compressionQuality: 50\r\n    crunchedCompression: 0\r\n    allowsAlphaSplitting: 0\r\n    overridden: 0\r\n    androidETC2FallbackOverride: 0\r\n    forceMaximumCompressionQuality_BC6H_BC7: 0\r\n  spriteSheet:\r\n    serializedVersion: 2\r\n    sprites: []\r\n    outline: []\r\n    physicsShape: []\r\n    bones: []\r\n    spriteID: \r\n    internalID: 0\r\n    vertices: []\r\n    indices: \r\n    edges: []\r\n    weights: []\r\n    secondaryTextures: []\r\n  spritePackingTag: \r\n  pSDRemoveMatte: 0\r\n  pSDShowRemoveMatteOption: 0\r\n  userData: \r\n  assetBundleName: \r\n  assetBundleVariant: \r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Assets/Material/Src/Resources/UVcolores.jpg.meta b/Assets/Material/Src/Resources/UVcolores.jpg.meta
+--- a/Assets/Material/Src/Resources/UVcolores.jpg.meta	(revision 7137da74b41c830a30c99b83a59564897d4f780d)
++++ b/Assets/Material/Src/Resources/UVcolores.jpg.meta	(date 1701970876056)
+@@ -1,5 +1,5 @@
+ fileFormatVersion: 2
+-guid: e13db2e47ae8e5940b3a477bddc1d195
++guid: b3dd9168f4bf6224eb386862a9baea36
+ TextureImporter:
+   internalIDToNameTable: []
+   externalObjects: {}
+Index: .idea/.idea.ecology_3d/.idea/codestream.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"CodeStream\">\r\n    <option name=\"webViewContext\" value=\"{&quot;chatProviderAccess&quot;:&quot;strict&quot;,&quot;currentTeamId&quot;:&quot;&quot;,&quot;currentStreamId&quot;:&quot;&quot;,&quot;pullRequestCheckoutBranch&quot;:false,&quot;isRepositioning&quot;:false,&quot;onboardStep&quot;:0,&quot;panelStack&quot;:[&quot;landing-redirect&quot;],&quot;hasFocus&quot;:true,&quot;channelFilter&quot;:&quot;all&quot;,&quot;channelsMuteAll&quot;:false,&quot;codemarkFileFilter&quot;:&quot;all&quot;,&quot;codemarkTypeFilter&quot;:&quot;all&quot;,&quot;codemarkTagFilter&quot;:&quot;all&quot;,&quot;codemarkBranchFilter&quot;:&quot;all&quot;,&quot;codemarkAuthorFilter&quot;:&quot;all&quot;,&quot;codemarksFileViewStyle&quot;:&quot;inline&quot;,&quot;codemarksShowArchived&quot;:false,&quot;codemarksShowResolved&quot;:false,&quot;codemarksWrapComments&quot;:false,&quot;showFeedbackSmiley&quot;:true,&quot;route&quot;:{&quot;name&quot;:&quot;newUserEntry&quot;,&quot;params&quot;:{}},&quot;spatialViewShowPRComments&quot;:false,&quot;currentPullRequestNeedsRefresh&quot;:{&quot;needsRefresh&quot;:false,&quot;providerId&quot;:&quot;&quot;,&quot;pullRequestId&quot;:&quot;&quot;},&quot;__teamless__&quot;:{&quot;selectedRegion&quot;:&quot;us&quot;},&quot;sessionStart&quot;:1701160342484}\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/.idea.ecology_3d/.idea/codestream.xml b/.idea/.idea.ecology_3d/.idea/codestream.xml
+--- a/.idea/.idea.ecology_3d/.idea/codestream.xml	(revision 7137da74b41c830a30c99b83a59564897d4f780d)
++++ b/.idea/.idea.ecology_3d/.idea/codestream.xml	(date 1701970834720)
+@@ -1,6 +1,6 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+   <component name="CodeStream">
+-    <option name="webViewContext" value="{&quot;chatProviderAccess&quot;:&quot;strict&quot;,&quot;currentTeamId&quot;:&quot;&quot;,&quot;currentStreamId&quot;:&quot;&quot;,&quot;pullRequestCheckoutBranch&quot;:false,&quot;isRepositioning&quot;:false,&quot;onboardStep&quot;:0,&quot;panelStack&quot;:[&quot;landing-redirect&quot;],&quot;hasFocus&quot;:true,&quot;channelFilter&quot;:&quot;all&quot;,&quot;channelsMuteAll&quot;:false,&quot;codemarkFileFilter&quot;:&quot;all&quot;,&quot;codemarkTypeFilter&quot;:&quot;all&quot;,&quot;codemarkTagFilter&quot;:&quot;all&quot;,&quot;codemarkBranchFilter&quot;:&quot;all&quot;,&quot;codemarkAuthorFilter&quot;:&quot;all&quot;,&quot;codemarksFileViewStyle&quot;:&quot;inline&quot;,&quot;codemarksShowArchived&quot;:false,&quot;codemarksShowResolved&quot;:false,&quot;codemarksWrapComments&quot;:false,&quot;showFeedbackSmiley&quot;:true,&quot;route&quot;:{&quot;name&quot;:&quot;newUserEntry&quot;,&quot;params&quot;:{}},&quot;spatialViewShowPRComments&quot;:false,&quot;currentPullRequestNeedsRefresh&quot;:{&quot;needsRefresh&quot;:false,&quot;providerId&quot;:&quot;&quot;,&quot;pullRequestId&quot;:&quot;&quot;},&quot;__teamless__&quot;:{&quot;selectedRegion&quot;:&quot;us&quot;},&quot;sessionStart&quot;:1701160342484}" />
++    <option name="webViewContext" value="{&quot;chatProviderAccess&quot;:&quot;strict&quot;,&quot;currentTeamId&quot;:&quot;&quot;,&quot;currentStreamId&quot;:&quot;&quot;,&quot;pullRequestCheckoutBranch&quot;:false,&quot;isRepositioning&quot;:false,&quot;onboardStep&quot;:0,&quot;panelStack&quot;:[&quot;landing-redirect&quot;],&quot;hasFocus&quot;:false,&quot;channelFilter&quot;:&quot;all&quot;,&quot;channelsMuteAll&quot;:false,&quot;codemarkFileFilter&quot;:&quot;all&quot;,&quot;codemarkTypeFilter&quot;:&quot;all&quot;,&quot;codemarkTagFilter&quot;:&quot;all&quot;,&quot;codemarkBranchFilter&quot;:&quot;all&quot;,&quot;codemarkAuthorFilter&quot;:&quot;all&quot;,&quot;codemarksFileViewStyle&quot;:&quot;inline&quot;,&quot;codemarksShowArchived&quot;:false,&quot;codemarksShowResolved&quot;:false,&quot;codemarksWrapComments&quot;:false,&quot;showFeedbackSmiley&quot;:true,&quot;route&quot;:{&quot;name&quot;:&quot;newUserEntry&quot;,&quot;params&quot;:{}},&quot;spatialViewShowPRComments&quot;:false,&quot;currentPullRequestNeedsRefresh&quot;:{&quot;needsRefresh&quot;:false,&quot;providerId&quot;:&quot;&quot;,&quot;pullRequestId&quot;:&quot;&quot;},&quot;__teamless__&quot;:{&quot;selectedRegion&quot;:&quot;us&quot;},&quot;sessionStart&quot;:1701841519427}" />
+   </component>
+ </project>
+\ No newline at end of file
+Index: Assets/PreFab/amongUsMapForExport.fbx.meta
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>fileFormatVersion: 2\r\nguid: 93b8d45301b306a448500ef03f635f2d\r\nModelImporter:\r\n  serializedVersion: 19300\r\n  internalIDToNameTable: []\r\n  externalObjects:\r\n  - first:\r\n      type: UnityEngine:Material\r\n      assembly: UnityEngine.CoreModule\r\n      name: Motor4\r\n    second: {fileID: 2100000, guid: 2a457bc9339241842a427a0607f6dcb1, type: 2}\r\n  - first:\r\n      type: UnityEngine:Material\r\n      assembly: UnityEngine.CoreModule\r\n      name: Pantallas\r\n    second: {fileID: 2100000, guid: 6f323997e64cbdb4ea6e2e1c081a4a2c, type: 2}\r\n  materials:\r\n    materialImportMode: 1\r\n    materialName: 0\r\n    materialSearch: 1\r\n    materialLocation: 1\r\n  animations:\r\n    legacyGenerateAnimations: 4\r\n    bakeSimulation: 0\r\n    resampleCurves: 1\r\n    optimizeGameObjects: 0\r\n    motionNodeName: \r\n    rigImportErrors: \r\n    rigImportWarnings: \r\n    animationImportErrors: \r\n    animationImportWarnings: \r\n    animationRetargetingWarnings: \r\n    animationDoRetargetingWarnings: 0\r\n    importAnimatedCustomProperties: 0\r\n    importConstraints: 0\r\n    animationCompression: 1\r\n    animationRotationError: 0.5\r\n    animationPositionError: 0.5\r\n    animationScaleError: 0.5\r\n    animationWrapMode: 0\r\n    extraExposedTransformPaths: []\r\n    extraUserProperties: []\r\n    clipAnimations: []\r\n    isReadable: 1\r\n  meshes:\r\n    lODScreenPercentages: []\r\n    globalScale: 1\r\n    meshCompression: 0\r\n    addColliders: 0\r\n    useSRGBMaterialColor: 1\r\n    sortHierarchyByName: 1\r\n    importVisibility: 1\r\n    importBlendShapes: 1\r\n    importCameras: 1\r\n    importLights: 1\r\n    swapUVChannels: 0\r\n    generateSecondaryUV: 0\r\n    useFileUnits: 1\r\n    keepQuads: 0\r\n    weldVertices: 1\r\n    preserveHierarchy: 0\r\n    skinWeightsMode: 0\r\n    maxBonesPerVertex: 4\r\n    minBoneWeight: 0.001\r\n    meshOptimizationFlags: -1\r\n    indexFormat: 0\r\n    secondaryUVAngleDistortion: 8\r\n    secondaryUVAreaDistortion: 15.000001\r\n    secondaryUVHardAngle: 88\r\n    secondaryUVPackMargin: 4\r\n    useFileScale: 1\r\n  tangentSpace:\r\n    normalSmoothAngle: 60\r\n    normalImportMode: 0\r\n    tangentImportMode: 3\r\n    normalCalculationMode: 4\r\n    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0\r\n    blendShapeNormalImportMode: 1\r\n    normalSmoothingSource: 0\r\n  referencedClips: []\r\n  importAnimation: 1\r\n  humanDescription:\r\n    serializedVersion: 3\r\n    human: []\r\n    skeleton: []\r\n    armTwist: 0.5\r\n    foreArmTwist: 0.5\r\n    upperLegTwist: 0.5\r\n    legTwist: 0.5\r\n    armStretch: 0.05\r\n    legStretch: 0.05\r\n    feetSpacing: 0\r\n    globalScale: 1\r\n    rootMotionBoneName: \r\n    hasTranslationDoF: 0\r\n    hasExtraRoot: 0\r\n    skeletonHasParents: 1\r\n  lastHumanDescriptionAvatarSource: {instanceID: 0}\r\n  autoGenerateAvatarMappingIfUnspecified: 1\r\n  animationType: 2\r\n  humanoidOversampling: 1\r\n  avatarSetup: 0\r\n  additionalBone: 0\r\n  userData: \r\n  assetBundleName: \r\n  assetBundleVariant: \r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Assets/PreFab/amongUsMapForExport.fbx.meta b/Assets/PreFab/amongUsMapForExport.fbx.meta
+--- a/Assets/PreFab/amongUsMapForExport.fbx.meta	(revision 7137da74b41c830a30c99b83a59564897d4f780d)
++++ b/Assets/PreFab/amongUsMapForExport.fbx.meta	(date 1701970959482)
+@@ -1,5 +1,5 @@
+ fileFormatVersion: 2
+-guid: 93b8d45301b306a448500ef03f635f2d
++guid: 4674ed37db8b5364d8970cd320bcd937
+ ModelImporter:
+   serializedVersion: 19300
+   internalIDToNameTable: []
+Index: Assets/Material/Src/Resources/UV_pantallas.png.meta
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>fileFormatVersion: 2\r\nguid: 36fb4539e8704514daeeae348bcea9c6\r\nTextureImporter:\r\n  internalIDToNameTable: []\r\n  externalObjects: {}\r\n  serializedVersion: 11\r\n  mipmaps:\r\n    mipMapMode: 0\r\n    enableMipMap: 1\r\n    sRGBTexture: 1\r\n    linearTexture: 0\r\n    fadeOut: 0\r\n    borderMipMap: 0\r\n    mipMapsPreserveCoverage: 0\r\n    alphaTestReferenceValue: 0.5\r\n    mipMapFadeDistanceStart: 1\r\n    mipMapFadeDistanceEnd: 3\r\n  bumpmap:\r\n    convertToNormalMap: 0\r\n    externalNormalMap: 0\r\n    heightScale: 0.25\r\n    normalMapFilter: 0\r\n  isReadable: 0\r\n  streamingMipmaps: 0\r\n  streamingMipmapsPriority: 0\r\n  grayScaleToAlpha: 0\r\n  generateCubemap: 6\r\n  cubemapConvolution: 0\r\n  seamlessCubemap: 0\r\n  textureFormat: 1\r\n  maxTextureSize: 2048\r\n  textureSettings:\r\n    serializedVersion: 2\r\n    filterMode: -1\r\n    aniso: 2\r\n    mipBias: -100\r\n    wrapU: -1\r\n    wrapV: -1\r\n    wrapW: -1\r\n  nPOTScale: 1\r\n  lightmap: 0\r\n  compressionQuality: 50\r\n  spriteMode: 0\r\n  spriteExtrude: 1\r\n  spriteMeshType: 1\r\n  alignment: 0\r\n  spritePivot: {x: 0.5, y: 0.5}\r\n  spritePixelsToUnits: 100\r\n  spriteBorder: {x: 0, y: 0, z: 0, w: 0}\r\n  spriteGenerateFallbackPhysicsShape: 1\r\n  alphaUsage: 1\r\n  alphaIsTransparency: 0\r\n  spriteTessellationDetail: -1\r\n  textureType: 0\r\n  textureShape: 1\r\n  singleChannelComponent: 0\r\n  maxTextureSizeSet: 0\r\n  compressionQualitySet: 0\r\n  textureFormatSet: 0\r\n  applyGammaDecoding: 0\r\n  platformSettings:\r\n  - serializedVersion: 3\r\n    buildTarget: DefaultTexturePlatform\r\n    maxTextureSize: 8192\r\n    resizeAlgorithm: 0\r\n    textureFormat: -1\r\n    textureCompression: 1\r\n    compressionQuality: 50\r\n    crunchedCompression: 0\r\n    allowsAlphaSplitting: 0\r\n    overridden: 0\r\n    androidETC2FallbackOverride: 0\r\n    forceMaximumCompressionQuality_BC6H_BC7: 0\r\n  - serializedVersion: 3\r\n    buildTarget: Standalone\r\n    maxTextureSize: 8192\r\n    resizeAlgorithm: 0\r\n    textureFormat: -1\r\n    textureCompression: 1\r\n    compressionQuality: 50\r\n    crunchedCompression: 0\r\n    allowsAlphaSplitting: 0\r\n    overridden: 0\r\n    androidETC2FallbackOverride: 0\r\n    forceMaximumCompressionQuality_BC6H_BC7: 0\r\n  - serializedVersion: 3\r\n    buildTarget: iPhone\r\n    maxTextureSize: 8192\r\n    resizeAlgorithm: 0\r\n    textureFormat: -1\r\n    textureCompression: 1\r\n    compressionQuality: 50\r\n    crunchedCompression: 0\r\n    allowsAlphaSplitting: 0\r\n    overridden: 0\r\n    androidETC2FallbackOverride: 0\r\n    forceMaximumCompressionQuality_BC6H_BC7: 0\r\n  - serializedVersion: 3\r\n    buildTarget: Android\r\n    maxTextureSize: 8192\r\n    resizeAlgorithm: 0\r\n    textureFormat: -1\r\n    textureCompression: 1\r\n    compressionQuality: 50\r\n    crunchedCompression: 0\r\n    allowsAlphaSplitting: 0\r\n    overridden: 0\r\n    androidETC2FallbackOverride: 0\r\n    forceMaximumCompressionQuality_BC6H_BC7: 0\r\n  spriteSheet:\r\n    serializedVersion: 2\r\n    sprites: []\r\n    outline: []\r\n    physicsShape: []\r\n    bones: []\r\n    spriteID: \r\n    internalID: 0\r\n    vertices: []\r\n    indices: \r\n    edges: []\r\n    weights: []\r\n    secondaryTextures: []\r\n  spritePackingTag: \r\n  pSDRemoveMatte: 0\r\n  pSDShowRemoveMatteOption: 0\r\n  userData: \r\n  assetBundleName: \r\n  assetBundleVariant: \r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Assets/Material/Src/Resources/UV_pantallas.png.meta b/Assets/Material/Src/Resources/UV_pantallas.png.meta
+--- a/Assets/Material/Src/Resources/UV_pantallas.png.meta	(revision 7137da74b41c830a30c99b83a59564897d4f780d)
++++ b/Assets/Material/Src/Resources/UV_pantallas.png.meta	(date 1701970876049)
+@@ -1,5 +1,5 @@
+ fileFormatVersion: 2
+-guid: 36fb4539e8704514daeeae348bcea9c6
++guid: 749c8aeffdfff8c4987be9dd02aded78
+ TextureImporter:
+   internalIDToNameTable: []
+   externalObjects: {}
+Index: Assets/Material/Src/Resources/UV_pantallas2.png.meta
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>fileFormatVersion: 2\r\nguid: 8c0828c8aaf48c944878eaa902fb76ae\r\nTextureImporter:\r\n  internalIDToNameTable: []\r\n  externalObjects: {}\r\n  serializedVersion: 11\r\n  mipmaps:\r\n    mipMapMode: 0\r\n    enableMipMap: 1\r\n    sRGBTexture: 1\r\n    linearTexture: 0\r\n    fadeOut: 0\r\n    borderMipMap: 0\r\n    mipMapsPreserveCoverage: 0\r\n    alphaTestReferenceValue: 0.5\r\n    mipMapFadeDistanceStart: 1\r\n    mipMapFadeDistanceEnd: 3\r\n  bumpmap:\r\n    convertToNormalMap: 0\r\n    externalNormalMap: 0\r\n    heightScale: 0.25\r\n    normalMapFilter: 0\r\n  isReadable: 0\r\n  streamingMipmaps: 0\r\n  streamingMipmapsPriority: 0\r\n  grayScaleToAlpha: 0\r\n  generateCubemap: 6\r\n  cubemapConvolution: 0\r\n  seamlessCubemap: 0\r\n  textureFormat: 1\r\n  maxTextureSize: 2048\r\n  textureSettings:\r\n    serializedVersion: 2\r\n    filterMode: -1\r\n    aniso: 2\r\n    mipBias: -100\r\n    wrapU: -1\r\n    wrapV: -1\r\n    wrapW: -1\r\n  nPOTScale: 1\r\n  lightmap: 0\r\n  compressionQuality: 50\r\n  spriteMode: 0\r\n  spriteExtrude: 1\r\n  spriteMeshType: 1\r\n  alignment: 0\r\n  spritePivot: {x: 0.5, y: 0.5}\r\n  spritePixelsToUnits: 100\r\n  spriteBorder: {x: 0, y: 0, z: 0, w: 0}\r\n  spriteGenerateFallbackPhysicsShape: 1\r\n  alphaUsage: 1\r\n  alphaIsTransparency: 0\r\n  spriteTessellationDetail: -1\r\n  textureType: 0\r\n  textureShape: 1\r\n  singleChannelComponent: 0\r\n  maxTextureSizeSet: 0\r\n  compressionQualitySet: 0\r\n  textureFormatSet: 0\r\n  applyGammaDecoding: 0\r\n  platformSettings:\r\n  - serializedVersion: 3\r\n    buildTarget: DefaultTexturePlatform\r\n    maxTextureSize: 8192\r\n    resizeAlgorithm: 0\r\n    textureFormat: -1\r\n    textureCompression: 1\r\n    compressionQuality: 50\r\n    crunchedCompression: 0\r\n    allowsAlphaSplitting: 0\r\n    overridden: 0\r\n    androidETC2FallbackOverride: 0\r\n    forceMaximumCompressionQuality_BC6H_BC7: 0\r\n  - serializedVersion: 3\r\n    buildTarget: Standalone\r\n    maxTextureSize: 8192\r\n    resizeAlgorithm: 0\r\n    textureFormat: -1\r\n    textureCompression: 1\r\n    compressionQuality: 50\r\n    crunchedCompression: 0\r\n    allowsAlphaSplitting: 0\r\n    overridden: 0\r\n    androidETC2FallbackOverride: 0\r\n    forceMaximumCompressionQuality_BC6H_BC7: 0\r\n  - serializedVersion: 3\r\n    buildTarget: iPhone\r\n    maxTextureSize: 8192\r\n    resizeAlgorithm: 0\r\n    textureFormat: -1\r\n    textureCompression: 1\r\n    compressionQuality: 50\r\n    crunchedCompression: 0\r\n    allowsAlphaSplitting: 0\r\n    overridden: 0\r\n    androidETC2FallbackOverride: 0\r\n    forceMaximumCompressionQuality_BC6H_BC7: 0\r\n  - serializedVersion: 3\r\n    buildTarget: Android\r\n    maxTextureSize: 8192\r\n    resizeAlgorithm: 0\r\n    textureFormat: -1\r\n    textureCompression: 1\r\n    compressionQuality: 50\r\n    crunchedCompression: 0\r\n    allowsAlphaSplitting: 0\r\n    overridden: 0\r\n    androidETC2FallbackOverride: 0\r\n    forceMaximumCompressionQuality_BC6H_BC7: 0\r\n  spriteSheet:\r\n    serializedVersion: 2\r\n    sprites: []\r\n    outline: []\r\n    physicsShape: []\r\n    bones: []\r\n    spriteID: \r\n    internalID: 0\r\n    vertices: []\r\n    indices: \r\n    edges: []\r\n    weights: []\r\n    secondaryTextures: []\r\n  spritePackingTag: \r\n  pSDRemoveMatte: 0\r\n  pSDShowRemoveMatteOption: 0\r\n  userData: \r\n  assetBundleName: \r\n  assetBundleVariant: \r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Assets/Material/Src/Resources/UV_pantallas2.png.meta b/Assets/Material/Src/Resources/UV_pantallas2.png.meta
+--- a/Assets/Material/Src/Resources/UV_pantallas2.png.meta	(revision 7137da74b41c830a30c99b83a59564897d4f780d)
++++ b/Assets/Material/Src/Resources/UV_pantallas2.png.meta	(date 1701970876052)
+@@ -1,5 +1,5 @@
+ fileFormatVersion: 2
+-guid: 8c0828c8aaf48c944878eaa902fb76ae
++guid: 94f9a16cd69049849b58e2ece421cd58
+ TextureImporter:
+   internalIDToNameTable: []
+   externalObjects: {}
+Index: Assets/Material/Pantallas.mat.meta
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>fileFormatVersion: 2\r\nguid: 6f323997e64cbdb4ea6e2e1c081a4a2c\r\nNativeFormatImporter:\r\n  externalObjects: {}\r\n  mainObjectFileID: 0\r\n  userData: \r\n  assetBundleName: \r\n  assetBundleVariant: \r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Assets/Material/Pantallas.mat.meta b/Assets/Material/Pantallas.mat.meta
+--- a/Assets/Material/Pantallas.mat.meta	(revision 7137da74b41c830a30c99b83a59564897d4f780d)
++++ b/Assets/Material/Pantallas.mat.meta	(date 1701970876034)
+@@ -1,5 +1,5 @@
+ fileFormatVersion: 2
+-guid: 6f323997e64cbdb4ea6e2e1c081a4a2c
++guid: 4d52f543d86ceed489dfae7f39ee0ade
+ NativeFormatImporter:
+   externalObjects: {}
+   mainObjectFileID: 0
+Index: UserSettings/EditorUserSettings.asset
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>%YAML 1.1\r\n%TAG !u! tag:unity3d.com,2011:\r\n--- !u!162 &1\r\nEditorUserSettings:\r\n  m_ObjectHideFlags: 0\r\n  serializedVersion: 4\r\n  m_ConfigSettings:\r\n    RecentlyUsedSceneGuid-0:\r\n      value: 54070c525350515e5c5a5c21497506444e4e1b28742b233329711935e3b16d60\r\n      flags: 0\r\n    RecentlyUsedSceneGuid-1:\r\n      value: 5706570250045a59550d587149745a4415164a7d7e2977362b7b4b6ae6b9676b\r\n      flags: 0\r\n    RecentlyUsedSceneGuid-2:\r\n      value: 070651575703590e555e082642200a444e4e1e797e7876322b2c1f37b6b1663e\r\n      flags: 0\r\n    RecentlyUsedSceneGuid-3:\r\n      value: 0154035f01560f0f5d0b0d7548775a4412151c2c7b7b2233782b1e60bbe2606c\r\n      flags: 0\r\n    RecentlyUsedSceneGuid-4:\r\n      value: 5a5757560101590a5d0c0e24427b5d44434e4c7a7b7a23677f2b4565b7b5353a\r\n      flags: 0\r\n    RecentlyUsedSceneGuid-5:\r\n      value: 0606025106025b0e09590f7345250a441515412e28297563292a1936b3e2306b\r\n      flags: 0\r\n    RecentlyUsedSceneGuid-6:\r\n      value: 5408500254510f5f5f5d5c7548745a444f4f4c7c7f78226974704e62b7e6316d\r\n      flags: 0\r\n    vcSharedLogLevel:\r\n      value: 0d5e400f0650\r\n      flags: 0\r\n  m_VCAutomaticAdd: 1\r\n  m_VCDebugCom: 0\r\n  m_VCDebugCmd: 0\r\n  m_VCDebugOut: 0\r\n  m_SemanticMergeMode: 2\r\n  m_DesiredImportWorkerCount: 5\r\n  m_StandbyImportWorkerCount: 2\r\n  m_IdleImportWorkerShutdownDelay: 60000\r\n  m_VCShowFailedCheckout: 1\r\n  m_VCOverwriteFailedCheckoutAssets: 1\r\n  m_VCProjectOverlayIcons: 1\r\n  m_VCHierarchyOverlayIcons: 1\r\n  m_VCOtherOverlayIcons: 1\r\n  m_VCAllowAsyncUpdate: 1\r\n  m_ArtifactGarbageCollection: 1\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/UserSettings/EditorUserSettings.asset b/UserSettings/EditorUserSettings.asset
+--- a/UserSettings/EditorUserSettings.asset	(revision 7137da74b41c830a30c99b83a59564897d4f780d)
++++ b/UserSettings/EditorUserSettings.asset	(date 1701970834735)
+@@ -18,10 +18,13 @@
+       value: 0154035f01560f0f5d0b0d7548775a4412151c2c7b7b2233782b1e60bbe2606c
+       flags: 0
+     RecentlyUsedSceneGuid-4:
+-      value: 5a5757560101590a5d0c0e24427b5d44434e4c7a7b7a23677f2b4565b7b5353a
++      value: 545557545c510b0e0e5b0a2047755b44474e40722a787f322b711c63b2e6633c
+       flags: 0
+     RecentlyUsedSceneGuid-5:
+       value: 0606025106025b0e09590f7345250a441515412e28297563292a1936b3e2306b
++      flags: 0
++    RecentlyUsedSceneGuid-5:
++      value: 5a5757560101590a5d0c0e24427b5d44434e4c7a7b7a23677f2b4565b7b5353a
+       flags: 0
+     RecentlyUsedSceneGuid-6:
+       value: 5408500254510f5f5f5d5c7548745a444f4f4c7c7f78226974704e62b7e6316d
+Index: .idea/.idea.ecology_3d/.idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"739ec775-2bce-411e-8645-81f107ffdc51\" name=\"Changes\" comment=\"good guy prefab fix\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/.idea.ecology_3d/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/.idea.ecology_3d/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Assets/PreFab/Guy 1.prefab\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Assets/PreFab/Guy 1.prefab\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Assets/Scenes/CharTestScene.unity\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Assets/Scenes/CharTestScene.unity\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Assets/Scripts/FOVCone.cs\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Assets/Scripts/FOVCone.cs\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/UserSettings/EditorUserSettings.asset\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/UserSettings/EditorUserSettings.asset\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"GitHubPullRequestSearchHistory\">{\r\n  &quot;lastFilter&quot;: {\r\n    &quot;state&quot;: &quot;OPEN&quot;,\r\n    &quot;assignee&quot;: &quot;UnicSix&quot;\r\n  }\r\n}</component>\r\n  <component name=\"GithubPullRequestsUISettings\">\r\n    <option name=\"selectedUrlAndAccountId\">\r\n      <UrlAndAccount>\r\n        <option name=\"accountId\" value=\"7ae17467-cfd2-4b0f-a7e7-c08485c65749\" />\r\n        <option name=\"url\" value=\"https://github.com/UnicSix/ecology_3d.git\" />\r\n      </UrlAndAccount>\r\n    </option>\r\n  </component>\r\n  <component name=\"HighlightingSettingsPerFile\">\r\n    <setting file=\"file://$PROJECT_DIR$/Assets/Scripts/FOVCone.cs\" root0=\"FORCE_HIGHLIGHTING\" />\r\n    <setting file=\"file://$PROJECT_DIR$/Assets/Scripts/SpawnPpl.cs\" root0=\"FORCE_HIGHLIGHTING\" />\r\n  </component>\r\n  <component name=\"MetaFilesCheckinStateConfiguration\" checkMetaFiles=\"true\" />\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;customColor&quot;: &quot;&quot;,\r\n  &quot;associatedIndex&quot;: 3\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"2YRmrVmmKZRLBfPo3s8uXUCiBoq\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\">\r\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\r\n  </component>\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,\r\n    &quot;git-widget-placeholder&quot;: &quot;master&quot;,\r\n    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,\r\n    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,\r\n    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;\r\n  },\r\n  &quot;keyToStringList&quot;: {\r\n    &quot;rider.external.source.directories&quot;: [\r\n      &quot;C:\\\\Users\\\\match\\\\AppData\\\\Roaming\\\\JetBrains\\\\Rider2023.2\\\\resharper-host\\\\DecompilerCache&quot;,\r\n      &quot;C:\\\\Users\\\\match\\\\AppData\\\\Roaming\\\\JetBrains\\\\Rider2023.2\\\\resharper-host\\\\SourcesCache&quot;,\r\n      &quot;C:\\\\Users\\\\match\\\\AppData\\\\Local\\\\Symbols\\\\src&quot;\r\n    ]\r\n  }\r\n}</component>\r\n  <component name=\"RunManager\" selected=\"Attach to Unity Editor.Attach to Unity Editor\">\r\n    <configuration name=\"Start Unity\" type=\"RunUnityExe\" factoryName=\"Unity Executable\">\r\n      <option name=\"EXE_PATH\" value=\"C:\\Program Files\\Unity 2022.3.11f1\\Editor\\Unity.exe\" />\r\n      <option name=\"PROGRAM_PARAMETERS\" value=\"-projectPath I:\\大四上\\人工智慧\\ecology_3d -debugCodeOptimization\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"I:\\大四上\\人工智慧\\ecology_3d\" />\r\n      <option name=\"PASS_PARENT_ENVS\" value=\"1\" />\r\n      <option name=\"USE_EXTERNAL_CONSOLE\" value=\"0\" />\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"Unit Tests (batch mode)\" type=\"RunUnityExe\" factoryName=\"Unity Executable\">\r\n      <option name=\"EXE_PATH\" value=\"C:\\Program Files\\Unity 2022.3.11f1\\Editor\\Unity.exe\" />\r\n      <option name=\"PROGRAM_PARAMETERS\" value=\"-runTests -batchmode -projectPath I:\\大四上\\人工智慧\\ecology_3d -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"I:\\大四上\\人工智慧\\ecology_3d\" />\r\n      <option name=\"PASS_PARENT_ENVS\" value=\"1\" />\r\n      <option name=\"USE_EXTERNAL_CONSOLE\" value=\"0\" />\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"Attach to Unity Editor &amp; Play\" type=\"UNITY_DEBUG_RUN_CONFIGURATION\" factoryName=\"UNITY_ATTACH_AND_PLAY\" show_console_on_std_err=\"false\" show_console_on_std_out=\"false\" port=\"50000\" address=\"localhost\">\r\n      <option name=\"allowRunningInParallel\" value=\"false\" />\r\n      <option name=\"listenPortForConnections\" value=\"false\" />\r\n      <option name=\"pid\" />\r\n      <option name=\"projectPathOnTarget\" />\r\n      <option name=\"selectedOptions\">\r\n        <list />\r\n      </option>\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"Attach to Unity Editor\" type=\"UNITY_DEBUG_RUN_CONFIGURATION\" factoryName=\"Unity Debug\" show_console_on_std_err=\"false\" show_console_on_std_out=\"false\" port=\"50000\" address=\"localhost\">\r\n      <option name=\"allowRunningInParallel\" value=\"false\" />\r\n      <option name=\"listenPortForConnections\" value=\"false\" />\r\n      <option name=\"pid\" />\r\n      <option name=\"projectPathOnTarget\" />\r\n      <option name=\"selectedOptions\">\r\n        <list />\r\n      </option>\r\n      <method v=\"2\" />\r\n    </configuration>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"739ec775-2bce-411e-8645-81f107ffdc51\" name=\"Changes\" comment=\"\" />\r\n      <created>1700496966086</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1700496966086</updated>\r\n      <workItem from=\"1700496971096\" duration=\"339000\" />\r\n      <workItem from=\"1700894903036\" duration=\"18000\" />\r\n      <workItem from=\"1700894939332\" duration=\"105000\" />\r\n      <workItem from=\"1700895057699\" duration=\"1010000\" />\r\n      <workItem from=\"1700897966433\" duration=\"1133000\" />\r\n      <workItem from=\"1700976172805\" duration=\"1146000\" />\r\n      <workItem from=\"1700979317552\" duration=\"543000\" />\r\n      <workItem from=\"1700991779742\" duration=\"5151000\" />\r\n      <workItem from=\"1701160347601\" duration=\"6500000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"editor scripts\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1701601300744</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1701601300744</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"good guy prefab fix\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1701604628127</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1701604628127</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"3\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"UnityCheckinConfiguration\" checkUnsavedScenes=\"true\" />\r\n  <component name=\"UnityProjectConfiguration\" hasMinimizedUI=\"true\" />\r\n  <component name=\"UnityUnitTestConfiguration\" currentTestLauncher=\"Both\" />\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <option name=\"CLEAR_INITIAL_COMMIT_MESSAGE\" value=\"true\" />\r\n    <MESSAGE value=\"editor scripts\" />\r\n    <MESSAGE value=\"good guy prefab fix\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"good guy prefab fix\" />\r\n  </component>\r\n  <component name=\"XSLT-Support.FileAssociations.UIState\">\r\n    <expand />\r\n    <select />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/.idea.ecology_3d/.idea/workspace.xml b/.idea/.idea.ecology_3d/.idea/workspace.xml
+--- a/.idea/.idea.ecology_3d/.idea/workspace.xml	(revision 7137da74b41c830a30c99b83a59564897d4f780d)
++++ b/.idea/.idea.ecology_3d/.idea/workspace.xml	(date 1702106762084)
+@@ -4,11 +4,23 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="739ec775-2bce-411e-8645-81f107ffdc51" name="Changes" comment="good guy prefab fix">
++    <list default="true" id="739ec775-2bce-411e-8645-81f107ffdc51" name="Changes" comment="">
++      <change beforePath="$PROJECT_DIR$/.idea/.idea.ecology_3d/.idea/codestream.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ecology_3d/.idea/codestream.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/.idea.ecology_3d/.idea/shelf/Uncommitted_changes_before_Update_at_2023_12_3__07_00__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ecology_3d/.idea/shelf/Uncommitted_changes_before_Update_at_2023_12_3__07_00__Changes_.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/.idea.ecology_3d/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ecology_3d/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Assets/PreFab/Guy 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PreFab/Guy 1.prefab" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/Assets/Material/Motor4.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Material/Motor4.mat.meta" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/Assets/Material/MyMaterial/Target.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Material/MyMaterial/Target.mat" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/Assets/Material/Pantallas.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Material/Pantallas.mat.meta" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/Assets/Material/Src/Resources/UV-ELECTRICIDAD.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Material/Src/Resources/UV-ELECTRICIDAD.png.meta" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/Assets/Material/Src/Resources/UV-caja01.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Material/Src/Resources/UV-caja01.png.meta" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/Assets/Material/Src/Resources/UV-caja02.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Material/Src/Resources/UV-caja02.png.meta" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/Assets/Material/Src/Resources/UV-caja03.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Material/Src/Resources/UV-caja03.png.meta" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/Assets/Material/Src/Resources/UV.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Material/Src/Resources/UV.png.meta" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/Assets/Material/Src/Resources/UV_pantallas.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Material/Src/Resources/UV_pantallas.png.meta" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/Assets/Material/Src/Resources/UV_pantallas2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Material/Src/Resources/UV_pantallas2.png.meta" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/Assets/Material/Src/Resources/UVcolores.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Material/Src/Resources/UVcolores.jpg.meta" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/Assets/PreFab/amongUsMapForExport.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PreFab/amongUsMapForExport.fbx.meta" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/Assets/Scenes/CharTestScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/CharTestScene.unity" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FOVCone.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FOVCone.cs" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+@@ -25,6 +37,13 @@
+     &quot;assignee&quot;: &quot;UnicSix&quot;
+   }
+ }</component>
++  <component name="GithubProjectSettings">
++    <option name="branchProtectionPatterns">
++      <list>
++        <option value="master" />
++      </list>
++    </option>
++  </component>
+   <component name="GithubPullRequestsUISettings">
+     <option name="selectedUrlAndAccountId">
+       <UrlAndAccount>
+@@ -34,7 +53,15 @@
+     </option>
+   </component>
+   <component name="HighlightingSettingsPerFile">
++    <setting file="file://$PROJECT_DIR$/Assets/DenysAlmaral/CityPeopleLite/Demo_Scenes/Scripts/CityPeople.cs" root0="FORCE_HIGHLIGHTING" />
++    <setting file="file://$PROJECT_DIR$/Assets/Editor/FieldOfViewEditor.cs" root0="SKIP_HIGHLIGHTING" />
++    <setting file="file://$PROJECT_DIR$/Assets/Editor/VillagerFOV.cs" root0="SKIP_HIGHLIGHTING" />
++    <setting file="mock://D:/Github/ecology_3d/Assets/PreFab/amongUsMapForExport.fbx.meta" root0="SKIP_HIGHLIGHTING" />
++    <setting file="mock://D:/Github/ecology_3d/Assets/Scenes/CharTestScene.unity" root0="SKIP_HIGHLIGHTING" />
++    <setting file="mock://D:/Github/ecology_3d/Assets/Scenes/CharTestScene.unity" root0="SKIP_HIGHLIGHTING" />
+     <setting file="file://$PROJECT_DIR$/Assets/Scripts/FOVCone.cs" root0="FORCE_HIGHLIGHTING" />
++    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Footprint.cs" root0="FORCE_HIGHLIGHTING" />
++    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GoodGuy.cs" root0="FORCE_HIGHLIGHTING" />
+     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SpawnPpl.cs" root0="FORCE_HIGHLIGHTING" />
+   </component>
+   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
+@@ -128,6 +155,7 @@
+       <workItem from="1700979317552" duration="543000" />
+       <workItem from="1700991779742" duration="5151000" />
+       <workItem from="1701160347601" duration="6500000" />
++      <workItem from="1701841524804" duration="4006000" />
+     </task>
+     <task id="LOCAL-00001" summary="editor scripts">
+       <option name="closed" value="true" />
