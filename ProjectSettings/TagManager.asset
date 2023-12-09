@@ -22,6 +22,8 @@ TagManager:
   - BadGuy
   - BadPrint
   - GoodPrint
+  - GoodGuy
+  - DeadBody
   layers:
   - Default
   - TransparentFX
