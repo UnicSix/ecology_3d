@@ -44,8 +44,19 @@ public class BadGuyBevaviour : MonoBehaviour
         }
         else if (DetectAgentStuck()) CutAgentPath();
     }
-
-
+    private bool ToPosition(Vector3 dest, float speed)
+    {
+        Debug.Log("Stuck:" + DetectAgentStuck());
+        Vector3 fixdest = GetNavMeshProjection(dest);
+        float distanceToDest = Vector3.Distance(navAgent.transform.position,fixdest);
+        if (!navAgent.hasPath) {
+            ResetAgentDtection();
+            navAgent.SetDestination(fixdest);
+            navAgent.speed = speed;
+        }
+        else if (DetectAgentStuck(maxStuckTimes: 10) && distanceToDest < 0.1) return true;
+        return false;
+    }
     private Vector3 GetNavMeshProjection(Vector3 position)
     {
         NavMeshHit navHit;

@@ -293,10 +293,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 651009941417709507, guid: baa577061495faf4891874d959b83a31, type: 3}
-      propertyPath: m_Value
-      value: 0.35
-      objectReference: {fileID: 0}
     - target: {fileID: 3536048346040863171, guid: baa577061495faf4891874d959b83a31, type: 3}
       propertyPath: m_LocalPosition.x
       value: 8.28
@@ -345,18 +341,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4146668136701718941, guid: baa577061495faf4891874d959b83a31, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6235667427911045229, guid: baa577061495faf4891874d959b83a31, type: 3}
       propertyPath: m_Name
       value: Worker
       objectReference: {fileID: 0}
-    - target: {fileID: 6678824032727165710, guid: baa577061495faf4891874d959b83a31, type: 3}
-      propertyPath: m_PresetInfoIsWorld
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6678873977413485606, guid: baa577061495faf4891874d959b83a31, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -365,14 +353,6 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6678873977413485606, guid: baa577061495faf4891874d959b83a31, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6687830869671164254, guid: baa577061495faf4891874d959b83a31, type: 3}
-      propertyPath: m_Value
-      value: 0.5
-      objectReference: {fileID: 0}
     - target: {fileID: 7390580302663146010, guid: baa577061495faf4891874d959b83a31, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -380,18 +360,6 @@ PrefabInstance:
     - target: {fileID: 7390580302663146010, guid: baa577061495faf4891874d959b83a31, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7390580302663146010, guid: baa577061495faf4891874d959b83a31, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8579754066563325369, guid: baa577061495faf4891874d959b83a31, type: 3}
-      propertyPath: m_Value
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8943925791213636872, guid: baa577061495faf4891874d959b83a31, type: 3}
-      propertyPath: obstacleMask.m_Bits
-      value: 448
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -425,14 +393,6 @@ PrefabInstance:
     - target: {fileID: 3253771733583928008, guid: 6486c913868ff2f41a16bbd12e8e72fa, type: 3}
       propertyPath: m_Name
       value: Murderer
-      objectReference: {fileID: 0}
-    - target: {fileID: 4446752983841172323, guid: 6486c913868ff2f41a16bbd12e8e72fa, type: 3}
-      propertyPath: targetMask.m_Bits
-      value: 320
-      objectReference: {fileID: 0}
-    - target: {fileID: 4446752983841172323, guid: 6486c913868ff2f41a16bbd12e8e72fa, type: 3}
-      propertyPath: obstacleMask.m_Bits
-      value: 448
       objectReference: {fileID: 0}
     - target: {fileID: 5148921593237371208, guid: 6486c913868ff2f41a16bbd12e8e72fa, type: 3}
       propertyPath: m_LocalPosition.x
@@ -819,8 +779,8 @@ MonoBehaviour:
   Badguy_Prefab: {fileID: 3253771733583928008, guid: 6486c913868ff2f41a16bbd12e8e72fa, type: 3}
   spawnCenter: {x: 26.5, y: -4.2, z: -9.5}
   spawnCircleRad: 7
-  numGoodguy: 5
-  numBadguy: 20
+  numGoodguy: 0
+  numBadguy: 0
 --- !u!1 &1084950166874058375
 GameObject:
   m_ObjectHideFlags: 0

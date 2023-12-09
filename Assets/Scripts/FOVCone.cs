@@ -93,7 +93,7 @@ public class VisionCone : MonoBehaviour
                 if (Physics.Raycast(transform.position, RaycastDirection, out RaycastHit hit, VisionRange, obstacleMask))
                 {
                     Vertices[i + 1] = VertForward.normalized * hit.distance;
-                    Debug.Log(hit.distance);
+                    // Debug.Log(hit.distance);
                 }
                 else
                 {
