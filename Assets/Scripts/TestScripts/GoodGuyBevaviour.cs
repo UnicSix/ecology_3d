@@ -5,7 +5,8 @@ using UnityEngine.AI;
 
 public class GoodGuyBevaviour : MonoBehaviour
 {
-    // private int nowStatus = 0;
+    // private int nowStatus = 1;
+    // energy = 0.11
     // float[] statusValues = new float[3];
     // float[] statusGain = new float[3];
     private WorkerStatusHandler statusBar;
@@ -25,7 +26,7 @@ public class GoodGuyBevaviour : MonoBehaviour
         statusBar = StatusBarObj.GetComponent<WorkerStatusHandler>();
         if (navAgent == null) Debug.LogError("Unable to find NavMeshAgent");
         if (statusBar == null) Debug.LogError("Unable to find WorkerStatusHandler");
-        if (footprint == null) footprint = Resources.Load<GameObject>("FootPrintGood");
+        if (footprint == null) footprint = Resources.Load<GameObject>("PreFab/FootPrintGood");
 
         GameObject[] taskPoints = GameObject.FindGameObjectsWithTag("Task");
         if (taskPoints.Length == 0) Debug.LogWarning("No TaskPoints found in the scene.");

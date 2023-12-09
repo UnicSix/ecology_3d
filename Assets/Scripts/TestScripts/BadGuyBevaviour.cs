@@ -24,7 +24,7 @@ public class BadGuyBevaviour : MonoBehaviour
         statusBar = StatusBarObj.GetComponent<MurdererStatusHandler>();
         if (navAgent == null) Debug.LogError("Unable to find NavMeshAgent");
         if (statusBar == null) Debug.LogError("Unable to find MurdererStatusHandler");
-        if (footprint == null) footprint = Resources.Load<GameObject>("FootPrintBad");
+        if (footprint == null) footprint = Resources.Load<GameObject>("PreFab/FootPrintBad");
 
     }
     void Update()

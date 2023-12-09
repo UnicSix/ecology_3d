@@ -797,7 +797,7 @@ GameObject:
   - component: {fileID: 1477419718}
   - component: {fileID: 1477419717}
   - component: {fileID: 1477419716}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: Workshop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
