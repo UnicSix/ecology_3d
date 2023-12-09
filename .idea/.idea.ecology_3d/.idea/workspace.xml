@@ -7,210 +7,13 @@
     <list default="true" id="739ec775-2bce-411e-8645-81f107ffdc51" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ecology_3d/.idea/shelf/Uncommitted_changes_before_Update_at_2023_12_3__07_00__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ecology_3d/.idea/shelf/Uncommitted_changes_before_Update_at_2023_12_3__07_00__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ecology_3d/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ecology_3d/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/3d.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/3d.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/AMONGUSTITLE.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/AMONGUSTITLE.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/AmongUsCharacterIntro.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/AmongUsCharacterIntro.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Button.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Button.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Character.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Character.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Character.fbx.meta.old" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Character.fbx.meta.old.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Emergencia01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Emergencia01.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Emergencia02.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Emergencia02.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Fonts.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Fonts/color basic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Fonts/color basic.ttf.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Fonts/comic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Fonts/comic.ttf.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Fonts/comicbd.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Fonts/comicbd.ttf.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Fonts/comici.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Fonts/comici.ttf.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Fonts/comicz.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Fonts/comicz.ttf.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Fonts/digital-7 (italic).ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Fonts/digital-7 (italic).ttf.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Fonts/digital-7 (mono italic).ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Fonts/digital-7 (mono italic).ttf.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Fonts/digital-7 (mono).ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Fonts/digital-7 (mono).ttf.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Fonts/digital-7.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Fonts/digital-7.ttf.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Material/Motor4.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Material/Motor4.mat.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Material/Pantallas.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Material/Pantallas.mat.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Material/Src/Resources/UV-ELECTRICIDAD.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Material/Src/Resources/UV-ELECTRICIDAD.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Material/Src/Resources/UV-caja01.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Material/Src/Resources/UV-caja01.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Material/Src/Resources/UV-caja02.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Material/Src/Resources/UV-caja02.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Material/Src/Resources/UV-caja03.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Material/Src/Resources/UV-caja03.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Material/Src/Resources/UV.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Material/Src/Resources/UV.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Material/Src/Resources/UV_pantallas.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Material/Src/Resources/UV_pantallas.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Material/Src/Resources/UV_pantallas2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Material/Src/Resources/UV_pantallas2.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Material/Src/Resources/UVcolores.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Material/Src/Resources/UVcolores.jpg.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Materials.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Materials/MACharacterBlack.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Materials/MACharacterBlack.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Materials/MACharacterGreen.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Materials/MACharacterGreen.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Materials/MACharacterLigthBlue.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Materials/MACharacterLigthBlue.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Materials/MACharacterPink.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Materials/MACharacterPink.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Materials/MACharacterRed.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Materials/MACharacterRed.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Materials/MAPasilloMain.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Materials/MAPasilloMain.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Materials/Motor4.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Materials/Motor4.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Materials/Motor5.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Materials/Motor5.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Materials/Pantallas.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Materials/Pantallas.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Materials/Pantallas2.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Materials/Pantallas2.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Materials/Skybox_Mat.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Materials/Skybox_Mat.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Materials/escaner.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Materials/escaner.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Menu.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Menu.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Pantallavotacion.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Pantallavotacion.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/PasilloMain.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/PasilloMain.fbx.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/PreFab/FootPrintBad.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/PreFab/FootPrintBad.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/PreFab/FootPrintBad.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/PreFab/FootPrintBad.prefab.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/PreFab/FootPrintGood.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/PreFab/FootPrintGood.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/PreFab/amongUsMapForExport.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/PreFab/amongUsMapForExport.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/CableFrom.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/CableFrom.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/CableTo.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/CableTo.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/MarcadorTripulante.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/MarcadorTripulante.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/MarkText.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/MarkText.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Player.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Player.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/PlayerTest.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/PlayerTest.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/TextCommand.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/TextCommand.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/TextPlayer.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/TextPlayer.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/RefeljoPantallaVotacion.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/RefeljoPantallaVotacion.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/TareasMarcador.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/TareasMarcador.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/USAR.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/USAR.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/UV-ELECTRICIDAD.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/UV-ELECTRICIDAD.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/UV-NAVE.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/UV-NAVE.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/UV-caja01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/UV-caja01.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/UV-caja02.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/UV-caja02.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/UV-caja03.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/UV-caja03.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/UV-pasilloMain-normal-map.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/UV-pasilloMain-normal-map.jpg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/UV-pasilloMain.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/UV-pasilloMain.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/UV.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/UV.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/UV_pantallas.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/UV_pantallas.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/UV_pantallas2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/UV_pantallas2.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/UVcolores.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/UVcolores.jpg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/amongUsLobby.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/amongUsLobby.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/amongUsMapForExport.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/amongUsMapForExport.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/black.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/black.jpg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/black2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/black2.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/blue.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/blue.jpg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/blue2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/blue2.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/botonactivaciongasolina.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/botonactivaciongasolina.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/btStartMatch.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/btStartMatch.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/btclose.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/btclose.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/btkill.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/btkill.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/btreport.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/btreport.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/ca.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/ca.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/caz.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/caz.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/check.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/check.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/cr.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/cr.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/cro.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/cro.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/darkGreen.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/darkGreen.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/drk-green.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/drk-green.jpg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/finalCA.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/finalCA.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/finalCAZ.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/finalCAZ.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/finalCR.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/finalCR.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/finalRO.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/finalRO.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/fondocables.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/fondocables.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/gasolina.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/gasolina.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/icoTripulante.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/icoTripulante.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/ligth-blue.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/ligth-blue.jpg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/ligthblue2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/ligthblue2.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/pink.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/pink.jpg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/pink2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/pink2.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/red2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/red2.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/reportesplash.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/reportesplash.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/skipbutton.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/skipbutton.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/uncheck.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/uncheck.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/velocidad.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/velocidad.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/votacionelement.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/votacionelement.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/white2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/white2.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/yelow2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/yelow2.png.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/CharTestScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/CharTestScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/BadGuy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BadGuy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FOVCone.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FOVCone.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GoodGuy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GoodGuy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -226,13 +29,6 @@
     &quot;assignee&quot;: &quot;UnicSix&quot;
   }
 }</component>
-  <component name="GithubProjectSettings">
-    <option name="branchProtectionPatterns">
-      <list>
-        <option value="master" />
-      </list>
-    </option>
-  </component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
@@ -340,7 +136,8 @@
       <workItem from="1701795973478" duration="1921000" />
       <workItem from="1701800022135" duration="2016000" />
       <workItem from="1701971137243" duration="1640000" />
-      <workItem from="1702003685594" duration="707000" />
+      <workItem from="1702003685594" duration="5573000" />
+      <workItem from="1702094612035" duration="1261000" />
     </task>
     <task id="LOCAL-00001" summary="editor scripts">
       <option name="closed" value="true" />
@@ -374,7 +171,31 @@
       <option name="project" value="LOCAL" />
       <updated>1701973054762</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="load foot print from resources">
+      <option name="closed" value="true" />
+      <created>1702009766855</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1702009766855</updated>
+    </task>
+    <task id="LOCAL-00006" summary="footprint update">
+      <option name="closed" value="true" />
+      <created>1702019356329</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1702019356329</updated>
+    </task>
+    <task id="LOCAL-00007" summary="weapon set">
+      <option name="closed" value="true" />
+      <created>1702094745994</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1702094745994</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -400,8 +221,10 @@
     <MESSAGE value="good guy prefab fix" />
     <MESSAGE value="add badguy prefab and script" />
     <MESSAGE value="foot print" />
+    <MESSAGE value="load foot print from resources" />
     <MESSAGE value="footprint update" />
-    <option name="LAST_COMMIT_MESSAGE" value="footprint update" />
+    <MESSAGE value="weapon set" />
+    <option name="LAST_COMMIT_MESSAGE" value="weapon set" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
