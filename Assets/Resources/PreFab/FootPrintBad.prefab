@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6833166582635358853}
   - component: {fileID: 5044911981981408272}
   - component: {fileID: 1005341610628430631}
+  - component: {fileID: 7350432047819280130}
   m_Layer: 0
   m_Name: FootPrintBad
   m_TagString: Untagged
@@ -28,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 2697591116166037132}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 23.24282, y: -4.137167, z: 21.704884}
+  m_LocalPosition: {x: 30.816654, y: -4.137167, z: -21.324383}
   m_LocalScale: {x: 0.4, y: 0.004, z: 0.4}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -97,3 +98,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Lifetime: 5
+--- !u!135 &7350432047819280130
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2697591116166037132}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
