@@ -57,7 +57,7 @@ public class GoodGuyBevaviour : MonoBehaviour
     }
     private bool ToPosition(Vector3 dest, float speed)
     {
-        Debug.Log("Stuck: " + DetectAgentStuck());
+        Debug.Log("Stuck:" + DetectAgentStuck());
         Vector3 fixdest = GetNavMeshProjection(dest);
         float distanceToDest = Vector3.Distance(navAgent.transform.position,fixdest);
         if (!navAgent.hasPath) {
@@ -65,7 +65,7 @@ public class GoodGuyBevaviour : MonoBehaviour
             navAgent.SetDestination(fixdest);
             navAgent.speed = speed;
         }
-        else if (DetectAgentStuck(maxStuckTimes: 1000) && distanceToDest < 0.1) return true;
+        else if (DetectAgentStuck(maxStuckTimes: 10) && distanceToDest < 0.1) return true;
         return false;
     }
     private Vector3 GetNavMeshProjection(Vector3 position)

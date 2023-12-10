@@ -120,10 +120,10 @@ MonoBehaviour:
   VisionAngle: 0
   obstacleMask:
     serializedVersion: 2
-    m_Bits: 192
+    m_Bits: 448
   targetMask:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 320
   VisionConeResolution: 0
 --- !u!114 &572890464803873624
 MonoBehaviour:
