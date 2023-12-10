@@ -54,6 +54,12 @@ public class FlowControl : MonoBehaviour
 
                 GameObject guy = Instantiate(creaturePrefab, spawnPos, rotation); // Both good and bad
                 GuysList.Add(guy);
+                // WorkerStatusHandler W_statusHandler = guy.GetComponentInChildren<WorkerStatusHandler>();
+                // if (W_statusHandler != null) W_statusHandler.set_name("GUY-" + i);
+                // else {
+                //     MurdererStatusHandler M_statusHandler = guy.GetComponentInChildren<MurdererStatusHandler>();
+                //     if (M_statusHandler != null) M_statusHandler.set_name("GUY-" + i);
+                // }
             }
         }
         else Debug.LogError("(PreFab is NULL)");

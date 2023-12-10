@@ -21,7 +21,7 @@ public class BadGuyBevaviour : MonoBehaviour
         ResetAgentDtection();
         navAgent = GetComponent<NavMeshAgent>();
         GameObject StatusBarObj = GetComponentInChildren<MurdererStatusHandler>().gameObject;
-        statusBar = StatusBarObj.GetComponent<MurdererStatusHandler>();
+        statusBar = StatusBarObj.GetComponent<MurdererStatusHandler>(); // Do not use it at Start
         if (navAgent == null) Debug.LogError("Unable to find NavMeshAgent");
         if (statusBar == null) Debug.LogError("Unable to find MurdererStatusHandler");
         if (footprint == null) footprint = Resources.Load<GameObject>("PreFab/FootPrintBad");
@@ -46,7 +46,6 @@ public class BadGuyBevaviour : MonoBehaviour
     }
     private bool ToPosition(Vector3 dest, float speed)
     {
-        Debug.Log("Stuck:" + DetectAgentStuck());
         Vector3 fixdest = GetNavMeshProjection(dest);
         float distanceToDest = Vector3.Distance(navAgent.transform.position,fixdest);
         if (!navAgent.hasPath) {
@@ -54,7 +53,7 @@ public class BadGuyBevaviour : MonoBehaviour
             navAgent.SetDestination(fixdest);
             navAgent.speed = speed;
         }
-        else if (DetectAgentStuck(maxStuckTimes: 10) && distanceToDest < 0.1) return true;
+        else if (DetectAgentStuck(maxStuckTimes: 1) && distanceToDest < 0.1) return true;
         return false;
     }
     private Vector3 GetNavMeshProjection(Vector3 position)
@@ -78,7 +77,7 @@ public class BadGuyBevaviour : MonoBehaviour
         agentStuckTimes = 0;
         agentRemainingDis = 0.0f;;
     }
-    bool DetectAgentStuck(float tolerance = 0.05f, int maxStuckTimes = 100)
+    bool DetectAgentStuck(float tolerance = 0.05f, int maxStuckTimes = 500)
     {
         // Find navAgent stuck at the same position for to many frame
         if (Mathf.Abs(agentRemainingDis - navAgent.remainingDistance) < tolerance) agentStuckTimes+= 1;

@@ -5,6 +5,9 @@ using UnityEngine.UI;
 
 public class WorkerStatusHandler : MonoBehaviour
 {
+    public Text Name;
+    public Slider sus;
+    public Slider idle;
     public Slider work;
     public Slider panic;
     public Slider alarm;
@@ -12,11 +15,22 @@ public class WorkerStatusHandler : MonoBehaviour
     void Start()
     {
         selfcanvas = GetComponent<Canvas>();
+        sus.value = 0;
+        idle.value = 0;
         work.value = 0;
         panic.value = 0;
         alarm.value = 0;
         // value can't be larger than 1 and smaller than zero (auto adjusted)
         Hide();
+    }
+    public void set_name(string str) {
+        Name.text = str;
+    }
+    public void update_sus(float val) {
+        sus.value = val;
+    }
+    public void update_idle(float val) {
+        idle.value = val;
     }
     public void update_work(float val) {
         work.value = val;
