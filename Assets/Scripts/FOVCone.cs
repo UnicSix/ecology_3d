@@ -33,6 +33,7 @@ public class VisionCone : MonoBehaviour
         }
     }
 
+    //draw the fov cone, return the position of the most fresh spotted footprint
     void Update()
     {
         DrawVisionCone();//calling the vision cone function everyframe just so the cone is updated every frame
