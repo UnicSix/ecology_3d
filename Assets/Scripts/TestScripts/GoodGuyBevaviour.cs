@@ -42,9 +42,9 @@ public class GoodGuyBevaviour : MonoBehaviour
         if (!arrive) arrive = ToPosition(taskPoints[0].transform.position, 10f);
         else {
             if (!back){
-                Debug.Log("Arrived !!");
                 CutAgentPath();
-                transform.LookAt(GetNavMeshProjection(new Vector3(4.743f, 0.0f, 15.308f)));
+                transform.LookAt(GetNavMeshProjection(taskPoints[0].transform.Find("Facing").position));
+                taskPoints[0].GetComponentInChildren<ProgressStatusHandler>().progress_val+= 0.8f;
                 back = true;
             }
             else {
@@ -64,6 +64,8 @@ public class GoodGuyBevaviour : MonoBehaviour
         }
         else if (DetectAgentStuck()) CutAgentPath();
     }
+
+    // API Function
     private bool ToPosition(Vector3 dest, float speed)
     {
         Vector3 fixdest = GetNavMeshProjection(dest);

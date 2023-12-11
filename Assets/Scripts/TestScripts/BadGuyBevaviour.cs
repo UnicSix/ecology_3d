@@ -31,7 +31,6 @@ public class BadGuyBevaviour : MonoBehaviour
     {
         UpdatePrams();
         Idle(5.0f);
-
         if (printTimeElapse >= printTimeGap) LeaveFootPrint(transform.position);
     }
     

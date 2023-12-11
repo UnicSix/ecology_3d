@@ -27,19 +27,19 @@ public class WorkerStatusHandler : MonoBehaviour
         Name.text = str;
     }
     public void update_sus(float val) {
-        sus.value = val;
+        sus.value = Mathf.Clamp01(val);
     }
     public void update_idle(float val) {
-        idle.value = val;
+        idle.value = Mathf.Clamp01(val);
     }
     public void update_work(float val) {
-        work.value = val;
+        work.value = Mathf.Clamp01(val);
     }
     public void update_panic(float val) {
-        panic.value = val;
+        panic.value = Mathf.Clamp01(val);
     }
     public void update_alarm(float val) {
-        alarm.value = val; 
+        alarm.value = Mathf.Clamp01(val); 
     }
     public void Hide() {
         selfcanvas.enabled = false;
