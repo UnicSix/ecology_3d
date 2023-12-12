@@ -39,6 +39,7 @@ public class BadGuyBevaviour : MonoBehaviour
         statusValues[4] = Random.Range(0.0f, 0.1f);
         nowStatus = status_select(statusValues);
         statusBar.Select(nowStatus);
+        Debug.Log(nowStatus);
     }
     void Update()
     {
@@ -55,12 +56,12 @@ public class BadGuyBevaviour : MonoBehaviour
             CutAgentPath();
             ResetTimer();
         }
-        else {
+        else {  // Select an Action and cost energy
             nowStatus = status_select(statusValues);
             statusBar.Select(nowStatus);
         }
 
-        // statusBar.Show();
+        statusBar.Show();
     }
     
     private int status_select(float[] probabilities)

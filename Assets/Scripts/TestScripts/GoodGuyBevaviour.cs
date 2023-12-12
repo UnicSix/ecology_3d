@@ -56,7 +56,7 @@ public class GoodGuyBevaviour : MonoBehaviour
             CutAgentPath();
             ResetTimer();
         }
-        else {
+        else { // Select an Action and cost energy
             nowStatus = status_select(statusValues);
             statusBar.Select(nowStatus);
         }

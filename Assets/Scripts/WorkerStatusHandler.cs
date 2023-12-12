@@ -52,7 +52,7 @@ public class WorkerStatusHandler : MonoBehaviour
             }
             else {
                 Color color = images[i].color;
-                color.a = 0.65f;
+                color.a = 0.5f;
                 images[i].color = color;
             }
         }
