@@ -17,8 +17,8 @@ public class BadGuy : MonoBehaviour
     private Camera Cam;
     [SerializeField] public GameObject footprint;
     private float printTime;
-    private float randMin=100f;
-    private float randMax=0f;
+    // private float randMin=100f;
+    // private float randMax=0f;
     void Start()
     {
         animator = GetComponent<Animator>();

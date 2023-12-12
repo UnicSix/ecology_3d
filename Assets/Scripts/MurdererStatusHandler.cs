@@ -29,22 +29,22 @@ public class MurdererStatusHandler : MonoBehaviour
         Name.text = str;
     }
     public void update_sus(float val) {
-        sus.value = val;
+        sus.value = Mathf.Clamp01(val);
     }
     public void update_idle(float val) {
-        idle.value = val;
+        idle.value = Mathf.Clamp01(val);
     }
     public void update_Chaos(float val) {
-        chaos.value = val;
+        chaos.value = Mathf.Clamp01(val);
     }
     public void update_tailgating(float val) {
-        tailgating.value = val;
+        tailgating.value = Mathf.Clamp01(val);
     }
     public void update_assassinate(float val) {
-        assassinate.value = val;
+        assassinate.value = Mathf.Clamp01(val);
     }
     public void update_killingSpree(float val) {
-        killingSpree.value = val; 
+        killingSpree.value = Mathf.Clamp01(val); 
     }
     public void Hide() {
         selfcanvas.enabled = false;
