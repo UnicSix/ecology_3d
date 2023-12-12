@@ -3,12 +3,29 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
+public class WorkParameters
+{
+    public int task_index { get; set; }
+    public bool arrived { get; set; }
+
+    public WorkParameters()
+    {
+        Reset();
+    }
+
+    public void Reset()
+    {
+        task_index = -1;
+        arrived = false;
+    }
+}
 public class GoodGuyBevaviour : MonoBehaviour
 {
     
-    private int nowStatus;
+    private int nowStatus; // -1: none, -2: meeting
+    private float exeuteTime;
     float[] statusValues = new float[4];
-    // float[] statusGain = new float[4];
+    float[] statusGainProportion = new float[4];
     float[] statusTimer = new float[4]{ 0f, 0f, 0f, 0f };
     GameObject[] taskPoints;
 
@@ -17,6 +34,8 @@ public class GoodGuyBevaviour : MonoBehaviour
     private int agentStuckTimes;
     private float agentRemainingDis;
     private float printTimeElapse;
+    private WorkParameters workParams;
+    [SerializeField] private float energyFactor = 20.0f;
     [SerializeField] private float printTimeGap = 0.15f;
     [SerializeField] public GameObject footprint;
     // private bool arrive = false;
@@ -26,6 +45,8 @@ public class GoodGuyBevaviour : MonoBehaviour
     {
         ResetTimer();
         ResetAgentDtection();
+        exeuteTime = 0.0f;
+        workParams = new WorkParameters();
         navAgent = GetComponent<NavMeshAgent>();
         taskPoints = GameObject.FindGameObjectsWithTag("Task");
         GameObject StatusBarObj = GetComponentInChildren<WorkerStatusHandler>().gameObject;
@@ -35,30 +56,41 @@ public class GoodGuyBevaviour : MonoBehaviour
         if (footprint == null) footprint = Resources.Load<GameObject>("PreFab/FootPrintGood");
 
         // Status Initialize
-        statusValues[0] = Random.Range(0.4f, 0.6f);
-        statusValues[1] = Random.Range(0.6f, 1.0f);
-        statusValues[2] = Random.Range(0.0f, 0.6f);
-        statusValues[3] = Random.Range(0.0f, 0.2f);
-        nowStatus = status_select(statusValues);
-        statusBar.Select(nowStatus);
+        nowStatus = -1;
+        statusValues[0] = Random.Range(0.4f, 0.6f); statusGainProportion[0] = 50f;
+        statusValues[1] = Random.Range(0.6f, 1.0f); statusGainProportion[1] = 40f;
+        statusValues[2] = Random.Range(0.0f, 0.6f); statusGainProportion[2] = 8f;
+        statusValues[3] = Random.Range(0.0f, 0.2f); statusGainProportion[3] = 2f;
     }
     void Update()
     {
         UpdatePrams();
-        if (nowStatus != -1) {
-            // switch nowStatus:
-            //     case 0:
-            //     case 1:
+        if (nowStatus >= 0 && nowStatus <= statusValues.Length) {
+            switch (nowStatus) {
+                case 0: 
+                    nowStatus = Idle(exeuteTime);
+                    break;
+                case 1: 
+                    nowStatus = Work(exeuteTime);
+                    break;
             //     case 2:
             //     case 3:
+            //     case 4:
+            }
         }
         else if (nowStatus == -2) { // Table Meeting
             CutAgentPath();
             ResetTimer();
+
         }
-        else { // Select an Action and cost energy
+        else { // Select an Action and distribute energy
             nowStatus = status_select(statusValues);
             statusBar.Select(nowStatus);
+
+            float energy = statusValues[nowStatus];
+            energy *= Random.Range(0.0f, 1.0f);
+            exeuteTime = energy * energyFactor;
+            distribute_energy(nowStatus, energy);
         }
 
         // if (!arrive) arrive = ToPosition(taskPoints[0].transform.position);
@@ -86,9 +118,23 @@ public class GoodGuyBevaviour : MonoBehaviour
         float randVal = (float) rand.NextDouble() * sum;
         for (int i = 0; i < probabilities.Length; i++) {
             cumulativeProb += probabilities[i];
-            if (randVal < cumulativeProb) return i;
+            if (randVal <= cumulativeProb) return i;
         }
         return probabilities.Length - 1;
+    }
+    private void distribute_energy(int from, float energy)
+    {
+        statusValues[from] -= energy;
+        float Denominator = 0.0f;
+        for (int i = 0; i < statusGainProportion.Length; i++ ) {
+            if (i != from) Denominator += statusGainProportion[i];
+        }
+        for (int i = 0; i < statusGainProportion.Length; i++ ) {
+            if (i != from) {
+                float gain = energy * (statusGainProportion[i] / Denominator);
+                statusValues[i] = Mathf.Clamp01(statusValues[i] + gain);
+            }
+        }
     }
     private int Idle(float time = -1.0f, float speed = 5.0f) // Loitering without intention
     { 
@@ -110,24 +156,39 @@ public class GoodGuyBevaviour : MonoBehaviour
     }
     private int Work(float time = -1.0f, float efficiency = 1.0f) // Find Task Positon at work(or wreck)
     {
-        // if on position:
-            statusTimer[1] += Time.deltaTime;
-            // taskPoints[0].GetComponentInChildren<ProgressStatusHandler>().progress_val += efficiency / 100
-        // else:
-            // search for empty posotion
+        if (workParams.task_index == -1) workParams.task_index = Random.Range(0, taskPoints.Length);
+        if (!workParams.arrived) {
+            // Use Vision to check weather task is occupied
+            // if not: workParams.task_index = -1
+            // else: 
+            workParams.arrived = ToPosition(taskPoints[workParams.task_index].transform.position);
+        }
+        else {
+            CutAgentPath();
+            FacePosition(GetNavMeshProjection(taskPoints[workParams.task_index].transform.Find("Facing").position));
+            ProgressStatusHandler handler = taskPoints[workParams.task_index].GetComponentInChildren<ProgressStatusHandler>();
+            if (handler.progress_val >= 1.0f) workParams.task_index = -1;
+            else {
+                handler.occupied = true;
+                handler.progress_val += efficiency * Time.deltaTime / 10.0f;
+                statusTimer[1] += Time.deltaTime;
+            }
+        }
 
+        Debug.Log("SpendTime: " + time + " Timer: " + statusTimer[1]);
         if (statusTimer[1] >= time) {
             ResetTimer(1);
+            workParams.Reset();
             return -1;
         }
         return 1;
     }
-    
+
     // API Functions
     private bool ToPosition(Vector3 dest, float speed = 10f)
     {
         Vector3 fixdest = GetNavMeshProjection(dest);
-        float distanceToDest = Vector3.Distance(navAgent.transform.position,fixdest);
+        float distanceToDest = Vector3.Distance(navAgent.transform.position, fixdest);
         if (!navAgent.hasPath) {
             ResetAgentDtection();
             navAgent.SetDestination(fixdest);

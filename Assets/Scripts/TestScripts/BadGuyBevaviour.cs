@@ -5,9 +5,10 @@ using UnityEngine.AI;
 
 public class BadGuyBevaviour : MonoBehaviour
 {
-    private int nowStatus;
+    private int nowStatus; // -1: none, -2: meeting
+    private float exeute_time;
     float[] statusValues = new float[5];
-    // float[] statusGain = new float[5];
+    float[] statusGainProportion = new float[5];
     float[] statusTimer = new float[5]{ 0f, 0f, 0f, 0f, 0f };
     GameObject[] taskPoints;
 
@@ -23,6 +24,7 @@ public class BadGuyBevaviour : MonoBehaviour
     {
         ResetTimer();
         ResetAgentDtection();
+        exeute_time = 0.0f;
         navAgent = GetComponent<NavMeshAgent>();
         taskPoints = GameObject.FindGameObjectsWithTag("Task");
         GameObject StatusBarObj = GetComponentInChildren<MurdererStatusHandler>().gameObject;
@@ -32,19 +34,17 @@ public class BadGuyBevaviour : MonoBehaviour
         if (footprint == null) footprint = Resources.Load<GameObject>("PreFab/FootPrintBad");
 
         // Status Initialize
-        statusValues[0] = Random.Range(0.4f, 0.6f);
-        statusValues[1] = Random.Range(0.4f, 1.0f);
-        statusValues[2] = Random.Range(0.2f, 0.6f);
-        statusValues[3] = Random.Range(0.0f, 0.4f);
-        statusValues[4] = Random.Range(0.0f, 0.1f);
-        nowStatus = status_select(statusValues);
-        statusBar.Select(nowStatus);
-        Debug.Log(nowStatus);
+        nowStatus = -1;
+        statusValues[0] = Random.Range(0.4f, 0.6f); statusGainProportion[0] = 40f;
+        statusValues[1] = Random.Range(0.4f, 1.0f); statusGainProportion[1] = 30f;
+        statusValues[2] = Random.Range(0.2f, 0.6f); statusGainProportion[2] = 20f;
+        statusValues[3] = Random.Range(0.0f, 0.4f); statusGainProportion[3] = 8f;
+        statusValues[4] = Random.Range(0.0f, 0.1f); statusGainProportion[4] = 2f;
     }
     void Update()
     {
         UpdatePrams();
-        if (nowStatus != -1) {
+        if (nowStatus >= 0 && nowStatus < statusValues.Length) {
             // switch nowStatus:
             //     case 0:
             //     case 1:
@@ -55,10 +55,15 @@ public class BadGuyBevaviour : MonoBehaviour
         else if (nowStatus == -2) { // Table Meeting
             CutAgentPath();
             ResetTimer();
+
         }
-        else {  // Select an Action and cost energy
+        else {  // Select an Action and distribute energy
             nowStatus = status_select(statusValues);
             statusBar.Select(nowStatus);
+
+            float energy = statusValues[nowStatus];
+            energy *= Random.Range(0.0f, 1.0f);
+            distribute_energy(nowStatus, energy);
         }
 
         statusBar.Show();
@@ -73,9 +78,23 @@ public class BadGuyBevaviour : MonoBehaviour
         float randVal = (float) rand.NextDouble() * sum;
         for (int i = 0; i < probabilities.Length; i++) {
             cumulativeProb += probabilities[i];
-            if (randVal < cumulativeProb) return i;
+            if (randVal <= cumulativeProb) return i;
         }
         return probabilities.Length - 1;
+    }
+    private void distribute_energy(int from, float energy)
+    {
+        statusValues[from] -= energy;
+        float Denominator = 0.0f;
+        for (int i = 0; i < statusGainProportion.Length; i++ ) {
+            if (i != from) Denominator += statusGainProportion[i];
+        }
+        for (int i = 0; i < statusGainProportion.Length; i++ ) {
+            if (i != from) {
+                float gain = energy * (statusGainProportion[i] / Denominator);
+                statusValues[i] = Mathf.Clamp01(statusValues[i] + gain);
+            }
+        }
     }
     private int Idle(float time = -1.0f, float speed = 5.0f) // Loitering without intention
     { 
@@ -100,7 +119,7 @@ public class BadGuyBevaviour : MonoBehaviour
     private bool ToPosition(Vector3 dest, float speed = 10f)
     {
         Vector3 fixdest = GetNavMeshProjection(dest);
-        float distanceToDest = Vector3.Distance(navAgent.transform.position,fixdest);
+        float distanceToDest = Vector3.Distance(navAgent.transform.position, fixdest);
         if (!navAgent.hasPath) {
             ResetAgentDtection();
             navAgent.SetDestination(fixdest);

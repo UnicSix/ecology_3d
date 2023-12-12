@@ -9,6 +9,7 @@ public class ProgressStatusHandler : MonoBehaviour
     public Color redColor = Color.red;
     public Color greenColor = Color.green;
     private Canvas selfcanvas;
+    public bool occupied = false;
     [Range(0f, 1f)] public float progress_val = 0.0f;
 
     void Start()
