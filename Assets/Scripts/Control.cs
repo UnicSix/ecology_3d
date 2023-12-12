@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FlowControl : MonoBehaviour
+public class Control : MonoBehaviour
 {
     [SerializeField] public GameObject Goodguy_Prefab;
     [SerializeField] public GameObject Badguy_Prefab;
@@ -10,17 +10,19 @@ public class FlowControl : MonoBehaviour
     [SerializeField] public float spawnCircleRad = 5.0f;
     [SerializeField] public int numGoodguy = 10;
     [SerializeField] public int numBadguy = 2;
+    
     private List<GameObject> GuysList = new List<GameObject>();
-    private List<int> GuysType = new List<int>();
+    private List<int> GuysType = new List<int>(); // 0: Good, 1: Bad
+    
     void Start()
     {
-        Generate_Creatures();
+        Generate_Guys();
     }
     void Update()
     {
 
     }
-    void Generate_Creatures()
+    void Generate_Guys()
     {
         if (Goodguy_Prefab != null && Badguy_Prefab != null) {
             int numGenGoodguys = 0;
@@ -51,15 +53,11 @@ public class FlowControl : MonoBehaviour
                         numGenGoodguys++;
                     }
                 }
-
+                string guy_name = "GUY-" + i;
                 GameObject guy = Instantiate(creaturePrefab, spawnPos, rotation); // Both good and bad
                 GuysList.Add(guy);
-                // WorkerStatusHandler W_statusHandler = guy.GetComponentInChildren<WorkerStatusHandler>();
-                // if (W_statusHandler != null) W_statusHandler.set_name("GUY-" + i);
-                // else {
-                //     MurdererStatusHandler M_statusHandler = guy.GetComponentInChildren<MurdererStatusHandler>();
-                //     if (M_statusHandler != null) M_statusHandler.set_name("GUY-" + i);
-                // }
+                if (GuysType[i] == 0) guy.GetComponentInChildren<WorkerStatusHandler>().set_name(guy_name);
+                else guy.GetComponentInChildren<MurdererStatusHandler>().set_name(guy_name);
             }
         }
         else Debug.LogError("(PreFab is NULL)");
