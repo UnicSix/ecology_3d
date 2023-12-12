@@ -29,10 +29,10 @@ public class BadGuy : MonoBehaviour
             footprint = Resources.Load<GameObject>("PreFab/FootPrintBad");
         printTime = 0f;
 
-        foreach (int i in Status.actionIntent)
-        {
-            Debug.Log(i);
-        }
+        // foreach (int i in Status.actionIntent)
+        // {
+        //     Debug.Log(i);
+        // }
 
         Roam();
 
@@ -95,21 +95,21 @@ public class BadGuy : MonoBehaviour
         
     }
 
-    void Track()
+    public void Track()
     {
         Debug.Log("Track");
     }
-    void Wreck()
+    public void Wreck()
     {
         Debug.Log("Wreck");
     }
-    void Camp()
+    public void Camp()
     {
         Debug.Log("Camp");
     }
 
     //walk randomly look around to find fresh footprints
-    void Roam()
+    public void Roam()
     {
         // Sample the position. If within 'range' of the sourcePosition, it finds the nearest point on a NavMesh
         Vector3 randomPoint = transform.position + Random.insideUnitSphere * range;
@@ -153,7 +153,7 @@ public class BadGuy : MonoBehaviour
         return 0;
     }
 
-    void Kill()
+    public void Kill()
     {
         
     }

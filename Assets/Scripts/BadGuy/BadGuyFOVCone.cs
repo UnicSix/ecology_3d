@@ -7,6 +7,7 @@ using UnityEngine.Events;
 
 public class BadGuyFov : MonoBehaviour
 {
+    private QueryTriggerInteraction _triggerInteraction;
     public BadGuyStatus Status;
     public Material VisionConeMaterial;
     [SerializeField] private float VisionRange;
@@ -19,7 +20,7 @@ public class BadGuyFov : MonoBehaviour
     //Create all of these variables, most of them are self explanatory, but for the ones that aren't i've added a comment to clue you in on what they do
     //for the ones that you dont understand dont worry, just follow along
 
-    public UnityVector3Event OnTargetFound;
+    public UnityVector3Event onFootprintLockedOn;
     void Start()
     {
         transform.AddComponent<MeshRenderer>().material = VisionConeMaterial;
@@ -60,10 +61,11 @@ public class BadGuyFov : MonoBehaviour
                 Cosine = Mathf.Cos(Currentangle);
                 Vector3 RaycastDirection = (transform.forward * Cosine) + (transform.right * Sine);
                 Vector3 VertForward = (Vector3.forward * Cosine) + (Vector3.right * Sine);
-                if (Physics.Raycast(transform.position, RaycastDirection, out RaycastHit hit, VisionRange, obstacleMask))
+                if (Physics.Raycast(transform.position, RaycastDirection, out RaycastHit hit, VisionRange, obstacleMask, _triggerInteraction))
                 {
                     Vertices[i + 1] = VertForward.normalized * hit.distance;
                     maxDist = maxDist < hit.distance ? hit.distance : maxDist;
+                    Debug.Log("hit footprint");
                 }
                 else
                 {

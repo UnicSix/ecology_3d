@@ -6,6 +6,7 @@ public class Footprint : MonoBehaviour
 {
     [Tooltip("this is how long the decal will stay, before it shrinks away totally")]
     public float Lifetime = 5.0f;
+    public float ElapsedTime;
     private float mark;
     private Vector3 OrigSize;
 
@@ -17,7 +18,7 @@ public class Footprint : MonoBehaviour
     }
     public void Update()
     {
-        float ElapsedTime = Time.time - mark;
+        ElapsedTime = Time.time - mark;
         if (ElapsedTime != 0)
         {
             float PercentTimeLeft = (Lifetime - ElapsedTime) / Lifetime;
