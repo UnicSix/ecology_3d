@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class WorkerStatusHandler : MonoBehaviour
 {
     public Text Name;
+    public Image focus0, focus1, focus2, focus3;
     public Slider sus;
     public Slider idle;
     public Slider work;
@@ -40,6 +41,21 @@ public class WorkerStatusHandler : MonoBehaviour
     }
     public void update_alarm(float val) {
         alarm.value = Mathf.Clamp01(val); 
+    }
+    public void Select(int index) {
+        Image[] images = { focus0, focus1, focus2, focus3 };
+        for (int i = 0; i < images.Length; i++) {
+            if (i != index) {
+                Color color = images[i].color;
+                color.a = 0f;
+                images[i].color = color;
+            }
+            else {
+                Color color = images[i].color;
+                color.a = 0.5f;
+                images[i].color = color;
+            }
+        }
     }
     public void Hide() {
         selfcanvas.enabled = false;
