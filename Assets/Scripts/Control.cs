@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Control : MonoBehaviour
 {
+    GameObject[] taskPoints;
     [SerializeField] public GameObject Goodguy_Prefab;
     [SerializeField] public GameObject Badguy_Prefab;
     [SerializeField] public Vector3 spawnCenter = new Vector3(0f, 5.0f, 0f);
@@ -16,6 +17,9 @@ public class Control : MonoBehaviour
     
     void Start()
     {
+        taskPoints = GameObject.FindGameObjectsWithTag("Task");
+        if (taskPoints.Length != 0) {} //Debug.Log("Found " + taskPoints.Length + " TaskPoints.");
+        else Debug.LogWarning("No TaskPoints found in the scene.");
         Generate_Guys();
     }
     void Update()

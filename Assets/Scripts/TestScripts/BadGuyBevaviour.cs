@@ -5,8 +5,8 @@ using UnityEngine.AI;
 
 public class BadGuyBevaviour : MonoBehaviour
 {
-    // private int nowStatus = 0;
-    // float[] statusValues = new float[5];
+    private int nowStatus;
+    float[] statusValues = new float[5];
     // float[] statusGain = new float[5];
     float[] statusTimer = new float[5]{ 0f, 0f, 0f, 0f, 0f };
     GameObject[] taskPoints;
@@ -21,27 +21,62 @@ public class BadGuyBevaviour : MonoBehaviour
 
     void Start()
     {
+        ResetTimer();
         ResetAgentDtection();
         navAgent = GetComponent<NavMeshAgent>();
+        taskPoints = GameObject.FindGameObjectsWithTag("Task");
         GameObject StatusBarObj = GetComponentInChildren<MurdererStatusHandler>().gameObject;
         statusBar = StatusBarObj.GetComponent<MurdererStatusHandler>(); // Do not use it at Start
         if (navAgent == null) Debug.LogError("Unable to find NavMeshAgent");
         if (statusBar == null) Debug.LogError("Unable to find MurdererStatusHandler");
         if (footprint == null) footprint = Resources.Load<GameObject>("PreFab/FootPrintBad");
 
-        // Find all Task points
-        taskPoints = GameObject.FindGameObjectsWithTag("Task");
-        if (taskPoints.Length != 0) {} // Debug.Log("Found " + taskPoints.Length + " TaskPoints.");
-        else Debug.LogWarning("No TaskPoints found in the scene.");
+        // Status Initialize
+        statusValues[0] = Random.Range(0.4f, 0.6f);
+        statusValues[1] = Random.Range(0.4f, 1.0f);
+        statusValues[2] = Random.Range(0.2f, 0.6f);
+        statusValues[3] = Random.Range(0.0f, 0.4f);
+        statusValues[4] = Random.Range(0.0f, 0.1f);
+        nowStatus = status_select(statusValues);
+        statusBar.Select(nowStatus);
     }
     void Update()
     {
         UpdatePrams();
-        Idle();
-        
+        if (nowStatus != -1) {
+            // switch nowStatus:
+            //     case 0:
+            //     case 1:
+            //     case 2:
+            //     case 3:
+            //     case 4:
+        }
+        else if (nowStatus == -2) { // Table Meeting
+            CutAgentPath();
+            ResetTimer();
+        }
+        else {
+            nowStatus = status_select(statusValues);
+            statusBar.Select(nowStatus);
+        }
+
+        // statusBar.Show();
     }
     
-    private bool Idle(float time = -1.0f, float speed = 5.0f) // Loitering without intention
+    private int status_select(float[] probabilities)
+    {
+        System.Random rand = new System.Random();
+        float sum = 0, cumulativeProb = 0;
+        foreach (float p in probabilities) sum += p;
+
+        float randVal = (float) rand.NextDouble() * sum;
+        for (int i = 0; i < probabilities.Length; i++) {
+            cumulativeProb += probabilities[i];
+            if (randVal < cumulativeProb) return i;
+        }
+        return probabilities.Length - 1;
+    }
+    private int Idle(float time = -1.0f, float speed = 5.0f) // Loitering without intention
     { 
         statusTimer[0] += Time.deltaTime;
         if (!navAgent.hasPath) {
@@ -53,11 +88,11 @@ public class BadGuyBevaviour : MonoBehaviour
         else if (DetectAgentStuck()) CutAgentPath();
 
         if (statusTimer[0] >= time && time > 0) {
-            ResetTimer();
+            ResetTimer(0);
             CutAgentPath();
-            return false;
+            return -1;
         }
-        return true;
+        return 0;
     }
 
     // API Functions
@@ -127,7 +162,12 @@ public class BadGuyBevaviour : MonoBehaviour
     
     void UpdatePrams()
     {
-        printTimeElapse += Time.deltaTime;
         if (printTimeElapse >= printTimeGap) LeaveFootPrint(transform.position);
+        statusBar.update_idle(statusValues[0]);
+        statusBar.update_chaos(statusValues[1]);
+        statusBar.update_tailgating(statusValues[2]);
+        statusBar.update_assassinate(statusValues[3]);
+        statusBar.update_killingSpree(statusValues[4]);
+        printTimeElapse += Time.deltaTime;
     }
 }

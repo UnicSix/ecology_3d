@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class MurdererStatusHandler : MonoBehaviour
 {
     public Text Name;
+    public Image focus0, focus1, focus2, focus3, focus4;
     public Slider sus;
     public Slider idle;
     public Slider chaos;
@@ -34,7 +35,7 @@ public class MurdererStatusHandler : MonoBehaviour
     public void update_idle(float val) {
         idle.value = Mathf.Clamp01(val);
     }
-    public void update_Chaos(float val) {
+    public void update_chaos(float val) {
         chaos.value = Mathf.Clamp01(val);
     }
     public void update_tailgating(float val) {
@@ -45,6 +46,21 @@ public class MurdererStatusHandler : MonoBehaviour
     }
     public void update_killingSpree(float val) {
         killingSpree.value = Mathf.Clamp01(val); 
+    }
+    public void Select(int index) {
+        Image[] images = { focus0, focus1, focus2, focus3, focus4 };
+        for (int i = 0; i < images.Length; i++) {
+            if (i != index) {
+                Color color = images[i].color;
+                color.a = 0f;
+                images[i].color = color;
+            }
+            else {
+                Color color = images[i].color;
+                color.a = 0.65f;
+                images[i].color = color;
+            }
+        }
     }
     public void Hide() {
         selfcanvas.enabled = false;

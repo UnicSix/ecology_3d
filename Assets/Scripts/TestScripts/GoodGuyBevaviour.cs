@@ -6,8 +6,8 @@ using UnityEngine.AI;
 public class GoodGuyBevaviour : MonoBehaviour
 {
     
-    // private int nowStatus;
-    // float[] statusValues = new float[4];
+    private int nowStatus;
+    float[] statusValues = new float[4];
     // float[] statusGain = new float[4];
     float[] statusTimer = new float[4]{ 0f, 0f, 0f, 0f };
     GameObject[] taskPoints;
@@ -27,21 +27,39 @@ public class GoodGuyBevaviour : MonoBehaviour
         ResetTimer();
         ResetAgentDtection();
         navAgent = GetComponent<NavMeshAgent>();
+        taskPoints = GameObject.FindGameObjectsWithTag("Task");
         GameObject StatusBarObj = GetComponentInChildren<WorkerStatusHandler>().gameObject;
         statusBar = StatusBarObj.GetComponent<WorkerStatusHandler>(); // Do not use it at Start
         if (navAgent == null) Debug.LogError("Unable to find NavMeshAgent");
         if (statusBar == null) Debug.LogError("Unable to find WorkerStatusHandler");
         if (footprint == null) footprint = Resources.Load<GameObject>("PreFab/FootPrintGood");
 
-        // Find all Task points
-        taskPoints = GameObject.FindGameObjectsWithTag("Task");
-        if (taskPoints.Length != 0) {} //Debug.Log("Found " + taskPoints.Length + " TaskPoints.");
-        else Debug.LogWarning("No TaskPoints found in the scene.");
+        // Status Initialize
+        statusValues[0] = Random.Range(0.4f, 0.6f);
+        statusValues[1] = Random.Range(0.6f, 1.0f);
+        statusValues[2] = Random.Range(0.0f, 0.6f);
+        statusValues[3] = Random.Range(0.0f, 0.2f);
+        nowStatus = status_select(statusValues);
+        statusBar.Select(nowStatus);
     }
     void Update()
     {
         UpdatePrams();
-        // Idle();
+        if (nowStatus != -1) {
+            // switch nowStatus:
+            //     case 0:
+            //     case 1:
+            //     case 2:
+            //     case 3:
+        }
+        else if (nowStatus == -2) { // Table Meeting
+            CutAgentPath();
+            ResetTimer();
+        }
+        else {
+            nowStatus = status_select(statusValues);
+            statusBar.Select(nowStatus);
+        }
 
         // if (!arrive) arrive = ToPosition(taskPoints[0].transform.position);
         // else {
@@ -56,10 +74,23 @@ public class GoodGuyBevaviour : MonoBehaviour
         //     }
         // }
 
-        
+        statusBar.Show();
     }
     
-    private bool Idle(float time = -1.0f, float speed = 5.0f) // Loitering without intention
+    private int status_select(float[] probabilities)
+    {
+        System.Random rand = new System.Random();
+        float sum = 0, cumulativeProb = 0;
+        foreach (float p in probabilities) sum += p;
+
+        float randVal = (float) rand.NextDouble() * sum;
+        for (int i = 0; i < probabilities.Length; i++) {
+            cumulativeProb += probabilities[i];
+            if (randVal < cumulativeProb) return i;
+        }
+        return probabilities.Length - 1;
+    }
+    private int Idle(float time = -1.0f, float speed = 5.0f) // Loitering without intention
     { 
         statusTimer[0] += Time.deltaTime;
         if (!navAgent.hasPath) {
@@ -71,20 +102,25 @@ public class GoodGuyBevaviour : MonoBehaviour
         else if (DetectAgentStuck()) CutAgentPath();
 
         if (statusTimer[0] >= time && time > 0) {
-            ResetTimer();
+            ResetTimer(0);
             CutAgentPath();
-            return false;
+            return -1;
         }
-        return true;
+        return 0;
     }
-    private bool Work(float time = -1.0f, float efficiency = 1.0f) { // Find Task Positon at work(or wreck)
-        statusTimer[0] += Time.deltaTime;
+    private int Work(float time = -1.0f, float efficiency = 1.0f) // Find Task Positon at work(or wreck)
+    {
+        // if on position:
+            statusTimer[1] += Time.deltaTime;
+            // taskPoints[0].GetComponentInChildren<ProgressStatusHandler>().progress_val += efficiency / 100
+        // else:
+            // search for empty posotion
 
-        if (statusTimer[0] >= time) {
-            ResetTimer();
-            return true;
+        if (statusTimer[1] >= time) {
+            ResetTimer(1);
+            return -1;
         }
-        return false;
+        return 1;
     }
     
     // API Functions
@@ -158,7 +194,11 @@ public class GoodGuyBevaviour : MonoBehaviour
     
     void UpdatePrams()
     {
-        printTimeElapse += Time.deltaTime;
         if (printTimeElapse >= printTimeGap) LeaveFootPrint(transform.position);
+        statusBar.update_idle(statusValues[0]);
+        statusBar.update_work(statusValues[1]);
+        statusBar.update_panic(statusValues[2]);
+        statusBar.update_alarm(statusValues[3]);
+        printTimeElapse += Time.deltaTime;
     }
 }
