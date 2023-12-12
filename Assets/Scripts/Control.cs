@@ -10,17 +10,19 @@ public class Control : MonoBehaviour
     [SerializeField] public float spawnCircleRad = 5.0f;
     [SerializeField] public int numGoodguy = 10;
     [SerializeField] public int numBadguy = 2;
+    
     private List<GameObject> GuysList = new List<GameObject>();
     private List<int> GuysType = new List<int>(); // 0: Good, 1: Bad
+    
     void Start()
     {
-        Generate_Creatures();
+        Generate_Guys();
     }
     void Update()
     {
 
     }
-    void Generate_Creatures()
+    void Generate_Guys()
     {
         if (Goodguy_Prefab != null && Badguy_Prefab != null) {
             int numGenGoodguys = 0;

@@ -5,23 +5,26 @@ using UnityEngine.AI;
 
 public class GoodGuyBevaviour : MonoBehaviour
 {
+    
+    // private int nowStatus;
+    // float[] statusValues = new float[4];
+    // float[] statusGain = new float[4];
+    float[] statusTimer = new float[4]{ 0f, 0f, 0f, 0f };
     GameObject[] taskPoints;
-    // private int nowStatus = 1;
-    // energy = 0.11
-    // float[] statusValues = new float[3];
-    // float[] statusGain = new float[3];
+
     private WorkerStatusHandler statusBar;
     private NavMeshAgent navAgent;
     private int agentStuckTimes;
     private float agentRemainingDis;
     private float printTimeElapse;
-    private bool arrive = false;
     [SerializeField] private float printTimeGap = 0.15f;
     [SerializeField] public GameObject footprint;
-    private bool back = false; // temp
+    // private bool arrive = false;
+    // private bool back = false; // temp
 
     void Start()
     {
+        ResetTimer();
         ResetAgentDtection();
         navAgent = GetComponent<NavMeshAgent>();
         GameObject StatusBarObj = GetComponentInChildren<WorkerStatusHandler>().gameObject;
@@ -32,30 +35,33 @@ public class GoodGuyBevaviour : MonoBehaviour
 
         // Find all Task points
         taskPoints = GameObject.FindGameObjectsWithTag("Task");
-        if (taskPoints.Length != 0) Debug.Log("Found " + taskPoints.Length + " TaskPoints.");
+        if (taskPoints.Length != 0) {} //Debug.Log("Found " + taskPoints.Length + " TaskPoints.");
         else Debug.LogWarning("No TaskPoints found in the scene.");
     }
     void Update()
     {
         UpdatePrams();
-        // Idle(5.0f);
-        if (!arrive) arrive = ToPosition(taskPoints[0].transform.position, 10f);
-        else {
-            if (!back){
-                CutAgentPath();
-                transform.LookAt(GetNavMeshProjection(taskPoints[0].transform.Find("Facing").position));
-                taskPoints[0].GetComponentInChildren<ProgressStatusHandler>().progress_val+= 0.8f;
-                back = true;
-            }
-            else {
-                ToPosition(new Vector3(8.347f, -4.211149f, -7.73f), 10f);
-            }
-        }
+        // Idle();
 
-        if (printTimeElapse >= printTimeGap) LeaveFootPrint(transform.position);
+        // if (!arrive) arrive = ToPosition(taskPoints[0].transform.position);
+        // else {
+        //     if (!back){
+        //         CutAgentPath();
+        //         FacePosition(GetNavMeshProjection(taskPoints[0].transform.Find("Facing").position));
+        //         taskPoints[0].GetComponentInChildren<ProgressStatusHandler>().progress_val+= 0.8f;
+        //         back = true;
+        //     }
+        //     else {
+        //         // ToPosition(new Vector3(8.347f, -4.211149f, -7.73f));
+        //     }
+        // }
+
+        
     }
     
-    private void Idle(float speed){ // Loitering without intent
+    private bool Idle(float time = -1.0f, float speed = 5.0f) // Loitering without intention
+    { 
+        statusTimer[0] += Time.deltaTime;
         if (!navAgent.hasPath) {
             ResetAgentDtection();
             Vector3 randomDestination = RandomNavmeshLocation(30.0f);
@@ -63,20 +69,41 @@ public class GoodGuyBevaviour : MonoBehaviour
             navAgent.SetDestination(randomDestination);
         }
         else if (DetectAgentStuck()) CutAgentPath();
-    }
 
-    // API Function
-    private bool ToPosition(Vector3 dest, float speed)
+        if (statusTimer[0] >= time && time > 0) {
+            ResetTimer();
+            CutAgentPath();
+            return false;
+        }
+        return true;
+    }
+    private bool Work(float time = -1.0f, float efficiency = 1.0f) { // Find Task Positon at work(or wreck)
+        statusTimer[0] += Time.deltaTime;
+
+        if (statusTimer[0] >= time) {
+            ResetTimer();
+            return true;
+        }
+        return false;
+    }
+    
+    // API Functions
+    private bool ToPosition(Vector3 dest, float speed = 10f)
     {
         Vector3 fixdest = GetNavMeshProjection(dest);
         float distanceToDest = Vector3.Distance(navAgent.transform.position,fixdest);
         if (!navAgent.hasPath) {
             ResetAgentDtection();
             navAgent.SetDestination(fixdest);
-            navAgent.speed = speed;
         }
         else if (DetectAgentStuck(maxStuckTimes: 1) && distanceToDest < 0.1) return true;
+        if (distanceToDest > 10f) navAgent.speed = speed;
+        else navAgent.speed = distanceToDest / 2 + 2.5f;
         return false;
+    }
+    private void FacePosition(Vector3 dest) 
+    {
+        transform.LookAt(dest);
     }
     private Vector3 GetNavMeshProjection(Vector3 position)
     {
@@ -94,6 +121,18 @@ public class GoodGuyBevaviour : MonoBehaviour
         Vector3 randomDir = Random.insideUnitSphere * range;
         return GetNavMeshProjection(randomDir + transform.position);
     }
+    void CutAgentPath()
+    {
+        ResetAgentDtection();
+        navAgent.speed = 0f;
+        navAgent.ResetPath();
+    }
+    void ResetTimer(int index = -1)
+    {
+        if (index >= 0) statusTimer[index] = 0f;
+        else
+            for (int i = 0; i < statusTimer.Length; i++) statusTimer[i] = 0f;
+    }
     void ResetAgentDtection()
     {
         agentStuckTimes = 0;
@@ -109,11 +148,6 @@ public class GoodGuyBevaviour : MonoBehaviour
         if (agentStuckTimes >= maxStuckTimes) return true;
         return false;
     }
-    void CutAgentPath()
-    {
-        ResetAgentDtection();
-        navAgent.ResetPath();
-    }
     void LeaveFootPrint(Vector3 pos)
     {
         GameObject newprint = footprint;
@@ -121,8 +155,10 @@ public class GoodGuyBevaviour : MonoBehaviour
         newprint.transform.position = pos;
         printTimeElapse = 0f;
     }
+    
     void UpdatePrams()
     {
         printTimeElapse += Time.deltaTime;
+        if (printTimeElapse >= printTimeGap) LeaveFootPrint(transform.position);
     }
 }

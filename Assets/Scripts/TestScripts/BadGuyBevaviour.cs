@@ -6,8 +6,11 @@ using UnityEngine.AI;
 public class BadGuyBevaviour : MonoBehaviour
 {
     // private int nowStatus = 0;
-    // float[] statusValues = new float[4];
-    // float[] statusGain = new float[4];
+    // float[] statusValues = new float[5];
+    // float[] statusGain = new float[5];
+    float[] statusTimer = new float[5]{ 0f, 0f, 0f, 0f, 0f };
+    GameObject[] taskPoints;
+
     private MurdererStatusHandler statusBar;
     private UnityEngine.AI.NavMeshAgent navAgent;
     private int agentStuckTimes;
@@ -26,15 +29,21 @@ public class BadGuyBevaviour : MonoBehaviour
         if (statusBar == null) Debug.LogError("Unable to find MurdererStatusHandler");
         if (footprint == null) footprint = Resources.Load<GameObject>("PreFab/FootPrintBad");
 
+        // Find all Task points
+        taskPoints = GameObject.FindGameObjectsWithTag("Task");
+        if (taskPoints.Length != 0) {} // Debug.Log("Found " + taskPoints.Length + " TaskPoints.");
+        else Debug.LogWarning("No TaskPoints found in the scene.");
     }
     void Update()
     {
         UpdatePrams();
-        Idle(5.0f);
-        if (printTimeElapse >= printTimeGap) LeaveFootPrint(transform.position);
+        Idle();
+        
     }
     
-    private void Idle(float speed){ // Loitering without intent
+    private bool Idle(float time = -1.0f, float speed = 5.0f) // Loitering without intention
+    { 
+        statusTimer[0] += Time.deltaTime;
         if (!navAgent.hasPath) {
             ResetAgentDtection();
             Vector3 randomDestination = RandomNavmeshLocation(30.0f);
@@ -42,17 +51,27 @@ public class BadGuyBevaviour : MonoBehaviour
             navAgent.SetDestination(randomDestination);
         }
         else if (DetectAgentStuck()) CutAgentPath();
+
+        if (statusTimer[0] >= time && time > 0) {
+            ResetTimer();
+            CutAgentPath();
+            return false;
+        }
+        return true;
     }
-    private bool ToPosition(Vector3 dest, float speed)
+
+    // API Functions
+    private bool ToPosition(Vector3 dest, float speed = 10f)
     {
         Vector3 fixdest = GetNavMeshProjection(dest);
         float distanceToDest = Vector3.Distance(navAgent.transform.position,fixdest);
         if (!navAgent.hasPath) {
             ResetAgentDtection();
             navAgent.SetDestination(fixdest);
-            navAgent.speed = speed;
         }
         else if (DetectAgentStuck(maxStuckTimes: 1) && distanceToDest < 0.1) return true;
+        if (distanceToDest > 10f) navAgent.speed = speed;
+        else navAgent.speed = distanceToDest / 2 + 2.5f;
         return false;
     }
     private Vector3 GetNavMeshProjection(Vector3 position)
@@ -71,6 +90,18 @@ public class BadGuyBevaviour : MonoBehaviour
         Vector3 randomDir = Random.insideUnitSphere * range;
         return GetNavMeshProjection(randomDir + transform.position);
     }
+    void CutAgentPath()
+    {
+        ResetAgentDtection();
+        navAgent.speed = 0f;
+        navAgent.ResetPath();
+    }
+    void ResetTimer(int index = -1)
+    {
+        if (index >= 0) statusTimer[index] = 0f;
+        else
+            for (int i = 0; i < statusTimer.Length; i++) statusTimer[i] = 0f;
+    }
     void ResetAgentDtection()
     {
         agentStuckTimes = 0;
@@ -86,11 +117,6 @@ public class BadGuyBevaviour : MonoBehaviour
         if (agentStuckTimes >= maxStuckTimes) return true;
         return false;
     }
-    void CutAgentPath()
-    {
-        ResetAgentDtection();
-        navAgent.ResetPath();
-    }
     void LeaveFootPrint(Vector3 pos)
     {
         GameObject newprint = footprint;
@@ -98,8 +124,10 @@ public class BadGuyBevaviour : MonoBehaviour
         newprint.transform.position = pos;
         printTimeElapse = 0f;
     }
+    
     void UpdatePrams()
     {
         printTimeElapse += Time.deltaTime;
+        if (printTimeElapse >= printTimeGap) LeaveFootPrint(transform.position);
     }
 }
