@@ -34,7 +34,7 @@ public class BadGuy : MonoBehaviour
         //     Debug.Log(i);
         // }
 
-        Roam();
+        // Roam();
 
         // Assuming task objects are tagged as "TaskObject"
         // GameObject[] taskObjects = GameObject.FindGameObjectsWithTag("Task");
@@ -54,19 +54,19 @@ public class BadGuy : MonoBehaviour
 
     void Update()
     {
-        Ray ray = Cam.ScreenPointToRay(Input.mousePosition);
-        RaycastHit hit = new RaycastHit();
+        // Ray ray = Cam.ScreenPointToRay(Input.mousePosition);
+        // RaycastHit hit = new RaycastHit();
         printTime += Time.deltaTime;
-        if (Input.GetKeyDown(KeyCode.Mouse0))
-        {
-            goal= Input.mousePosition;
-            if( Physics.Raycast(ray, out hit) )
-            {
-                Debug.Log(hit.point);
-                Vector3 dest = new Vector3(hit.point.x, hit.point.y+1.5f, hit.point.z);
-                _agent.destination = dest; 
-            }
-        }
+        // if (Input.GetKeyDown(KeyCode.Mouse0))
+        // {
+        //     goal= Input.mousePosition;
+        //     if( Physics.Raycast(ray, out hit) )
+        //     {
+        //         Debug.Log(hit.point);
+        //         Vector3 dest = new Vector3(hit.point.x, hit.point.y+1.5f, hit.point.z);
+        //         _agent.destination = dest; 
+        //     }
+        // }
 
         if (_agent.isStopped || _agent.remainingDistance==0)
         {
