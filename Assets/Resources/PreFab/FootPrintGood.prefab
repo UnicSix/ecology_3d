@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 3529103425583433579}
   - component: {fileID: 7789594348563058789}
   - component: {fileID: 8896532424342147049}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FootPrintGood
-  m_TagString: Untagged
+  m_TagString: GoodPrint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29,9 +29,9 @@ Transform:
   m_GameObject: {fileID: 2140893498484936665}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -44.445107, y: -4.137167, z: -23.268608}
-  m_LocalScale: {x: 0.4, y: 0.004, z: 0.4}
-  m_ConstrainProportionsScale: 1
+  m_LocalPosition: {x: -22.335873, y: -4.137167, z: -16.074036}
+  m_LocalScale: {x: 0.4, y: 0.05, z: 0.4}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -98,6 +98,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Lifetime: 5
+  ElapsedTime: 0
 --- !u!135 &8896532424342147049
 SphereCollider:
   m_ObjectHideFlags: 0

@@ -43,6 +43,7 @@ public class BadGuyBevaviour : MonoBehaviour
     }
     void Update()
     {
+        Idle();
         UpdatePrams();
         if (nowStatus >= 0 && nowStatus < statusValues.Length) {
             // switch nowStatus:

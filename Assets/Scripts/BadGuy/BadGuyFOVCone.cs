@@ -30,6 +30,7 @@ public class BadGuyFov : MonoBehaviour
         VisionAngle *= Mathf.Deg2Rad;
         VisionRange = 25f;
         VisionConeResolution = 10;
+        _triggerInteraction = QueryTriggerInteraction.Collide;
         if (gameObject.CompareTag("BadGuy"))
         {
             VisionAngle = 15f;
@@ -43,7 +44,7 @@ public class BadGuyFov : MonoBehaviour
     {
         DrawVisionCone();//calling the vision cone function everyframe just so the cone is updated every frame
     }
-    
+
     void DrawVisionCone()//this method creates the vision cone mesh
     {
         int[] triangles = new int[(VisionConeResolution - 1) * 3];
@@ -54,6 +55,7 @@ public class BadGuyFov : MonoBehaviour
         float Sine;
         float Cosine;
         float maxDist=0;
+        RaycastHit[] footprints;
 
             for (int i = 0; i < VisionConeResolution; i++)
             {
@@ -64,14 +66,23 @@ public class BadGuyFov : MonoBehaviour
                 if (Physics.Raycast(transform.position, RaycastDirection, out RaycastHit hit, VisionRange, obstacleMask, _triggerInteraction))
                 {
                     Vertices[i + 1] = VertForward.normalized * hit.distance;
-                    maxDist = maxDist < hit.distance ? hit.distance : maxDist;
-                    Debug.Log("hit footprint");
                 }
                 else
                 {
                     Vertices[i + 1] = VertForward.normalized * VisionRange;
                 }
                 Currentangle += angleIcrement;
+                
+                //collect footprint using raycastall
+                footprints = Physics.RaycastAll(transform.position, RaycastDirection, VisionRange, targetMask,
+                    _triggerInteraction);
+                foreach (RaycastHit footprint in footprints)
+                {
+                    if (hit.collider.gameObject.CompareTag("GoodPrint"))
+                    {
+                        if(hit.collider.gameObject)
+                    }
+                }
             }
             for (int i = 0, j = 0; i < triangles.Length; i += 3, j++)
             {
