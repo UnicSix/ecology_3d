@@ -80,7 +80,7 @@ public class BadGuyFov : MonoBehaviour
                 {
                     if (hit.collider.gameObject.CompareTag("GoodPrint"))
                     {
-                        if(hit.collider.gameObject)
+                        // if(hit.collider.gameObject)
                     }
                 }
             }
