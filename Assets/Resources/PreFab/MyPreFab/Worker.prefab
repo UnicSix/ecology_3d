@@ -292,8 +292,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce818ee91ef69224c8e5c3b0f30319b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  energyFactor: 20
   printTimeGap: 0.15
-  footprint: {fileID: 2140893498484936665, guid: 476e4bc9aa5ef724a8496b74dee16f59, type: 3}
+  footprint: {fileID: 3908740890176407281, guid: a37b9365108270a4784ed1417fe6c9f7, type: 3}
 --- !u!195 &284980355854041750
 NavMeshAgent:
   m_ObjectHideFlags: 0
