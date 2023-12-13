@@ -30,7 +30,6 @@ public class Control : MonoBehaviour
         Summarize_Tasks();
         Update_SpaceshipDurability();
         // control new guy spawn and its probability
-        Debug.Log("spaceship_durability: " + spaceship_durability);
     }
     void Generate_Guys()
     {
