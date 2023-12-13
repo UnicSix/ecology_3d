@@ -275,7 +275,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 617be4d09a2782c488377c864d2df295, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  VisionConeMaterial: {fileID: 2100000, guid: 9255753fa8bf80e42b33758fc7fbe120, type: 2}
+  VisionConeMaterial: {fileID: 2100000, guid: 8f92e5abc8d5a2048b54a9f1e4c2a2d3, type: 2}
   VisionRange: 0
   VisionAngle: 0
   obstacleMask:

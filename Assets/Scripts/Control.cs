@@ -11,12 +11,14 @@ public class Control : MonoBehaviour
     [SerializeField] public float spawnCircleRad = 5.0f;
     [SerializeField] public int numGoodguy = 10;
     [SerializeField] public int numBadguy = 2;
+    private float spaceship_durability;
     
     private List<GameObject> GuysList = new List<GameObject>();
     private List<int> GuysType = new List<int>(); // 0: Good, 1: Bad
     
     void Start()
     {
+        spaceship_durability = 1.0f;
         taskPoints = GameObject.FindGameObjectsWithTag("Task");
         if (taskPoints.Length != 0) {} //Debug.Log("Found " + taskPoints.Length + " TaskPoints.");
         else Debug.LogWarning("No TaskPoints found in the scene.");
@@ -24,7 +26,11 @@ public class Control : MonoBehaviour
     }
     void Update()
     {
-
+        // control meeting
+        Summarize_Tasks();
+        Update_SpaceshipDurability();
+        // control new guy spawn and its probability
+        Debug.Log("spaceship_durability: " + spaceship_durability);
     }
     void Generate_Guys()
     {
@@ -66,5 +72,20 @@ public class Control : MonoBehaviour
         }
         else Debug.LogError("(PreFab is NULL)");
     }
-
+    void Summarize_Tasks()
+    {
+        for (int i = 0; i < taskPoints.Length; i++) {
+            ProgressStatusHandler handler = taskPoints[i].GetComponentInChildren<ProgressStatusHandler>();
+            if (handler.progress_val >= 1.0f) {
+                spaceship_durability = Mathf.Clamp01(spaceship_durability + 0.1f);
+                handler.progress_val = 0.0f;
+                handler.occupied = false;
+            }
+        }
+    }
+    void Update_SpaceshipDurability()
+    {
+        spaceship_durability = Mathf.Clamp01(spaceship_durability - 0.01f * Time.deltaTime);
+        // Update UI bar
+    }
 }

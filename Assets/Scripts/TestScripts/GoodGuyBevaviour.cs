@@ -7,12 +7,10 @@ public class WorkParameters
 {
     public int task_index { get; set; }
     public bool arrived { get; set; }
-
     public WorkParameters()
     {
         Reset();
     }
-
     public void Reset()
     {
         task_index = -1;
@@ -75,7 +73,6 @@ public class GoodGuyBevaviour : MonoBehaviour
                     break;
             //     case 2:
             //     case 3:
-            //     case 4:
             }
         }
         else if (nowStatus == -2) { // Table Meeting
@@ -88,23 +85,10 @@ public class GoodGuyBevaviour : MonoBehaviour
             statusBar.Select(nowStatus);
 
             float energy = statusValues[nowStatus];
-            energy *= Random.Range(0.0f, 1.0f);
+            energy *= Random.Range(0.1f, 1.0f);
             exeuteTime = energy * energyFactor;
             distribute_energy(nowStatus, energy);
         }
-
-        // if (!arrive) arrive = ToPosition(taskPoints[0].transform.position);
-        // else {
-        //     if (!back){
-        //         CutAgentPath();
-        //         FacePosition(GetNavMeshProjection(taskPoints[0].transform.Find("Facing").position));
-        //         taskPoints[0].GetComponentInChildren<ProgressStatusHandler>().progress_val+= 0.8f;
-        //         back = true;
-        //     }
-        //     else {
-        //         // ToPosition(new Vector3(8.347f, -4.211149f, -7.73f));
-        //     }
-        // }
 
         statusBar.Show();
     }
@@ -161,29 +145,51 @@ public class GoodGuyBevaviour : MonoBehaviour
             // Use Vision to check weather task is occupied
             // if not: workParams.task_index = -1
             // else: 
-            workParams.arrived = ToPosition(taskPoints[workParams.task_index].transform.position);
+                workParams.arrived = ToPosition(taskPoints[workParams.task_index].transform.position);
         }
         else {
             CutAgentPath();
             FacePosition(GetNavMeshProjection(taskPoints[workParams.task_index].transform.Find("Facing").position));
             ProgressStatusHandler handler = taskPoints[workParams.task_index].GetComponentInChildren<ProgressStatusHandler>();
-            if (handler.progress_val >= 1.0f) workParams.task_index = -1;
-            else {
-                handler.occupied = true;
-                handler.progress_val += efficiency * Time.deltaTime / 10.0f;
-                statusTimer[1] += Time.deltaTime;
+            float progress = handler.progress_val + efficiency * Time.deltaTime / 10.0f;
+            if (progress >= 1.0f) {
+                workParams.task_index = -1;
+                workParams.arrived = false;
+                handler.occupied = false;
             }
+            else handler.occupied = true;
+            handler.progress_val = progress;
+            statusTimer[1] += Time.deltaTime;
         }
 
-        Debug.Log("SpendTime: " + time + " Timer: " + statusTimer[1]);
+        if (statusTimer[1] >= time) {
+            if (workParams.task_index != -1)
+                taskPoints[workParams.task_index].GetComponentInChildren<ProgressStatusHandler>().occupied = false;
+            workParams.Reset();
+            ResetTimer(1);
+            return -1;
+        }
+        return 1;
+    }
+    private int Panic(float time = -1.0f, float speed = 15.0f) // Run away from follower and watcher
+    {
+        statusTimer[1] += Time.deltaTime;
+
         if (statusTimer[1] >= time) {
             ResetTimer(1);
             workParams.Reset();
             return -1;
         }
-        return 1;
+        return 2;
     }
+    private int Report(bool findBody = false, float speed = 12.0f)
+    {
+        // if force: immediately start the meeting
+        // else: run to cafeteria and press button
 
+
+        return 3;
+    }
     // API Functions
     private bool ToPosition(Vector3 dest, float speed = 10f)
     {
