@@ -8,6 +8,7 @@ using UnityEngine.Events;
 public class BadGuyFov : MonoBehaviour
 {
     private QueryTriggerInteraction _triggerInteraction;
+    private float _priorFreshment = 0.9f;
     public BadGuyStatus Status;
     public Material VisionConeMaterial;
     [SerializeField] private float VisionRange;
@@ -19,7 +20,7 @@ public class BadGuyFov : MonoBehaviour
     MeshFilter MeshFilter_;
     //Create all of these variables, most of them are self explanatory, but for the ones that aren't i've added a comment to clue you in on what they do
     //for the ones that you dont understand dont worry, just follow along
-
+    
     public UnityVector3Event onFootprintLockedOn;
     void Start()
     {
@@ -51,10 +52,12 @@ public class BadGuyFov : MonoBehaviour
         Vector3[] Vertices = new Vector3[VisionConeResolution + 1];
         Vertices[0] = Vector3.zero;
         float Currentangle = -VisionAngle / 2;
-        float angleIcrement = VisionAngle / (VisionConeResolution - 1);
+        float angleIncrement = VisionAngle / (VisionConeResolution - 1);
         float Sine;
         float Cosine;
         float maxDist=0;
+        float maxFreshment = 0;
+        float lockThreshold = 0.5f;
         RaycastHit[] footprints;
 
             for (int i = 0; i < VisionConeResolution; i++)
@@ -71,16 +74,25 @@ public class BadGuyFov : MonoBehaviour
                 {
                     Vertices[i + 1] = VertForward.normalized * VisionRange;
                 }
-                Currentangle += angleIcrement;
+                Currentangle += angleIncrement;
                 
-                //collect footprint using raycastall
+                //collect footprint using RaycastAll
                 footprints = Physics.RaycastAll(transform.position, RaycastDirection, VisionRange, targetMask,
                     _triggerInteraction);
                 foreach (RaycastHit footprint in footprints)
                 {
-                    if (hit.collider.gameObject.CompareTag("GoodPrint"))
+                    if (footprint.collider.gameObject.CompareTag("GoodPrint"))
                     {
                         // if(hit.collider.gameObject)
+                        float freshment = footprint.collider.transform.localScale.x / 0.5f;
+                        // maxDist = hit.distance > maxDist ? hit.distance : maxDist;
+                        maxFreshment = freshment > maxFreshment ? freshment : maxFreshment;
+                        if (maxFreshment >= lockThreshold)
+                        {
+                            // onFootprintLockedOn.Invoke(footprint.transform.TransformPoint(footprint.transform.position));
+                            onFootprintLockedOn.Invoke(footprint.transform.position);
+                            // Debug.Log("hit print:"+footprint.transform.TransformPoint(footprint.transform.position));
+                        }
                     }
                 }
             }

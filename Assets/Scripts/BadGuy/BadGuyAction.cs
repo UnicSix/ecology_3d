@@ -28,6 +28,7 @@ public class BadGuy : MonoBehaviour
         if (footprint == null)
             footprint = Resources.Load<GameObject>("PreFab/FootPrintBad");
         printTime = 0f;
+        Roam();
 
         // foreach (int i in Status.actionIntent)
         // {
@@ -68,23 +69,19 @@ public class BadGuy : MonoBehaviour
         //     }
         // }
 
-        if (_agent.isStopped || _agent.remainingDistance==0)
-        {
-            switch (SelectAction())
-            {
-                case 0:
-                    Roam(); break;
-                case 1:
-                    Track(); break;
-                case 2:
-                    Kill(); break;
-                case 3:
-                    Camp(); break;
-                case 4:
-                    Wreck(); break;
-            }
-        }
-
+            // switch (SelectAction())
+            // {
+            //     case BadGuyStatus.ROAM:
+            //         Roam(); break;
+            //     case BadGuyStatus.TRACK:
+            //         Track(); break;
+            //     case BadGuyStatus.KILL:
+            //         Kill(); break;
+            //     case BadGuyStatus.CAMP:
+            //         Camp(); break;
+            //     case BadGuyStatus.WRECK:
+            //         Wreck(); break;
+            // }
         if (printTime > 0.25f)
         {
             GameObject newprint = footprint;
@@ -95,9 +92,11 @@ public class BadGuy : MonoBehaviour
         
     }
 
-    public void Track()
+    public void Track(Vector3 pos)
     {
-        Debug.Log("Track");
+        if(_agent.SetDestination(pos))
+            Debug.Log("tracking"+pos);
+        
     }
     public void Wreck()
     {
@@ -140,15 +139,15 @@ public class BadGuy : MonoBehaviour
             intentToPossibility[i] = accuIntent / sum;
         }
 
-        int nextAction = 0;
-        foreach (float p in intentToPossibility)
+        int nextAction;
+        for(nextAction=0; nextAction<5; nextAction++)
         {
-            cumulativeProbability += p;
+            cumulativeProbability += intentToPossibility[nextAction];
             if (rd <= cumulativeProbability)
             {
+                Debug.Log("next action: "+nextAction);
                 return nextAction;
             }
-            nextAction++;
         }
         return 0;
     }
