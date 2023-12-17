@@ -28,7 +28,8 @@ public class BadGuy : MonoBehaviour
         if (footprint == null)
             footprint = Resources.Load<GameObject>("PreFab/FootPrintBad");
         printTime = 0f;
-        Roam();
+        // Roam();
+        Kill();
 
         // foreach (int i in Status.actionIntent)
         // {
@@ -154,7 +155,10 @@ public class BadGuy : MonoBehaviour
 
     public void Kill()
     {
-        
+        GameObject weapon = Resources.Load<GameObject>("PreFab/Weapons/Hammer");
+        weapon.transform.localPosition = Vector3.forward * 1.3f + Vector3.up * 2.8f + Vector3.left * 0f;
+    weapon.transform.localRotation = Quaternion.Euler(0f, 0f, 90f );
+        Instantiate(weapon, this.transform);
     }
 
     void WalkToFootprint(Vector3 footPrintPos)

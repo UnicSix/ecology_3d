@@ -22,15 +22,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7c5106dd5de22c04d81bb6694cb934d7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 22.528368
+      value: 17.42
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7c5106dd5de22c04d81bb6694cb934d7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.0000009536743
+      value: -4.2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7c5106dd5de22c04d81bb6694cb934d7, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -27.39084
+      value: -10.67
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7c5106dd5de22c04d81bb6694cb934d7, type: 3}
       propertyPath: m_LocalRotation.w
@@ -223,14 +223,26 @@ MonoBehaviour:
   VisionAngle: 0
   obstacleMask:
     serializedVersion: 2
-    m_Bits: 448
+    m_Bits: 384
   targetMask:
     serializedVersion: 2
-    m_Bits: 192
+    m_Bits: 640
   VisionConeResolution: 0
   onFootprintLockedOn:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3886117298762837730}
+        m_TargetAssemblyTypeName: BadGuy, Assembly-CSharp
+        m_MethodName: Track
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &3886117298762837730
 MonoBehaviour:
   m_ObjectHideFlags: 0
