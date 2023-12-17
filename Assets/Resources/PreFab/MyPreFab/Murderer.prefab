@@ -298,7 +298,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   printTimeGap: 0.15
-  footprint: {fileID: 6007103018979134886, guid: 1c2e25fa8fb86fc459110f1a2b98a863, type: 3}
+  footprint: {fileID: 3130562817142718416, guid: c154851c530dee049876b37b06c62524, type: 3}
 --- !u!195 &1576360860512169012
 NavMeshAgent:
   m_ObjectHideFlags: 0
