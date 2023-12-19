@@ -146,7 +146,7 @@ public class BadGuyBehaviour : MonoBehaviour
         Vector3 randomDir = Random.insideUnitSphere * range;
         return GetNavMeshProjection(randomDir + transform.position);
     }
-    void CutAgentPath()
+    public void CutAgentPath()
     {
         ResetAgentDtection();
         navAgent.speed = 0f;

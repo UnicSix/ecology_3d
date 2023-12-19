@@ -166,7 +166,9 @@ public class GoodGuyBehaviour : MonoBehaviour
             // Use Vision to check weather task is occupied
             // if not: workParams.task_index = -1
             // else: 
-                workParams.arrived = ToPosition(taskPoints[workParams.task_index].transform.position);
+                Vector3 end_pos = taskPoints[workParams.task_index].transform.position;
+                end_pos.y = navAgent.transform.position.y;
+                workParams.arrived = ToPosition(end_pos);
         }
         else {
             FacePosition(GetNavMeshProjection(taskPoints[workParams.task_index].transform.Find("Facing").position));
@@ -180,7 +182,6 @@ public class GoodGuyBehaviour : MonoBehaviour
                 CutAgentPath();
             }
             else handler.occupied = true;
-            // transform.position = 
             handler.progress_val = progress;
             statusTimer[1] += Time.deltaTime;
         }
@@ -258,7 +259,7 @@ public class GoodGuyBehaviour : MonoBehaviour
         Vector3 randomDir = Random.insideUnitSphere * range;
         return GetNavMeshProjection(randomDir + transform.position);
     }
-    void CutAgentPath()
+    public void CutAgentPath()
     {
         ResetAgentDtection();
         navAgent.speed = 0f;

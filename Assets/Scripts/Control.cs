@@ -11,6 +11,7 @@ public class Control : MonoBehaviour
     [SerializeField] public float spawnCircleRad = 5.0f;
     [SerializeField] public int numGoodguy = 10;
     [SerializeField] public int numBadguy = 2;
+    private bool isMeeting = false;
     private float spaceship_durability;
     
     void Start()
@@ -23,13 +24,15 @@ public class Control : MonoBehaviour
     }
     void Update()
     {
+        if (isMeeting) Meeting();
+        // Need to Trigger DisbandMeeting()
         Summarize_Tasks();
         Update_SpaceshipDurability();
     }
     public void Meeting() {
+        isMeeting = true;
         GameObject[] goodGuys = GameObject.FindGameObjectsWithTag("GoodGuy");
         GameObject[] badGuys = GameObject.FindGameObjectsWithTag("BadGuy");
-        Debug.Log("<MEETING> G:" + goodGuys.Length + " B:" + badGuys.Length);
 
         foreach (GameObject goodGuy in goodGuys)
             goodGuy.GetComponent<GoodGuyBehaviour>().nowStatus = -2;
@@ -37,10 +40,35 @@ public class Control : MonoBehaviour
         foreach (GameObject badGuy in badGuys)
             badGuy.GetComponent<BadGuyBehaviour>().nowStatus = -2;
 
-        // spawnCenter (Vector3) => 圓心
-        // spawnCircleRad (float) => 半徑
-        // look at 圓心
-        // every Guy.nowStatus = -2;
+        int total_guys = goodGuys.Length + badGuys.Length;
+        for (int i = 0; i < total_guys; i++) {
+            float angle = i * (360f / total_guys); // Calculate the angle of each spawning point on the circle
+            float x = spawnCenter.x + spawnCircleRad * Mathf.Cos(Mathf.Deg2Rad * angle);
+            float z = spawnCenter.z + spawnCircleRad * Mathf.Sin(Mathf.Deg2Rad * angle);
+            Vector3 spawnPos = new Vector3(x, spawnCenter.y, z);
+            Quaternion rotation = Quaternion.LookRotation(spawnCenter - spawnPos); // Face Center
+
+            if (i < goodGuys.Length) {
+                goodGuys[i].GetComponent<GoodGuyBehaviour>().CutAgentPath();
+                goodGuys[i].transform.position = spawnPos;
+                goodGuys[i].transform.rotation = rotation;
+            }
+            else {
+                badGuys[i - goodGuys.Length].GetComponent<BadGuyBehaviour>().CutAgentPath();
+                badGuys[i - goodGuys.Length].transform.position = spawnPos;
+                badGuys[i - goodGuys.Length].transform.rotation = rotation;
+            }
+        }
+    }
+    public void DisbandMeeting() {
+        isMeeting = false;
+        GameObject[] goodGuys = GameObject.FindGameObjectsWithTag("GoodGuy");
+        GameObject[] badGuys = GameObject.FindGameObjectsWithTag("BadGuy");
+        foreach (GameObject goodGuy in goodGuys)
+            goodGuy.GetComponent<GoodGuyBehaviour>().nowStatus = -1;
+
+        foreach (GameObject badGuy in badGuys)
+            badGuy.GetComponent<BadGuyBehaviour>().nowStatus = -1;
     }
     void Generate_Guys()
     {
@@ -48,7 +76,7 @@ public class Control : MonoBehaviour
             int numGenGoodguys = 0;
             int numGenBadguys = 0;
 
-            for (int i=0; i<(numGoodguy+numBadguy); i++) {
+            for (int i = 0; i < (numGoodguy + numBadguy); i++) {
                 float angle = i * (360f / (numGoodguy+numBadguy)); // Calculate the angle of each spawning point on the circle
                 float x = spawnCenter.x + spawnCircleRad * Mathf.Cos(Mathf.Deg2Rad * angle);
                 float z = spawnCenter.z + spawnCircleRad * Mathf.Sin(Mathf.Deg2Rad * angle);
