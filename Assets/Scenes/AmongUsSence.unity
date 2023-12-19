@@ -1282,7 +1282,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1771704560610268997, guid: baa577061495faf4891874d959b83a31, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 11
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1771704560610268997, guid: baa577061495faf4891874d959b83a31, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1773,8 +1773,8 @@ MonoBehaviour:
   Badguy_Prefab: {fileID: 6519080641129698724, guid: 6486c913868ff2f41a16bbd12e8e72fa, type: 3}
   spawnCenter: {x: 26.5, y: -4.2, z: -9.5}
   spawnCircleRad: 7
-  numGoodguy: 5
-  numBadguy: 5
+  numGoodguy: 10
+  numBadguy: 0
 --- !u!1001 &1619817408
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2425,5 +2425,5 @@ SceneRoots:
   - {fileID: 21217584}
   - {fileID: 560365416}
   - {fileID: 295804127}
-  - {fileID: 191576026}
   - {fileID: 964904374}
+  - {fileID: 191576026}

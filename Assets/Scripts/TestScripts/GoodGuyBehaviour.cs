@@ -156,24 +156,31 @@ public class GoodGuyBehaviour : MonoBehaviour
     private int Work(float time = -1.0f, float efficiency = 1.0f) // Find Task Positon at work(or wreck)
     {
         if (workParams.task_index == -1) {
-            int get_index = workParams.task_index;
+            int get_index = -1;
             while (get_index == workParams.task_index){
                 get_index = Random.Range(0, taskPoints.Length);
             }
             workParams.task_index = get_index;
         }
+
+        ProgressStatusHandler handler = taskPoints[workParams.task_index].GetComponentInChildren<ProgressStatusHandler>();
         if (!workParams.arrived) {
-            // Use Vision to check weather task is occupied
-            // if not: workParams.task_index = -1
-            // else: 
-                Vector3 end_pos = taskPoints[workParams.task_index].transform.position;
-                end_pos.y = navAgent.transform.position.y;
+            Vector3 end_pos = taskPoints[workParams.task_index].transform.position;
+            end_pos.y = navAgent.transform.position.y;
+            float distanceToPos = Vector3.Distance(navAgent.transform.position, end_pos);
+
+            if (handler.occupied && distanceToPos <= 12.0f) {
+                workParams.task_index = -1;
+                CutAgentPath();
+            }
+            else
                 workParams.arrived = ToPosition(end_pos);
+                if (!workParams.arrived && distanceToPos <= 0.5f)
+                    workParams.arrived = true;
         }
         else {
             FacePosition(GetNavMeshProjection(taskPoints[workParams.task_index].transform.Find("Facing").position));
             ToPosition(taskPoints[workParams.task_index].transform.position);
-            ProgressStatusHandler handler = taskPoints[workParams.task_index].GetComponentInChildren<ProgressStatusHandler>();
             float progress = handler.progress_val + efficiency * Time.deltaTime / 10.0f;
             if (progress >= 1.0f) {
                 workParams.task_index = -1;
@@ -188,7 +195,7 @@ public class GoodGuyBehaviour : MonoBehaviour
 
         if (statusTimer[1] >= time) {
             if (workParams.task_index != -1)
-                taskPoints[workParams.task_index].GetComponentInChildren<ProgressStatusHandler>().occupied = false;
+                handler.occupied = false;
             workParams.Reset();
             CutAgentPath();
             ResetTimer(1);
@@ -225,6 +232,7 @@ public class GoodGuyBehaviour : MonoBehaviour
             }
         }
     }
+    
     // API Functions 
     private bool ToPosition(Vector3 dest, float speed = 10f)
     {
