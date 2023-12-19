@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class BadGuyBevaviour : MonoBehaviour
+public class BadGuyBehaviour : MonoBehaviour
 {
-    private int nowStatus; // -1: none, -2: meeting
+    public int nowStatus; // -1: none, -2: meeting
     private float exeute_time;
     float[] statusValues = new float[5];
     float[] statusGainProportion = new float[5];
@@ -53,6 +53,7 @@ public class BadGuyBevaviour : MonoBehaviour
             //     case 4:
         }
         else if (nowStatus == -2) { // Table Meeting
+            statusBar.Select(-2);
             CutAgentPath();
             ResetTimer();
 

@@ -24,6 +24,7 @@ TagManager:
   - GoodPrint
   - GoodGuy
   - DeadBody
+  - Alarm
   layers:
   - Default
   - TransparentFX

@@ -13,9 +13,6 @@ public class Control : MonoBehaviour
     [SerializeField] public int numBadguy = 2;
     private float spaceship_durability;
     
-    private List<GameObject> GuysList = new List<GameObject>();
-    private List<int> GuysType = new List<int>(); // 0: Good, 1: Bad
-    
     void Start()
     {
         spaceship_durability = 1.0f;
@@ -26,10 +23,24 @@ public class Control : MonoBehaviour
     }
     void Update()
     {
-        // control meeting
         Summarize_Tasks();
         Update_SpaceshipDurability();
-        // control new guy spawn and its probability
+    }
+    public void Meeting() {
+        GameObject[] goodGuys = GameObject.FindGameObjectsWithTag("GoodGuy");
+        GameObject[] badGuys = GameObject.FindGameObjectsWithTag("BadGuy");
+        Debug.Log("<MEETING> G:" + goodGuys.Length + " B:" + badGuys.Length);
+
+        foreach (GameObject goodGuy in goodGuys)
+            goodGuy.GetComponent<GoodGuyBehaviour>().nowStatus = -2;
+
+        foreach (GameObject badGuy in badGuys)
+            badGuy.GetComponent<BadGuyBehaviour>().nowStatus = -2;
+
+        // spawnCenter (Vector3) => 圓心
+        // spawnCircleRad (float) => 半徑
+        // look at 圓心
+        // every Guy.nowStatus = -2;
     }
     void Generate_Guys()
     {
@@ -44,28 +55,26 @@ public class Control : MonoBehaviour
                 Vector3 spawnPos = new Vector3(x, spawnCenter.y, z);
                 Quaternion rotation = Quaternion.LookRotation(spawnCenter - spawnPos); // Face Center
 
+                int guyType = 0;
                 GameObject creaturePrefab; // Random sequence
                 if (Random.Range(0f, 1f) < 0.5f && numGenGoodguys < numGoodguy) {
                     creaturePrefab = Goodguy_Prefab;
-                    GuysType.Add(0);
                     numGenGoodguys++;
                 }
                 else {
                     if (numGenBadguys < numBadguy) {
                         creaturePrefab = Badguy_Prefab;
-                        GuysType.Add(1);
                         numGenBadguys++;
+                        guyType = 1;
                     }
                     else {
                         creaturePrefab = Goodguy_Prefab;
-                        GuysType.Add(0);
                         numGenGoodguys++;
                     }
                 }
                 string guy_name = "GUY-" + i;
                 GameObject guy = Instantiate(creaturePrefab, spawnPos, rotation); // Both good and bad
-                GuysList.Add(guy);
-                if (GuysType[i] == 0) guy.GetComponentInChildren<WorkerStatusHandler>().set_name(guy_name);
+                if (guyType == 0) guy.GetComponentInChildren<WorkerStatusHandler>().set_name(guy_name);
                 else guy.GetComponentInChildren<MurdererStatusHandler>().set_name(guy_name);
             }
         }
