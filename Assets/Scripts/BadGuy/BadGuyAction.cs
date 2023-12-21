@@ -13,7 +13,7 @@ public class BadGuy : MonoBehaviour
     private List<Vector3> taskPositions;
     [SerializeField] private AnimationClip[] myClips;
     private Animator animator;
-    [Range(10f,50f)] public float range = 30.0f;
+    [Range(10f,50f)] public float range = 20.0f;
     private Camera Cam;
     [SerializeField] public GameObject footprint;
     private float printTime;
@@ -29,15 +29,7 @@ public class BadGuy : MonoBehaviour
             footprint = Resources.Load<GameObject>("PreFab/FootPrintBad");
         printTime = 0f;
         // Roam();
-        Kill();
-
-        // foreach (int i in Status.actionIntent)
-        // {
-        //     Debug.Log(i);
-        // }
-
-        // Roam();
-
+        // Kill();
         // Assuming task objects are tagged as "TaskObject"
         // GameObject[] taskObjects = GameObject.FindGameObjectsWithTag("Task");
         //
@@ -56,33 +48,18 @@ public class BadGuy : MonoBehaviour
 
     void Update()
     {
-        // Ray ray = Cam.ScreenPointToRay(Input.mousePosition);
-        // RaycastHit hit = new RaycastHit();
-        printTime += Time.deltaTime;
-        // if (Input.GetKeyDown(KeyCode.Mouse0))
+        // switch (SelectAction())
         // {
-        //     goal= Input.mousePosition;
-        //     if( Physics.Raycast(ray, out hit) )
-        //     {
-        //         Debug.Log(hit.point);
-        //         Vector3 dest = new Vector3(hit.point.x, hit.point.y+1.5f, hit.point.z);
-        //         _agent.destination = dest; 
-        //     }
+        //     case BadGuyStatus.ROAM:
+        //         Roam(); break;
+        //     case BadGuyStatus.KILL:
+        //         Kill(); break;
+        //     case BadGuyStatus.WRECK:
+        //         Wreck(); break;
+        //     case BadGuyStatus.IDLE:
+        //         Idle(); break;
         // }
-
-            // switch (SelectAction())
-            // {
-            //     case BadGuyStatus.ROAM:
-            //         Roam(); break;
-            //     case BadGuyStatus.TRACK:
-            //         Track(); break;
-            //     case BadGuyStatus.KILL:
-            //         Kill(); break;
-            //     case BadGuyStatus.CAMP:
-            //         Camp(); break;
-            //     case BadGuyStatus.WRECK:
-            //         Wreck(); break;
-            // }
+        printTime += Time.deltaTime;
         if (printTime > 0.25f)
         {
             GameObject newprint = footprint;
@@ -95,19 +72,27 @@ public class BadGuy : MonoBehaviour
 
     public void Track(Vector3 pos)
     {
-        if(_agent.SetDestination(pos))
-            Debug.Log("tracking"+pos);
-        
-    }
-    public void Wreck()
-    {
-        Debug.Log("Wreck");
-    }
-    public void Camp()
-    {
-        Debug.Log("Camp");
+        if (Status.curAction == "roam" || Status.curAction == "track" || Status.curAction == "idle")
+        {
+            Status.curAction = "track";
+            _agent.SetDestination(pos);
+            // if(_agent.SetDestination(pos))
+            // Debug.Log("tracking"+pos);
+        }
     }
 
+    public void PplInsight(Vector3 pplPos)
+    {
+        Debug.Log(pplPos);
+    }
+    public void Kill()
+    {
+        GameObject weapon = Resources.Load<GameObject>("PreFab/Weapons/Hammer");
+        weapon.transform.localPosition = Vector3.forward * 1.3f + Vector3.up * 2.8f + Vector3.left * 0f;
+        weapon.transform.localRotation = Quaternion.Euler(90f, 0f, 90f );
+        Instantiate(weapon, this.transform);
+        Status.curAction = "roam";
+    }
     //walk randomly look around to find fresh footprints
     public void Roam()
     {
@@ -124,6 +109,15 @@ public class BadGuy : MonoBehaviour
         float angle = Mathf.Sin(Time.time) * rotationSpeed; // Creates a back-and-forth rotation
         transform.Rotate(Vector3.up, angle * Time.deltaTime);
     }
+    public void Wreck()
+    {
+        Debug.Log("Wreck");
+    }
+    public void Camp()
+    {
+        Debug.Log("Camp");
+    }
+
 
     int SelectAction()
     {
@@ -133,7 +127,7 @@ public class BadGuy : MonoBehaviour
         float sum=0;
         foreach (int i in Status.actionIntent)
             sum += i;
-        int accuIntent = 0;
+        float accuIntent = 0;
         for(int i=0; i<5; i++)
         {
             accuIntent += Status.actionIntent[i];
@@ -151,19 +145,6 @@ public class BadGuy : MonoBehaviour
             }
         }
         return 0;
-    }
-
-    public void Kill()
-    {
-        GameObject weapon = Resources.Load<GameObject>("PreFab/Weapons/Hammer");
-        weapon.transform.localPosition = Vector3.forward * 1.3f + Vector3.up * 2.8f + Vector3.left * 0f;
-    weapon.transform.localRotation = Quaternion.Euler(0f, 0f, 90f );
-        Instantiate(weapon, this.transform);
-    }
-
-    void WalkToFootprint(Vector3 footPrintPos)
-    {
-        
     }
 }
 

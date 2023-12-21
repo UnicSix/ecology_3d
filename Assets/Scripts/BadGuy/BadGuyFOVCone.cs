@@ -22,6 +22,7 @@ public class BadGuyFov : MonoBehaviour
     //for the ones that you dont understand dont worry, just follow along
     
     public UnityVector3Event onFootprintLockedOn;
+    public UnityVector3Event onPplInsight;
     void Start()
     {
         transform.AddComponent<MeshRenderer>().material = VisionConeMaterial;
@@ -69,6 +70,10 @@ public class BadGuyFov : MonoBehaviour
                 if (Physics.Raycast(transform.position, RaycastDirection, out RaycastHit hit, VisionRange, obstacleMask, _triggerInteraction))
                 {
                     Vertices[i + 1] = VertForward.normalized * hit.distance;
+                    if (hit.collider.gameObject.CompareTag("GoodGuy"))
+                    {
+                        onPplInsight.Invoke(hit.collider.transform.position);
+                    }
                 }
                 else
                 {
