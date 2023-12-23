@@ -7,9 +7,9 @@ using UnityEngine.Events;
 
 public class BadGuyFov : MonoBehaviour
 {
+    private BadGuy badguy;
     private QueryTriggerInteraction _triggerInteraction;
     private float _priorFreshment = 0.9f;
-    public BadGuyStatus Status;
     public Material VisionConeMaterial;
     [SerializeField] private float VisionRange;
     [SerializeField] private float VisionAngle;
@@ -21,8 +21,8 @@ public class BadGuyFov : MonoBehaviour
     //Create all of these variables, most of them are self explanatory, but for the ones that aren't i've added a comment to clue you in on what they do
     //for the ones that you dont understand dont worry, just follow along
     
-    public UnityVector3Event onFootprintLockedOn;
-    public UnityVector3Event onPplInsight;
+    // public UnityVector3Event onFootprintLockedOn;
+    // public UnityVector3Event onPplInsight;
     void Start()
     {
         transform.AddComponent<MeshRenderer>().material = VisionConeMaterial;
@@ -33,6 +33,11 @@ public class BadGuyFov : MonoBehaviour
         VisionRange = 25f;
         VisionConeResolution = 10;
         _triggerInteraction = QueryTriggerInteraction.Collide;
+        badguy = GetComponentInParent<BadGuy>();
+        if (badguy == null)
+        {
+            Debug.Log("badGuy: " + badguy.tag);
+        }
         if (gameObject.CompareTag("BadGuy"))
         {
             VisionAngle = 15f;
@@ -72,7 +77,7 @@ public class BadGuyFov : MonoBehaviour
                     Vertices[i + 1] = VertForward.normalized * hit.distance;
                     if (hit.collider.gameObject.CompareTag("GoodGuy"))
                     {
-                        onPplInsight.Invoke(hit.collider.transform.position);
+                        badguy.SetGuyPos(hit.collider.transform.position);
                     }
                 }
                 else
@@ -95,11 +100,14 @@ public class BadGuyFov : MonoBehaviour
                         if (maxFreshment >= lockThreshold)
                         {
                             // onFootprintLockedOn.Invoke(footprint.transform.TransformPoint(footprint.transform.position));
-                            onFootprintLockedOn.Invoke(footprint.transform.position);
+                            badguy.SetFootprintPos(footprint.transform.position);
+                            // Debug.Log(footprint.transform.position);
+                            badguy.seenFootprint = true;
                             // Debug.Log("hit print:"+footprint.transform.TransformPoint(footprint.transform.position));
                         }
                     }
                 }
+
             }
             for (int i = 0, j = 0; i < triangles.Length; i += 3, j++)
             {
@@ -113,5 +121,5 @@ public class BadGuyFov : MonoBehaviour
             MeshFilter_.mesh = VisionConeMesh;
     }
 }
-[Serializable]
-public class UnityVector3Event : UnityEvent<Vector3>{}
+// [Serializable]
+// public class UnityVector3Event : UnityEvent<Vector3>{}
