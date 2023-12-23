@@ -170,7 +170,7 @@ public class GoodGuyBehaviour : MonoBehaviour
             end_pos.y = navAgent.transform.position.y;
             float distanceToPos = Vector3.Distance(navAgent.transform.position, end_pos);
 
-            if (handler.occupied && distanceToPos <= 12.0f) {
+            if (handler.IsOccupied() && distanceToPos <= 12.0f) {
                 workParams.task_index = -1;
                 CutAgentPath();
             }
@@ -182,21 +182,18 @@ public class GoodGuyBehaviour : MonoBehaviour
         else {
             FacePosition(GetNavMeshProjection(taskPoints[workParams.task_index].transform.Find("Facing").position));
             ToPosition(taskPoints[workParams.task_index].transform.position);
-            float progress = handler.progress_val + efficiency * Time.deltaTime / 10.0f;
-            if (progress >= 1.0f) {
+            if (handler.IncreaseWorkProgress(efficiency * Time.deltaTime / 10.0f)) {
                 workParams.task_index = -1;
                 workParams.arrived = false;
-                handler.occupied = false;
                 CutAgentPath();
             }
-            else handler.occupied = true;
-            handler.progress_val = progress;
+            else handler.Occupying();
             statusTimer[1] += Time.deltaTime;
         }
 
         if (statusTimer[1] >= time) {
             if (workParams.task_index != -1)
-                handler.occupied = false;
+                handler.Leave();
             workParams.Reset();
             CutAgentPath();
             ResetTimer(1);

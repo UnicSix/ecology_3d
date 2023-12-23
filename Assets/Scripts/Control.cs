@@ -18,6 +18,7 @@ public class Control : MonoBehaviour
     {
         spaceship_durability = 1.0f;
         taskPoints = GameObject.FindGameObjectsWithTag("Task");
+        ProgressStatusHandler.OnInfluenceShipDurability += HandleShipDurability;
         if (taskPoints.Length != 0) {} //Debug.Log("Found " + taskPoints.Length + " TaskPoints.");
         else Debug.LogWarning("No TaskPoints found in the scene.");
         Generate_Guys();
@@ -26,7 +27,6 @@ public class Control : MonoBehaviour
     {
         if (isMeeting) Meeting();
         // Need to Trigger DisbandMeeting()
-        Summarize_Tasks();
         Update_SpaceshipDurability();
     }
     public void Meeting() {
@@ -108,16 +108,9 @@ public class Control : MonoBehaviour
         }
         else Debug.LogError("(PreFab is NULL)");
     }
-    void Summarize_Tasks()
+    void HandleShipDurability(float influence) // Event Receive
     {
-        for (int i = 0; i < taskPoints.Length; i++) {
-            ProgressStatusHandler handler = taskPoints[i].GetComponentInChildren<ProgressStatusHandler>();
-            if (handler.progress_val >= 1.0f) {
-                spaceship_durability = Mathf.Clamp01(spaceship_durability + 0.1f);
-                handler.progress_val = 0.0f;
-                handler.occupied = false;
-            }
-        }
+        spaceship_durability += influence;
     }
     void Update_SpaceshipDurability()
     {

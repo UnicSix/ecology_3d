@@ -1773,7 +1773,7 @@ MonoBehaviour:
   Badguy_Prefab: {fileID: 6519080641129698724, guid: 6486c913868ff2f41a16bbd12e8e72fa, type: 3}
   spawnCenter: {x: 26.5, y: -4.2, z: -9.5}
   spawnCircleRad: 7
-  numGoodguy: 10
+  numGoodguy: 0
   numBadguy: 0
 --- !u!1001 &1619817408
 PrefabInstance:
@@ -2337,7 +2337,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3506025390456792067, guid: bff92570f258ac248b7390fa55125ba0, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3.602
+      value: 2.972
       objectReference: {fileID: 0}
     - target: {fileID: 4397517851256557056, guid: bff92570f258ac248b7390fa55125ba0, type: 3}
       propertyPath: m_Name
