@@ -5,7 +5,7 @@ using UnityEngine.AI;
 
 public interface IMoveable
 {
-    NavMeshAgent _agent { get; set; }
+    NavMeshAgent agent { get; set; }
     
     // void MoveToPos(Vector3 pos);
 

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8166958845216998712}
   - component: {fileID: 4516205928229479187}
   - component: {fileID: 6948729896658122447}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: FootPrintGood
   m_TagString: GoodPrint
   m_Icon: {fileID: 0}
@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 284948448007308209}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 30, y: -4.2, z: -15.562178}
+  m_LocalPosition: {x: -11.371177, y: -4.137167, z: -11.713137}
   m_LocalScale: {x: 0.5, y: 0.02, z: 0.5}
   m_ConstrainProportionsScale: 1
   m_Children: []

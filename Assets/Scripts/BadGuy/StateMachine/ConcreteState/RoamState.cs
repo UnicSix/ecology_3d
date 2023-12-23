@@ -15,14 +15,14 @@ public class RoamState : BadGuyState
     public override void EnterState()
     {
         base.EnterState();
-        badguy._agent.angularSpeed = 250f;
-        badguy._agent.speed = 8f;
+        badguy.agent.angularSpeed = 250f;
+        badguy.agent.speed = 8f;
         Vector3 randomPoint = badguy.transform.position + Random.insideUnitSphere * _sampleRange;
         while(!NavMesh.SamplePosition(randomPoint, out _hit, _sampleRange, NavMesh.AllAreas))
         {
             randomPoint = badguy.transform.position + Random.insideUnitSphere * _sampleRange;
         }
-        badguy._agent.SetDestination(randomPoint);
+        badguy.agent.SetDestination(randomPoint);
     }
 
     public override void ExitState()
@@ -34,17 +34,17 @@ public class RoamState : BadGuyState
     {
         if (badguy.seenGuy)
         {
-            badguy._agent.ResetPath();
+            badguy.agent.ResetPath();
             Debug.Log("Roam to Kill");
             badguy.StateMachine.ChangeState(badguy.killState, badguy.guyPos);
         }
         else if (badguy.seenFootprint)
         {
-            badguy._agent.ResetPath();
+            badguy.agent.ResetPath();
             Debug.Log("Roam to Track");
             badguy.StateMachine.ChangeState(badguy.trackState, badguy.footprintPos);
         }
-        else if(!badguy._agent.hasPath)
+        else if(!badguy.agent.hasPath)
         {
             Debug.Log("Roam to Idle");
             badguy.StateMachine.ChangeState(badguy.idleState);

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class TrackState : BadGuyState
 {
@@ -11,9 +12,9 @@ public class TrackState : BadGuyState
     public override void EnterState(Vector3 pos)
     {
         base.EnterState();
-        badguy._agent.angularSpeed = 120f;
-        badguy._agent.speed = 5f;
-        badguy._agent.SetDestination(pos);
+        badguy.agent.angularSpeed = 120f;
+        badguy.agent.speed = 5f;
+        badguy.agent.SetDestination(pos);
         Debug.Log("Track"+pos);
         badguy.seenFootprint = false;
     }
@@ -26,7 +27,7 @@ public class TrackState : BadGuyState
     public override void FrameUpdate()
     {
         base.FrameUpdate();
-        if (badguy._agent.isStopped)
+        if (badguy.agent.pathStatus == NavMeshPathStatus.PathComplete)
         {
             Debug.Log("Track to Idle");
             badguy.StateMachine.ChangeState(badguy.idleState);

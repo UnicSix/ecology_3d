@@ -36,7 +36,7 @@ public class BadGuy: MonoBehaviour, IVisionTrigger, IMoveable
     }
     void Start()
     {
-        _agent = GetComponent<NavMeshAgent>();
+        agent = GetComponent<NavMeshAgent>();
         taskPositions = new List<Vector3>();
         if (footprint == null)
             footprint = Resources.Load<GameObject>("PreFab/FootPrintBad");
@@ -84,7 +84,7 @@ public class BadGuy: MonoBehaviour, IVisionTrigger, IMoveable
         guyPos = pos;
     }
 
-    public NavMeshAgent _agent { get; set; }
+    public NavMeshAgent agent { get; set; }
     // public void MoveToPos(Vector3 pos)
     // {
         // throw new System.NotImplementedException();
