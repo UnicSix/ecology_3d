@@ -25,7 +25,8 @@ public class PanicParameters
 
 public class GoodGuyBehaviour : MonoBehaviour
 {
-    
+
+    public VisionCone fovcone;
     public int nowStatus; // -1: none, -2: meeting
     private float exeuteTime;
     float[] statusValues = new float[4];

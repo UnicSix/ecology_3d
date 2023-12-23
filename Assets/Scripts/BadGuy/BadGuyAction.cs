@@ -6,6 +6,7 @@ using UnityEngine.Windows.WebCam;
 
 public class BadGuy: MonoBehaviour, IVisionTrigger, IMoveable
 {
+    public float sus;
     private NavMeshHit hit;
     private List<Vector3> taskPositions;
     [SerializeField] private AnimationClip[] myClips;

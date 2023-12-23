@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class VisionCone : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class VisionCone : MonoBehaviour
     [SerializeField] private int VisionConeResolution;//the vision cone will be made up of triangles, the higher this value is the pretier the vision cone will be
     Mesh VisionConeMesh;
     MeshFilter MeshFilter_;
+    public UnityVector3Event onFootprintLockedOn;
     //Create all of these variables, most of them are self explanatory, but for the ones that aren't i've added a comment to clue you in on what they do
     //for the ones that you dont understand dont worry, just follow along
     void Start()
@@ -94,6 +96,10 @@ public class VisionCone : MonoBehaviour
                 if (Physics.Raycast(transform.position, RaycastDirection, out RaycastHit hit, VisionRange, obstacleMask))
                 {
                     Vertices[i + 1] = VertForward.normalized * hit.distance;
+                    if (hit.collider.gameObject.CompareTag("GoodGuy") || hit.collider.gameObject.CompareTag("BadGuy"))
+                    {
+                        //isAvoiding = true;
+                    }
                     // Debug.Log(hit.distance);
                 }
                 else
@@ -116,3 +122,5 @@ public class VisionCone : MonoBehaviour
             MeshFilter_.mesh = VisionConeMesh;
     }
 }
+[Serializable]
+public class UnityVector3Event : UnityEvent<Vector3>{}
