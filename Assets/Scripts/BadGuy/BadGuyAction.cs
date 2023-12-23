@@ -33,7 +33,7 @@ public class BadGuy: MonoBehaviour, IVisionTrigger, IMoveable
         killState = new KillState(this, StateMachine);
         wreckState = new WreckState(this, StateMachine);
         
-        actionIntent = new float[5]{10, 10,10,10,10};
+        actionIntent = new float[5]{10,10,10,10,10};
     }
     void Start()
     {
