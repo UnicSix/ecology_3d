@@ -78,6 +78,8 @@ public class BadGuyFov : MonoBehaviour
                     if (hit.collider.gameObject.CompareTag("GoodGuy"))
                     {
                         badguy.SetGuyPos(hit.collider.transform.position);
+                        badguy.SetSeenGuy(true);
+                        // Debug.Log("see guy");
                     }
                 }
                 else
@@ -102,7 +104,7 @@ public class BadGuyFov : MonoBehaviour
                             // onFootprintLockedOn.Invoke(footprint.transform.TransformPoint(footprint.transform.position));
                             badguy.SetFootprintPos(footprint.transform.position);
                             // Debug.Log(footprint.transform.position);
-                            badguy.seenFootprint = true;
+                            badguy.SetSeenFootprint(true);
                             // Debug.Log("hit print:"+footprint.transform.TransformPoint(footprint.transform.position));
                         }
                     }

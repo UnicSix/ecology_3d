@@ -41,12 +41,12 @@ public class RoamState : BadGuyState
         else if (badguy.seenFootprint)
         {
             badguy.agent.ResetPath();
-            Debug.Log("Roam to Track");
+            // Debug.Log("Roam to Track");
             badguy.StateMachine.ChangeState(badguy.trackState, badguy.footprintPos);
         }
         else if(!badguy.agent.hasPath)
         {
-            Debug.Log("Roam to Idle");
+            // Debug.Log("Roam to Idle");
             badguy.StateMachine.ChangeState(badguy.idleState);
         }
     }

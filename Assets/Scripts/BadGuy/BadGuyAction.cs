@@ -9,9 +9,9 @@ public class BadGuy: MonoBehaviour, IVisionTrigger, IMoveable
     public float sus;
     private NavMeshHit hit;
     private List<Vector3> taskPositions;
-    [SerializeField] private AnimationClip[] myClips;
     [Range(10f,50f)] public float range = 20.0f;
-    [SerializeField] public GameObject footprint;
+    [SerializeField] private GameObject footprint;
+    [SerializeField] private GameObject[] taskPoints;
     private float printTime;
     public float[] actionIntent;
     
@@ -34,6 +34,7 @@ public class BadGuy: MonoBehaviour, IVisionTrigger, IMoveable
         wreckState = new WreckState(this, StateMachine);
         
         actionIntent = new float[5]{10,10,10,10,10};
+        taskPoints = GameObject.FindGameObjectsWithTag("Task");
     }
     void Start()
     {
@@ -52,8 +53,8 @@ public class BadGuy: MonoBehaviour, IVisionTrigger, IMoveable
         if (printTime > 0.25f)
         {
             GameObject newprint = footprint;
-            Instantiate(newprint);
             newprint.transform.position = transform.position;
+            Instantiate(newprint);
             printTime = 0f;
         }
         StateMachine.CurBadGuyState.FrameUpdate();
@@ -65,14 +66,14 @@ public class BadGuy: MonoBehaviour, IVisionTrigger, IMoveable
     public bool seenGuy { get; set; }
     public Vector3 guyPos { get; set; }
 
-    public void SetSeenFootprint(bool seenFootprint)
+    public void SetSeenFootprint(bool seen)
     {
-        seenFootprint = seenFootprint;
+        seenFootprint = seen;
     }
 
-    public void SetSeenGuy(bool seenGuy)
+    public void SetSeenGuy(bool seen)
     {
-        seenGuy = seenGuy;
+        seenGuy = seen;
     }
 
     public void SetFootprintPos(Vector3 pos)

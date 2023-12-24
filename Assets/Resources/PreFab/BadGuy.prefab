@@ -22,7 +22,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7c5106dd5de22c04d81bb6694cb934d7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 10.54
+      value: 4.64
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7c5106dd5de22c04d81bb6694cb934d7, type: 3}
       propertyPath: m_LocalPosition.y
@@ -30,7 +30,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7c5106dd5de22c04d81bb6694cb934d7, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -9.09
+      value: -6.13
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7c5106dd5de22c04d81bb6694cb934d7, type: 3}
       propertyPath: m_LocalRotation.w
@@ -149,7 +149,7 @@ NavMeshAgent:
   m_AutoRepath: 1
   m_Height: 2
   m_BaseOffset: 0
-  m_WalkableMask: 4294967295
+  m_WalkableMask: 13
   m_ObstacleAvoidanceType: 4
 --- !u!65 &8890020175256282048
 BoxCollider:
@@ -189,10 +189,10 @@ MonoBehaviour:
   VisionAngle: 0
   obstacleMask:
     serializedVersion: 2
-    m_Bits: 384
+    m_Bits: 768
   targetMask:
     serializedVersion: 2
-    m_Bits: 192
+    m_Bits: 65
   VisionConeResolution: 0
 --- !u!114 &3886117298762837730
 MonoBehaviour:
@@ -206,9 +206,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f7bf195a4998e640bd8fa1fc60a3a3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sus: 0
   myClips: []
   range: 30
   footprint: {fileID: 0}
+  actionIntent: []
 --- !u!4 &746912571944225760 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7c5106dd5de22c04d81bb6694cb934d7, type: 3}

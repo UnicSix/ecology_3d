@@ -1,7 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using Random = UnityEngine.Random;
 
 public class WorkParameters
 {
@@ -26,6 +28,7 @@ public class PanicParameters
 public class GoodGuyBehaviour : MonoBehaviour
 {
 
+    public float sus;
     public VisionCone fovcone;
     public int nowStatus; // -1: none, -2: meeting
     private float exeuteTime;
@@ -35,6 +38,7 @@ public class GoodGuyBehaviour : MonoBehaviour
     GameObject[] taskPoints;
     Transform alarmPoint;
 
+    public GameObject deadBody;
     private WorkerStatusHandler statusBar;
     private NavMeshAgent navAgent;
     private int agentStuckTimes;
@@ -61,6 +65,7 @@ public class GoodGuyBehaviour : MonoBehaviour
         alarmPoint = alarmPoints[Random.Range(0, alarmPoints.Length)].transform;
         GameObject StatusBarObj = GetComponentInChildren<WorkerStatusHandler>().gameObject;
         statusBar = StatusBarObj.GetComponent<WorkerStatusHandler>(); // Do not use it at Start
+        deadBody = Resources.Load<GameObject>("PreFab/MyPreFab/GoodGuyDead");
         if (navAgent == null) Debug.LogError("Unable to find NavMeshAgent");
         if (statusBar == null) Debug.LogError("Unable to find WorkerStatusHandler");
         if (footprint == null) footprint = Resources.Load<GameObject>("PreFab/FootPrintGood");
@@ -308,5 +313,22 @@ public class GoodGuyBehaviour : MonoBehaviour
         statusBar.update_panic(statusValues[2]);
         statusBar.update_alarm(statusValues[3]);
         printTimeElapse += Time.deltaTime;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Weapon"))
+        {
+            GameObject newDeadBody = deadBody;
+            newDeadBody.transform.position = new Vector3(transform.position.x, -2.7f, transform.position.z);
+            Instantiate(newDeadBody);
+            if (newDeadBody != null)
+                Debug.Log("ins");
+            Destroy(this.gameObject);
+        }
+    }
+
+    private void OnDestroy()
+    {
     }
 }
