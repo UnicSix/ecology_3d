@@ -25,6 +25,7 @@ TagManager:
   - GoodGuy
   - DeadBody
   - Alarm
+  - Weapon
   layers:
   - Default
   - TransparentFX
@@ -35,8 +36,8 @@ TagManager:
   - Task
   - Villager
   - Wall
-  - 
-  - 
+  - Guy
+  - Weapon
   - 
   - 
   - 

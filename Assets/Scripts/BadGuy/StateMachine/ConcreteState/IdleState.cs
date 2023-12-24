@@ -32,12 +32,18 @@ public class IdleState : BadGuyState
         if (_idleTime >= _idleLimit)
         {
             _idleTime = 0;
-            Debug.Log("Idle to Roam");
+            // Debug.Log("Idle to Roam");
             badguy.StateMachine.ChangeState(badguy.roamState);
         }
-        if (badguy.seenFootprint)
+
+        if (badguy.seenGuy)
         {
-            Debug.Log("Idle to Track"+badguy.footprintPos);
+            Debug.Log("Idle to Kill");
+            badguy.StateMachine.ChangeState(badguy.killState, badguy.guyPos);
+        }
+        else if (badguy.seenFootprint)
+        {
+            // Debug.Log("Idle to Track");
             badguy.StateMachine.ChangeState(badguy.trackState, badguy.footprintPos);
         }
     }
