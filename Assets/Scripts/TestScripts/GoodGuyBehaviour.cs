@@ -27,6 +27,7 @@ public class GoodGuyBehaviour : MonoBehaviour
 {
 
     public VisionCone fovcone;
+    public float sus;
     public int nowStatus; // -1: none, -2: meeting
     private float exeuteTime;
     float[] statusValues = new float[4];
