@@ -295,12 +295,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce818ee91ef69224c8e5c3b0f30319b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sus: 0
   fovcone: {fileID: 6551398207411942125}
+  sus: 0
   nowStatus: 0
+  deadBody: {fileID: 0}
   energyFactor: 20
   printTimeGap: 0.15
-  footprint: {fileID: 284948448007308209, guid: 476e4bc9aa5ef724a8496b74dee16f59, type: 3}
+  footprint: {fileID: 5555643005452015369, guid: 476e4bc9aa5ef724a8496b74dee16f59, type: 3}
 --- !u!195 &284980355854041750
 NavMeshAgent:
   m_ObjectHideFlags: 0

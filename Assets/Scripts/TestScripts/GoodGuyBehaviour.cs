@@ -28,7 +28,6 @@ public class PanicParameters
 public class GoodGuyBehaviour : MonoBehaviour
 {
 
-    public float sus;
     public VisionCone fovcone;
     public float sus;
     public int nowStatus; // -1: none, -2: meeting
