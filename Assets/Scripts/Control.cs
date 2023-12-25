@@ -130,7 +130,6 @@ public class Control : MonoBehaviour
             float ProbOfGoodGuy = spaceship_durability;
             float ProbOfBadGuy = 1 - ProbOfGoodGuy;
             string guy_name = "GUY-" + guynumber;
-            guynumber += 1;
 
             if (Random.Range(0f, 1f) < ProbOfGoodGuy) {
                 GameObject guy = Instantiate(Goodguy_Prefab, SpawnPoints[0].transform.position, Quaternion.LookRotation(facingDirection));
@@ -140,7 +139,9 @@ public class Control : MonoBehaviour
                 GameObject guy = Instantiate(Badguy_Prefab, SpawnPoints[0].transform.position, Quaternion.LookRotation(facingDirection));
                 guy.GetComponentInChildren<MurdererStatusHandler>().set_name(guy_name);
             }
-            spawnTimer = 0f;
+            spawnTimer = 0.0f;
+            guynumber += 1;
+            Debug.Log(guy_name);
         }
     }
     void Update_SpaceshipDurability()
