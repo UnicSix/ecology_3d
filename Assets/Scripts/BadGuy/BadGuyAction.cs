@@ -20,6 +20,8 @@ public class BadGuy: MonoBehaviour, IVisionTrigger, IMoveable
     private float killThreshold = 15f;
     private float trackThreshold = 3f;
     private float wreckThreshold = 7f;
+    public int nowStatus;
+    public Control masterControl;
     private const float energyLimit=100f;
     
     public List<Vector3> taskPositions;
@@ -84,6 +86,11 @@ public class BadGuy: MonoBehaviour, IVisionTrigger, IMoveable
         
     }
 
+    public void CutAgentPath()
+    {
+        agent.ResetPath();
+        agent.speed = 0;
+    }
     public bool seenFootprint { get; set; }
     public Vector3 footprintPos { get; set; }
     public bool seenGuy { get; set; }

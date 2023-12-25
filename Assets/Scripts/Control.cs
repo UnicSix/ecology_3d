@@ -47,7 +47,7 @@ public class Control : MonoBehaviour
             goodGuy.GetComponent<GoodGuyBehaviour>().nowStatus = -2;
 
         foreach (GameObject badGuy in badGuys)
-            badGuy.GetComponent<BadGuyBehaviour>().nowStatus = -2;
+            badGuy.GetComponent<BadGuy>().nowStatus = -2;
 
         int total_guys = goodGuys.Length + badGuys.Length;
         for (int i = 0; i < total_guys; i++) {
@@ -63,7 +63,7 @@ public class Control : MonoBehaviour
                 goodGuys[i].transform.rotation = rotation;
             }
             else {
-                badGuys[i - goodGuys.Length].GetComponent<BadGuyBehaviour>().CutAgentPath();
+                badGuys[i - goodGuys.Length].GetComponent<BadGuy>().CutAgentPath();
                 badGuys[i - goodGuys.Length].transform.position = spawnPos;
                 badGuys[i - goodGuys.Length].transform.rotation = rotation;
             }
@@ -77,7 +77,7 @@ public class Control : MonoBehaviour
             goodGuy.GetComponent<GoodGuyBehaviour>().nowStatus = -1;
 
         foreach (GameObject badGuy in badGuys)
-            badGuy.GetComponent<BadGuyBehaviour>().nowStatus = -1;
+            badGuy.GetComponent<BadGuy>().nowStatus = -1;
     }
 
     void Generate_Guys()
@@ -149,6 +149,11 @@ public class Control : MonoBehaviour
     void Update_SpaceshipDurability()
     {
         spaceship_durability = Mathf.Clamp01(spaceship_durability - 0.01f * Time.deltaTime);
-        spaceShipDurabilityHandler.GetComponentInChildren<ShipBarHandler>().update_bar(spaceship_durability); // Update UI bar
+        // spaceShipDurabilityHandler.GetComponentInChildren<ShipBarHandler>().update_bar(spaceship_durability); // Update UI bar
+    }
+
+    public float getSpaceShipDurability()
+    {
+        return spaceship_durability;
     }
 }

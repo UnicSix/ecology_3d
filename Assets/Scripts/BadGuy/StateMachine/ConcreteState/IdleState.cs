@@ -68,6 +68,14 @@ public class IdleState : BadGuyState
             badguy.setKillEnergy(-killThreshold);
             badguy.StateMachine.ChangeState(badguy.killState, badguy.guyPos);
         }
+
+        if (badguy.masterControl.getSpaceShipDurability() < 0.5f && isEnteringState("wreckState"))
+        {
+            Debug.Log("Idle to wreck");
+            badguy.setKillEnergy(-wreckThreshold);
+            badguy.StateMachine.ChangeState(badguy.wreckState);
+            
+        }
     }
 
     private bool isEnteringState(string nextState)
