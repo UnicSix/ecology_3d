@@ -5,19 +5,25 @@ using UnityEngine;
 public class Control : MonoBehaviour
 {
     GameObject[] taskPoints;
+    GameObject[] SpawnPoints;
     [SerializeField] public GameObject Goodguy_Prefab;
     [SerializeField] public GameObject Badguy_Prefab;
     [SerializeField] public Vector3 spawnCenter = new Vector3(0f, 5.0f, 0f);
     [SerializeField] public float spawnCircleRad = 5.0f;
     [SerializeField] public int numGoodguy = 10;
     [SerializeField] public int numBadguy = 2;
+    [SerializeField] private float spwanSec = 30.0f;
     private bool isMeeting = false;
+    private int guynumber = 0;
+    private float spawnTimer;
     private float spaceship_durability;
     
     void Start()
     {
+        spawnTimer = 0.0f;
         spaceship_durability = 1.0f;
         taskPoints = GameObject.FindGameObjectsWithTag("Task");
+        SpawnPoints = GameObject.FindGameObjectsWithTag("SpawnPoint");
         ProgressStatusHandler.OnInfluenceShipDurability += HandleShipDurability;
         if (taskPoints.Length != 0) {} //Debug.Log("Found " + taskPoints.Length + " TaskPoints.");
         else Debug.LogWarning("No TaskPoints found in the scene.");
@@ -26,6 +32,7 @@ public class Control : MonoBehaviour
     void Update()
     {
         if (isMeeting) Meeting();
+        else HandleSpawnGuy();
         // Need to Trigger DisbandMeeting()
         Update_SpaceshipDurability();
     }
@@ -70,11 +77,13 @@ public class Control : MonoBehaviour
         foreach (GameObject badGuy in badGuys)
             badGuy.GetComponent<BadGuyBehaviour>().nowStatus = -1;
     }
+
     void Generate_Guys()
     {
         if (Goodguy_Prefab != null && Badguy_Prefab != null) {
             int numGenGoodguys = 0;
             int numGenBadguys = 0;
+            guynumber = (numGoodguy + numBadguy);
 
             for (int i = 0; i < (numGoodguy + numBadguy); i++) {
                 float angle = i * (360f / (numGoodguy+numBadguy)); // Calculate the angle of each spawning point on the circle
@@ -111,6 +120,29 @@ public class Control : MonoBehaviour
     void HandleShipDurability(float influence) // Event Receive
     {
         spaceship_durability += influence;
+        spaceship_durability = Mathf.Clamp01(spaceship_durability);
+    }
+    void HandleSpawnGuy()
+    {
+        spawnTimer += Time.deltaTime;
+        if (spawnTimer >= spwanSec) {
+            Vector3 facingDirection = SpawnPoints[0].transform.Find("Facing").position - SpawnPoints[0].transform.position;
+            float ProbOfGoodGuy = spaceship_durability;
+            float ProbOfBadGuy = 1 - ProbOfGoodGuy;
+            string guy_name = "GUY-" + guynumber;
+
+            if (Random.Range(0f, 1f) < ProbOfGoodGuy) {
+                GameObject guy = Instantiate(Goodguy_Prefab, SpawnPoints[0].transform.position, Quaternion.LookRotation(facingDirection));
+                guy.GetComponentInChildren<WorkerStatusHandler>().set_name(guy_name);
+            }
+            else {
+                GameObject guy = Instantiate(Badguy_Prefab, SpawnPoints[0].transform.position, Quaternion.LookRotation(facingDirection));
+                guy.GetComponentInChildren<MurdererStatusHandler>().set_name(guy_name);
+            }
+            spawnTimer = 0.0f;
+            guynumber += 1;
+            Debug.Log(guy_name);
+        }
     }
     void Update_SpaceshipDurability()
     {
