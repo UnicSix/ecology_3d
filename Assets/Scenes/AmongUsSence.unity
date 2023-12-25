@@ -2199,8 +2199,8 @@ MonoBehaviour:
   spaceShipDurabilityHandler: {fileID: 344414214}
   spawnCenter: {x: 26.5, y: -4.2, z: -9.5}
   spawnCircleRad: 7
-  numGoodguy: 0
-  numBadguy: 0
+  numGoodguy: 5
+  numBadguy: 5
   spwanSec: 30
 --- !u!1001 &1619817408
 PrefabInstance:

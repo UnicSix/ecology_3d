@@ -51,7 +51,7 @@ public class GoodGuyBehaviour : MonoBehaviour
     {
         ResetTimer();
         ResetAgentDtection();
-        sus = 0.0f;
+        sus = 0.5f;
         exeuteTime = 0.0f;
         workParams = new WorkParameters();
         navAgent = GetComponent<NavMeshAgent>();
@@ -211,7 +211,10 @@ public class GoodGuyBehaviour : MonoBehaviour
             Vector3 randomDestination = RandomNavmeshLocation(range: 15.0f, minAngleTurn: 100.0f);
             navAgent.speed = speed;
             navAgent.SetDestination(randomDestination);
-            if (fovcone.seenGuy) CutAgentPath();
+            if (fovcone.seenGuy) {
+                CutAgentPath();
+                fovcone.seenGuy = false;
+            }
         }
         else if (DetectAgentStuck(maxStuckTimes: 100000)) CutAgentPath();
 
@@ -245,6 +248,7 @@ public class GoodGuyBehaviour : MonoBehaviour
     {
         if (fovcone.seenBody) {
             Report(findBody: true);
+            fovcone.seenBody = false;
             nowStatus = -2;
         }
     }
