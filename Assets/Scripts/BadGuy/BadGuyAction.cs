@@ -22,6 +22,7 @@ public class BadGuy: MonoBehaviour, IVisionTrigger, IMoveable
     private float wreckThreshold = 7f;
     public int nowStatus;
     public Control masterControl;
+    public MurdererStatusHandler statusBar;
     private const float energyLimit=100f;
     
     public List<Vector3> taskPositions;
@@ -44,7 +45,7 @@ public class BadGuy: MonoBehaviour, IVisionTrigger, IMoveable
         killState = new KillState(this, StateMachine);
         wreckState = new WreckState(this, StateMachine);
 
-        killEnergy = 10;
+        killEnergy = 40;
         trackEnergy = 90;
         wreckEnergy = 10;
     }
@@ -83,6 +84,11 @@ public class BadGuy: MonoBehaviour, IVisionTrigger, IMoveable
             SetSeenFootprint(false);
         }
         StateMachine.CurBadGuyState.FrameUpdate();
+        
+        statusBar.update_sus(sus);
+        statusBar.update_kill(killEnergy);
+        statusBar.update_track(trackEnergy);
+        statusBar.update_wreck(wreckEnergy);
         
     }
 
