@@ -51,6 +51,7 @@ public class GoodGuyBehaviour : MonoBehaviour
     {
         ResetTimer();
         ResetAgentDtection();
+        sus = 0.0f;
         exeuteTime = 0.0f;
         workParams = new WorkParameters();
         navAgent = GetComponent<NavMeshAgent>();
@@ -326,6 +327,7 @@ public class GoodGuyBehaviour : MonoBehaviour
     void UpdatePrams()
     {
         if (printTimeElapse >= printTimeGap) LeaveFootPrint(transform.position);
+        statusBar.update_sus(sus);
         statusBar.update_idle(statusValues[0]);
         statusBar.update_work(statusValues[1]);
         statusBar.update_panic(statusValues[2]);

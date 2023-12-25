@@ -5,6 +5,8 @@ using UnityEngine.AI;
 
 public class BadGuyBehaviour : MonoBehaviour
 {
+    public VisionCone fovcone;
+    public float sus;
     public int nowStatus; // -1: none, -2: meeting
     private float exeute_time;
     float[] statusValues = new float[5];
@@ -24,6 +26,7 @@ public class BadGuyBehaviour : MonoBehaviour
     {
         ResetTimer();
         ResetAgentDtection();
+        sus = 0.0f;
         exeute_time = 0.0f;
         navAgent = GetComponent<NavMeshAgent>();
         taskPoints = GameObject.FindGameObjectsWithTag("Task");
@@ -184,6 +187,7 @@ public class BadGuyBehaviour : MonoBehaviour
     void UpdatePrams()
     {
         if (printTimeElapse >= printTimeGap) LeaveFootPrint(transform.position);
+        statusBar.update_sus(sus);
         statusBar.update_idle(statusValues[0]);
         statusBar.update_chaos(statusValues[1]);
         statusBar.update_tailgating(statusValues[2]);
