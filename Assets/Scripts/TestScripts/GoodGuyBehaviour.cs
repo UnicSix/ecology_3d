@@ -225,6 +225,7 @@ public class GoodGuyBehaviour : MonoBehaviour
     private int Report(bool findBody = false, float speed = 12.0f)
     {
         if (findBody) {
+            sus -= 1.0f; // Reporter prevent suspect gain by DeadbodyEvent
             GameObject.Find("MasterControl").GetComponent<Control>().Meeting();
             Debug.Log("Call meeting !!!");
             return -2;
@@ -327,6 +328,7 @@ public class GoodGuyBehaviour : MonoBehaviour
     void UpdatePrams()
     {
         if (printTimeElapse >= printTimeGap) LeaveFootPrint(transform.position);
+        sus = Mathf.Clamp01(sus);
         statusBar.update_sus(sus);
         statusBar.update_idle(statusValues[0]);
         statusBar.update_work(statusValues[1]);
