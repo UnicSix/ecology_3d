@@ -20,10 +20,6 @@ public class WorkParameters
     }
 }
 
-public class PanicParameters
-{
-
-}
 
 public class GoodGuyBehaviour : MonoBehaviour
 {
@@ -45,7 +41,6 @@ public class GoodGuyBehaviour : MonoBehaviour
     private float agentRemainingDis;
     private float printTimeElapse;
     private WorkParameters workParams;
-    private PanicParameters panicParams;
     [SerializeField] private float energyFactor = 20.0f;
     [SerializeField] private float printTimeGap = 0.15f;
     [SerializeField] public GameObject footprint;
@@ -58,7 +53,6 @@ public class GoodGuyBehaviour : MonoBehaviour
         ResetAgentDtection();
         exeuteTime = 0.0f;
         workParams = new WorkParameters();
-        panicParams = new PanicParameters();
         navAgent = GetComponent<NavMeshAgent>();
         taskPoints = GameObject.FindGameObjectsWithTag("Task");
         GameObject[] alarmPoints = GameObject.FindGameObjectsWithTag("Alarm");
@@ -89,7 +83,7 @@ public class GoodGuyBehaviour : MonoBehaviour
                     nowStatus = Work(exeuteTime);
                     break;
                 case 2:
-                    // nowStatus = Panic(exeuteTime);
+                    nowStatus = Panic(exeuteTime);
                     break;
                 case 3:
                     nowStatus = Report(findBody: false);
@@ -111,6 +105,8 @@ public class GoodGuyBehaviour : MonoBehaviour
             distribute_energy(nowStatus, energy);
         }
 
+        // Scan body every update
+        ScanBody();
         statusBar.Show();
     }
     
@@ -141,16 +137,16 @@ public class GoodGuyBehaviour : MonoBehaviour
             }
         }
     }
-    private int Idle(float time = -1.0f, float speed = 5.0f) // Loitering without intention
+    private int Idle(float time = -1.0f, float speed = 4.0f) // Loitering without intention
     { 
         statusTimer[0] += Time.deltaTime;
         if (!navAgent.hasPath) {
             ResetAgentDtection();
-            Vector3 randomDestination = RandomNavmeshLocation(30.0f);
+            Vector3 randomDestination = RandomNavmeshLocation(range: 50.0f);
             navAgent.speed = speed;
             navAgent.SetDestination(randomDestination);
         }
-        else if (DetectAgentStuck(maxStuckTimes: 1000)) CutAgentPath();
+        else if (DetectAgentStuck(maxStuckTimes: 1000000)) CutAgentPath();
 
         if (statusTimer[0] >= time && time > 0) {
             ResetTimer(0);
@@ -206,13 +202,21 @@ public class GoodGuyBehaviour : MonoBehaviour
         }
         return 1;
     }
-    private int Panic(float time = -1.0f, float speed = 15.0f) // Run away from follower and watcher
+    private int Panic(float time = -1.0f, float speed = 30.0f) // Run away from any guy
     {
         statusTimer[1] += Time.deltaTime;
+        if (!navAgent.hasPath) {
+            ResetAgentDtection();
+            Vector3 randomDestination = RandomNavmeshLocation(range: 15.0f, minAngleTurn: 100.0f);
+            navAgent.speed = speed;
+            navAgent.SetDestination(randomDestination);
+            // if FOV see Guy, CutAgentPath()
+        }
+        else if (DetectAgentStuck(maxStuckTimes: 100000)) CutAgentPath();
 
         if (statusTimer[1] >= time) {
             ResetTimer(1);
-            workParams.Reset();
+            CutAgentPath();
             return -1;
         }
         return 2;
@@ -234,6 +238,11 @@ public class GoodGuyBehaviour : MonoBehaviour
                 return -2;
             }
         }
+    }
+    private void ScanBody()
+    {
+        // FOV check body
+        // if find: Report(findBodyL true);
     }
     
     // API Functions 
@@ -265,9 +274,18 @@ public class GoodGuyBehaviour : MonoBehaviour
             return position;
         }
     }
-    private Vector3 RandomNavmeshLocation(float range)
+    private Vector3 RandomNavmeshLocation(float range, float minAngleTurn = -1.0f)
     {
-        Vector3 randomDir = Random.insideUnitSphere * range;
+        Vector3 randomDir = Vector3.zero;
+        do
+        {
+            randomDir = Random.insideUnitSphere * range;
+            randomDir.y = 0;
+            float angle = Vector3.Angle(transform.forward, randomDir);
+
+            if (angle >= minAngleTurn) break;
+        } while (true);
+
         return GetNavMeshProjection(randomDir + transform.position);
     }
     public void CutAgentPath()
