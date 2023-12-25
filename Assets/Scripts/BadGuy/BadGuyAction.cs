@@ -59,7 +59,7 @@ public class BadGuy: MonoBehaviour, IVisionTrigger, IMoveable
             footprint = Resources.Load<GameObject>("PreFab/FootPrintBad");
         printTime = 0f;
         
-        StateMachine.Initialize(wreckState);
+        StateMachine.Initialize(idleState);
         // StateMachine.Initialize(idleState);
     }
 

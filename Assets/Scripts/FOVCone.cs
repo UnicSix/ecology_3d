@@ -16,6 +16,9 @@ public class VisionCone : MonoBehaviour
     Mesh VisionConeMesh;
     MeshFilter MeshFilter_;
     public UnityVector3Event onFootprintLockedOn;
+
+    public bool seenGuy = false;
+    public bool seenBody = false;
     //Create all of these variables, most of them are self explanatory, but for the ones that aren't i've added a comment to clue you in on what they do
     //for the ones that you dont understand dont worry, just follow along
     void Start()
@@ -98,7 +101,12 @@ public class VisionCone : MonoBehaviour
                     Vertices[i + 1] = VertForward.normalized * hit.distance;
                     if (hit.collider.gameObject.CompareTag("GoodGuy") || hit.collider.gameObject.CompareTag("BadGuy"))
                     {
-                        //isAvoiding = true;
+                        seenGuy = true;
+                    }
+
+                    if (hit.collider.gameObject.CompareTag("DeadBody"))
+                    {
+                        seenBody = true;
                     }
                     // Debug.Log(hit.distance);
                 }
