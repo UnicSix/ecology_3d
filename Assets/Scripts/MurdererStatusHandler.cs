@@ -21,7 +21,11 @@ public class MurdererStatusHandler : MonoBehaviour
         track.value = 0;
         kill.value = 0;
         // value can't be larger than 1 and smaller than zero (auto adjusted)
-        Hide();
+        // Hide();
+    }
+
+    private void Update()
+    {
     }
     public void set_name(string str) {
         Name.text = str;
@@ -29,14 +33,14 @@ public class MurdererStatusHandler : MonoBehaviour
     public void update_sus(float val) {
         sus.value = Mathf.Clamp01(val);
     }
-    public void update_idle(float val) {
-        wreck.value = Mathf.Clamp01(val);
+    public void update_wreck(float val) {
+        wreck.value = Mathf.Clamp01(val/100);
     }
-    public void update_chaos(float val) {
-        track.value = Mathf.Clamp01(val);
+    public void update_track(float val) {
+        track.value = Mathf.Clamp01(val/100);
     }
-    public void update_tailgating(float val) {
-        kill.value = Mathf.Clamp01(val);
+    public void update_kill(float val) {
+        kill.value = Mathf.Clamp01(val/100);
     }
     public void Select(int index) {
         // Image[] images = { focus0, focus1, focus2, focus3, focus4 };

@@ -44,9 +44,9 @@ public class BadGuy: MonoBehaviour, IVisionTrigger, IMoveable
         killState = new KillState(this, StateMachine);
         wreckState = new WreckState(this, StateMachine);
 
-        killEnergy = 50;
-        trackEnergy = 50;
-        wreckEnergy = 50;
+        killEnergy = 10;
+        trackEnergy = 90;
+        wreckEnergy = 10;
     }
     void Start()
     {
@@ -124,15 +124,18 @@ public class BadGuy: MonoBehaviour, IVisionTrigger, IMoveable
 
     public void setKillEnergy(float val)
     {
-        killEnergy += val;
+        if(killEnergy<100)
+            killEnergy += val;
     }
     public void setTrackEnergy(float val)
     {
-        trackEnergy += val;
+        if(trackEnergy<100)
+            trackEnergy += val;
     }
     public void setWreckEnergy(float val)
     {
-        wreckEnergy += val;
+        if(wreckEnergy<100)
+            wreckEnergy += val;
     }
     public float getTrackEnergy()
     {

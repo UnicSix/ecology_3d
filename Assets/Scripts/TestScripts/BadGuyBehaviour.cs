@@ -188,9 +188,9 @@ public class BadGuyBehaviour : MonoBehaviour
     {
         if (printTimeElapse >= printTimeGap) LeaveFootPrint(transform.position);
         statusBar.update_sus(sus);
-        statusBar.update_idle(statusValues[0]);
-        statusBar.update_chaos(statusValues[1]);
-        statusBar.update_tailgating(statusValues[2]);
+        // statusBar.update_idle(statusValues[0]);
+        // statusBar.update_chaos(statusValues[1]);
+        // statusBar.update_tailgating(statusValues[2]);
         // statusBar.update_assassinate(statusValues[3]);
         // statusBar.update_killingSpree(statusValues[4]);
         printTimeElapse += Time.deltaTime;
