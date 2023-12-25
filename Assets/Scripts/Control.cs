@@ -14,6 +14,7 @@ public class Control : MonoBehaviour
     [SerializeField] public int numBadguy = 2;
     [SerializeField] private float spwanSec = 30.0f;
     private bool isMeeting = false;
+    private int guynumber = 0;
     private float spawnTimer;
     private float spaceship_durability;
     
@@ -82,6 +83,7 @@ public class Control : MonoBehaviour
         if (Goodguy_Prefab != null && Badguy_Prefab != null) {
             int numGenGoodguys = 0;
             int numGenBadguys = 0;
+            guynumber = (numGoodguy + numBadguy);
 
             for (int i = 0; i < (numGoodguy + numBadguy); i++) {
                 float angle = i * (360f / (numGoodguy+numBadguy)); // Calculate the angle of each spawning point on the circle
@@ -124,14 +126,20 @@ public class Control : MonoBehaviour
     {
         spawnTimer += Time.deltaTime;
         if (spawnTimer >= spwanSec) {
+            Vector3 facingDirection = SpawnPoints[0].transform.Find("Facing").position - SpawnPoints[0].transform.position;
             float ProbOfGoodGuy = spaceship_durability;
             float ProbOfBadGuy = 1 - ProbOfGoodGuy;
-            
-            GameObject guyPrefab;
-            if (Random.Range(0f, 1f) < ProbOfGoodGuy) guyPrefab = Goodguy_Prefab;
-            else guyPrefab = Badguy_Prefab;
-            Vector3 facingDirection = SpawnPoints[0].transform.Find("Facing").position - SpawnPoints[0].transform.position;
-            Instantiate(guyPrefab, SpawnPoints[0].transform.position, Quaternion.LookRotation(facingDirection));
+            string guy_name = "GUY-" + guynumber;
+            guynumber += 1;
+
+            if (Random.Range(0f, 1f) < ProbOfGoodGuy) {
+                GameObject guy = Instantiate(Goodguy_Prefab, SpawnPoints[0].transform.position, Quaternion.LookRotation(facingDirection));
+                guy.GetComponentInChildren<WorkerStatusHandler>().set_name(guy_name);
+            }
+            else {
+                GameObject guy = Instantiate(Badguy_Prefab, SpawnPoints[0].transform.position, Quaternion.LookRotation(facingDirection));
+                guy.GetComponentInChildren<MurdererStatusHandler>().set_name(guy_name);
+            }
             spawnTimer = 0f;
         }
     }
