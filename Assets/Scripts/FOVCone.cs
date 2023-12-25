@@ -102,11 +102,16 @@ public class VisionCone : MonoBehaviour
                     if (hit.collider.gameObject.CompareTag("GoodGuy") || hit.collider.gameObject.CompareTag("BadGuy"))
                     {
                         seenGuy = true;
+                    } else {
+                        seenGuy = false;
                     }
 
                     if (hit.collider.gameObject.CompareTag("DeadBody"))
                     {
                         seenBody = true;
+                    }
+                    else {
+                        seenBody = false;
                     }
                     // Debug.Log(hit.distance);
                 }

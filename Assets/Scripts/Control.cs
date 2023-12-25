@@ -143,7 +143,7 @@ public class Control : MonoBehaviour
             }
             spawnTimer = 0.0f;
             guynumber += 1;
-            Debug.Log(guy_name);
+            Debug.Log("SPAWN: " + guy_name);
         }
     }
     void Update_SpaceshipDurability()

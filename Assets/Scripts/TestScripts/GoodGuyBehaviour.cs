@@ -211,7 +211,7 @@ public class GoodGuyBehaviour : MonoBehaviour
             Vector3 randomDestination = RandomNavmeshLocation(range: 15.0f, minAngleTurn: 100.0f);
             navAgent.speed = speed;
             navAgent.SetDestination(randomDestination);
-            // if FOV see Guy, CutAgentPath()
+            if (fovcone.seenGuy) CutAgentPath();
         }
         else if (DetectAgentStuck(maxStuckTimes: 100000)) CutAgentPath();
 
@@ -227,7 +227,7 @@ public class GoodGuyBehaviour : MonoBehaviour
         if (findBody) {
             sus -= 1.0f; // Reporter prevent suspect gain by DeadbodyEvent
             GameObject.Find("MasterControl").GetComponent<Control>().Meeting();
-            Debug.Log("Call meeting !!!");
+            Debug.Log("Call  meeting !!!");
             return -2;
         }
         else {
@@ -243,8 +243,10 @@ public class GoodGuyBehaviour : MonoBehaviour
     }
     private void ScanBody()
     {
-        // FOV check body
-        // if find: Report(findBodyL true);
+        if (fovcone.seenBody) {
+            Report(findBody: true);
+            nowStatus = -2;
+        }
     }
     
     // API Functions 
