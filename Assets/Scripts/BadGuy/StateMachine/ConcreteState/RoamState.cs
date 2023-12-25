@@ -8,6 +8,14 @@ public class RoamState : BadGuyState
     private float _sampleRange=50f;
     private float _sampleDegree;
     private NavMeshHit _hit;
+    
+    private float energyScaler = 0.1f;
+    private float killEnergy;
+    private float trackEnergy;
+    private float wreckEnergy;
+    private float killThreshold;
+    private float trackThreshold;
+    private float wreckThreshold;
     public RoamState(BadGuy badguy, BadGuyStateMachine badguyStateMachine) : base(badguy, badguyStateMachine)
     {
     }
@@ -32,22 +40,41 @@ public class RoamState : BadGuyState
 
     public override void FrameUpdate()
     {
-        if (badguy.seenGuy)
+        if (badguy.seenFootprint && isEnteringState("trackState"))
         {
-            badguy.agent.ResetPath();
-            Debug.Log("Roam to Kill");
-            badguy.StateMachine.ChangeState(badguy.killState, badguy.guyPos);
-        }
-        else if (badguy.seenFootprint)
-        {
-            badguy.agent.ResetPath();
-            // Debug.Log("Roam to Track");
+            badguy.setTrackEnergy(-trackThreshold);
             badguy.StateMachine.ChangeState(badguy.trackState, badguy.footprintPos);
+        }
+        else if (badguy.seenGuy && isEnteringState("killState"))
+        {
+            Debug.Log("Idle to Kill");
+            badguy.setKillEnergy(-killThreshold);
+            badguy.StateMachine.ChangeState(badguy.killState, badguy.guyPos);
         }
         else if(!badguy.agent.hasPath)
         {
             // Debug.Log("Roam to Idle");
             badguy.StateMachine.ChangeState(badguy.idleState);
         }
+    }
+    private bool isEnteringState(string nextState)
+    {
+        float rd;
+        float energySum = killEnergy + trackEnergy + wreckEnergy;
+        rd = Random.Range(0f, energySum);
+        switch (nextState)
+        {
+            case "killState":
+                if (rd <= killEnergy && killEnergy<=15f) return true;
+                break;
+            case "trackState":
+                if (rd > killEnergy && rd <= trackEnergy+killEnergy && trackEnergy >= 3f) return true;
+                break;
+            case "wreckState":
+                if (rd > trackEnergy+killEnergy && rd <= energySum && wreckEnergy >= 10f) return true;
+                break;
+        }
+
+        return false;
     }
 }

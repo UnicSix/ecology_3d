@@ -181,8 +181,8 @@ public class GoodGuyBehaviour : MonoBehaviour
             }
             else
                 workParams.arrived = ToPosition(end_pos);
-                if (!workParams.arrived && distanceToPos <= 0.5f)
-                    workParams.arrived = true;
+            if (!workParams.arrived && distanceToPos <= 0.5f)
+                workParams.arrived = true;
         }
         else {
             FacePosition(GetNavMeshProjection(taskPoints[workParams.task_index].transform.Find("Facing").position));

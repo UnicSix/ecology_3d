@@ -1,28 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class MurdererStatusHandler : MonoBehaviour
 {
     public Text Name;
-    public Image focus0, focus1, focus2, focus3, focus4;
+    public Image focus0, focus1, focus2;// focus3, focus4;
     public Slider sus;
-    public Slider idle;
-    public Slider chaos;
-    public Slider tailgating;
-    public Slider assassinate;
-    public Slider killingSpree;
+    [FormerlySerializedAs("idle")] public Slider wreck;
+    [FormerlySerializedAs("chaos")] public Slider track;
+    [FormerlySerializedAs("tailgating")] public Slider kill;
     private Canvas selfcanvas;
     private void Start()
     {
         selfcanvas = GetComponent<Canvas>();
         sus.value = 0;
-        idle.value = 0;
-        chaos.value = 0;
-        tailgating.value = 0;
-        assassinate.value = 0;
-        killingSpree.value = 0;
+        wreck.value = 0;
+        track.value = 0;
+        kill.value = 0;
         // value can't be larger than 1 and smaller than zero (auto adjusted)
         Hide();
     }
@@ -33,22 +30,17 @@ public class MurdererStatusHandler : MonoBehaviour
         sus.value = Mathf.Clamp01(val);
     }
     public void update_idle(float val) {
-        idle.value = Mathf.Clamp01(val);
+        wreck.value = Mathf.Clamp01(val);
     }
     public void update_chaos(float val) {
-        chaos.value = Mathf.Clamp01(val);
+        track.value = Mathf.Clamp01(val);
     }
     public void update_tailgating(float val) {
-        tailgating.value = Mathf.Clamp01(val);
-    }
-    public void update_assassinate(float val) {
-        assassinate.value = Mathf.Clamp01(val);
-    }
-    public void update_killingSpree(float val) {
-        killingSpree.value = Mathf.Clamp01(val); 
+        kill.value = Mathf.Clamp01(val);
     }
     public void Select(int index) {
-        Image[] images = { focus0, focus1, focus2, focus3, focus4 };
+        // Image[] images = { focus0, focus1, focus2, focus3, focus4 };
+        Image[] images = { focus0, focus1, focus2};
         for (int i = 0; i < images.Length; i++) {
             if (i != index) {
                 Color color = images[i].color;

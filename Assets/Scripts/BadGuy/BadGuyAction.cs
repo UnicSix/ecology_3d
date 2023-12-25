@@ -2,18 +2,27 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Serialization;
 using UnityEngine.Windows.WebCam;
 
 public class BadGuy: MonoBehaviour, IVisionTrigger, IMoveable
 {
     public float sus;
     private NavMeshHit hit;
-    private List<Vector3> taskPositions;
     [Range(10f,50f)] public float range = 20.0f;
     [SerializeField] private GameObject footprint;
-    [SerializeField] private GameObject[] taskPoints;
+    public GameObject[] taskPoints;
     private float printTime;
-    public float[] actionIntent;
+    private float eraseVisionInfo = 0;
+    private float killEnergy = 0;
+    private float wreckEnergy = 0;
+    private float trackEnergy = 0;
+    private float killThreshold = 15f;
+    private float trackThreshold = 3f;
+    private float wreckThreshold = 7f;
+    private const float energyLimit=100f;
+    
+    public List<Vector3> taskPositions;
     
     public BadGuyStateMachine StateMachine { get; set; }
     public TrackState trackState { get; set; }
@@ -32,30 +41,44 @@ public class BadGuy: MonoBehaviour, IVisionTrigger, IMoveable
         roamState = new RoamState(this, StateMachine);
         killState = new KillState(this, StateMachine);
         wreckState = new WreckState(this, StateMachine);
-        
-        actionIntent = new float[5]{10,10,10,10,10};
-        taskPoints = GameObject.FindGameObjectsWithTag("Task");
+
+        killEnergy = 50;
+        trackEnergy = 50;
+        wreckEnergy = 50;
     }
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
+        taskPoints = GameObject.FindGameObjectsWithTag("Task");
         taskPositions = new List<Vector3>();
+        foreach(GameObject taskPoint in taskPoints)
+        {
+            taskPositions.Add(taskPoint.transform.position);
+        }
         if (footprint == null)
             footprint = Resources.Load<GameObject>("PreFab/FootPrintBad");
         printTime = 0f;
         
-        StateMachine.Initialize(idleState);
+        StateMachine.Initialize(wreckState);
+        // StateMachine.Initialize(idleState);
     }
 
     void Update()
     {
         printTime += Time.deltaTime;
+        eraseVisionInfo += Time.deltaTime;
         if (printTime > 0.25f)
         {
             GameObject newprint = footprint;
             newprint.transform.position = transform.position;
             Instantiate(newprint);
             printTime = 0f;
+        }
+
+        if (eraseVisionInfo > 0.25f)
+        {
+            SetSeenGuy(false);
+            SetSeenFootprint(false);
         }
         StateMachine.CurBadGuyState.FrameUpdate();
         
@@ -91,5 +114,43 @@ public class BadGuy: MonoBehaviour, IVisionTrigger, IMoveable
     // {
         // throw new System.NotImplementedException();
     // }
+
+    public void setKillEnergy(float val)
+    {
+        killEnergy += val;
+    }
+    public void setTrackEnergy(float val)
+    {
+        trackEnergy += val;
+    }
+    public void setWreckEnergy(float val)
+    {
+        wreckEnergy += val;
+    }
+    public float getTrackEnergy()
+    {
+        return trackEnergy;
+    }
+    public float getWreckEnergy()
+    {
+        return wreckEnergy;
+    }
+    public float getKillEnergy()
+    {
+        return killEnergy;
+    }
+
+    public float getKillThreshold()
+    {
+        return killThreshold;
+    }
+    public float getTrackThreshold()
+    {
+        return trackThreshold;
+    }
+    public float getWreckThreshold()
+    {
+        return wreckThreshold;
+    }
 }
 
