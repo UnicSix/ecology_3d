@@ -727,7 +727,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 600
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!114 &4355762169014494756
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -799,14 +799,10 @@ MonoBehaviour:
   focus0: {fileID: 835853634833911250}
   focus1: {fileID: 7621915512912258742}
   focus2: {fileID: 2140865286849353794}
-  focus3: {fileID: 2616150630442569868}
-  focus4: {fileID: 2287091358853696902}
   sus: {fileID: 1780626123262411036}
-  idle: {fileID: 6943291907685137634}
-  chaos: {fileID: 3245833375146064221}
-  tailgating: {fileID: 6288090011939492581}
-  assassinate: {fileID: 2262524000332623972}
-  killingSpree: {fileID: 5421942900072356954}
+  wreck: {fileID: 6943291907685137634}
+  track: {fileID: 3245833375146064221}
+  kill: {fileID: 6288090011939492581}
 --- !u!1 &3568234842425998084
 GameObject:
   m_ObjectHideFlags: 0

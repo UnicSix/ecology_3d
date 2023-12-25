@@ -8,11 +8,13 @@ public class Control : MonoBehaviour
     GameObject[] SpawnPoints;
     [SerializeField] public GameObject Goodguy_Prefab;
     [SerializeField] public GameObject Badguy_Prefab;
+    [SerializeField] private GameObject spaceShipDurabilityHandler;
     [SerializeField] public Vector3 spawnCenter = new Vector3(0f, 5.0f, 0f);
     [SerializeField] public float spawnCircleRad = 5.0f;
     [SerializeField] public int numGoodguy = 10;
     [SerializeField] public int numBadguy = 2;
     [SerializeField] private float spwanSec = 30.0f;
+    
     private bool isMeeting = false;
     private int guynumber = 0;
     private float spawnTimer;
@@ -147,6 +149,6 @@ public class Control : MonoBehaviour
     void Update_SpaceshipDurability()
     {
         spaceship_durability = Mathf.Clamp01(spaceship_durability - 0.01f * Time.deltaTime);
-        // Update UI bar
+        spaceShipDurabilityHandler.GetComponentInChildren<ShipBarHandler>().update_bar(spaceship_durability); // Update UI bar
     }
 }
