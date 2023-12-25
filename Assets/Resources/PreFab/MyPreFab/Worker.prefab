@@ -233,6 +233,7 @@ GameObject:
   - component: {fileID: 284980355854041750}
   - component: {fileID: 3676731693219277954}
   - component: {fileID: 915815709198693179}
+  - component: {fileID: 8749042635297513526}
   m_Layer: 7
   m_Name: Worker
   m_TagString: GoodGuy
@@ -295,12 +296,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce818ee91ef69224c8e5c3b0f30319b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sus: 0
   fovcone: {fileID: 6551398207411942125}
+  sus: 0
   nowStatus: 0
+  deadBody: {fileID: 0}
   energyFactor: 20
   printTimeGap: 0.15
-  footprint: {fileID: 284948448007308209, guid: 476e4bc9aa5ef724a8496b74dee16f59, type: 3}
+  footprint: {fileID: 5555643005452015369, guid: 476e4bc9aa5ef724a8496b74dee16f59, type: 3}
 --- !u!195 &284980355854041750
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -371,6 +373,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!95 &8749042635297513526
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4533539354297569469}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &4776335580857564917
 GameObject:
   m_ObjectHideFlags: 0
