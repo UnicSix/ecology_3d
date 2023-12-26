@@ -78,7 +78,7 @@ public class IdleState : BadGuyState
                 badguy.StateMachine.ChangeState(badguy.killState, badguy.guyPos);
             }
 
-            if (badguy.masterControl.getSpaceShipDurability() < 0.5f && isEnteringState("wreckState"))
+            if (GameObject.Find("MasterControl").GetComponent<Control>().getSpaceShipDurability() < 0.5f && isEnteringState("wreckState"))
             {
                 badguy.setWreckEnergy(-wreckThreshold);
                 badguy.StateMachine.ChangeState(badguy.wreckState);

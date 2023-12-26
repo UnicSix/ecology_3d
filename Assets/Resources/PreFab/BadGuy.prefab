@@ -285,6 +285,9 @@ MonoBehaviour:
   range: 30
   footprint: {fileID: 0}
   taskPoints: []
+  nowStatus: 0
+  masterControl: {fileID: 0}
+  statusBar: {fileID: 7988877089944149505}
   taskPositions: []
 --- !u!4 &746912571944225760 stripped
 Transform:
@@ -599,6 +602,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &7988877089944149505 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6706480655735182849, guid: be3c3f7a3d648f643b25e3b6fe9a6e9f, type: 3}
+  m_PrefabInstance: {fileID: 3732364776819345408}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd980e6d3e7992540a3fc9c5b3fe9306, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &8715197184628020314 stripped
