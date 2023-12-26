@@ -16,6 +16,7 @@ public class Control : MonoBehaviour
     [SerializeField] public int numGoodguy = 10;
     [SerializeField] public int numBadguy = 2;
     [SerializeField] private float spwanSec = 30.0f;
+    [SerializeField] public float susThreashold = 0.11f;
     
     private bool isMeeting = false;
     private int guynumber = 0;
@@ -60,6 +61,7 @@ public class Control : MonoBehaviour
             badGuy.GetComponent<BadGuy>().nowStatus = -2;
 
         int total_guys = goodGuys.Length + badGuys.Length;
+        List<GameObject> inVoting = new List<GameObject>();
         for (int i = 0; i < total_guys; i++) {
             float angle = i * (360f / total_guys); // Calculate the angle of each spawning point on the circle
             float x = spawnCenter.x + spawnCircleRad * Mathf.Cos(Mathf.Deg2Rad * angle);
@@ -68,16 +70,30 @@ public class Control : MonoBehaviour
             Quaternion rotation = Quaternion.LookRotation(spawnCenter - spawnPos); // Face Center
 
             if (i < goodGuys.Length) {
-                goodGuys[i].GetComponent<GoodGuyBehaviour>().CutAgentPath();
+                GoodGuyBehaviour behaviour = goodGuys[i].GetComponent<GoodGuyBehaviour>();
+                behaviour.CutAgentPath();
                 goodGuys[i].transform.position = spawnPos;
+                Debug.Log("SUS: " + behaviour.sus);
                 goodGuys[i].transform.rotation = rotation;
+                if (behaviour.sus >= susThreashold) {
+                    inVoting.Add(goodGuys[i]);
+                }
             }
             else {
-                badGuys[i - goodGuys.Length].GetComponent<BadGuy>().CutAgentPath();
+                BadGuy behaviour = badGuys[i - goodGuys.Length].GetComponent<BadGuy>();
+                behaviour.CutAgentPath();
                 badGuys[i - goodGuys.Length].transform.position = spawnPos;
+                Debug.Log("SUS: " + behaviour.sus);
                 badGuys[i - goodGuys.Length].transform.rotation = rotation;
+                if (behaviour.sus >= susThreashold) {
+                    inVoting.Add(badGuys[i - goodGuys.Length]);
+                }
             }
         }
+
+        // Vote
+        
+
     }
     public void DisbandMeeting() {
         isMeeting = false;

@@ -7,7 +7,7 @@ using UnityEngine.Windows.WebCam;
 
 public class BadGuy: MonoBehaviour, IVisionTrigger, IMoveable
 {
-    public float sus;
+    public float sus=0f;
     private NavMeshHit hit;
     [Range(10f,50f)] public float range = 20.0f;
     [SerializeField] private GameObject footprint;
@@ -44,7 +44,7 @@ public class BadGuy: MonoBehaviour, IVisionTrigger, IMoveable
         killState = new KillState(this, StateMachine);
         wreckState = new WreckState(this, StateMachine);
 
-        killEnergy = 100;
+        killEnergy = 40;
         trackEnergy = 80;
         wreckEnergy = 50;
     }
@@ -61,7 +61,7 @@ public class BadGuy: MonoBehaviour, IVisionTrigger, IMoveable
             footprint = Resources.Load<GameObject>("PreFab/FootPrintBad");
         printTime = 0f;
         
-        StateMachine.Initialize(idleState);
+        StateMachine.Initialize(wreckState);
         // StateMachine.Initialize(idleState);
     }
 

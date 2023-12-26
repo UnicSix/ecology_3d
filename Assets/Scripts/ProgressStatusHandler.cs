@@ -36,10 +36,11 @@ public class ProgressStatusHandler : MonoBehaviour
         return false;
     }
     public bool DecreaseWorkProgress(float val) {
-        if (progress_val == 0.0f) return true;
+        // if (progress_val == 0.0f) return true;
         progress_val -= Mathf.Abs(val);
         if (progress_val <= 0.0f) {
-            OnInfluenceShipDurability?.Invoke(-0.25f);
+            OnInfluenceShipDurability?.Invoke(-0.15f);
+            Debug.Log("OnInfluenceShipDurability -0.25f");
             Leave();
             return true;
         }

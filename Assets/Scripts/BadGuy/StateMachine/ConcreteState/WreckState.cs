@@ -76,7 +76,7 @@ public class WreckState : BadGuyState
         // badguy.agent.ResetPath();
         Debug.Log("wre");
         badguy.transform.LookAt(visionDir);
-        if (handler.DecreaseWorkProgress(efficiency * Time.deltaTime / 10.0f)) {
+        if (handler.DecreaseWorkProgress(efficiency / 10.0f)) {
             badguy.StateMachine.ChangeState(badguy.idleState);
         }
         else 

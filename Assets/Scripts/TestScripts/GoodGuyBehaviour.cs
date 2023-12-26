@@ -52,7 +52,7 @@ public class GoodGuyBehaviour : MonoBehaviour
     {
         ResetTimer();
         ResetAgentDtection();
-        sus = 0.5f;
+        sus = 0.0f;
         exeuteTime = 0.0f;
         workParams = new WorkParameters();
         navAgent = GetComponent<NavMeshAgent>();
@@ -236,7 +236,7 @@ public class GoodGuyBehaviour : MonoBehaviour
     private int Report(bool findBody = false, float speed = 12.0f)
     {
         if (findBody) {
-            sus -= 1.0f; // Reporter prevent suspect gain by DeadbodyEvent
+            //sus -= 0.1f; // Reporter prevent suspect gain by DeadbodyEvent
             GameObject.Find("MasterControl").GetComponent<Control>().Meeting(findbody: true);
             Debug.Log("Call  meeting !!!");
             return -2;
@@ -356,7 +356,7 @@ public class GoodGuyBehaviour : MonoBehaviour
         if (other.CompareTag("Weapon"))
         {
             GameObject newDeadBody = deadBody;
-            newDeadBody.transform.position = new Vector3(transform.position.x, -2.7f, transform.position.z);
+            newDeadBody.transform.position = new Vector3(transform.position.x, -3.0f, transform.position.z);
             Instantiate(newDeadBody);
             if (newDeadBody != null)
                 Debug.Log("ins");
