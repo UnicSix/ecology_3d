@@ -11,7 +11,7 @@ public class KillState : BadGuyState
     private float killCdTime;
     public KillState(BadGuy badguy, BadGuyStateMachine badguyStateMachine) : base(badguy, badguyStateMachine)
     {
-        killCdTime = 5f;
+        killCdTime = 2f;
         cdCounter = 0f;
     }
 
@@ -48,14 +48,18 @@ public class KillState : BadGuyState
         {
             cdCounter-= Time.deltaTime;
         }
-        if (Vector3.Distance(badguy.transform.position, guyPos)<=3f && badguy.seenGuy && cdCounter<=0)
+        if (Vector3.Distance(badguy.transform.position, badguy.guyPos)<=3f && badguy.seenGuy && cdCounter<=0)
+        //if (Vector3.Distance(badguy.transform.position, guyPos)<=3f && badguy.seenGuy)
         {
             Kill();
             badguy.StateMachine.ChangeState(badguy.idleState);
             cdCounter = killCdTime;
         }
 
-        if (badguy.agent.pathStatus == NavMeshPathStatus.PathComplete)
+        if(badguy.seenGuy){
+            badguy.StateMachine.ChangeState(badguy.killState, badguy.guyPos);
+        }
+        else if (badguy.agent.pathStatus == NavMeshPathStatus.PathComplete)
         {
             badguy.StateMachine.ChangeState(badguy.idleState);
         }

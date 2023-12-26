@@ -40,6 +40,7 @@ public class GoodGuyBehaviour : MonoBehaviour
     private int agentStuckTimes;
     private float agentRemainingDis;
     private float printTimeElapse;
+    private float unseenTime=0;
     private WorkParameters workParams;
     [SerializeField] private float energyFactor = 20.0f;
     [SerializeField] private float printTimeGap = 0.15f;
@@ -70,11 +71,12 @@ public class GoodGuyBehaviour : MonoBehaviour
         statusValues[0] = Random.Range(0.4f, 0.6f); statusGainProportion[0] = 50f;
         statusValues[1] = Random.Range(0.6f, 1.0f); statusGainProportion[1] = 40f;
         statusValues[2] = Random.Range(0.0f, 0.6f); statusGainProportion[2] = 8f;
-        statusValues[3] = Random.Range(0.0f, 0.2f); statusGainProportion[3] = 2f;
+        statusValues[3] = 0.0f; statusGainProportion[3] = 2f;
     }
     void Update()
     {
         UpdatePrams();
+
         if (nowStatus >= 0 && nowStatus <= statusValues.Length) {
             switch (nowStatus) {
                 case 0: 
@@ -109,6 +111,12 @@ public class GoodGuyBehaviour : MonoBehaviour
         // Scan body every update
         ScanBody();
         statusBar.Show();
+        unseenTime+=Time.deltaTime;
+        if(unseenTime>=0.5f){
+            fovcone.seenBody=false;
+            fovcone.seenGuy=false;
+            unseenTime=0f;
+        }
     }
     
     private int status_select(float[] probabilities)

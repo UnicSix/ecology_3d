@@ -36,6 +36,7 @@ public class IdleState : BadGuyState
         {
             randomPoint = badguy.transform.position + Random.insideUnitSphere * _sampleRange;
         }
+        stateChangeTimer=stateChangeCD;
         badguy.agent.SetDestination(randomPoint);
     }
 
@@ -51,7 +52,7 @@ public class IdleState : BadGuyState
         float maxAngle=90f;
         float angle = Mathf.Cos(rotationSpeed * Time.time) * maxAngle;
         int nextState;
-        stateChangeTimer += Time.deltaTime;
+        
         _idleTime += Time.deltaTime;
         badguy.transform.Rotate(Vector3.up, angle * Time.deltaTime);
         if (_idleTime >= _idleLimit)
@@ -65,47 +66,51 @@ public class IdleState : BadGuyState
         badguy.setTrackEnergy(Time.deltaTime*0.5f);
         badguy.setWreckEnergy(Time.deltaTime*0.3f);
 
-        if (stateChangeTimer >= stateChangeCD)
-        {
+       // if (stateChangeTimer >= 0)
+       // {
             if (badguy.seenFootprint && isEnteringState("trackState"))
             {
+                Debug.Log("idle to track");
                 badguy.setTrackEnergy(-trackThreshold);
                 badguy.StateMachine.ChangeState(badguy.trackState, badguy.footprintPos);
             }
             else if (badguy.seenGuy && isEnteringState("killState"))
             {
+                Debug.Log("idle to kill");
                 badguy.setKillEnergy(-killThreshold);
                 badguy.StateMachine.ChangeState(badguy.killState, badguy.guyPos);
             }
 
             if (GameObject.Find("MasterControl").GetComponent<Control>().getSpaceShipDurability() < 0.5f && isEnteringState("wreckState"))
             {
+                Debug.Log("idle to wreck");
                 badguy.setWreckEnergy(-wreckThreshold);
                 badguy.StateMachine.ChangeState(badguy.wreckState);
             }
-            stateChangeTimer=0;
-        }
+            stateChangeTimer=stateChangeCD;
+       // }
+
     }
 
     private bool isEnteringState(string nextState)
     {
         float rd;
         float energySum = killEnergy + trackEnergy + wreckEnergy;
-        rd = Random.Range(0f, energySum);
-        Debug.Log("rd: "+rd);
-        Debug.Log("kill: "+killEnergy);
-        Debug.Log("track: "+trackEnergy);
-        Debug.Log("wreck: "+wreckEnergy);
+        
+        //Debug.Log("rd: "+rd);
         switch (nextState)
         {
             case "killState":
-                if (rd <= killEnergy && killEnergy<=15f) return true;
+                rd = Random.Range(0f, 100f);
+                if (rd <= killEnergy) return true;
                 break;
             case "trackState":
-                if (rd > killEnergy && rd <= trackEnergy+killEnergy && trackEnergy >= 3f) return true;
+                rd = Random.Range(0f, 100f);
+                if (rd <= trackEnergy) return true;
                 break;
             case "wreckState":
-                if (rd > trackEnergy+killEnergy && rd <= energySum && wreckEnergy >= 20f) return true;
+                rd = Random.Range(0f, 100f);
+                if (rd <= wreckEnergy) return true;
                 break;
         }
 

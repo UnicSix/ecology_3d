@@ -29,7 +29,7 @@ public class VisionCone : MonoBehaviour
         VisionAngle = 90f;
         VisionAngle *= Mathf.Deg2Rad;
         VisionRange = 25f;
-        VisionConeResolution = 10;
+        VisionConeResolution = 25;
         if (gameObject.CompareTag("BadGuy"))
         {
             VisionAngle = 15f;
@@ -101,11 +101,13 @@ public class VisionCone : MonoBehaviour
                     Vertices[i + 1] = VertForward.normalized * hit.distance;
                     if (hit.collider.gameObject.CompareTag("GoodGuy") || hit.collider.gameObject.CompareTag("BadGuy"))
                     {
+
                         seenGuy = true;
                     }
                     
                     if (hit.collider.gameObject.CompareTag("DeadBody"))
                     {
+                        Debug.Log("seen body");
                         seenBody = true;
                     }
                     // Debug.Log(hit.distance);

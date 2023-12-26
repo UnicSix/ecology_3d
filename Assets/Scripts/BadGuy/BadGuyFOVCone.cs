@@ -31,7 +31,7 @@ public class BadGuyFov : MonoBehaviour
         VisionAngle = 90f;
         VisionAngle *= Mathf.Deg2Rad;
         VisionRange = 25f;
-        VisionConeResolution = 10;
+        VisionConeResolution = 20;
         _triggerInteraction = QueryTriggerInteraction.Collide;
         badguy = GetComponentInParent<BadGuy>();
         if (badguy == null)
@@ -40,7 +40,7 @@ public class BadGuyFov : MonoBehaviour
         }
         if (gameObject.CompareTag("BadGuy"))
         {
-            VisionAngle = 15f;
+            VisionAngle = 30f;
             VisionAngle *= Mathf.Deg2Rad;
             VisionRange = 45;
         }
@@ -95,15 +95,13 @@ public class BadGuyFov : MonoBehaviour
                 {
                     if (footprint.collider.gameObject.CompareTag("GoodPrint"))
                     {
-                        // if(hit.collider.gameObject)
                         float freshment = footprint.collider.transform.localScale.x / 0.5f;
-                        // maxDist = hit.distance > maxDist ? hit.distance : maxDist;
                         maxFreshment = freshment > maxFreshment ? freshment : maxFreshment;
                         if (maxFreshment >= lockThreshold)
                         {
                             // onFootprintLockedOn.Invoke(footprint.transform.TransformPoint(footprint.transform.position));
                             badguy.SetFootprintPos(footprint.transform.position);
-                            // Debug.Log(footprint.transform.position);
+                            //Debug.Log(footprint.transform.position);
                             badguy.SetSeenFootprint(true);
                             // Debug.Log("hit print:"+footprint.transform.TransformPoint(footprint.transform.position));
                         }

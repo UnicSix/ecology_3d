@@ -13,7 +13,7 @@ public class TrackState : BadGuyState
     {
         base.EnterState();
         badguy.agent.angularSpeed = 120f;
-        badguy.agent.speed = 5f;
+        badguy.agent.speed = 8f;
         badguy.agent.SetDestination(pos);
         badguy.seenFootprint = false;
     }
@@ -26,19 +26,21 @@ public class TrackState : BadGuyState
     public override void FrameUpdate()
     {
         base.FrameUpdate();
-        if (badguy.agent.pathStatus == NavMeshPathStatus.PathComplete)
+        if (badguy.agent.pathStatus == NavMeshPathStatus.PathComplete && !badguy.seenFootprint && !badguy.seenGuy)
         {
-            // Debug.Log("Track to Idle");
+            Debug.Log("Track to Idle");
             badguy.StateMachine.ChangeState(badguy.idleState);
-        }
-        else if (badguy.seenFootprint)
-        {
-            badguy.StateMachine.ChangeState(badguy.trackState, badguy.footprintPos);
         }
         else if (badguy.seenGuy)
         {
             Debug.Log("Track to Kill");
-            badguy.StateMachine.ChangeState(badguy.killState);
+            badguy.StateMachine.ChangeState(badguy.killState, badguy.guyPos);
         }
+        else if (badguy.seenFootprint)
+        {
+            Debug.Log("track to track");
+            badguy.StateMachine.ChangeState(badguy.trackState, badguy.footprintPos);
+        }
+
     }
 }

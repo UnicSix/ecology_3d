@@ -10,7 +10,7 @@ public class WreckState : BadGuyState
     private int targetTaskIndex=-1;
     private int prevTaskIndex=-1;
     private ProgressStatusHandler handler;
-    private float efficiency = -1f;
+    private float efficiency = -10f;
     private float energyCost;
     private float minCost = 1f;
     private float maxCost = 10f;

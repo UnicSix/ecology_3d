@@ -6,6 +6,15 @@ using UnityEngine;
 public class DeadBody : MonoBehaviour
 {
     private List<GameObject> guys = new List<GameObject>();
+    private float bodyDestroyTime=15f;
+    private float destroyCounter=0f;
+
+    private void Update(){
+        destroyCounter+=Time.deltaTime;
+        if(destroyCounter>=bodyDestroyTime){
+            Destroy(this.gameObject);
+        }
+    }
     private void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.CompareTag("BadGuy")||other.gameObject.CompareTag("GoodGuy"))
@@ -28,11 +37,11 @@ public class DeadBody : MonoBehaviour
         {
             if (guy.CompareTag("GoodGuy"))
             {
-                guy.GetComponent<GoodGuyBehaviour>().sus+=10f;
+                guy.GetComponent<GoodGuyBehaviour>().sus+=0.1f;
             }
             else if (guy.CompareTag("BadGuy"))
             {
-                guy.GetComponent<GoodGuyBehaviour>().sus+=10f;
+                guy.GetComponent<GoodGuyBehaviour>().sus+=0.1f;
             }
         }
     }

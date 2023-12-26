@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 8753737275556045675}
   - component: {fileID: 3994151062835871048}
   - component: {fileID: 7714865038246589215}
-  m_Layer: 0
+  - component: {fileID: -7055560924648606409}
+  m_Layer: 9
   m_Name: GoodGuyDead
   m_TagString: DeadBody
   m_Icon: {fileID: 0}
@@ -28,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 2576994473009617008}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.958103, y: -2.7, z: -6.4296184}
+  m_LocalPosition: {x: 10.104377, y: -3, z: -20.354115}
   m_LocalScale: {x: 0.5, y: 0.4, z: 0.45}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -94,14 +95,26 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 4294967295
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 2.430324, y: 2.7922773, z: 2.052611}
   m_Center: {x: 0.2221523, y: -1.7117991, z: 0}
+--- !u!114 &-7055560924648606409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2576994473009617008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e90a625e987cfa4cb77570549435aae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

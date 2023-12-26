@@ -44,9 +44,9 @@ public class BadGuy: MonoBehaviour, IVisionTrigger, IMoveable
         killState = new KillState(this, StateMachine);
         wreckState = new WreckState(this, StateMachine);
 
-        killEnergy = 40;
-        trackEnergy = 90;
-        wreckEnergy = 10;
+        killEnergy = 100;
+        trackEnergy = 80;
+        wreckEnergy = 50;
     }
     void Start()
     {
@@ -77,10 +77,11 @@ public class BadGuy: MonoBehaviour, IVisionTrigger, IMoveable
             printTime = 0f;
         }
 
-        if (eraseVisionInfo > 0.25f)
+        if (eraseVisionInfo > 0.5f)
         {
             SetSeenGuy(false);
             SetSeenFootprint(false);
+            eraseVisionInfo=0f;
         }
         StateMachine.CurBadGuyState.FrameUpdate();
         
