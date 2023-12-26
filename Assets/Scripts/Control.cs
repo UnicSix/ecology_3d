@@ -62,6 +62,7 @@ public class Control : MonoBehaviour
 
         int total_guys = goodGuys.Length + badGuys.Length;
         List<GameObject> inVoting = new List<GameObject>();
+        List<float> inVotingSus = new List<float>();
         for (int i = 0; i < total_guys; i++) {
             float angle = i * (360f / total_guys); // Calculate the angle of each spawning point on the circle
             float x = spawnCenter.x + spawnCircleRad * Mathf.Cos(Mathf.Deg2Rad * angle);
@@ -73,27 +74,26 @@ public class Control : MonoBehaviour
                 GoodGuyBehaviour behaviour = goodGuys[i].GetComponent<GoodGuyBehaviour>();
                 behaviour.CutAgentPath();
                 goodGuys[i].transform.position = spawnPos;
-                Debug.Log("SUS: " + behaviour.sus);
                 goodGuys[i].transform.rotation = rotation;
                 if (behaviour.sus >= susThreashold) {
                     inVoting.Add(goodGuys[i]);
+                    inVotingSus.Add(behaviour.sus);
                 }
             }
             else {
                 BadGuy behaviour = badGuys[i - goodGuys.Length].GetComponent<BadGuy>();
                 behaviour.CutAgentPath();
                 badGuys[i - goodGuys.Length].transform.position = spawnPos;
-                Debug.Log("SUS: " + behaviour.sus);
                 badGuys[i - goodGuys.Length].transform.rotation = rotation;
                 if (behaviour.sus >= susThreashold) {
                     inVoting.Add(badGuys[i - goodGuys.Length]);
+                    inVotingSus.Add(behaviour.sus);
                 }
             }
         }
 
         // Vote
-        
-
+        StartCoroutine(Voting(inVoting, inVotingSus));
     }
     public void DisbandMeeting() {
         isMeeting = false;
@@ -189,5 +189,43 @@ public class Control : MonoBehaviour
         effect.Show();
         yield return new WaitForSeconds(sec);
         effect.Hide();
+    }
+    private IEnumerator Voting(List<GameObject> guy_lst, List<float> sus_lst, float waitSec1 = 4.0f, float waitSec2 = 1.0f)
+    {
+        yield return new WaitForSeconds(waitSec1);
+
+        // Sum of sus_lst
+        float totalSus = 0.0f;
+        foreach (float sus in sus_lst)
+        {
+            totalSus += sus;
+        }
+
+        // RandSelection
+        float randomValue = Random.Range(0.0f, totalSus);
+        float cumulativeSum = 0.0f;
+        GameObject electedGuy = null;
+
+        for (int i = 0; i < sus_lst.Count; i++)
+        {
+            cumulativeSum += sus_lst[i];
+            if (randomValue <= cumulativeSum)
+            {
+                electedGuy = guy_lst[i];
+                break;
+            }
+        }
+
+        if (electedGuy != null)
+        {
+            Debug.Log("Kick guy: " + electedGuy.name);
+            Destroy(electedGuy);
+        }
+        else {
+            Debug.Log("No guy to Kick");
+        }
+        
+        DisbandMeeting();
+        yield return new WaitForSeconds(waitSec2);
     }
 }

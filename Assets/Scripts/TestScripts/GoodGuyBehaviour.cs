@@ -366,5 +366,6 @@ public class GoodGuyBehaviour : MonoBehaviour
 
     private void OnDestroy()
     {
+        
     }
 }
