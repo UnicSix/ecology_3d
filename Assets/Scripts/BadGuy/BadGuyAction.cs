@@ -20,7 +20,12 @@ public class BadGuy: MonoBehaviour, IVisionTrigger, IMoveable
     private float killThreshold = 15f;
     private float trackThreshold = 3f;
     private float wreckThreshold = 7f;
+<<<<<<< HEAD
     public int nowStatus;
+=======
+    public int nowStatus=-1;
+    public Control masterControl;
+>>>>>>> fdc63847f3edc4547fc56fd2d15bf3ecd5ba1daf
     public MurdererStatusHandler statusBar;
     private const float energyLimit=100f;
     
