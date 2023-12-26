@@ -62,9 +62,9 @@ public class IdleState : BadGuyState
             badguy.StateMachine.ChangeState(badguy.roamState);
         }
         
-        badguy.setKillEnergy(Time.deltaTime*0.3f);
-        badguy.setTrackEnergy(Time.deltaTime*0.5f);
-        badguy.setWreckEnergy(Time.deltaTime*0.3f);
+        badguy.setKillEnergy(Time.deltaTime);
+        badguy.setTrackEnergy(Time.deltaTime);
+        badguy.setWreckEnergy(Time.deltaTime);
 
        // if (stateChangeTimer >= 0)
        // {

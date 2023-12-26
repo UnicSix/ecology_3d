@@ -46,7 +46,7 @@ public class BadGuy: MonoBehaviour, IVisionTrigger, IMoveable
         wreckState = new WreckState(this, StateMachine);
         meetingState = new MeetingState(this, StateMachine);
 
-        killEnergy = 40;
+        killEnergy = 20;
         trackEnergy = 80;
         wreckEnergy = 50;
     }
