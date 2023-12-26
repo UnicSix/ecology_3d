@@ -103,7 +103,7 @@ public class VisionCone : MonoBehaviour
                     {
                         seenGuy = true;
                     }
-
+                    
                     if (hit.collider.gameObject.CompareTag("DeadBody"))
                     {
                         seenBody = true;
