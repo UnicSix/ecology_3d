@@ -13,6 +13,7 @@ public class MeetingState : BadGuyState
     {
         base.EnterState();
         badguy.agent.ResetPath();
+        Debug.Log("meeting");
     }
 
     public override void ExitState()
@@ -23,8 +24,9 @@ public class MeetingState : BadGuyState
     public override void FrameUpdate()
     {
         base.FrameUpdate();
-        if (badguy.nowStatus != -2)
+        if (badguy.nowStatus == -1)
         {
+            Debug.Log("exit meeting");
             badguy.StateMachine.ChangeState(badguy.idleState);
         }
     }

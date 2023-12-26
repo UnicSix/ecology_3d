@@ -6,7 +6,7 @@ using UnityEngine;
 public class DeadBody : MonoBehaviour
 {
 
-    private float bodyDestroyTime=15f;
+    private float bodyDestroyTime=60f;
     private float destroyCounter=0f;
 
     private void Update(){

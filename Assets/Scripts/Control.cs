@@ -93,17 +93,27 @@ public class Control : MonoBehaviour
         }
 
         // Vote
-        StartCoroutine(Voting(inVoting, inVotingSus));
+        if (transition) {
+            GameObject[] deadBodys = GameObject.FindGameObjectsWithTag("DeadBody");
+            foreach (GameObject body in deadBodys)
+                Destroy(body);
+            StartCoroutine(Voting(inVoting, inVotingSus));
+        }
     }
     public void DisbandMeeting() {
         isMeeting = false;
         GameObject[] goodGuys = GameObject.FindGameObjectsWithTag("GoodGuy");
         GameObject[] badGuys = GameObject.FindGameObjectsWithTag("BadGuy");
+
         foreach (GameObject goodGuy in goodGuys)
             goodGuy.GetComponent<GoodGuyBehaviour>().nowStatus = -1;
 
-        foreach (GameObject badGuy in badGuys)
+        foreach (GameObject badGuy in badGuys){
+            
             badGuy.GetComponent<BadGuy>().nowStatus = -1;
+        }
+
+        
     }
 
     void Generate_Guys()
@@ -224,8 +234,8 @@ public class Control : MonoBehaviour
         else {
             Debug.Log("No guy to Kick");
         }
-        
-        DisbandMeeting();
         yield return new WaitForSeconds(waitSec2);
+        DisbandMeeting();
+
     }
 }
