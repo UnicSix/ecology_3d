@@ -8,6 +8,8 @@ public class Control : MonoBehaviour
     GameObject[] SpawnPoints;
     [SerializeField] public GameObject Goodguy_Prefab;
     [SerializeField] public GameObject Badguy_Prefab;
+    [SerializeField] public GameObject bodyAlarm;
+    [SerializeField] public GameObject ButtonAlarm;
     [SerializeField] private GameObject spaceShipDurabilityHandler;
     [SerializeField] public Vector3 spawnCenter = new Vector3(0f, 5.0f, 0f);
     [SerializeField] public float spawnCircleRad = 5.0f;
@@ -33,15 +35,23 @@ public class Control : MonoBehaviour
     }
     void Update()
     {
-        if (isMeeting) Meeting();
+        if (isMeeting) Meeting(transition: false);
         else HandleSpawnGuy();
         // Need to Trigger DisbandMeeting()
         Update_SpaceshipDurability();
     }
-    public void Meeting() {
+    public void Meeting(bool findbody = false, bool transition = true) {
         isMeeting = true;
         GameObject[] goodGuys = GameObject.FindGameObjectsWithTag("GoodGuy");
         GameObject[] badGuys = GameObject.FindGameObjectsWithTag("BadGuy");
+
+        if (transition) {
+            if (findbody) {
+                StartCoroutine(ActivateAndDeactivate(bodyAlarm));
+            } else {
+                StartCoroutine(ActivateAndDeactivate(ButtonAlarm));
+            }
+        }
 
         foreach (GameObject goodGuy in goodGuys)
             goodGuy.GetComponent<GoodGuyBehaviour>().nowStatus = -2;
@@ -149,11 +159,19 @@ public class Control : MonoBehaviour
     void Update_SpaceshipDurability()
     {
         spaceship_durability = Mathf.Clamp01(spaceship_durability - 0.01f * Time.deltaTime);
-        // spaceShipDurabilityHandler.GetComponentInChildren<ShipBarHandler>().update_bar(spaceship_durability); // Update UI bar
+        spaceShipDurabilityHandler.GetComponentInChildren<ShipBarHandler>().update_bar(spaceship_durability); // Update UI bar
     }
 
     public float getSpaceShipDurability()
     {
         return spaceship_durability;
+    }
+
+    private IEnumerator ActivateAndDeactivate(GameObject alarmObject, float sec = 2.0f)
+    {
+        UiHandler effect = alarmObject.GetComponent<UiHandler>();
+        effect.Show();
+        yield return new WaitForSeconds(sec);
+        effect.Hide();
     }
 }

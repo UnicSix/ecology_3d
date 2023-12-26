@@ -229,7 +229,7 @@ public class GoodGuyBehaviour : MonoBehaviour
     {
         if (findBody) {
             sus -= 1.0f; // Reporter prevent suspect gain by DeadbodyEvent
-            GameObject.Find("MasterControl").GetComponent<Control>().Meeting();
+            GameObject.Find("MasterControl").GetComponent<Control>().Meeting(findbody: true);
             Debug.Log("Call  meeting !!!");
             return -2;
         }
@@ -238,7 +238,7 @@ public class GoodGuyBehaviour : MonoBehaviour
                 return 3;
             }
             else {
-                GameObject.Find("MasterControl").GetComponent<Control>().Meeting();
+                GameObject.Find("MasterControl").GetComponent<Control>().Meeting(findbody: false);
                 Debug.Log("Call meeting !!!");
                 return -2;
             }
