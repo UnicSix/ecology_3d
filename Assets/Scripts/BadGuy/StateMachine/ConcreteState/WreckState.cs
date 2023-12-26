@@ -23,6 +23,7 @@ public class WreckState : BadGuyState
     public override void EnterState()
     {
         base.EnterState();
+        badguy.statusBar.Select("wreck");
         badguy.agent.angularSpeed = 300f;
         badguy.agent.speed = 10f;
         energyCost = Random.Range(minCost, maxCost);

@@ -56,14 +56,14 @@ public class BadGuyBehaviour : MonoBehaviour
             //     case 4:
         }
         else if (nowStatus == -2) { // Table Meeting
-            statusBar.Select(-2);
+            //statusBar.Select(-2);
             CutAgentPath();
             ResetTimer();
 
         }
         else {  // Select an Action and distribute energy
             nowStatus = status_select(statusValues);
-            statusBar.Select(nowStatus);
+            //statusBar.Select(nowStatus);
 
             float energy = statusValues[nowStatus];
             energy *= Random.Range(0.0f, 1.0f);

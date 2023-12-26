@@ -18,6 +18,7 @@ public class KillState : BadGuyState
     public override void EnterState(Vector3 pos)
     {
         base.EnterState();
+        badguy.statusBar.Select("kill");
         guyPos = pos;
         badguy.agent.angularSpeed = 300f;
         badguy.agent.speed = 30f;
@@ -44,6 +45,7 @@ public class KillState : BadGuyState
         //     Debug.Log("Kill to Track");
         //     badguy.StateMachine.ChangeState(badguy.trackState, badguy.guyPos);
         // }
+        
         if (cdCounter > 0)
         {
             cdCounter-= Time.deltaTime;

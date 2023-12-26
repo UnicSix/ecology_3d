@@ -12,6 +12,7 @@ public class TrackState : BadGuyState
     public override void EnterState(Vector3 pos)
     {
         base.EnterState();
+        badguy.statusBar.Select("track");
         badguy.agent.angularSpeed = 120f;
         badguy.agent.speed = 8f;
         badguy.agent.SetDestination(pos);

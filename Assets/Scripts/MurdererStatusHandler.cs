@@ -42,7 +42,19 @@ public class MurdererStatusHandler : MonoBehaviour
     public void update_kill(float val) {
         kill.value = Mathf.Clamp01(val/100);
     }
-    public void Select(int index) {
+    public void Select(string stateName) {
+        int index=0;
+        switch(stateName){
+            case "wreck":
+                index = 0;
+                break;
+            case "track":
+                index = 1;
+                break;
+            case "kill":
+                index = 2;
+                break;
+        }
         // Image[] images = { focus0, focus1, focus2, focus3, focus4 };
         Image[] images = { focus0, focus1, focus2};
         for (int i = 0; i < images.Length; i++) {
